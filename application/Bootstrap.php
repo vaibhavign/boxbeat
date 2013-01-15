@@ -1,4 +1,5 @@
 <?php
+// i have changed the first line
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
     protected function _initAutoload ()
