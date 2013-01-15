@@ -1,0 +1,59 @@
+<div id="wid1000Auto">
+	<!--<div id="header-wrapper">
+		<div id="logo"><a href="#" title="Goo2o"><img src="/images/secure/registration/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header-rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+    </div>-->
+      <form name="accountrestrictedform" action="/secure/login/accountrestricted/passcode/<?=$this->vcodes;?>" method="post" id="accountrestrictedform">
+     <div class="blueMainHeadingContainer">
+    	<div class="blueMainHeading floatLeft">Goo2o ID Restricted!!</div>
+        <div class="floatRight content-text12"><b><?php echo $this->userfullname;?>,</b>&nbsp;  <a href="<?php echo HTTP_SECURE.'/accountsetting/logout';?>" title="Not You" class="hyperLinkBlue11None">( Not You )</a></div>
+    </div>
+    <div class="clearBoth">
+    	<div class="lh60">&nbsp;</div>
+    	<div class="clearBoth content-text14">Goo2o has restricted your Goo2o ID because the email address associated with it is not verified within the mentioned time frame.</div>
+        <div class="lh10">&nbsp;</div>
+        <div class="clearBoth content-text14">Before continuing, please verify your email address by using the link that we had sent to <b><?php echo $this->useremailaddress;?></b></div>
+        <div class="lh25">&nbsp;</div>
+        <div class="dashedBorderText14Lh25"><b>Didn’t get the email?</b></div>
+        <div class="lh35">&nbsp;</div>
+   	</div>
+    <div class="clearBoth">
+    	<div class="wid465">
+        	<div class="clearBoth content-text12">Check to see if your email is correct, or enter a different address:</div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft">
+                 <input type="text" id="user_email_address" name="changeduseremail" class="input-textField230 content-text14Lh22" value="<?php echo $this->useremailaddresses; ?>" onblur="if(this.value==''){ this.value=this.defaultValue}" onfocus="if(this.value==this.defaultValue){this.value=''} "  />
+            </div>
+            <div class="suggestive-container floatLeft" id="show_hide_user_email_address" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_user_email_address"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+            </div>
+             <?php if($this->emailExist){?>
+             <div class="suggestive-container floatLeft" id="show_email_address" style="display:block">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_address">Email id already exists</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+            </div>
+              <?php } ?>
+            <div class="lh5">&nbsp;</div>
+            <div class="grey-text11">Enter an email address that works</div>
+            <div class="lh20">&nbsp;</div>
+            <div class="floatLeft"><input type="submit" class="resentcheckmail_server" title="Resend email" id="resentmail" name="resentcheckmail"  value="" /></div>
+            <!--<div class="floatLeft"><input type="image" src="/images/secure/registration/resend_email.gif" class="cursor" title="Resend email" /></div>-->
+        </div>
+        <div class="wid80"><img src="/images/secure/registration/restricted_seperaor.gif" /></div>
+        <div class="wid375 content-text12Lh20">
+        	Check your email&rsquo;s junk/ bulk folder, because it&rsquo;s possible our email will be accidentally placed there. If you do find it in your junk/bulk folder, please remember to mark it as &quot;Not junk/spam&quot;.
+
+
+        </div>
+
+    </div>
+    <div class="lh35">&nbsp;</div>
+              <input type="hidden" name="restictedpage" value="accountcheckprocess">
+              <input type="hidden" name="vcode" value="<?php echo $this->vcodes; ?>">
+              <input type="hidden" name="usernameid" value="<?php echo $this->userid; ?>">
+              <input type="hidden" name="user_full_name" value="<?php echo $this->userfullname; ?>">
+                 </form>
+</div>

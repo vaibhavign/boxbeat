@@ -1,0 +1,26 @@
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><?php echo PAGE_TITLE.' '.TITLE_SEPERATOR.' '.TITLE_SEPERATOR_TEXT;  ?></title>
+	<meta name="keywords" content=" <?php echo PAGE_META_KEYWORD ; ?>" />
+	<meta name="description" content= " <?php echo PAGE_META_DESCRIPTION ; ?> " />
+	<?php echo $this->cssHelper(); ?>
+	<?php echo $this->JavascriptHelper(); ?>
+    </head>
+    <body>
+        <div id="mainWrapper" style="clear:both;">
+			<div class="clearBoth">
+				 <table cellpadding="0" cellspacing="0" border="0" width="1000" align="center">
+					<tr>
+						<td>
+						   <div class="clearBoth"><?php echo $this->layout()->content ?></div>
+						</td>
+					</tr>
+					<tr>
+						<td height="20">&nbsp;</td>
+					</tr>
+				</table>
+			</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+<?php
+$accountListing = $this->accountListing;
+//echo '<pre>';print_r($accountListing);
+?>
+
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+	<tr>
+    	<!--LEFT PANEL starts from here-->
+    	<td width="260" valign="top">
+        	<div class="bank_account_listingLeftPanel">
+            	<div class="lh25">&nbsp;</div>
+            	<div class="businessDetialsLeftPanel">
+					
+               <?php
+			 		$request = Zend_Controller_Front::getInstance()->getRequest();
+					$controllerName = $request->getControllerName();
+					$actionName = $request->getActionName();
+					$genObj = new General();
+					//$controllerName = "Store";
+					$abc = $genObj->displaySettingMenuNew($controllerName,$actionName);
+					echo $abc;
+				?>
+                
+            	</div>
+            </div>
+        </td>
+        <!--LEFT PANELends from here-->
+        <!--RIGHT PANEL starts from here-->
+        <td width="740" valign="top">
+        	<div class="bank_account_listingRightPanel">
+                <div class="lh25">&nbsp;</div>
+                
+                <div class="clearBoth">
+                	<div class="floatLeft">
+                        <div class="floatLeft blueMainHeading">My payment</div>
+                        
+                    </div>
+                    <div class="floatRight"><a href="/mypayment/addabankaccount"><img src="/images/secure/add_a_bank_account_btn.png" title="Add a bank account" /> </a></div>
+                </div>
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="clearBoth content_text12">Add your bank account to receive your payments and withdrawals resulted from the transactions made on goo2o stores like;</div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth">
+                    	<div class="squareBullet">&nbsp;</div>
+                        <div class="floatLeft content_text12">Receive payments for the products sold from your store.</div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth">
+                    	<div class="squareBullet">&nbsp;</div>
+                        <div class="floatLeft content_text12">Withdraw amount during a refund for the products purchased from any of the goo2o stores.</div>
+                    </div>
+                </div>
+                <div class="lh35">&nbsp;</div>
+                <div class="clearBoth greyText12Lh20">Your account information details will be kept confidential by storing it in our secure servers.</div>
+                <div class="lh25">&nbsp;</div>
+                <div class="borderDotted">&nbsp;</div>
+                <div class="lh20">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="content_text14"><b>Manage your Bank Accounts</b></div>
+                    <div class="lh3">&nbsp;</div>
+                    <div class="clearBoth content_text12">All your bank accounts are listed below. You can remove or make an account primary for your transactions</div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="table_top_bar">
+                        	<div class="wid6">&nbsp;</div>
+                            <div class="wid200"><b>Name</b></div>
+                            <div class="wid255"><b>Bank Details</b></div>
+                            <div class="wid190"><b>Status</b></div>
+                        </div>
+                    <div class="solidBorderBot715"></div>
+                    <?php 
+			$i=0;	//echo '<pre>';print_r($accountListing);	
+			foreach($accountListing as $key) {   
+                            $mapper  = new Secure_Model_MypaymentMapper();
+                            $dropdown = $mapper->getStatusAndDropdown($key['status'],$key['is_primary'],$key['id']);
+                            ?>
+                            
+		<div class="clearBoth tableListBg ActiveAction" id="mainDiv_<?php echo $i;?>">
+		    <div class="wid10">&nbsp;</div>
+		    <div class="wid200 content_text13Lh28"><?php echo $key['fullname'];?><br/><span class="content_text11Lh12"><?php echo $key['pan_number'];?></span></div>
+					  
+		    <div class="wid255">
+		    	<div class="clearBoth content_text13Lh28"><?php echo $key['bankname'];  ?>, XX-<?php echo substr($key['account_number'],-4,4);?>,</div>
+		        <div class="content_text11Lh12"><?php echo $key['ifsc_code'];  ?></div>
+                        <div class="lh5">&nbsp;</div> 
+                        <div class="content_text11Lh12"><?php echo $key['branch_name'];  ?></div>
+		        <div class="lh5">&nbsp;</div>  
+		  	</div>
+		    <div class="wid190">
+                        <div class="clearBoth content_text13Lh28"<?php $su = strlen($dropdown['text']); if($su==18){echo 'id="checkit_'.$i.'" rel='.$i;}else{}?> <?php $subject=$dropdown['text'];?>><?php echo $dropdown['text'];?> </div>
+		        <div class="content_text11Lh12"><?php echo $dropdown['supporting'];?></div>
+		  	</div>
+                        <div class="actionContainer content_text13Lh28 Action_div" id="actionDiv_<?php echo $i;?>" style="display:none;">
+		    	<div class="wid52">
+		            <div class="floatLeft" style="cursor:pointer;">Action</div>
+		            <div class="floatRight"><a class="actionDownArrow"></a></div>
+		       	</div>
+                         <?php if($dropdown['dropdown']!=''){ ?>
+			<div class="actionDropDownList" id="ddl_<?php echo $i;?>">
+		    		 
+                            <?php echo $dropdown['dropdown'];?>
+                    
+			 </div>
+                            <?php }?>
+            </div>
+                                     
+<!--		    <div class="actionContainer content_text13Lh28 Action_div" id="actionDiv_<?php echo $i;?>" style="display:none;">
+		    	<div class="wid52">
+		            <div class="floatLeft" style="cursor:pointer;">Action</div>
+		            <div class="floatRight"><a class="actionDownArrow"></a></div>
+		       	</div>
+			<div class="actionDropDownList" id="ddl_<?php echo $i;?>">
+		    		 <ul>
+		     			<li style="cursor:pointer"><a>Edit</a></li>
+		     			<li style="cursor:pointer"><a>Delete</a></li>
+		     		 </ul>
+			 </div>
+            </div>-->
+       </div>
+        <div class="dashedTableBorder">&nbsp;</div>
+
+                     <?php $i++;}  ?>   
+ 	                                   
+                </div>
+                <div class="lh40">&nbsp;</div>
+              	
+               <div class="lh40">&nbsp;</div>
+                
+           </div>
+        
+        </td>
+        <!--RIGHT PANEL ends from here-->
+    </tr>
+</table>
+<div id="lightbox"></div>

@@ -1,0 +1,27 @@
+2012-05-04T14:23:15+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T14:24:14+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T14:24:23+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T14:50:07+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T14:50:27+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T17:04:41+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T17:05:28+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-04T17:19:58+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-05T14:23:48+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 448b2d99bf391e61e446f0ae49185391
+2012-05-07T16:15:52+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 448b2d99bf391e61e446f0ae49185391
+2012-05-10T19:10:16+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-05-18T10:36:32+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 448b2d99bf391e61e446f0ae49185391
+2012-05-18T15:55:06+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-06-22T15:33:17+05:30 DEBUG (7): Admin_Model_MallDetail.getMallDetailOfUser :: query = SELECT id,title,mallurl,template_admin FROM mall_detail WHERE apikey = '53f44024d22f8229c76692c8333687f9'
+2012-07-24T13:48:22+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:50:08+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:52:47+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:54:09+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:54:38+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:55:13+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T13:56:34+05:30 DEBUG (7): Admin_DesignController.init :: user api key = c74d97b01eae257e44aa9d5bade97baf
+2012-07-24T15:48:04+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 4b2c9c398471fd2d0976146d0e68a250
+2012-07-24T16:05:43+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 4b2c9c398471fd2d0976146d0e68a250
+2012-07-26T14:16:00+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-07-26T15:09:54+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9
+2012-08-18T16:49:20+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 4b2c9c398471fd2d0976146d0e68a250
+2012-08-23T17:25:50+05:30 DEBUG (7): Admin_DesignController.init :: user api key = 53f44024d22f8229c76692c8333687f9

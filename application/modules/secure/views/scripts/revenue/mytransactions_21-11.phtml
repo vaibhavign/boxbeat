@@ -1,0 +1,273 @@
+<script>
+	jQuery(document).ready(function(){
+		jQuery('#plus_icon').click(function(){
+				jQuery('.openContainer').slideToggle(500);
+				jQuery('#transactionContainer').addClass('tableSelectedBg');
+				jQuery('#plus_icon').hide();
+				jQuery('.minus_icon').show();
+				
+							   });
+	});
+</script>
+<?php  
+	echo "<pre>";
+	print_r($this->transactionListingArray);	
+
+
+?>
+
+
+<div class="lh42">&nbsp;</div>
+<div class="wid1000Auto">
+	<div class="mainTopHeading">Transaction Details</div>
+	<div class="lh3">&nbsp;</div>
+    <div class="mainTopSubHeading">Transaction subheading comes here</div>
+    <div class="lh42">&nbsp;</div>
+    <div class="clearBoth">
+    	<div class="floatLeft mainPageBlueHeading">Transactions</div>
+        <div class="floatRight">
+        	<div class="placeholdertxt">
+                <a title="Back to myaccount" href="javascript:history.go(-1)">Back to my account</a>
+            </div>
+            <div class="backarrow">&nbsp;</div>
+        </div>
+    </div>
+    <div class="lh3">&nbsp;</div>
+    <div class="solidMainBorder">&nbsp;</div>
+    <div class="lh25">&nbsp;</div>
+    
+    <div class="wid494 content_text12">
+    	<div class="content_text14">Available balance in your Goo2o account  is</div>
+    	<div class="lh5">&nbsp;</div>
+        <div class="blueTotalAmtBox"> Rs.1500.00</div>
+     </div>
+    <div class="summaryDetailContainer">
+    	<div class="content_text14">Available balance for Withdrawal is</div>
+    	<div class="lh5">&nbsp;</div>
+        <div class="blueTotalAmtBox"> Rs.1500.00</div>
+        <div class="floatLeft"><div class="lh30">&nbsp;</div><a href="#" class="hyperLinkBlue12" title="Request a withdrawal">Request a withdrawal</a></div>
+
+   </div>
+	<div class="lh40">&nbsp;</div>
+        <div class="floatLeft">
+            <div class="wid78 content_text14Lh22"><b>Show me:</b></div>
+            <div class="floatLeft"><select class="dropDown113"><option>All</option></select>&nbsp;&nbsp;</div>
+            <div class="floatLeft content_text14Lh22"><b>transactions on </b>&nbsp;&nbsp;</div>
+            <div class="floatLeft "><select class="dropDown139"><option> Easy Shop</option></select>&nbsp;</div>
+            <div class="floatLeft content_text14Lh22"><b> with </b>&nbsp;</div>
+            <div class="floatLeft"><select class="dropDown110"><option>On Hold</option></select>&nbsp;</div>
+            <div class="floatLeft content_text14Lh22">&nbsp;&nbsp;<b>status from</b>&nbsp;&nbsp;</div>
+            <div class="floatLeft calenderFieldBorder93">
+                <div class="floatLeft"><input type="text" value="Start" class="calenderInputField93" /></div>
+                <div class="calenderIcon"></div>
+            </div> 
+            <div class="floatLeft content_text14Lh22">&nbsp;&nbsp;<b>to</b>&nbsp;&nbsp;</div>
+            <div class="floatLeft calenderFieldBorder93">
+                <div class="floatLeft"><input type="text" value="Till Date" class="calenderInputField93" /></div>
+                <div class="calenderIcon"></div>
+            </div>
+            <div class="wid10">&nbsp;</div>
+            <div class="floatLeft"><input type="image" src="/images/secure/go_btn.png" title="Go"/></div>
+            <div class="wid15">&nbsp;</div>
+            <div class="floatLeft"><a href="#" title="Reset" class="hyperLinkBlue12Lh22">Reset</a></div>
+        </div>
+    <div class="lh10">&nbsp;</div>
+    <div class="clearBoth">
+    	<div class="clearBoth">
+        	<div class="table_top_bar">
+            	<div class="wid108">Transaction ID</div>
+                <div class="wid396">Description	</div>
+                <div class="wid108">Status</div>
+                <div class="wid144">Gross Amount (Rs.)</div>
+                <div class="wid108">Fees (Rs.)	</div>
+                <div class="wid110">Net Amount (Rs.)</div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Payment for Order Item ID OR_DB_123_12 put On Hold	because</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="clearBoth content_text13" id="transactionContainer">
+              	<div class="lh5">&nbsp;</div>
+            	<div class="wid24"><div class="plus_icon" id="plus_icon"></div><div class="minus_icon"></div></div>
+                <div class="floatLeft">
+                    <div class="clearBoth">
+                    <div class="wid108">
+                    <div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+                    </div>
+                    <div class="wid396">Amount transferred for Order ID OR_DB_001</div>
+                    <div class="wid108">Processing</div>
+                    <div class="wid133TAlignR">-1500.00</div>
+                    <div class="wid10">&nbsp;</div>
+                    <div class="wid90TAlignR">0.00</div>
+                    <div class="wid10">&nbsp;</div>
+                    <div class="wid113TAlignR">-1500.00</div>
+                    </div>
+                    <div class="openContainer">
+                        <div class="dashedTableBorder974">&nbsp;</div>
+                        <div class="clearBoth content_text13Lh27">
+                        <div class="wid108">IM12345-1  </div>
+                        <div class="wid396">Payment made to Easyshop 	</div>
+                        <div class="wid108">Processing</div>
+                        <div class="wid133TAlignR">-1500.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid90TAlignR">0.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid113TAlignR">-1500.00</div>
+                        </div>
+                        <div class="dashedTableBorder974">&nbsp;</div>
+                        <div class="clearBoth content_text13Lh27">
+                        <div class="wid108">IM12345-2  </div>
+                        <div class="wid396">Payment made to Hotspot </div>
+                        <div class="wid108">Processing</div>
+                        <div class="wid133TAlignR">-1500.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid90TAlignR">0.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid113TAlignR">-1500.00</div>
+                        </div>
+                        <div class="dashedTableBorder974">&nbsp;</div>
+                        <div class="clearBoth content_text13Lh27">
+                        <div class="wid108">IM12345-3</div>
+                        <div class="wid396">Payment made to Jingles</div>
+                        <div class="wid108">Processing</div>
+                        <div class="wid133TAlignR">-1500.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid90TAlignR">0.00</div>
+                        <div class="wid10">&nbsp;</div>
+                        <div class="wid113TAlignR">-1500.00</div>
+                        </div> 
+                    </div>
+              	</div>
+           	</div>
+            <div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			<div class="dashedTableBorder">&nbsp;</div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth content_text13">
+            	<div class="wid24"><div class="plus_icon"></div></div>
+                <div class="wid108">
+                	<div class="clearBoth">IM00107</div>
+                    <div class="clearBoth content_text11Lh25">May 1, 2011</div>
+              	</div>
+                <div class="wid396"><div class="clearBoth">Amount transferred for order id OR_DB_002</div>
+                	<div class="content_text13Lh23">a chargeback is raised</div>
+                </div>
+                <div class="wid108">On Hold</div>
+                <div class="wid133TAlignR">1500.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid90TAlignR">0.00</div>
+                <div class="wid10">&nbsp;</div>
+                <div class="wid113TAlignR">1500.00</div>
+            </div>
+			
+        </div>
+    </div>
+    <div class="lh55">&nbsp;</div>
+ 	<div class="clearBoth">
+    	<div class="floatRight">pagination code comes here</div>
+    </div>
+    <div class="lh55">&nbsp;</div>
+</div>

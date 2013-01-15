@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<user>
+<templates></templates>
+<blocks>
+<header>
+<logo>
+<image>logo.png</image>
+<type>image_logo</type>
+<text></text>
+<color></color>
+<font></font>
+<fontsize></fontsize>
+</logo><search>
+<text>Search</text>
+<image></image>
+<button>Default button</button>
+<button-type>default</button-type>
+</search><navigation>
+<type>Categories</type>
+<mode>Default</mode>
+<default-categories></default-categories>
+<more-categories></more-categories>
+<default-pages></default-pages>
+<more-pages></more-pages>
+</navigation>
+<goo2o>
+<position>left_align</position>
+<left-margin>0</left-margin>
+<block-selection>0</block-selection>
+<goo2o-image>1</goo2o-image>
+</goo2o>
+</header><body>
+<recently-viewed>
+<heading>Recently viewed</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<content/>
+<location>Undefined</location>
+<visibility>Hidden</visibility>
+<display-view>List view</display-view>
+</recently-viewed>
+<new-products><heading>New to the Store</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Main body block</location>
+<visibility>Visible</visibility>
+<display-view>Grid view</display-view>
+<content/>
+</new-products>
+<current-top-sellers><heading>Current Top Seller</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Right body block</location>
+<visibility>Visible</visibility>
+<display-view>Grid view</display-view>
+<content/>
+</current-top-sellers>
+<featured-products><heading>Featured products</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Main body block</location>
+<visibility>Visible</visibility>
+<display-view>List view</display-view>
+<content/>
+</featured-products>
+<compare-products><heading>Compare Products</heading>
+<order-by>Default logic</order-by>
+<display-count>All</display-count>
+<location>Left body block</location>
+<visibility>Visible</visibility>
+<display-view>List view</display-view>
+<content/>
+</compare-products>
+<popular-brands><heading>Popular Brands</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Left body block</location>
+<visibility>Visible</visibility>
+<display-view>List view</display-view>
+<content/>
+</popular-brands>
+<popular-categories><heading>Popular Categories</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Left body block</location>
+<visibility>Visible</visibility>
+<display-view>List view</display-view>
+<content/>
+</popular-categories>
+<popular-tags><heading>Popular Tags</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Left body block</location>
+<visibility>Hidden</visibility>
+<display-view>Cloud</display-view>
+<content/>
+<smallest_font_size>11</smallest_font_size>
+<largest_font_size>18</largest_font_size>
+<opacity>12</opacity>
+</popular-tags>
+<recommended-products><heading>Recommended Products</heading>
+<order-by>Default logic</order-by>
+<display-count>8</display-count>
+<location>Undefined</location>
+<visibility>Hidden</visibility>
+<display-view>List view</display-view>
+<content/>
+</recommended-products>
+<about-store><heading>About the Store</heading>
+<order-by>Default logic</order-by>
+<display-count>All</display-count>
+<location>Right body block</location>
+<visibility>Visible</visibility>
+<display-view>List view</display-view>
+<content>We at Abcd Store always strive to deliver the best to our customers. Your satisfaction is our guarantee. We deal in all types of shoes. All products we showcase are branded  available at the best buy rates.</content>
+</about-store>
+</body>
+<footer>
+<footer-about-store><heading>About the Store</heading>
+<content>"I've purchased a mobile from Abcd Store, it is a great product. Shipping was a bit delayed and for that they provided me a Rs.500.00 voucher…That's great!!!"</content>
+<visibility>Hidden</visibility>
+</footer-about-store>
+<safe-secure><heading>Safe secure</heading>
+<skin>Default</skin>
+<visibility>Visible</visibility>
+</safe-secure>
+<store-info><heading>Store information</heading>
+<content/>
+<visibility>Visible</visibility>
+</store-info>
+<powered-by><heading>Powered by Goo2o</heading>
+<content/>
+<visibility>Visible</visibility>
+</powered-by>
+<footer-categories><heading>Categories</heading>
+<content/>
+<visibility>Visible</visibility>
+</footer-categories>
+<footer-brands><heading>Brands</heading>
+<content/>
+<visibility>Visible</visibility>
+</footer-brands>
+<footer-tags><heading>Tags</heading>
+<content/>
+<visibility>Visible</visibility>
+</footer-tags>
+<payment-methods><heading>Payment accepted</heading>
+<skin>Default</skin>
+<visibility>Visible</visibility>
+</payment-methods>
+<footer-news-letter><heading>Footer News Letter</heading>
+<internal-title>its internal title</internal-title>
+<message>messge</message>
+<visibility>Visible</visibility>
+<send-confirmation>Yes</send-confirmation>
+</footer-news-letter>
+<follow-us><heading>Keep in Touch</heading>
+<display-style>Show service icon only</display-style>
+<skin>Default</skin>
+<visibility>Visible</visibility>
+</follow-us>
+<footer-copyright><content>© 2011-2012 Goo2o Demo Store.</content>
+<visibility>Visible</visibility>
+</footer-copyright>
+</footer>
+</blocks>
+<custom-blocks></custom-blocks>
+<banners></banners>
+</user>

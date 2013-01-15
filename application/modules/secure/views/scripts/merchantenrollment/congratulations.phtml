@@ -1,0 +1,78 @@
+<div id="wid1000Auto">
+	 <!--left panel starts from here-->
+    <div class="wid650">
+        <div class="content_textGreen18">Congratulations!!</div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20 wid640">Your merchant account is activated. You should now setup your store and start building catalogue and design your store setup</div>
+        <div class="lh12">&nbsp;</div>
+        <div class="clearBoth">
+        <?php if($this->user_info['payment_mode']!=3){?>
+            <div class="clearBoth">
+                <div class="wid145 content_text12Lh20">Transaction ID</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft content_text12Lh20"><b><?php echo $this->user_info['transaction_id'];?></b></div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+        <?php } ?>
+            <div class="clearBoth">
+                <div class="wid145 content_text12Lh20">Online Store Name</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft content_text12Lh20"><b> <?php echo $this->user_info['title'];?></b></div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid145 content_text12Lh20">Store URL:</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft content_text12Lh20"><b><?php echo $this->user_info['mallurl'];?></b></div>
+            </div>
+            <div class="lh80">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="floatLeft"><div class="lh57">&nbsp;</div><img src="/images/secure/merchantenrollment/setup_left_shadow.png" alt="left shadow" /></div>
+                <div class="floatLeft"><a href="<?php echo HTTP_SERVER;?>/admin/overview/#page" class="setup_your_store_btn" title="Setup your store" ></a></div>
+                <div class="floatLeft"><div class="lh55">&nbsp;</div><img src="/images/secure/merchantenrollment/setup_right_shadow.png" alt="right shadow" /></div>
+            </div>
+            <div class="lh70">&nbsp;</div>
+           <!-- <div class="content_text14"><b>Documents Checklist</b></div>
+            <div class="lh25">&nbsp;</div>-->
+            <!--<div class="wid650 content_text12Lh20">Before setting up your store please take a look about the necessary documents you have to submit to Goo2o Technologies for continuing as a registered store owner</div>
+            <div class="lh15">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="floatLeft content_text14">3 Passport photos</div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="floatLeft content_text14">Photocopy of PAN card</div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="floatLeft content_text14">Address Proof and photocopy of voter's Id</div>
+            </div>
+            <div class="lh80">&nbsp;</div>
+            <div class="floatLeft content_text12Lh20">Have questions or need assistance? One of our expert consultants will be happy to help you.<br /> 
+<a href="#" title="Click here" class="hyperLinkBlue12">Click here</a> for live chat or call <b>0124 2334139</b></div>-->
+     	</div>
+        
+    </div>
+     <!--left panel ends from here-->
+    <!--right panel starts from here-->
+    <div class="right_block">
+    	<div class="content_text14"><b>Business & Billing Information</b></div>
+        <div class="lh15">&nbsp;</div>
+        <div class="content_text12Lh20"><b>Business Name:</b> <?php echo $this->user_info['business_name'];?></div>        
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20"><b>Billing Name:</b> <?php echo $this->user_full_name; ?></div> 
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20"><b>Billing  Address:</b>  <?php echo $this->user_info['business_address'];?></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20"><b>State:</b> <?php echo $this->state_name; ?></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20"><b>City: </b> <?php echo $this->city_name; ?></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20"><b>Email:	</b> <?php echo $this->email_address; ?></div> 
+        <div class="lh80">&nbsp;</div>       
+    </div>
+    <!--right panel starts from here-->
+</div>

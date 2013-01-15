@@ -1,0 +1,125 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+
+	<head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+		  <?php echo $this->headMeta() ?>
+
+             <?php echo $this->headTitle() ?>
+
+			<?php echo $this->headLink(); ?>
+
+            <?php echo $this->javascriptHelper();?>
+
+			<?php //echo $this->headScript(); ?>
+
+             <?php echo $this->cssHelper();  ?>
+
+
+
+			</head>
+
+			<body>
+
+			
+
+		<div id="mainContainer">
+
+        <!---BOF Header---->
+
+        <div class="clearBoth">
+
+			<?php
+
+			if($this->controller!='o2ologin' && $this->controller!='acknowledgement')
+
+			{
+
+                     //  echo $this->controller;
+
+			if($_GET['tab']!=1 && ($this->controller=='login' || $this->controller=='registration' || $this->controller=='forgetpassword') || $this->controller=='forgetpasswordinstruction' || $this->controller=='forgetpasswordresendinstruction' || $this->controller=='resetpassword' || $this->controller=='resetpasswordinstruction' || $this->controller=='notmyaccount' || $this->controller=='youremailremoved' || $this->controller=='notyouraccount' || $this->controller=='accountrestricted' || $this->controller=='mailconfirmation' || $this->controller=='emailalreadyuse' || $this->controller=='checkyourmail' || $this->controller=='resendconfirmation' || $this->controller=='newmailconfirmation' || $this->controller=='notyournewaccount' || $this->controller=='yournewemailremoved')
+
+				require('header.phtml');
+
+               else if($this->controller=='o2ologin')
+
+				require('header.phtml');
+
+			else if($this->controller=='accountsetting' || $this->controller=='mypayment')
+
+				require('settingheader.phtml');
+
+			else if($this->controller=='merchantenrollment')
+
+				require('enrollmentheader.phtml');
+
+			else if($this->controller=='demo')
+
+				require('demoenrollmentheader.phtml');
+
+			else
+
+				require('header_login.phtml');
+
+				
+
+				}
+
+			 ?>
+
+        </div>
+
+        <!---EOF Header---->
+
+        <!---BOF BODY---->	
+
+		<?php   echo $this->layout()->content ?>
+
+		<!---EOF BODY---->
+<?php if($this->controller!='o2ologin')
+			{?>
+        <div class="mainGapFooter">&nbsp;</div>
+		<?php } ?>
+
+        <!---BOF Footer---->
+
+        <div class="clearBoth">
+
+		
+
+			<?php
+
+			if($this->controller!='o2ologin')
+
+			{ 
+
+                  
+
+			  if($this->controller=='selectshippingaddress' || $this->controller=='checkoutaddress' || $this->controller=='checkout' || $this->controller=='review' || $this->controller=='success' || $this->controller=='welldone' || ($this->controller=='login' && $_GET['tab']==1) ||  ($this->controller=='registration' && $_GET['tab']==1))
+			  {
+			  require('footer.phtml');
+			  }
+
+			 
+
+			 } ?>
+
+        </div>
+
+        <!---EOF Footer---->
+
+    </div>
+
+			 </body>
+
+			 </html>
+
+
+

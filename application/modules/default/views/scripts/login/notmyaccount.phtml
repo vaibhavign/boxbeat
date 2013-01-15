@@ -1,0 +1,52 @@
+<div id="wid1000Auto">
+    <!--<div id="header-wrapper">
+		<div id="logo"><a href="#" title="Goo2o"><img src="images/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header-rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+    </div>-->
+    <div class="clearBoth">
+		<div class="blueMainHeadingContainer">
+    		<div class="blueMainHeading">New email address required for your Goo2o ID</div>
+       	</div>
+        <div class="lh35">&nbsp;</div>
+        <div class="wid734Auto content-text14Lh22">Goo2o has removed the email address <b><?php echo $this->useremailaddress;?></b> from your Goo2o ID <b><?php echo $this->userfullname;?></b>, by request of the email owner. Before continuing please enter a new address where you can be reached.</div>
+        <div class="lh50">&nbsp;</div>
+      <form name="notmyaccountform" action="/login/notmyaccount/passcode/<?=$this->vcodes;?>" method="post" id="notmyaccountform">
+        <div class="wid382Auto">
+                 <input type="hidden" name="formaction" value="notmyaccounts">
+                 <input type="hidden" name="vcode" value="<?php echo $this->vcodes; ?>">
+                 <input type="hidden" name="usernameid" value="<?php echo $this->userid; ?>">
+                 <input type="hidden" name="user_full_name" value="<?php echo $this->userfullname; ?>">
+        	<div class="floatLeft"><input type="text"  id="user_email_address" class="input-textField274"  value="<?php echo $this->useremailaddresses; ?>" name="changeduseremail"/></div>
+                <div class="floatRight">
+                <!--<input type="image" src="images/continue_btn_not_my_account.gif" class="cursor" title="Continue" />-->
+                <input type="submit" class="continueaccount" title="Continue" name="continueemail" value=""/>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                 <div class="floatLeft" id="show_hide_user_email_address" style="display:none">
+                            	
+                                <div id="error_user_email_address" style="color:rgb(255,0,0)"></div>
+                                
+                </div>
+             
+        </div>
+          <?php if($this->sameemailExist){?>
+                <div class="lh5">&nbsp;</div>
+             <div class="clearBoth" align="center" id="show_email_address" style="display:block">
+                            	
+                                <div id="error_address" style="color:rgb(255,0,0)">Email not permitted to change back to <?php echo $this->useremailaddress;?>. Please enter another email address.</div>
+                               
+            </div>
+              <?php }
+              else if($this->emailExist){?>
+             <div class="clearBoth" align="center" id="show_email_address" style="display:block">
+                            	
+                                <div id="error_address" style="color:rgb(255,0,0)">Email address you entered is already exists in our system. Please enter a new email address.</div>
+                               
+            </div>
+              <?php } ?>
+
+        </form>
+        <div class="lh160">&nbsp;</div>
+        <div class="not_my_account_msg_box">If &quot;old email address&quot; belongs to you and was removed from your Goo2o ID, please visit our <a href="#" title="Help">Help</a> re-associating this email with your Goo2o ID</div>
+  	</div>
+</div>

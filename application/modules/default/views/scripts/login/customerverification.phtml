@@ -1,0 +1,70 @@
+<div class="wid1000Auto">
+    <!--<div class="header_wrapper">
+		<div class="logo"><a href="#" title="Goo2o"><img src="images/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header_rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+    </div>-->
+	<div class="floatLeft">
+		<div class="blueMainHeading">Hi <?php echo $this->userfullname;?>,</div>
+		<div class="lh30">&nbsp;</div>
+		<div class="content_text14">Congrats!!! You’re now a verified customer of <a href="<?php echo $this->mallurl;?>" class="hyperLinkBlue14" title="<?php echo $this->malltitle;?>"><?php echo $this->malltitle;?></a>. You’ve shared following info with the store…</div>
+		<div class="lh50">&nbsp;</div>
+		<div class="wid105">&nbsp;</div>
+		<div class="floatLeft">
+			<div class="floatLeft">
+				<div class="clearBoth">
+					<!--<div class="imageContainer40"><img src="/images/admin/customers/invite_cust_img1.png" alt="invite_image1"/></div>-->
+                                         <?php 
+                    //echo $this->userimage;exit
+                     $this->userName = new Zend_Session_Namespace('USER');
+                    if (file_exists('images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage))
+                     {
+                        //echo 'hiiiiii';exit;
+                    $class=new General();
+                   
+                    $userid=$this->userName->userId;
+                    //$height=36;
+                    //$width=30;
+                        //$newimageurl=$class->getuserimage($userid,$height,$width);
+                        //echo $newimageurl;exit;        
+                        ?>
+                         <div class="imageContainer40"><img src="<?php echo HTTP_SECURE.'/images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage;?>" height="36" width="30" alt="upload img" /></div>
+                        <?php } else { ?>
+                        <div class="imageContainer40"><img src="<?php echo HTTP_SECURE.'/images/secure/user_image/no_image.jpg';?>" height="36" width="30" alt="upload img" /></div>
+                        <?php } ?>
+                                    
+					<div class="wid842">
+						<div class="content_text13"><b>Access my basic information</b></div>
+						<div class="lh5">&nbsp;</div>
+						<div class="content_textGrey12">Your basic profile information is now shared with <a href="<?php echo $this->mallurl;?>" title="<?php echo $this->malltitle;?>" class="hyperLinkBlue12None"><?php echo $this->malltitle;?></a> like name, profile image, contact info and address.</div>
+					</div>
+				</div>
+				<div class="lh25">&nbsp;</div>
+				<div class="clearBoth">
+					<div class="imageContainer40"><img src="/images/admin/customers/invite_cust_img2.png" alt="invite_image1"/></div>
+					<div class="wid842">
+						<div class="content_text13"><b>Send me email</b></div>
+						<div class="lh5">&nbsp;</div>
+						<div class="content_textGrey12"><a href="<?php echo $this->mallurl;?>" title="<?php echo $this->malltitle;?>" class="hyperLinkBlue12None"><?php echo $this->malltitle;?></a> may send you mail directly at <b><?php echo $useremail;?></b>.</div>
+					</div>
+				</div>
+				<div class="lh25">&nbsp;</div>
+				<div class="clearBoth">
+					<div class="imageContainer40"><img src="/images/admin/customers/invite_cust_img3.png" alt="invite_image1"/></div>
+					<div class="wid842">
+						<div class="content_text13"><b>Access my profile information</b></div>
+						<div class="lh5">&nbsp;</div>
+						<div class="content_textGrey12">You’ll receive alerts whenever <a href="<?php echo $this->mallurl;?>" title="<?php echo $this->malltitle;?>" class="hyperLinkBlue12None"><?php echo $this->malltitle;?></a> create a discount coupon or add a product and also receive promotional emails and newsletters from this store.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lh85">&nbsp;</div>
+		<div class="wid315">
+			<div class="floatLeft">
+                            <a href="<?php echo HTTP_SERVER.'/myaccount'; ?>"><img src="/images/admin/customers/proceed_your_acc_btn.png" class="cursor" title="Proceed to your account"></a>
+                            <!--<input type="image" src="/images/admin/customers/proceed_your_acc_btn.png" title="Proceed to your account" />-->
+                        </div>
+			<div class="floatRight"><a href="<?php echo $this->mallurl;?>" class="hyperLinkBlue13Lh28None" title="Visit <?php echo $this->malltitle;?>">Visit <?php echo $this->malltitle;?></a></div>
+		</div>
+	</div>
+</div>

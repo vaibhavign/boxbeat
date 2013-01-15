@@ -1,0 +1,488 @@
+<?php
+//echo 'hi';
+//echo "<pre>";
+//print_r($_SESSION);exit;
+///count($this->checkoutdetail);
+$billing = $this->billing_address;
+$total_pamt = $this->total_pamt;
+$payment_method = $this->payment_method;
+$paymentmode_id = $this->paymentmode_id;
+/* echo "<pre>";
+  print_r($payment_method);exit; */
+//echo "<pre>";
+//print_r($this->errormaeesge);
+
+if (!empty($this->errormaeesge)) {
+?>
+    <div class="wid1000mAuto">
+
+        <div class="cart_msg">
+            <div class="cart_msg_container">
+                <div class="cartmsg_icon"></div>
+                <div class="floatLeft">
+                    <div class="important_msg">Important messages</div>
+                <?php foreach ($this->errormaeesge as $key => $val) {
+ ?>
+                    <div class="lh12"></div>
+                    <div class="plz_note"><?=$val ?></div>
+<?php } ?>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="lh40">&nbsp;</div>
+<?php } ?>
+        <div class="checkout_mainwidth">
+            <!-- Body Block Start From here-->
+            <div class="checkout_registration_width"> 
+               <!-- <div class="lh35">&nbsp;</div>-->
+                <div class="checkout_heading">Your Order Summary</div>
+                <div class="lh10">&nbsp;</div>
+                <div class="floatLeft edit_saddress_example">To Change quantity or shipping address you can click on edit order.</div>
+                <div class="lh35">&nbsp;</div>
+                <form id="checkout" action="/cart/updatecartcheckout" method="post">
+                    <div class="checkout_registration_width"> 
+                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                            <tr>
+                                <td width="10" class="review_heading_bgcolor"></td>
+                                <td width="345" class="review_content_heading review_heading_bgcolor">Items</td>
+                                <td width="15" class="review_heading_bgcolor"></td>
+                                <td width="100" class="review_content_heading review_heading_bgcolor">Quantity</td>
+                                <td width="10" class="review_heading_bgcolor"></td>
+                                <td width="270" class="review_content_heading review_heading_bgcolor">Shipping Address</td>
+                                <td width="10" class="review_heading_bgcolor"></td>
+                                <td width="240" class="review_content_heading review_heading_bgcolor">Pricing</td>
+                            </tr>
+                            <tr>
+                                <td height="15" colspan="8"></td>
+                            </tr>
+                    <?php
+                    if (!empty($this->checkoutdetail)) {
+                        $records = $this->checkoutdetail;
+                        /* echo "<pre>";
+                          print_r($records);exit; */ ?>
+                    <?php
+                        //echo "<pre>"; print_r($records);
+                        $k = '1';
+                        foreach ($records as $key => $productdetail) {
+                    ?>
+                            <tr>
+                                <td height="15" colspan="8"></td>
+                            </tr>
+                            <tr>
+                                <td width="10"></td>
+                                <td width="345" valign="top">
+
+                                    <div class="review_content_wid345">
+                                        <?php
+                                        $productname=$productdetail->product_name;
+                                        
+                                        if(strlen($productdetail->variations[$productdetail->product_id]['allvariation']) > 0)
+                                        $productname=$productname.' - '.$productdetail->variations[$productdetail->product_id]['allvariation'];
+                                        //echo $productname
+                                        if(strlen($productname)>130)
+                                        $productname=substr($productname,0,130).'...';
+                                        ?>
+                                        <div class="review_content_heading_width review_content"><strong><?php echo  $productname ?>
+                    </strong></div>
+					<?php if($productdetail->variations[$productdetail->product_id]['allvariation']){?>
+                                        <!--<div class="lh10">&nbsp;</div>
+                                        <div class="floatLeft review_content_variation">Variation : <strong><?= $productdetail->variations[$productdetail->product_id]['allvariation'];
+                    ?></strong></div> -->
+					<?php } ?>
+                                        <div class="lh5">&nbsp;</div>
+                                        <div class="floatLeft review_content_variation">Condition : <strong><?= $productdetail->variations[$productdetail->product_id]['condition'];
+                    ?></strong></div>
+                                        <div class="lh5">&nbsp;</div>
+                                        <div class="floatLeft review_content_variation">Product Id : <strong><?= $productdetail->product_id;
+                    ?></strong></div>
+                                        <div class="lh10">&nbsp;</div>
+                                       <!-- <div class="floatLeft"><input type="image" src="/images/secure/payment_update_btn.png" alt="Update" title="Update" name="update" /></div>-->
+                                    </div>
+                                </td>
+                                <td width="15"></td>
+                                <td width="100" class="review_content" valign="top">
+                                    <div class="floatLeft">
+                                        <div class="floatLeft"><?php echo $productdetail->product_qty; ?>
+                                       <!--     <select class="selectbox48 qtybox" id="qty_<?=$productdetail->product_id;
+                    ?>_<?php echo $productdetail->store_api_key[0]['apikey'] ?>" rel="<?php echo $productdetail->variations[$productdetail->product_id]['srp']; ?>" name="qty_<?php echo $key; ?>">
+<?php for ($i = 1; $i <= $productdetail->product_maxqty; $i++) { ?>
+                                        <option value="<?php echo $i; ?>" <?php if ($i == $productdetail->product_qty) {
+                                    //echo 'selected';
+                                } ?>>--><!--</option>
+<?php } ?>
+                                    </select>-->
+                                </div>
+                                <div class="lh5">&nbsp;</div>
+                                <!--<div class="floatLeft"><a class="forgot_link" href="/cart/delete/id/<?=$productdetail->product_id; ?>/key/<?php echo $productdetail->store_api_key[0]['apikey'] ?>" title="Remove">Remove</a></div>-->
+                            </div>
+                        </td>
+                        <td width="10"></td>
+                        <td width="270" valign="top">
+                            <div class="review_content_wid270">
+                                <div class="review_content">
+                                    <div class="floatLeft shipAddWrap">
+                                           <!-- <?php //echo "<pre>"; print_r($this->shippingaddresses); ?>
+                                        <select class="selectbox248" name="addresss_<?php echo $key; ?>">
+
+                                            <option value="0">select</option>
+<?php
+                                            $address = $this->shippingaddresses;
+											
+
+                                            foreach ($address as $key => $add) {
+ ?><option value="<?php echo $add['address_book_id']; ?>" <?php if ($add['address_book_id'] == $productdetail->address_book_id) {
+                                                    echo 'selected';
+                                                } ?>>	<?php echo $add['fullname']; ?> <?php echo $add['address']; ?>,<?php echo $add['cityname']; ?></option>
+                                        <?php } ?>
+                                            </select>-->
+											<?php
+											$address = $this->cart_model->getShippingAddressesSecure($productdetail->address_book_id); 
+												foreach($address as $key=>$val)
+												{
+													echo ucwords(strtolower($val['fullname'])), ", ", stripslashes($val['address']), ", <br />", $val['cityname'], ", ", $val['state_name'];
+												}
+											?>
+                                        </div>
+                                        <div><?php
+                                            if (($productdetail->shipcost) == '0') {
+                                                //echo $productdetail->shipcost;
+                                            } else if (($productdetail->shipcost) == 'error') {
+                                                echo "Sorry we do not deliver materials at this location, please select other location.";
+                                            }
+                                        ?></div>
+                                    </div>
+                                    <div class="lh35">&nbsp;</div>
+                                    <div class="floatLeft review_content_variation"> Bought from : <strong><?=$productdetail->store_api_key[0]['title'];
+                                        ?></strong></div>
+                                </div>
+                            </td>
+                            <td width="10"></td>
+                            <td width="240" valign="top">
+								<table class="marRight10" cellpadding="0" cellspacing="0" border="0" align="right">
+									<tr>
+										<td class="review_content_srp_width">SRP:</td>
+										<td class="review_content_srp_price" id="divTotal_<?=$productdetail->product_id; ?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">Rs.<?php echo number_format(($productdetail->variations[$productdetail->product_id]['srp']*$productdetail->product_qty), 2, '.', ''); ?></td>										
+									</tr>
+									<tr>
+										<td class="review_content_srp_width">Shipping:</td>
+										<td class="review_content_srp_price">Rs.
+											<?php
+												if (($productdetail->shipcost) == 'error') {
+													echo number_format((0), 2, '.', '');
+												} else {
+													$scost = number_format(($productdetail->shipcost), 2, '.', '');
+													$pqty = $productdetail->product_qty;
+													$nscost = $pqty * $scost;
+													echo number_format(($nscost), 2, '.', '');
+												}
+                                        	?>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2" class="review_content_pricing_underline">&nbsp;</td>
+									</tr>
+									<tr>
+                                        <td class="review_content_srp_width"><strong>Item Total</strong></td>
+                                        <td class="review_content_srp_price"><strong>Rs.<?php echo $productdetail->purchase_amt; ?></strong></td>
+                                    </tr>
+								</table>
+                                <!--<div class="review_content_wid240">
+                                    <div class="floatLeft">
+                                        <div class="floatLeft review_content_srp_width">SRP:</div>
+                                        <div class="floatLeft review_content_srp_price" id="divTotal_<?=$productdetail->product_id; ?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">Rs.<?php echo number_format(($productdetail->variations[$productdetail->product_id]['srp']), 2, '.', ''); ?></div>
+                                    </div>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="floatLeft">
+                                        <div class="floatLeft review_content_srp_width">Shipping:</div>
+                                        <div class="floatLeft review_content_srp_price">Rs.<?php
+                                            if (($productdetail->shipcost) == 'error') {
+                                                echo number_format((0), 2, '.', '');
+                                            } else {
+                                                $scost = number_format(($productdetail->shipcost), 2, '.', '');
+                                                $pqty = $productdetail->product_qty;
+                                                $nscost = $pqty * $scost;
+                                                echo number_format(($nscost), 2, '.', '');
+                                            }
+                                        ?></div>
+                                    </div>
+                                    <div class="review_content_pricing_underline"></div>
+                                    <div class="floatLeft">
+                                        <div class="floatLeft review_content_srp_width"><strong>Item Total</strong></div>
+                                        <div class="floatLeft review_content_srp_price"><strong>Rs.<?php echo $productdetail->purchase_amt; ?></strong></div>
+                                    </div>
+
+
+                                </div>-->
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="15" colspan="8"></td>
+                        </tr>
+                        <?php if($k < count($records)) { ?>
+                        <tr>
+                            <td valign="top" class="review_content_underline" colspan="8">&nbsp;</td>
+                        </tr>
+                        <?php } ?>
+<?php $k++;
+                                        } ?>
+<?php } ?>
+
+                                    <tr>
+                                        <td height="15" colspan="8"></td>
+                                    </tr>
+                                </table>
+                                <div class="lh35">&nbsp;</div>
+                                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                                    <tr>
+                                        <td width="10"></td>
+                                        <td width="455"></td>
+                                        <td width="15"></td>
+                                        <td width="255"></td>
+                                        <td width="25"></td>
+                                        <td width="240" valign="top">
+											<table class="marRight10" cellpadding="0" cellspacing="0" border="0" align="right">
+												<tr>
+													<td class="select_saddress_heading payment_content_wid110">Sum of Item Total</td>
+													<td class="payment_content_semicolon">:</td>
+													<td class="floatLeft select_saddress_heading"><strong>Rs.<?php echo $total_pamt; ?></strong></td>
+												</tr>
+											</table>
+                                        </td>
+                                    </tr>
+									  <td height="10" colspan="6"></td>
+				<?php 
+			$disamount=0;
+if(!empty($this->coupons)) {  
+				foreach($this->coupons as $key=>$val)
+				{   foreach($val as $k=>$v)
+					{ foreach($v as $lk=>$lv){ 
+?>
+					<tr>
+                                        <td width="10"></td>
+                                        <td width="455">
+                                            <div class="payment_content_wid455">
+                                                <div class="payment_content_wid125">Discount coupon</div>
+                                                <div class="floatLeft payment_content_gcid"><b><?php echo $lv['ccode']?></b>&nbsp;&nbsp;<a href="/cart/removecoupon/t/d/code/<?php echo $lv['ccode']?>/key/<?php echo $lk?>" class="forgot_link" title="Remove">Remove</a></div>
+                                            </div>
+                                        </td>
+                                        <td width="15"></td>
+                                        <td width="255"><div class="floatLeft review_content_variation"> Offered from : <strong><?php echo $lv['fromstore']?></strong></div></td>
+                                        <td width="25"></td>
+                                        <td width="240" valign="top">
+                                            <table cellpadding="0" cellspacing="0" border="0" align="right" class="marRight10">
+												<tr>
+													<td class="floatLeft payment_content_gcid"><?php $disamount+=$lv['less'];?>- Rs.<?php echo $lv['less']?></td>
+												</tr>
+											</table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="10" colspan="6"></td>
+                                    </tr>
+				<?php  } } } } ?>
+				<?php if(!empty($this->gccoupons)){
+					foreach($this->gccoupons as $keygc=>$valgc){  $disamountgc=0;?>
+<tr>
+                                        <td width="10"></td>
+                                        <td width="455">
+                                            <div class="payment_content_wid455">
+                                                <div class="payment_content_wid125">Gift certificate</div>
+                                                <div class="floatLeft payment_content_gcid"><b><?php echo $valgc['ccode']?></b>&nbsp;&nbsp;<a href="/cart/removecoupon/t/g/code/<?php echo $valgc['ccode']?>" class="forgot_link" title="Remove">Remove</a></div>
+                                            </div>
+                                        </td>
+                                        <td width="15"></td>
+                                        <td width="255"><div class="floatLeft review_content_variation"> Offered from : <strong><?php echo $valgc['fromstore']?></strong></div></td>
+                                        <td width="25"></td>
+                                        <td width="240" valign="top">
+                                            <table cellpadding="0" cellspacing="0" border="0" align="right" class="marRight10">
+												<tr>
+													<td class="floatLeft payment_content_gcid"><?php $disamountgc+=$valgc['less'];?>- Rs.<?php echo $valgc['less']?></td>
+												</tr>
+											</table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="10" colspan="6"></td>
+                                    </tr>
+				<?php } }?>
+                                  
+                                    <tr>
+                                        <td width="240" valign="top" colspan="6" class="payment_granstotal_bg">
+                                            <table cellpadding="0" cellspacing="0" border="0" align="right" class="marRight10">
+												<tr>
+													<td class="payment_content_wid110">Grand Total</td>
+													<td class="payment_content_semicolon">:</td>
+													<td class="payment_content_gcid"><strong>Rs.<?php echo number_format(($total_pamt-($disamount+$disamountgc)), 2, '.', ''); ?></strong></td>
+												</tr>
+											</table>
+                                        </td>
+                                    </tr>
+									 <tr>
+                	<td height="25" colspan="6"></td>
+                </tr>
+			
+									<tr>
+					<td valign="top" align="center" colspan="6"><img  src="/images/secure/edit_order_btn.gif" alt="Edit Order"  title="Edit Order" style="cursor:pointer;" onclick="window.location='/cart/checkoutaddress'" /></td>
+				</tr>
+                                </table>
+                                <div class="lh35">&nbsp;</div>
+                                <div class="payment_cutter_container"><div class="payment_cutter"></div></div>
+						<?php  if($this->checkbox==1)
+									{
+										$checked='checked="checked"';
+										$display="style='display:block;'";	
+									}
+								else
+								{
+									$checked='';
+									$display="style='display:none;'";		
+								}	
+								?>	
+								
+								
+								<div class="discount_gc_bg" id="dap">
+                                    <div class="innerblock1">
+                                        <div class="floatLeft select_saddress_heading"><strong>Do you have any discount coupon or gift certificate?</strong></div>
+                                        <div class="lh2">&nbsp;</div>
+                                        <div class="floatLeft">
+                                            <div class="floatLeft" style="margin-top:3px;"><input type="checkbox" name="couponcheck" id="couponcheck" value="1" <?php echo $checked; ?> onchange="((this.checked)?document.getElementById('discount_block').style.display='block':document.getElementById('discount_block').style.display='none')" /></div>
+                                            <div class="floatLeft checkout_signin_content" ><label for="couponcheck">Yes, I have a coupon and/or gift certificate to redeem.</label></div>
+                                        </div>
+                                        <div class="lh30">&nbsp;</div>
+                                        <div class="discount_block" id="discount_block" <?php echo $display; ?>>
+                                            <div class="innerblock">
+                                                <div class="floatLeft">
+                                                    <div class="lh7">&nbsp;</div>
+                                                    <div class="floatLeft payment_content_gcid">Enter a discount coupon code:</div>
+                                                    <div class="lh7">&nbsp;</div>
+                                                    <div class="discount_blockbg"><input type="text" name="dc_code" id="dc_code" class="inputbox" AUTOCOMPLETE=OFF /></div>
+                                                    <div class="floatLeft"><input type="image" src="/images/secure/apply_btn.png" alt="Apply" title="Apply" name="applydc" id="applydc" /></div>
+                                                </div>
+                                                <div class="discount_block_sep">
+                                                    <div class="border1"></div>
+                                                </div>
+                                                <div class="floatLeft">
+                                                    <div class="lh7">&nbsp;</div>
+                                                    <div class="floatLeft payment_content_gcid">Enter a gift certificate code:</div>
+                                                    <div class="lh7">&nbsp;</div>
+                                                    <div class="discount_blockbg"><input type="text" class="inputbox" id="gc_code" name="gc_code" AUTOCOMPLETE=OFF /></div>
+                                                    <div class="floatLeft"><input type="image" src="/images/secure/apply_btn.png" alt="Apply" title="Apply" name="applygc" id="applygc"/></div>
+                                                </div>
+                                                <div class="lh20">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <div class="lh15">&nbsp;</div>
+					<?php  if(!empty($this->dmessages)){
+						foreach($this->dmessages as $k=>$val){ 
+					if($k=='error')	
+					$class='floatLeft gc_invalidmessage';
+					else
+					$class='gc_message';
+					foreach($val as $k=>$v){
+					?>
+						
+						<div class="<?php echo $class?>"><?php echo $v?></div>
+						<div class="lh15">&nbsp;</div>
+                                       
+						
+					<?php }}} ?>
+                                        
+                                    </div>
+
+                                </div>
+                                <div class="lh70">&nbsp;</div>
+                                <div class="floatLeft">
+                                    <div class="floatLeft">
+                                        <div class="floatLeft checkout_heading">Choose the address to receive your bill</div>
+                                        <div class="lh10">&nbsp;</div>
+                                        <div class="floatLeft edit_saddress_example">Is the address you'd like to use displayed below or you can create new address</div>
+                                    </div>
+                                    <div class="lh20">&nbsp;</div>
+                                    <div class="floatLeft">
+                                        <div class="payment_billing_address">Billing Address</div>
+                                        <div class="payment_billing_wid13 payment_billing_address">:</div>
+                                        <div class="floatLeft">
+                                            <div class="floatLeft">
+                                                <select class="selectbox248_BText" name="billing_<?php echo $key; ?>">
+                                   <!-- <option value="0">select</option>-->
+                            <?php
+                                    $address = $this->shippingaddresses;
+                                    foreach ($address as $key => $add) {
+                            ?><option value="<?php echo $add['address_book_id']; ?>" <?php if ($add['address_book_id'] == $billing) {
+                                            echo 'selected';
+                                        } ?>><?php echo stripslashes($add['address']); ?>,<?php echo $add['cityname']; ?></option>
+                            <?php } ?>
+                                        </select>
+                                    </div>
+<?php
+									$billing= $address[0]['address_book_id'];
+                                    if (isset($billing)) {
+?>
+                                        <div class="lh10">&nbsp;</div>
+                                        <div class="floatLeft"><a href="/cart/selectshippingaddress/id/<?php echo $billing; ?>#addressform" class="forgot_link" title="Edit selected address">Edit selected address</a></div>
+<?php
+                                    }
+?>
+
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="floatLeft"><a href="/cart/selectshippingaddress#addressform" class="forgot_link" title="Create new address">Create new address</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lh40">&nbsp;</div>
+                        <div class="floatLeft">
+                            <div class="floatLeft checkout_heading">How would you like to pay?</div>
+                            <div class="lh20">&nbsp;</div>
+<?php if (count($payment_method) > 0) { ?>
+<?php $i = 0;
+                                        foreach ($payment_method as $key => $val) {
+
+						
+                                            $i++; 
+//if($val['pay_mod_id']==3)
+//continue;
+if($val['pay_mod_id']==3 && $this->currentUserId!=865)
+continue;
+
+if($_GET['test']==1)
+{
+
+echo $val['pay_mod_id'];
+echo "<pre>";
+print_r($val);
+}
+
+
+if($val['pay_mode_id']=='3' )
+							continue;
+?>
+                                            <div class="payment_billing_wid652">
+                                                <div class="lh7">&nbsp;</div>
+                                                <div class="floatLeft">
+                                                    <div class="floatLeft"><input type="radio" name="payment" id="payment<?=$i?>" <?php if ($val['pay_mod_id'] == $paymentmode_id) {
+ ?> checked="checked" <?php } ?> value="payment_<?php echo $val['pay_mod_id']; ?>_<?php echo $val['short_desc']; ?>" /></div>
+                                                    <div class="floatLeft">
+                                                        <div class="floatLeft payment_pay_content"><label for="payment<?=$i?>"><?php echo $val['long_desc']; ?></label></div>
+                                                        <div class="lh5">&nbsp;</div>
+                                                        <div class="floatLeft payment_pay_example"><?php echo $val['desc']; ?></div>
+                                                    </div>
+                                                </div>
+                                               <!-- <div class="floatRight"><img src="/images/secure/<?php echo $val['pay_mod_image']; ?>" alt="<?php echo $val['pay_mod_desc']; ?>" title="<?php echo $val['pay_mod_desc']; ?>" /></div>-->
+                                            </div>
+<?php if ($i != count($payment_method)) { ?>
+                                                <div class="payment_billing_underline"></div>
+<?php } ?>
+<?php }
+                                    } else { ?>
+                    				contact to your site administrator.
+<?php } ?>
+                </div>
+                <div class="lh30">&nbsp;</div>
+                <div align="center"><input type="image" src="/images/secure/payment_continue_btn.png" alt="Continue" title="Continue" name="continue" /></div>
+            </div>
+        </form>
+    </div>
+    <!-- Body Block Ends here-->
+</div>

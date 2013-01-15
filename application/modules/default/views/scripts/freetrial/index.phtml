@@ -1,0 +1,351 @@
+<script>
+	$(document).ready(function() {
+		jQuery("#ururl").focus(function() {										
+			var ururltxt = jQuery("#ururl").attr('value');
+			jQuery("#ururlBG").addClass("ururlBGHover");
+			jQuery("#ururlBG").removeClass("ururlBG");
+			if(ururltxt=='Site URL'){
+				jQuery("#ururl").attr('value','');
+			}
+		});
+		jQuery("#ururl").blur(function() {
+			var ururltxt = jQuery("#ururl").attr('value');
+			jQuery("#ururlBG").addClass("ururlBG");
+			jQuery("#ururlBG").removeClass("ururlBGHover");
+			//alert(ururltxt);
+			if(ururltxt==''){
+				jQuery("#ururl").attr('value','Site URL');
+			}			
+		});
+		jQuery("#urname").focus(function() {										
+			var urnametxt = jQuery("#urname").attr('value');
+			//alert(urnametxt);
+			jQuery("#urnameBG").addClass("urnameBGHover");
+			jQuery("#urnameBG").removeClass("urnameBG");
+			//if(urnametxt=='Your name'){
+			//	jQuery("#urname").attr('value','');
+			//}
+		});
+		jQuery("#urname").blur(function() {
+			var urnametxt = jQuery("#urname").attr('value');
+			jQuery("#urnameBG").addClass("urnameBG");
+			jQuery("#urnameBG").removeClass("urnameBGHover");
+			//alert(urnametxt);
+			//if(urnametxt==''){
+			//	jQuery("#urname").attr('value','Your name');
+			//}			
+		});
+		jQuery("#uremail").focus(function() {										
+			var uremailtxt = jQuery("#uremail").attr('value');
+			//alert(uremailtxt);
+			jQuery("#uremailBG").addClass("uremailBGHover");
+			jQuery("#uremailBG").removeClass("uremailBG");
+			//if(uremailtxt=='Your@email.com'){
+			//	jQuery("#uremail").attr('value','');
+			//}
+		});
+		jQuery("#uremail").blur(function() {
+			var uremailtxt = jQuery("#uremail").attr('value');
+			jQuery("#uremailBG").addClass("uremailBG");
+			jQuery("#uremailBG").removeClass("uremailBGHover");
+			//alert(uremailtxt);
+			//if(uremailtxt==''){
+			//	jQuery("#uremail").attr('value','Your@email.com');
+			//}			
+		});
+		jQuery("#password").focus(function() {			
+			jQuery("#passwordBG").addClass("passwordBGHover");
+			jQuery("#passwordBG").removeClass("passwordBG");
+			jQuery("#password").hide();
+			jQuery("#password1").show();
+			document.getElementById('password1').focus();
+			
+		});
+		jQuery("#password1").blur(function() {
+			var passtxt = jQuery("#password1").attr('value');
+			jQuery("#passwordBG").addClass("passwordBG");
+			jQuery("#passwordBG").removeClass("passwordBGHover");
+			if((passtxt=='')||(passtxt=='password')){
+				jQuery("#password1").hide();
+				jQuery("#password").show();
+			}
+			else { 
+				//do nothing
+			}
+		});
+		jQuery("#urcontact").focus(function() {										
+			var urcontacttxt = jQuery("#urcontact").attr('value');
+			//alert(urcontacttxt);
+			jQuery("#urcontactBG").addClass("urcontactBGHover");
+			jQuery("#urcontactBG").removeClass("urcontactBG");
+			//if(urcontacttxt=='Contact number'){
+			//	jQuery("#urcontact").attr('value','');
+			//}
+		});
+		jQuery("#urcontact").blur(function() {
+			var urcontacttxt = jQuery("#urcontact").attr('value');
+			jQuery("#urcontactBG").addClass("urcontactBG");
+			jQuery("#urcontactBG").removeClass("urcontactBGHover");
+			//alert(urcontacttxt);
+			//if(urcontacttxt==''){
+			//	jQuery("#urcontact").attr('value','Contact number');
+			//}			
+		});
+				jQuery(".eshopjsrand").bind('click',function(){
+			jQuery("#selectedcaptchacalue").val(jQuery(this).html())  ;
+			jQuery('li').each(function() {
+    jQuery(this).css('background-color','#BCBCBC');
+						jQuery(this).css('color','#393939');
+});
+			//jQuery(this).addClass("caphoverc");
+						jQuery(this).css('background-color','#E00034');
+						jQuery(this).css('color','#FFF');
+		});
+		
+				jQuery("#ururl").keyup(function() {
+							var urltext = jQuery(this).val(); 
+							jQuery.ajax({
+								url : "/freetrial/domaincheck",
+								type : "GET",
+								data : "domain="+	urltext,
+								dataType: "json",
+
+								success : function(response){
+									//	alert(response.result);
+										if(response.result =="fail"){
+											//	alert('me');
+														jQuery("#ururlError").css('color','red');
+                        jQuery("#ururlError").html("URL not available.").show();
+                
+                    }
+										 else if(response.result =="success") {
+										 				jQuery("#ururlError").css('color','green');
+														jQuery("#ururlError").html("URL available.").show();
+										}
+								
+								}						
+							
+							})
+					/*
+			var ururltxt = jQuery("#ururl").attr('value');
+			jQuery("#ururlBG").addClass("ururlBG");
+			jQuery("#ururlBG").removeClass("ururlBGHover");
+			//alert(ururltxt);
+			if(ururltxt==''){
+				jQuery("#ururl").attr('value','Site URL');
+			}		*/	
+		});
+                
+                jQuery("#createStore").click(function(){
+           //     alert('me'); return false;
+                
+                    var ururl = jQuery.trim(jQuery("#ururl").val());
+                    var urname = jQuery.trim(jQuery("#urname").val());
+		    var storename = jQuery.trim(jQuery("#storename").val());
+                    var uremail = jQuery.trim(jQuery("#uremail").val());
+                    var password = jQuery.trim(jQuery("#password1").val());
+                    var urcontact = jQuery.trim(jQuery("#urcontact").val());
+                    jQuery("#captchaError").hide();
+                    var regContact = /^[0-9]+$/;
+		    var regStorename = /^[a-zA-Z0-9 /$]+$/;
+                    var regEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+                    var flag = 1;
+                    if(ururl == "" || ururl == "Site URL"){
+                        jQuery("#ururlError").html("This field is mandatory.").show();
+                        flag = 0;
+                    }
+                    if(urname == ""){
+                        jQuery("#urnameError").html("This field is mandatory.").show();
+                        flag = 0;
+                    }
+		    if(storename == ""){
+			jQuery("#storenameError").html("This field is mandatory.").show();
+                        flag = 0;
+		    }else if(regStorename.test(storename)==false){
+		    	jQuery("#storenameError").html("Please enter a valid store name.").show();
+                        flag = 0;
+		    }
+                    if(uremail == ""){
+                        jQuery("#uremailError").html("This field is mandatory.").show();
+                        flag = 0;
+                    }else if(regEmail.test(uremail) == false){
+                        jQuery("#uremailError").html("Please enter a valid email address.").show();
+                        flag = 0;
+                    } else {
+                
+                    
+                    }
+                    if(password == ""){
+                        jQuery("#passwordError").html("This field is mandatory.").show();
+                        flag = 0;
+                    }else if(password.length < 6){
+                        jQuery("#passwordError").html("Password should be 6 characters.").show();
+                        flag = 0;
+                    }
+                    if(urcontact == ""){
+                        jQuery("#urcontactError").html("This field is mandatory.").show();
+                        flag = 0;
+                    }else if(regContact.test(urcontact) == false) {
+                        jQuery("#urcontactError").html("Only numbers are allowed.").show();
+                        flag = 0;
+                    }else if(urcontact.length < 10 || urcontact.length > 10){
+                        jQuery("#urcontactError").html("Contact no should be 10 digits.").show();
+                        flag = 0;
+                    }
+                    if(jQuery("#selectedcaptchacalue").val()==""){
+			jQuery("#captchaError").html("You did not select the correct word.").show();
+                        flag = 0;	
+		    } else if(jQuery("#selectedcaptchacalue").val()!=jQuery("#origcaptchacalue").val()){
+			jQuery("#captchaError").html("You did not select the correct word.").show();
+                        flag = 0;	
+		    }	
+		    
+		//    flag=0;
+		    
+		    
+                    if(flag==0){
+                        return false;
+                    } else {
+                    
+    			jQuery.ajax({
+					url :"/freetrial/checkemail",
+					type : "GET",
+					dataType : "json",
+					data : "email="+uremail,
+				
+					success : function(response){
+						if(response.result =="fail"){
+					//	alert('me');
+	//		jQuery("#ururlError").css('color','red');
+jQuery("#uremailError").html("Email already exists.").show();
+		//		return false;                         
+flag = 0;
+
+}
+else if(response.result =="success") {
+				jQuery("#trail_form").submit();
+		//	jQuery("#ururlError").css('color','green');
+		//	jQuery("#ururlError").html("URL available.").show();
+}																
+					
+					}
+                    			})                    
+              }
+                });
+         jQuery(".blurClass").focus(function(){
+            var blurFieldVal = jQuery(this).attr('id');
+            jQuery("#"+blurFieldVal+"Error").hide();
+        });
+	});
+        
+</script>
+
+<div class="mainHeader">
+    <div class="header" align="center">
+        <div class="floatLeft"><a href="/" title="eshopbox"><img src="/images/secure/elogin/signuplogo.png" alt="eshopbox" /></a></div>
+        <div class="signuptxt">Sign up for a free 15-day trial!</div>
+    </div>
+    <form name="trail_form" id="trail_form" method="post">
+        <div class="clearBoth">
+                <div class="topBorder">&nbsp;</div>
+                <div class="botGap">&nbsp;</div>
+                <div class="loginContainer" align="center">
+                        <div class="txtfieldBG">
+                                <div id="ururlBG" class="ururlBG">
+                                        <input id="ururl" name="ururl" type="text" class="loginInput blurClass" value="Site URL" />
+                                        <div class="errorMSGurl" id="ururlError"></div>
+                                </div>
+                                <div class="inputtxt">.myeshopbox.com</div>
+                        </div>
+                        <div class="signupBelowTxt">This will be your (temporary) website address; it must be 3-30 characters long <br />(only numbers & letters). you can change this later on.</div>
+                        <div class="txtfieldBG">
+                                <div class="inputtxt1">Your name</div>
+                                <div id="urnameBG" class="urnameBG">
+                                        <input id="urname" name="urname" type="text" class="loginInput blurClass" value="" />
+                                        <div class="errorMSG" id="urnameError"></div>
+                                </div>					
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+			<div class="txtfieldBG">
+                                <div class="inputtxt1">Store name</div>
+                                <div id="urnameBG" class="urnameBG">
+                                        <input id="storename" name="storename" type="text" class="loginInput blurClass" value="" />
+                                        <div class="errorMSG" id="storenameError"></div>
+                                </div>					
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="txtfieldBG">
+                                <div class="inputtxt1">Email address</div>
+                                <div id="uremailBG" class="uremailBG">
+                                        <input id="uremail" name="uremail" type="text" class="loginInput blurClass" value="" />
+                                        <div class="errorMSG" id="uremailError"></div>
+                                </div>				
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="txtfieldBG">
+                                <div class="inputtxt1">Password</div>
+                                <div id="passwordBG" class="passwordBG">
+                                        <input id="password" name="password" type="text" class="loginInput blurClass" value="" />
+                                        <input id="password1" type="password" class="loginInput" value="" />
+                                        <div class="errorMSG" id="passwordError"></div>
+                                </div>				
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="txtfieldBG">
+                                <div class="inputtxt1">Contact number</div>
+                                        <div id="urcontactBG" class="urcontactBG">
+                                        <input id="urcontact" name="urcontact" type="text" class="loginInput blurClass" value="" />
+                                        <div class="errorMSG" id="urcontactError"></div>
+                                </div>				
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="clearBoth">
+                                <div class="txtfieldBG2">
+                                        <div class="captchaTxt">To prove you're not spam, select the word "<span><?php echo $this->randToDisplay;  ?></span>":</div>
+                                        <div class="captchaimg">
+                                                <ul>
+                                                        <?php  
+						foreach($this->totalRandArray as $key=>$value){	
+						?>
+                                                        <li class="eshopjsrand"><?php echo $value;  ?></li>
+                                                <?php } ?>        
+                                                </ul>
+                                                </ul>
+                                        </div>			
+                                </div>
+                                <input type="hidden" name="origcaptchacalue" id="origcaptchacalue" value="<?php echo $this->randToDisplay;  ?>" />
+				<input type="hidden" name="selectedcaptchacalue" id="selectedcaptchacalue" value="" />
+                                <div class="errorMSGCaptcha" id="captchaError"></div>
+                        </div>
+                </div>
+                        <!--<div id="ururlBG" class="loginBG">
+                                <input id="ururl" type="text" class="loginInput" value="StoreURL.myeshopbox.com" />
+                                <span class="errorMSG">This field is mandatory.</span>
+                        </div>
+                        <div id="urnameBG" class="loginBG">
+                                <input id="urname" type="text" class="loginInput" value="Your name" />
+                                <span class="errorMSG">This field is mandatory.</span>
+                        </div>
+                        <div id="uremailBG" class="loginBG">
+                                <input id="uremail" type="text" class="loginInput" value="Your@email.com" />
+                                <span class="errorMSG">Enter a valid email address.</span>
+                        </div>
+                        <div id="passwordBG" class="passwordBG">
+                                <input id="password" type="text" class="loginInput" value="password" />
+                                <input id="password1" type="password" class="loginInput" value="" />
+                                <span class="errorMSG">Your password must contain atleast 6 characters.</span>
+                        </div>
+                        <div id="urcontactBG" class="loginBG">
+                                <input id="urcontact" type="text" class="loginInput" value="Contact number" />
+                                <span class="errorMSG">Enter a valid contact number.</span>
+                        </div>-->
+                <div class="lh30">&nbsp;</div>
+                <div class="loginBTN">
+                        <div class="forgotpass"><a href="http://login.leshopbox.com/" title="Cancel">Cancel</a></div>
+                        <div class="floatRight" style="cursor:pointer;"><img src="/images/secure/elogin/createstoreBtn.png" width="138" height="32" title="Create Store" alt="Create Store" id="createStore" name="create-store"/></div>
+                </div>
+                <div class="botGap">&nbsp;</div>
+                <div class="botBorder">&nbsp;</div>
+        </div>
+    </form>
+</div>

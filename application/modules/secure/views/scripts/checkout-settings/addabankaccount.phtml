@@ -1,0 +1,176 @@
+<?php
+$errorMessages = $this->errorMessages;
+?>
+
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+    <tr>
+        <!--Right panel starts from here-->
+        <td width="260" valign="top">
+            <div class="add_a_bank_accountLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="businessDetialsLeftPanel">
+
+                    <?php
+                    $request = Zend_Controller_Front::getInstance()->getRequest();
+                    $controllerName = $request->getControllerName();
+                    $actionName = $request->getActionName();
+                    $genObj = new General();
+                    //$controllerName = "Store";
+                    $abc = $genObj->displaySettingMenuNew($controllerName, $actionName);
+                    echo $abc;
+                    ?>
+
+                </div>
+
+            </div>
+        </td>
+        <!--Right panel ends from here-->
+        <!--Left panel starts from here-->
+        <td width="740" valign="top">
+            <div class="add_a_bank_accountRightPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="blueMainHeading">Store settings</div>
+                <div class="lh15">&nbsp;</div>
+                    <div class="clearBoth">
+
+                    <div class="solidBorder">&nbsp;</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="floatLeft content_text16">Checkout</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Add a bank account</b></div>
+                    </div>
+                    <div class="floatRight">
+                        <div class="backArrow"></div>
+                        <div class="floatLeft"><a href="/checkout-settings/bankaccountlisting" class="hyperLinkBlue13" title="Back to checkout">Back to checkout</a></div>
+                    </div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+                     <div class="lh25">&nbsp;</div>
+
+                </div>
+                <div class="clearBoth greyText12Lh20">
+                	After adding a bank account you have to confirm it with the amount and its transaction Id deposited by goo2o to your mentioned account. You will only be eligible to receive your payments once your bank account is confirmed. Make sure you entered the correct IFSC code to make the online transfer possible.
+                </div>
+                <div class="lh10">&nbsp;</div>
+                <div class="clearBoth greyText12Lh20">
+                    Please enter your valid PAN card number at the time of adding your bank account. The PAN number you have provided must be similar to the PAN number submitted at the time of opening a bank account.
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth greyText12Lh20">
+                    IFSC code identifies a particular bank branch that participates in online transfer of funds. Without the IFSC code, online transfer of funds will not be possible.	
+                </div>
+
+                <div class="lh20">&nbsp;</div>
+                <div class="clearBoth">
+                    <form name="bankdetailsform" action="" method="post" >
+                        <div class="floatLeft content_text14"><b>Enter your bank details:</b></div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Name</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth content_text12Lh20"><b><?php echo $this->businessName; ?></b>
+                                    <input type="hidden" class="inputWid204" name="fullname" value="<?php echo $this->businessName; ?>"  maxlength="30"/></div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="lh15">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Bank Name</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid204" name="bankname" value="<?php echo $this->dispData['bankname']; ?>" maxlength="40" /></div>
+                                <?php if (isset($errorMessages['bankname'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['bankname']; ?></div>
+                                <?php } ?>
+                                <div class="lh3">&nbsp;</div>
+                                <div class="clearBoth greyText11">Enter the name of the bank where you hold an account</div>
+                                <div class="lh3">&nbsp;</div>
+                                <div class="clearBoth greyText11"><b>e.g.</b> HDFCs</div>
+                            </div>
+
+                        </div>
+                           <div class="lh15">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Branch Name</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid204" name="branch_name" value="<?php echo $this->dispData['branch_name']; ?>" maxlength="40" /></div>
+                                <?php if (isset($errorMessages['branch_name'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['branch_name']; ?></div>
+                                <?php } ?>
+                                <div class="lh3">&nbsp;</div>
+                                <div class="clearBoth greyText11">Enter the name of the branch where you hold an account</div>
+                                <div class="lh3">&nbsp;</div>
+                                <div class="clearBoth greyText11"><b>e.g.</b>Udyog Vihar</div>
+                            </div>
+
+                        </div>
+                        <div class="lh15">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>IFSC Code</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid117" name="ifsc_code" value="<?php echo $this->dispData['ifsc_code']; ?>" /></div>
+                                <?php if (isset($errorMessages['ifsccode'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['ifsccode']; ?></div>
+                                <?php } ?>
+                                <div class="lh3">&nbsp;</div>
+                                <div class="clearBoth greyText11"><b>e.g.</b> HDFC0000111</div>
+                            </div>
+
+                        </div>
+                        <div class="lh15">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Account Number</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid204" name="account_number" value="<?php echo $this->dispData['account_number']; ?>" maxlength="16"/></div>
+                                <?php if (isset($errorMessages['accountnum1'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['accountnum1']; ?></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Re-enter Account Number</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid204" name="re_account_number" value="<?php echo $this->dispData['re_account_number']; ?>" maxlength="16"/></div>
+                                <?php if (isset($errorMessages['accountnum2'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['accountnum2']; ?></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="wid160 content_text12Lh20"><b>Pan Number</b></div>
+                            <div class="floatLeft">	
+                                <div class="clearBoth"><input type="text" class="inputWid204" name="pan_number" value="<?php echo $this->dispData['pan_number']; ?>" maxlength="16" style="text-transform:uppercase;"/></div>
+                                <?php if (isset($errorMessages['pan_number'])) { ?>
+                                    <div class="lh5">&nbsp;</div>
+                                    <div class="clearBoth greyText11 alert"><?php echo $errorMessages['pan_number']; ?></div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+
+                </div>
+                <div class="lh40">&nbsp;</div>
+                <div class="wid138">
+                    <div class="floatLeft"><input type="image" class="cursor" src="/images/secure/continue_button.png" title="Continue" /></div>
+                    <div class="floatRight"><a href="/checkout-settings/bankaccountlisting" class="hyperLinkBlue12Lh25" title="Cancel">Cancel</a></div>
+                </div>
+                <div class="lh40">&nbsp;</div>
+                <input type="hidden" name="isposted" value="true" />
+                </form>
+            </div>
+
+        </td>
+        <!--Left panel ends from here-->
+    </tr>
+</table>

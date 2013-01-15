@@ -1,0 +1,8 @@
+{
+	"css":["#footer-categories" ,"#footer-categories .heading",
+			"#footer-categories .content ul","#footer-categories .content ul li","#footer-categories .content ul li a",
+			"#footer-categories .content ul li a:hover"
+		  ]
+	
+			  
+}

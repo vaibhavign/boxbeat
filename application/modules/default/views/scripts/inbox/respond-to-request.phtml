@@ -1,0 +1,193 @@
+<link rel="stylesheet" type="text/css" href="/css/default/respond-to-request.css"/>
+<script language="javascript" type="text/javascript" src="/jscript/default/changerequest.js"></script>
+
+
+<?php
+$returnDetails = $this->returnDetails;
+$messageData = $this->returnMessageData;
+$userId = $this->userId;
+/* echo '<pre>';
+  print_r($returnDetails);
+  exit; */
+?>
+
+<table cellpadding="0" cellspacing="0" width="100%" border="0"><input type="hidden" id="order_item_id" name="order_item_id" value="<?php echo $returnDetails['order_item_id']; ?>" />
+    <tr>
+        <td height="40"></td>
+    </tr>
+    <tr>
+        <td valign="top">
+            <table cellpadding="0" cellspacing="0" width="1000" border="0" align="center">
+                <tr>
+                    <td valign="top" height="32">
+                        <div class="clearBoth" id="bodytopbar">
+                            <?php if ($returnDetails['request_seller_id'] == $userId) { ?>
+                                <div class="topbarheading"><?php echo $returnDetails['buyer_name']; ?></div>
+                            <?php } elseif ($returnDetails['request_buyer_id'] == $userId) { ?>
+                                <div class="topbarheading"><?php echo $returnDetails['seller_name']; ?></div>
+                                <?php } ?>
+                            <div class="floatRight">
+                                    <?php if ($returnDetails['request_status'] == 0 && $returnDetails['request_seller_id'] == $userId) { ?>
+                                    <div class="floatLeft">
+                                        <div class="floatLeft"><a title="Respond" class="actionbuttondefault" id="actionbutton" href="javascript://"></a></div>
+    <?php if ($returnDetails['request_status'] == 0 && $returnDetails['request_seller_id'] == $userId) { ?>
+                                            <!-- Action Drop Down  Start Form here-->
+                                            <div id="actiondropdown" class="floatLeft myReturnRespondDropDown">
+                                                <ul>
+
+                                                    <li><a title="Accept" class="acceptReturn" rel="<?php echo $returnDetails['request_id']; ?>" style="cursor:pointer" id="acceptReturn">Accept</a></li>
+                                                    <li><a title="Reject" class="rejectReturn" rel="<?php echo $returnDetails['request_id']; ?>" style="cursor:pointer" id="rejectReturn" >Reject</a></li>
+                                                </ul>
+                                            </div>
+                                    <?php } ?>
+                                    </div>
+<?php } ?>
+                                <div class="floatLeft"><a href="/admin/orders/#list-order/rand/<?php echo rand(599, 999); ?>" class="back_link" title="Back to requests"><span class="backtoarrow"></span>Back to requests</a></div>				
+                            </div>
+                        </div>
+
+                        <!-- Action Drop Down Down here-->
+                    </td>
+                </tr>
+                <tr>
+                    <td valign="top"><div class="respondbottomline">&nbsp;</div></td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <div id="leftBlock">
+                            <div class="floatLeft">
+                                <div class="floatLeft">
+                                    <div class="email_heading">Order Item ID </div>
+                                    <div class="email_seperator">:</div>
+                                    <div class="email_text">OR_<?php echo $returnDetails['payment_module']; ?>_<?php echo $returnDetails['order_id']; ?>_<?php echo $returnDetails['order_item_id']; ?></div> 
+                                </div>
+                                <div class="clearBoth">
+                                    <div class="email_heading">Quantity to be returned</div>
+                                    <div class="email_seperator">:</div>
+                                    <div class="email_text"><?php echo $returnDetails['quantity']; ?></div> 
+                                </div>
+                                <div class="clearBoth">
+                                    <div class="email_heading">Expected Shipping Cost</div>
+                                    <div class="email_seperator">:</div>
+                                    <div class="email_text">Rs. <?php echo $returnDetails['ship_cost']; ?></div> 
+                                </div>
+                                <div class="clearBoth">
+                                    <div class="email_heading">Requested for</div>
+                                    <div class="email_seperator">:</div>
+                                    <?php
+                                    if ($returnDetails['return_type'] == 1) {
+                                        $returntype = 'Refund';
+                                    } elseif ($returnDetails['return_type'] == 2) {
+                                        $returntype = 'Replacement';
+                                    }
+                                    ?>
+                                    <div class="email_text"><?php echo $returntype; ?></div> 
+                                </div>
+                                <div class="clearBoth">
+                                    <div class="email_heading">Reason</div>
+                                    <div class="email_seperator">:</div>
+                                    <div class="email_text"><?php echo $returnDetails['return_reason']; ?></div> 
+                                </div>
+                                <div class="clearBoth">
+                                    <div class="email_heading">Status</div>
+                                    <div class="email_seperator">:</div>
+                                    <div class="email_text"><?php echo $returnDetails['status_name']; ?></div> 
+                                </div>
+                            </div>
+                            <div class="main_container">
+<?php if ($messageData['request_description'] != '') { ?>
+                                    <ul>
+                                        <li class="dotted_border">
+                                        <li <?php //if ($messageData[$i]['name'] == me){echo 'class = "dotted_border selected"';} else {} ?>>
+                                            <div class="main_container">
+                                                <div class="innerblock">
+                                                    <div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                        <?php
+                                                        if ($this->userId == $returnDetails['request_buyer_id']) {
+                                                            $name = 'me';
+                                                        } elseif ($this->userId == $returnDetails['request_seller_id']) {
+                                                            $name = $returnDetails['fullname'];
+                                                        }
+                                                        ?>
+                                                        <div class="floatLeft"><a href="#" class="me_link" title="Me"><?php echo $name; ?></a></div>
+                                                        <div class="clearBoth">
+                                                            <div class="wid440">
+                                                                <!--<div class="clearBoth">I have received an item significantly different than what was described by a store 																	owner<br />
+                                                                                                                                I have received a completely different item</div>-->
+                                                                <div class="clearBoth"><?php echo $messageData['request_description']; ?></div>
+                                                            </div>																		 																		 															<div class="floatRight">
+                                                                <div class="date_text"></div>
+                                                                <!--<div class="dategap">&nbsp;</div>
+                                                                <div class="date_text">11:00 AM</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        </li>
+
+                                    </ul>
+                                <?php } ?>
+
+<?php for ($i = 0; $i < count($messageData) - 1; $i++) { ?>
+                                    <ul>
+                                        <li class="dotted_border">
+                                        <li <?php
+    if ($messageData[$i]['name'] == me) {
+        echo 'class = "dotted_border selected"';
+    } else {
+        
+    }
+    ?>>
+                                            <div class="main_container">
+                                                <div class="innerblock">
+                                                    <div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                        <div class="floatLeft"><a href="#" class="me_link" title="Me"><?php echo $messageData[$i]['name']; ?></a></div>
+                                                        <div class="clearBoth">
+                                                            <div class="wid440">
+                                                                <!--<div class="clearBoth">I have received an item significantly different than what was described by a store 																	owner<br />
+                                                                                                                                I have received a completely different item</div>-->
+                                                                <div class="clearBoth"><?php echo $messageData[$i]['message']; ?></div>
+                                                            </div>																		 																		 															<div class="floatRight">
+                                                                <div class="date_text"><?php echo date('F j,Y', strtotime($messageData[$i]['time'])); ?></div>
+                                                                <!--<div class="dategap">&nbsp;</div>
+                                                                <div class="date_text">11:00 AM</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        </li>
+
+                                    </ul>
+<?php } ?>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="50" valign="top"></td>
+                </tr>
+                <tr>
+                    <td valign="top">
+                        <div id="msgbox">
+                            <div class="imagecontainer"><img src="images/user_pic.png" title="User Image"  alt="User Image"/></div>
+                            <div class="msgboxbg">
+                                <textarea cols="0" rows="0" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(this.value == '') this.value = this.defaultValue;">Your message here...</textarea>  
+                            </div>
+                            <div class="reply_btn"><img src="images/reply_btn.png" alt="Reply" title="Reply" /></div>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="50" valign="top"></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>

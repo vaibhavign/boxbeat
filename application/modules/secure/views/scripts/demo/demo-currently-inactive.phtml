@@ -1,0 +1,32 @@
+<div id="wid1000Auto">
+    <div class="clearBoth">
+    	<div class="blueMainHeadingContainer">
+    		<div class="blueMainHeading">You have already taken GMS Demo with this Goo2o ID</div><!--within last 30 days-->
+        </div>
+        <div class="lh10">&nbsp;</div>
+		<div class="content-text12">Not  <b><?php echo $_SESSION['USER']['userDetails'][0]['user_full_name'];?></b>? <a href="<?php echo HTTP_SERVER ;?>/admin/create/logout" class="hyperLinkBlue12" title="Logout">Logout</a></div>
+		<div class="lh10">&nbsp;</div>
+        <div class="email_error_msgBox">
+        	<div class="floatLeft"><img src="/images/secure/demo/email_error_msg_img.gif" alt="" /></div>
+            <div class="floatLeft">
+            	<div class="clearBoth content-text14"><b>There was a problem with your Demo request, So your request can not be processed.</b></div>
+                <div class="lh7">&nbsp;</div>
+                <div class="content-text12">Incase if you have any query mail us : <a href="mailto:support@mygoo2o.com" title="support@mygoo2o.com" class="hyperLinkBlue12">support@mygoo2o.com</a> or call us at : <b>+91 .124.398.3111</b></div>
+            </div>
+       	</div>
+        <div class="lh32">&nbsp;</div>
+        <div class="clearBoth content-text12">Following store associated with this goo2o ID : <b><?php echo $_SESSION['USER']['userDetails'][0]['user_email_address'];?></b></div>
+        <div class="lh5">&nbsp;</div>
+		<div class="wid72 content-text12"><b>Store Name</b></div>
+		<div class="floatLeft content-text12"><b>: <?php echo $this->mall_detail[0]['title'] ;?></b></div>
+		<div class="lh5">&nbsp;</div>
+		<div class="wid72 content-text12"><b>Store URL</b></div>
+        <div class="floatLeft content-text12"><b>: </b><a href="<?php echo $this->mall_detail[0]['mallurl'] ;?>" class="hyperLinkBlue12" title="<?php echo $this->mall_detail[0]['mallurl'] ;?>" target="_blank"><?php echo $this->mall_detail[0]['mallurl'] ;?></a></div>
+        <div class="lh25">&nbsp;</div>
+        <div class="clearBoth"><a href="<?php echo HTTP_SERVER ;?>/myaccount" class="hyperLinkBlue12" title="Access your account">Access your account</a></div>
+		<div class="lh25">&nbsp;</div>
+        <div class="clearBoth content-text12"><b>Want to upgrade?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content-text12">Get started <a href="<?php echo HTTP_SECURE ;?>/merchantenrollment/business-details" class="hyperLinkBlue12" title="here">here</a></div>
+ 	</div>
+</div>

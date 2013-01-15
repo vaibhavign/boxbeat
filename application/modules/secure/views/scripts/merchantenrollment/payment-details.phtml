@@ -1,0 +1,116 @@
+<div id="wid1000Auto">
+    <!--left panel starts from here-->
+    <form name="payment_detail_form" id="payment_detail_form" method="post">
+	    <div class="wid650">
+        <div class="blueMainHeading">Payment Details</div>
+        <div class="lh5">&nbsp;</div>
+        <div class="grey_text12Lh20 wid640">Goo2o Merchant Solution is currently open only for few of the privileged Merchants. If you are one among the privileged merchants and have already paid for the Licensee fee, please enter your activation code sent to you through email.  If you are interested to find out about Goo2o Merchant solution, you can get in touch with us at <a href="mailto:support@goo2o.com" class="hyperLinkBlue12" title="support@goo2o.com">support@goo2o.com</a> or request a demo.<!--Below you can select a payment plan and mode of payment for your online store--></div>
+        <div class="lh30">&nbsp;</div>
+        <div class="clearBoth">
+            <!--<div class="content_text14"><b>Payment Plan</b></div>
+            <div class="lh25">&nbsp;</div>-->
+            <div class="clearBoth">
+            	<!--<div class="wid20">&nbsp;</div>-->
+            	<!--<div class="floatLeft">
+                	<div class="clearBoth">
+                    	<div class="wid470 content_text14">Software Licensing Fee:</div>
+                        <div class="floatLeft content_text14"><b>Rs.<?php //echo $this->software_lincense_amount ; ?></b></div>
+                    </div>
+                    <div class="lh12">&nbsp;</div>
+                    <div class="clearBoth" id="discount_detail">
+                    	<div class="wid470 content_text14"><div class="clearBoth">Do you want to pay your usage plan yearly?</div>
+                        	<div class="lh2">&nbsp;</div>
+                        	<div class="wid360 grey_text12Lh20">By choosing yearly usage plan you will be entitled to 10% discount
+on your annual usage amount.</div>
+                        	
+                        </div>
+                        <div class="floatLeft content_text14" id="yearly_value"><b>Rs.<?php //echo $this->yearly_amount; ?></b></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth">
+                    	<div class="wid30"><input type="radio" name="payment_plan" id="with_plan" <?php //echo $this->yearly_payment_plan; ?> class="payment_plan_mode" value="with_yearly_plan"/></div>
+                    	<div class="floatLeft content_text14">Yes</div>
+                    </div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="floatLeft">
+                    	<div class="wid30"><input type="radio" name="payment_plan" id="without_plan" <?php //echo $this->noyearly_payment_plan; ?> class="payment_plan_mode"  value="without_yearly_plan"/></div>
+                    	<div class="floatLeft content_text14">No</div>
+                    </div>
+                    <div class="lh20">&nbsp;</div>
+                    <div class="blueTotalBar">
+                    	<div class="wid452AlignR">Total Payment :</div>
+                        <div class="wid155Pad" id="total_value"><b>Rs.<?php //echo $this->total_amount; ?></b></div>
+                    </div>
+                    <div class="lh15">&nbsp;</div>
+				</div>-->
+                
+                <div class="clearBoth">
+                		<div class="checkBox"><a href='javascript:void(0);' class="checkbox checkbox_on <?php //echo $this->checkbox_class; ?>" rel="<?php //echo $this->checkbox_class; ?>checkbox_on" id="click_CheckBox"></a></div>
+                        <input type="hidden" name="checkbox_input" id="checkbox_input" value=" checkbox_on<?php //echo $this->checkbox_class; ?>" />
+                        <div class="floatLeft">
+                            <div class="clearBoth content_text14">I had already paid for my ecommerce store.</div>
+                            
+                            
+                            <div class="clearBoth" style=" <?php echo $this->activation_code_display; ?>" id="activation_code_box">
+                     	       <div class="lh10">&nbsp;</div>
+                            	<div class="wid159 content_text12Lh20">Enter your activation code  :</div>
+                            	<div class="floatLeft"><input type="text" class="input_textField130" id="activation_code" name="activation_code" value="<?php echo $this->activation_code_value; ?>"/></div>
+                                <div class="suggestive-container floatLeft" id="show_hide_activation_code" style=" <?php echo $this->code_error_display ; ?>">
+                                    <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                    <div class="suggestive-textContainer" id="error_activation_code"><?php echo $this->code_error_msg ; ?></div>
+                                    <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                                </div>
+
+                            </div>
+                         </div>
+                	</div>
+            </div>
+      	</div>
+       <div class="clearBoth">
+       		<div class="clearBoth" style=" <?php echo $this->payment_option_display; ?>" id="credit_card_option">
+            	<div class="lh45">&nbsp;</div>
+                <div class="content_text14"><b>Select Your Mode of Payment</b></div>
+                <div class="lh20">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="radioContainer"><input type="radio" name="payment_mode" id="by_credit_card" <?php //echo $this->card_payment_option ;?> value="credit_card"/></div>
+                    <div class="floatLeft">
+                        <div class="clearBoth content_text12Lh20">Pay by Credit Card / Debit Card</div>
+                        <div class="clearBoth grey_text11Lh17">Pay through a secure payment getway.</div>
+                     </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="dottedBorder"></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="radioContainer"><input type="radio" name="payment_mode" id="by_online_payment" <?php //echo $this->net_payment_option ;?> value="net_payment"/></div>
+                    <div class="floatLeft">
+                        <div class="clearBoth content_text12Lh20">Net Banking (All major indian banks)</div>
+                        <div class="clearBoth grey_text11Lh17">Pay through a secure payment getway.</div>
+                     </div>
+                    <div class="lh10">&nbsp;</div>
+                </div>
+            </div>
+            <div class="lh60">&nbsp;</div>
+            <div class="btnContainer">
+                <div class="floatLeft"><a href="/merchantenrollment/business-details?flag=1" class="back_btn" title="BACK"></a></div>
+                <div class="floatRight"><input type="submit" title="CONTINUE" id="continue_payment_detail" class="continue_btn cursor" name="continue_payment_btn" value="continue"/></div>
+                <input type="hidden" name="action" value="payment" />
+        	</div>
+            <div class="lh60">&nbsp;</div>
+        </div>
+        
+    </div>
+    </form>
+     <!--left panel ends from here-->
+    <!--right panel starts from here-->
+    <div class="right_block">
+    	<div class="content_text14"><b>I don't remember my activation code. What should I do?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20">You should search for it in your inbox as we have already sent it on your email address.  Also please check your Junk/Spam folder, because it's possible our email will be accidently placed there.  In case you still couldn't find it please get in touch with us at <a href="mailto:support@goo2o.com" class="hyperLinkBlue12" title="support@goo2o.com">support@goo2o.com</a></div>
+        <div class="lh20">&nbsp;</div>
+    	<div class="content_text14"><b>When will I receive an invoice for my payment?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20">Well once our merchant enrollment team receives and verifies all the documents, you will receive an invoice on your email as well in your store settings.</div>	
+    </div>
+    <!--right panel starts from here-->
+</div>

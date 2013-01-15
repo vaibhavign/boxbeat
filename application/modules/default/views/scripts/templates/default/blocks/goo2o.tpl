@@ -1,0 +1,1 @@
+<a href="javascript://"><img src="{$user_image_path}goo2ologin_option1.png" title="Goo2o" /></a>

@@ -1,0 +1,122 @@
+<div id="wid1000Auto">
+  <form name="loginform" id="loginform" method="post">
+  
+    	<div class="blueMainHeadingContainer">
+                <?php if($_GET['tab']!=2){?>
+                    <div class="blueMainHeading">Sign in / Register to manage your Goo2o ID</div>
+                <?php }else {?>
+                <div class="blueMainHeading">Sign in/Register to get started with GMS</div>
+                <?php } ?>
+        </div>
+        <div class="lh50">&nbsp;</div>
+        <div class="clearBoth">
+    
+            <div class="wid263AlignR content-text12Lh20">Enter your email address/username</div>
+            <div class="wid23AlignC content-text12Lh20">:</div>
+            <div class="wid415" >
+               
+            	<div class="floatLeft"><input type="text" class="input-textField230" id="txtname"  value="<?php if($this->usernamepost != '') { echo $this->usernamepost; } ?>" name="username"/>
+                </div>
+                 <?php if($this->userempty){?>
+                 <div class="suggestive-container" id="show_hide_username" style="display:block">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif"  alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer">It can’t be blank</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+
+               
+                </div>
+                <?php } ?>
+
+                <div class="lh32">&nbsp;</div>
+                
+                <div class="clearBoth">
+                	<div class="clearBoth radioOne cursor">
+                        <div class="wid25"><input type="radio" name="customer" value="1" id="newuser"/></div>
+                        <div class="floatLeft">
+                            <div class="clearBoth content-text12" id="newuserradio"><b>I do not have a Goo2o ID</b></div>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="floatLeft content-text11">(You’ll create a password later)</div>
+                        </div>
+                       
+                	</div>
+                    <div class="lh20">&nbsp;</div>
+                    
+                </div>
+            </div>
+             <?php if($this->allError){?>
+        	<div class="sign_in_errorMsgBox floatLeft" >Wrong username/email and password combination!</div>
+                <?php } ?>
+                
+            <div class="clearBoth">
+                <div class="wid286">&nbsp;</div>
+                <div class="floatLeft">
+                        <div class="clearBoth existinguserradio cursor">
+                            <div class="wid25"><input type="radio" name="customer" value="0" checked="checked" id="reguser"/></div>
+                            <div class="floatLeft"><div class="clearBoth content-text12 wid150"><b>I already have a Goo2o ID, and my password is:</b></div></div>
+                        </div>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="wid25">&nbsp;</div>
+                        <div class="floatLeft">
+                            <div class="floatLeft hidepassword" style="display:block">
+                                <input id="password" type="password" class="input-textField158" value="<?php if($this->passwordpost!= '') { echo $this->passwordpost; } ?>" name="password" />
+                            </div>
+                                 <div class="clearBoth hiddeninput" style="display:none"><input type="text" disabled="disabled"  class="input-textField158-disabled"/></div>
+                             <?php  if($this->passwordempty){ ?>
+                              <div class="suggestive-container" id="show_hide_password" style="display:block">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif"  alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer">It can’t be blank</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+                              </div>
+                            <?php } ?>
+                             <?php  if($this->lessthansix){ ?>
+                              <div class="suggestive-container" id="show_hide_password" style="display:block">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif"  alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer">Password must be at least 6 characters or more</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+                              </div>
+                            <?php } ?>
+                            <div class="lh15">&nbsp;</div>
+		                    <div class="clearBoth"><a href="/login/forgetpassword" title="Forgot your password?" class="hyperLinkBlue11">Forgot your password?</a></div>
+                        </div>
+                	</div>
+            </div>
+                
+        </div>
+        <div class="lh35">&nbsp;</div>
+        <div class="clearBoth" style="display: <?=(($this->captchview==1)?'block':'none')?> ;" >
+        	<div class="wid263AlignR content-text12Lh20">Are you human?</div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+            <div class="floatLeft">
+            	<div class="clearBoth content-text12Lh20" style="display:block">It seems you are using wrong email address or username. Please type the characters in the box below.</div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="floatLeft jCaptcha" style="display: <?=(($this->captchview==1)?'block':'none')?> ;" ><?php  echo recaptcha_get_html($this->publickey, $errorRecaptcha); ?></div>
+                <div class="lh40">&nbsp;</div>
+        	
+            </div>
+           </div>
+        
+    </div>
+
+        <div>
+        <div  style="text-align: center; float: left; margin-left: 300px;">
+            <div class="floatLeft content-text12 keepmelog cursor">
+        			<div class="checkBox">
+                                   <!-- <label class="checkbox_off checkboxclass"><input type="checkbox" class="input_checkbox"/></label>-->
+                                    <input name="remember" id="checkbox-06"  type="checkbox" <?php if($_COOKIE['c_n']!='' || $this->captchapost==1){?> checked="checked" <?php } ?>>
+                                </div>
+                                <div class="floatLeft content-text12">Keep me logged in</div>
+            </div>
+        	<div class="lh15">&nbsp;</div>
+                <div class="clearBoth" >
+                           <input type="submit" class="signin_secure_server" title="Sign in using our secure server"  id="submit" name="login"  value="" />
+                </div>
+       </div>
+</div>
+         <input type="hidden" name="action" id="action" value="process"  />
+	 <input type="hidden" name="tab" value="<?php echo $this->tabs ;?>" />
+         <input type="hidden" name="sapikey" value="<?php echo $this->sapikey;?>" />
+	 <input type="hidden" name="pkey" value="<?php echo $this->privatekey;?>" />
+</form>
+</div>
+     

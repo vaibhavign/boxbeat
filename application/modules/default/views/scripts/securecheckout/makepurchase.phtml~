@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	<div class="makepurchase">
+		<div class="chechoutHeadingMain">
+			<div align="center" class="logostyle">A one Music & Computers</div>
+			<div class="userstyle">Hi, <strong>Prateek Dimri</strong></div>
+			<div class="chechoutHeading">Secure Checkout</div>
+			<div class="chechoutHeadingBorder"></div>
+		</div>
+		<div class="chechoutBodyMain">
+			<div class="checkoutNavShippingInfo"></div>
+			<div>
+				<div class="leftBlock">
+					<div class="couponBlock">
+						<div class="couponBlock1">
+							Pay <br />Rs. <span>40300</span>
+						</div>
+						<div class="couponBlock2">
+							<div class="label">Have a Coupon / voucher?</div>
+							<div class="txtbox"><input type="text" /></div>
+							<div class="inputBlock"><input type="image" src="images/applyBtn.png" title="APPLY" /></div>
+							
+						</div>
+					</div>
+					<div class="clearnexrow">
+						<div class="clear">
+							<div class="payonline"></div>
+							<div class="paycod"></div>
+							<div class="paydirectbank"></div>
+						</div>
+						<div class="couponBlocknext">
+							<div class="billinghead">Billing Details <span>(<a href="#" title="change">change</a>)</span></div>
+							<div class="address">
+								Prateek Dimri<span>House no-56, Pelican group housing sociecty. sec-10A  Gurgaon, Haryana-110021    9999555522</span>
+							</div>
+						</div>
+					</div>
+					<div class="clearnexrowpaynow">
+						<input type="image" src="images/paynowBtn.png" align="right" title="PAY NOW" />
+					</div>
+				</div>
+				<div class="rightBlock">
+					<div class="cartsummBlock">
+						<div class="heading">Cart Summary</div>
+						<div class="shadowborder">&nbsp;</div>
+						<div>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<th width="200" valign="top">Item</th>
+									<th width="140" valign="top">Shipping price</th>
+									<th width="50" valign="top">Qty.</th>
+									<th width="100" valign="top">Sub-total</th>
+								</tr>
+								<tr>
+									<td>Via Mazzini Orange...</td>
+									<td> Rs. 200 </td>
+									<td>1</td>
+									<td> Rs. 20200</td>
+								</tr>
+								<tr>
+									<td>Orange Handbag</td>
+									<td> Rs. 200 </td>
+									<td>1</td>
+									<td> Rs. 20200</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<div class="clear">
+											<div class="leftalign">Total</div>
+											<div class="rightalign">Rs. 40300.00</div>
+										</div>
+										<div class="lh10">&nbsp;</div>
+										<div class="clear">
+											<div class="leftalign">Discount</div>
+											<div class="rightalign">Rs. 300.00</div>
+										</div>
+									</td>									
+								</tr>
+								<tr>
+									<td colspan="4">
+										<div class="clear">
+											<div class="leftalign"><strong>Grand Total</strong></div>
+											<div class="rightalign"><strong>Rs. 40000.00</strong></div>
+										</div>										
+									</td>									
+								</tr>								
+							</table>
+						</div>
+					</div>
+					<div class="cartsummBlock1">
+						<div class="clear">
+							<div class="heading">Shipping to</div>
+							<div class="chngadd"><a href="#" title="Change Address">Change Address</a></div>
+						</div>
+						<div class="shadowborder">&nbsp;</div>
+						<div class="address">
+							<strong>Prateek Dimri</strong><span>House no-56, Pelican group housing sociecty. sec-10A  Gurgaon, Haryana-110021    9999555522</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

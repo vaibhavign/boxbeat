@@ -1,0 +1,4 @@
+{
+	"css":["#payment-methods" ,"#payment-methods .heading","#payment-methods .content"],
+	"image":["payment-method-light.png","payment-method-dark.png"]
+}

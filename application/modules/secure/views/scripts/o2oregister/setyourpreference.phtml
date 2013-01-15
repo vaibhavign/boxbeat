@@ -1,0 +1,150 @@
+<table cellpadding="0" cellspacing="0" border="0" width="760" align="center">
+	<tr>
+		<td height="27">&nbsp;</td>
+	</tr>
+	<tr>
+    	<td valign="bottom" colspan="3">
+            <div class="wid92"><a href="<?=HTTP_SERVER_ROOTS?>"><img src="/images/secure/logo.gif" /></a></div>
+            <div class="floatLeft header_txt" style="padding-top:30px;">iglobul helps you buy & sell live deals with real-time conversation. </div>
+    	</td>
+    </tr>
+    <tr>
+    	<td height="10" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td class="step_bg" colspan="3">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td height="40" colspan="3" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+			<div class="clearBoth subscribe_heading">Subscribe the departments you are interested in...</div>
+		</td>
+    </tr>
+    <tr>
+    	<td height="50" colspan="3" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td width="65">&nbsp;</td>
+        <td width="627">
+        	<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<td width="289" valign="top">
+                            <?php  $firstdept = $this->firstdept;
+                                   $seconddept = $this->seconddept;
+                                   $firstclass = $this->firstclass;
+                                   $secondclass = $this->secondclass;
+                                   $totaldeptid = $this->selecteddip;
+                                   
+                            ?>
+<?php for($i=0;$i< sizeof($firstdept);$i++){?>
+                    <div class="clearBoth">
+                            <div class="wid32"><div class="<?=$firstclass[$i]?>" title="<?=$firstdept[$i]['dept_name']?>">&nbsp;</div></div>
+                            <div class="floatLeft"><div class="set_prefer" title="<?=$firstdept[$i]['dept_name']?>"><?=$firstdept[$i]['dept_name']?></div></div>
+                            <div class="floatRight subsunsubsactionclass" id="idunsubscribe<?=$firstdept[$i]['department_id']?>">
+
+                            
+                           <?php
+                          for($m=0;$m<sizeof($totaldeptid);$m++){
+                            if($totaldeptid[$m]==$firstdept[$i]['department_id']){ ?>
+                              <div id="unsubscribedata" class="clearBoth checksubstatus">
+                <div class="floatRight cross">
+                                                        <input type="image" name="unsubscribedata" value="" title="Unsubscribe" id="unsubscribedata_<?=$firstdept[$i]['department_id']?>" class="subscribeimg btn_wid67 subscribe_btn"  />
+
+          </div>
+                                        </div>
+                         <?php   }
+                          }
+                           if($totaldeptid[$firstdept[$i]['department_id']]!=$firstdept[$i]['department_id']){?>
+                         
+                        <div id="subscribe" class="subscribe_btn checksubstatus">
+                                                <input type="image" title="Subscribe" value="" name="subscribe"   id="subscribe_<?=$firstdept[$i]['department_id']?>" class="subscribe_btn btn_wid67 subscribeimg"  />
+
+                                        </div>
+                                <?php }else{?>
+                                        <div id="unsubscribedata" class="clearBoth checksubstatus">
+                <div class="floatRight cross">
+                                                        <input type="image" name="unsubscribedata" value="" title="Unsubscribe" id="unsubscribedata_<?=$firstdept[$i]['department_id']?>" class="subscribeimg btn_wid67 subscribe_btn"  />
+
+          </div>
+                                        </div>
+                <?php }?>
+                                </div>
+                        </div>
+                        <div class="dotted">&nbsp;</div>
+                        <?php if($i!=(sizeof($firstdept)-1)){?>
+                                <div class="lh29">&nbsp;</div>
+                        <?php }?>
+<?php }?>
+                    </td>
+                    <td width="48">&nbsp;</td>
+                    <td width="289" valign="top">
+					<?php for($j=0;$j< sizeof($seconddept);$j++){?>
+							<div class="clearBoth">
+								<div class="wid32"><div class="<?=$secondclass[$j]?>" title="<?=$seconddept[$j]['dept_name']?>">&nbsp;</div></div>
+								<div class="floatLeft"><div class="set_prefer" title="<?=$seconddept[$j]['dept_name']?>"><?=$seconddept[$j]['dept_name']?></div></div>
+								<div class="floatRight subsunsubsactionclass" id="idunsubscribe<?=$seconddept[$j]['department_id']?>">
+ <?php
+                          for($m=0;$m<sizeof($totaldeptid);$m++){
+                            if($totaldeptid[$m]==$seconddept[$j]['department_id']){ ?>
+                              <div id="unsubscribedata" class="clearBoth checksubstatus">
+                <div class="floatRight cross">
+                                                        <input type="image" name="unsubscribedata" value="" title="Unsubscribe" id="unsubscribedata_<?=$seconddept[$j]['department_id']?>" class="subscribeimg btn_wid67 subscribe_btn"  />
+
+          </div>
+                                        </div>
+                         <?php   }
+                          }
+ if($totaldeptid[$seconddept[$j]['department_id']]!=$seconddept[$j]['department_id']){?>
+                        <div id="subscribe" class="subscribe_btn checksubstatus">
+                                                <input type="image" title="Subscribe" value="" name="subscribe"   id="subscribe_<?=$seconddept[$j]['department_id']?>" class="subscribe_btn btn_wid67 subscribeimg"  />
+
+                                        </div>
+                                <?php }else{?>
+                                        <div id="unsubscribedata" class="clearBoth checksubstatus">
+                <div class="floatRight cross">
+                                                        <input type="image" name="unsubscribedata" value="" title="Unsubscribe" id="unsubscribedata_<?=$seconddept[$j]['department_id']?>" class="subscribeimg btn_wid67 subscribe_btn"  />
+
+          </div>
+                                        </div>
+                <?php }?>
+								</div>
+							</div>
+							<div class="dotted">&nbsp;</div>
+							<?php if($j!=(sizeof($seconddept)-1)){?>
+							<div class="lh29">&nbsp;</div>
+							<?php }?>
+                     <?php }?>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        <td width="68">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td colspan="3" height="95">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td colspan="3" class="note"><strong>Note:</strong> You can anytime change your preferences from your settings.</td>
+    </tr>
+    <tr>
+    	<td colspan="3" height="35" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td colspan="3">
+        	<div class="clearBoth">
+            	<div class="wid446">
+                	<a href="activatemobile"><div class="next_step"></div></a>
+					<div class="wid9">&nbsp;</div>
+					<a href="activatemobile" class="skip_link"><div class="skip_step">&nbsp;</div></a>
+
+                </div>
+                <!--<div class="floatRight"><a href="#" class="skip" title="Skip this">Skip this</a> >></div>-->
+            </div>
+        </td>
+    </tr>
+	<tr>
+    	<td colspan="3" height="30" class="fs0">&nbsp;</td>
+    </tr>
+</table>

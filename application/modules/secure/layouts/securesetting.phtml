@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		  <?php echo $this->headMeta() ?>
+             <?php echo $this->headTitle() ?>
+			<?php echo $this->headLink(); ?>
+            <?php echo $this->javascriptHelper();?>
+			<?php //echo $this->headScript(); ?>
+             <?php echo $this->cssHelper();  ?>
+
+			</head>
+			<body>
+			
+		<div id="mainContainer">
+        <!---BOF Header---->
+        <div class="clearBoth">
+			<?php
+
+				require('settingheader.phtml');
+			
+			 ?>
+        </div>
+        <!---EOF Header---->
+        <!---BOF BODY---->	
+		<?php   echo $this->layout()->content ?>
+		<!---EOF BODY---->
+        <div class="mainGapFooter">&nbsp;</div>
+        <!---BOF Footer---->
+        <div class="clearBoth">
+			<?php //require('footer.phtml');?>
+        </div>
+        <!---EOF Footer---->
+    </div>
+			 </body>
+			 </html>

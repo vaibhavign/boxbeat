@@ -1,0 +1,131 @@
+<?php
+$bankAccountDetails = $this->bankaccountDetails;
+$errorMessages = $this->errorMessages;
+//print_r($errorMessages);
+?>
+
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+    <tr>
+        <!--LEFT PANEL starts from here-->
+        <td width="260" valign="top">
+            <div class="confirm_bank_accountLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="businessDetialsLeftPanel">
+
+                    <?php
+                    $request = Zend_Controller_Front::getInstance()->getRequest();
+                    $controllerName = $request->getControllerName();
+                    $actionName = $request->getActionName();
+                    $genObj = new General();
+                    //$controllerName = "Store";
+                    $abc = $genObj->displaySettingMenuNew($controllerName, $actionName);
+                    echo $abc;
+                    ?>
+
+                </div>
+
+            </div>
+        </td>
+        <!--LEFT PANEL ends from here-->
+        <!--RIGHT PANEL starts from here-->
+        <td width="740" valign="top">
+            <div class="confirm_bank_accountRightPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+
+                    <div class="blueMainHeading">Store settings</div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="floatLeft content_text16">Checkout</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Confirm your bank account</b></div>
+                    </div>
+                    <div class="floatRight">
+                        <div class="backArrow"></div>
+                        <div class="floatLeft"><a href="/checkout-settings/bankaccountlisting" class="hyperLinkBlue13" title="Back to Checkout">Back to Checkout</a></div>
+                    </div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+
+
+                </div>
+                <div class="lh25">&nbsp;</div>
+
+                <div class="clearBoth greyText12Lh20">
+                    Check your bank account for the amount deposited by Goo2o. Enter the amount below with its transaction id to confirm your bank account.  Please make sure that the details you entered to confirm the bank account is accurate.
+                </div>
+                <div class="lh10">&nbsp;</div>
+                <div class="clearBoth greyText12Lh20">A transaction id is a unique id that identifies a particular movement of funds between two parties through electronic transfer mechanism.</div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth greyText12Lh20">In case you entered incorrect details for three times your existing bank account will be restricted. To re-activate your existing account, contact goo2o customer support or else add a new bank account.</div>
+                <div class="lh20">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="clearBoth">
+                        <div class="wid160 content_text12Lh20"><b>Bank Details</b></div>
+                        <div class="floatLeft">	
+                            <div class="clearBoth content_text12Lh20"><?php echo $bankAccountDetails[0]['bankname']; ?></div>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth content_text12Lh20">XX-<?php echo substr($bankAccountDetails[0]['account_number'], -4, 4) ?></div>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth content_text12Lh20"><?php echo $bankAccountDetails[0]['ifsc_code']; ?></div>
+                            <div class="lh15">&nbsp;</div>
+                            <div class="solidBorder_bot348">&nbsp;</div>
+                            <div class="lh10">&nbsp;</div>
+                            <div class="clearBoth">
+                                <div class="content_text12Lh20"><b>Enter the deposit amount and transaction Id:</b></div>
+                                <div class="lh5">&nbsp;</div>
+                                <form name="confirmbankaccount" method="post" >
+                                    <div class="clearBoth">
+                                        <div class="greyText12Lh20 wid90"><b>Amount &nbsp;(Rs.)	</b></div>
+                                        <div class="floatLeft">
+                                            <div class="clearBoth"><input type="text" name="amount" class="inputWid70" value="<?php echo $_POST['amount']; ?>" /></div>
+                                            <?php if (isset($errorMessages['amount'])) { ?>
+                                                <div class="lh5">&nbsp;</div>
+                                                <div class="clearBoth greyText11 alert"><?php echo $errorMessages['amount']; ?></div>
+                                            <?php } ?>
+                                            <div class="lh3">&nbsp;</div>
+                                            <div class="clearBoth">
+                                                <div class="floatLeft greyText11"><b>e.g.</b> 1.10</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="lh10">&nbsp;</div>
+                            <div class="clearBoth">
+                                <div class="greyText12Lh20 wid90"><b>Transaction Id</b></div>
+                                <div class="floatLeft">
+                                    <div class="clearBoth"><span class="greyText12Lh20 floatLeft"></span><input type="text" name="transid" class="inputWid114" value="<?php echo $_POST['transid']; ?>" /></div>
+                                    <?php if (isset($errorMessages['transid'])) { ?>
+                                        <div class="lh5">&nbsp;</div>
+                                        <div class="clearBoth greyText11 alert"><?php echo $errorMessages['transid']; ?></div>
+                                    <?php } ?>
+                                    <div class="clearBoth">
+                                        <div class="lh3">&nbsp;</div>
+                                        <div class="clearBoth greyText11">Enter the Id that identifies goo2o deposited an amount in your account</div>
+                                        <div class="lh3">&nbsp;</div>
+                                        <div class="floatLeft greyText11"><b>e.g. </b>VADE0B248932</div>
+                                        <?php if (isset($errorMessages['err_deposit_details'])) { ?>
+                                            <div class="lh5">&nbsp;</div>
+                                            <div class="clearBoth greyText11 alert"><?php echo $errorMessages['err_deposit_details']; ?></div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lh40">&nbsp;</div>
+                <div class="wid138">
+                    <div class="floatLeft"><input type="image" class="cursor" src="/images/secure/confirm_btn.png" title="Confirm" /></div>
+                    <input type="hidden" value="true" name="posted" />
+                    </form>
+                    <div class="floatRight"><a href="/mypayment/bankaccountlisting" class="hyperLinkBlue12Lh25" title="Cancel">Cancel</a></div>
+                </div>
+                <div class="lh40">&nbsp;</div>
+            </div>
+        </td>
+        <!--RIGHT PANEL ends from here-->
+    </tr>
+</table>

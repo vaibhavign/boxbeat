@@ -1,0 +1,157 @@
+<div id="wid1000Auto">
+    <!--left panel starts from here-->
+    <div class="wid650">
+        <div class="blueMainHeading">Review and Confirm Enrollment</div>
+        <div class="lh5">&nbsp;</div>
+        <div class="grey_text12Lh20 wid640">Review your enrollment application and proceed towards payment gateway</div>
+        <div class="lh25">&nbsp;</div>
+        <div class="clearBoth">
+        	<div class="clearBoth">
+                <div class="clearBoth">
+                    <div class="content_text14"><b>Business Info</b></div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="wid145 content_text12Lh20">Business Name</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo stripslashes($this->user_info['business_name']);?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">Business Filling Status</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b> <?php if($this->user_info['business_type']==1){ echo 'Partnership'; }elseif($this->user_info['business_type']==2){ echo 'Sole Proprietorship'; }elseif($this->user_info['business_type']==3){ echo 'Private limited'; }elseif($this->user_info['business_type']==4){ echo 'Public limited'; };?></b></div>
+                </div>
+            </div>
+            <div class="lh25">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="clearBoth">
+                    <div class="content_text14"><b>Billing Details</b></div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="wid145 content_text12Lh20">Billing Address</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft wid450 content_text12Lh20"><b><?php echo $this->user_info['business_address'];?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">City</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo $this->city_name; ?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">State</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo $this->state_name; ?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">Pincode</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo $this->user_info['pincode'];?></b></div>
+                </div>
+            </div>
+            <div class="lh25">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="clearBoth">
+                    <div class="content_text14"><b>Store Details</b></div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="wid145 content_text12Lh20">Online Store Name</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo stripslashes($this->user_info['title']);?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">Your Store URL</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b><?php echo $this->user_info['mallurl'];?></b></div>
+                </div>
+                
+            </div>
+            <div class="lh25">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="clearBoth">
+                    <div class="content_text14"><b>Payment Details</b></div>
+                    <div class="lh15">&nbsp;</div>
+                    <div class="wid145 content_text12Lh20">Software Licensing Fee</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b>Rs.31000</b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="wid145 content_text12Lh20">1 year @ 10% discount</div>
+                    <div class="wid22padd8 content_text12Lh20">:</div>
+                    <div class="floatLeft content_text12Lh20"><b> <?php if($this->user_info['payment_plan']==1){echo 'Rs.51948'; }else{ echo 'Rs.0'; }?></b></div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="totalPayment_bg">
+                	<div class="wid139 content_text12">Total Payment</div>
+                    <div class="wid22padd8 content_text12">:</div>
+                    <div class="floatLeft content_text12"><b><?php if($this->user_info['payment_plan']==1){echo 'Rs.82948'; }else{ echo 'Rs.31000'; }?></b></div>
+                </div>
+            </div>
+            
+            
+            <div class="lh60">&nbsp;</div>
+            <div class="buttonContainer">
+            	<div class="floatLeft"><a href="/merchantenrollment/payment-details?flag=0" class="edit_btn" title="EDIT"></a></div>
+                <?php if($this->user_info['payment_mode']==3){?>
+                <div class="floatRight"><a href="/merchantenrollment/congratulations" class="confirm_btn" title="CONFIRM"></a></div>
+                <?php }else{?>
+                <div class="floatRight"><a href="#"><input type="image" src="/images/secure/merchantenrollment/confirm_btn.png" title="CONFIRM" /></a></div>
+                <?php } ?>
+                
+            </div>
+            
+     	</div>
+        
+    </div>
+     <!--left panel ends from here-->
+    <!--right panel starts from here-->
+    <div class="right_block">
+    	<!--<div class="paymentMethodContainer">
+        	<div class="paymentMethodHeading">Payment Method</div>
+            <div class="lh20">&nbsp;</div>
+        	<div class="paymentModeContainer">
+            	<div class="floatLeft">Internet Banking:</div>
+                <div class="lh10">&nbsp;</div>
+                <div class="floatRight"><img src="/images/secure/merchantenrollment/cca_img.png"  /></div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="wid38">&nbsp;</div>
+            <div class="floatLeft"><a href="/merchantenrollment/payment-details?flag=0" class="hyperLinkBlue12" title="Change">Change</a></div>
+        </div>-->
+        <div class="instructionsContainer">
+        	<div class="content_text14"><b>Instructions:</b></div>
+            <div class="lh15">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">After reviewing your enrollment application click on the "pay now" to proceed towards  payment gateway.</div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">Once you entered into a payment gateway please enter your payment details carefully to process your  payment.</div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">Do not refresh the page in the middle of processing your payment or else you will lose the current session</div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">To edit your existing details click on the "edit" to go back to the business details and payment page.</div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">Once your payment is successful, you will be redirected to the payment acknowledgement page from where you can setup your online store.</div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="bullet"></div>
+                <div class="wid275 content_text12Lh20">As soon as your payment is processed you will receive a payment acknowledgement on your registered email address.</div>
+            </div>
+        </div>
+    </div>
+    <!--right panel starts from here-->
+</div>

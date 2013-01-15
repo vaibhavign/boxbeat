@@ -1,0 +1,75 @@
+<div id="footerSecure">
+	<div class="wid1000">
+		<!--<div class="lh145">&nbsp;</div>        -->
+		<div class="borderSolid1"></div>
+		<div class="lh20">&nbsp;</div>
+		<div class="floatLeft">
+			<div class="wid78"><img src="/images/secure/footer_img.png" /></div>
+			<div class="floatLeft">
+				<div class="floatLeft">
+					<div class="top-footerHeading">Safe shopping guaranteed</div>
+					<div class="tableGreyText_footer">To ensure that your personal information is kept secure, every transaction at secure.goo2o.com is processed using secure servers with advanced encryption and firewall technology throughout the ordering process. Read our <a href="http://support.goo2o.com/entries/506158-security-tips" title="security tips" target="_blank">security tips</a>.	</div>
+				</div>
+				<div class="floatRight"><img src="/images/secure/verisign_img.png" alt="" /></div>
+			
+			</div>
+			<div class="lh45">&nbsp;</div>
+		</div>
+		<div class="borderSolid2"></div>
+		<div class="lh15">&nbsp;</div>	
+		<div class="clearBoth">
+			<div class="tableGreyText11 floatLeft">Copyright &copy; 2010-12 Goo2o technologies (P) Ltd. All rights reserved.</div>
+			<div class="floatRight">
+				<div class="floatLeft"><a href="http://support.goo2o.com/entries/507112-privacy-policy" class="hyperlinkfont11_footer" title="Privacy Policy" target="_blank">Privacy Policy</a><span class="tableGreyText11">&nbsp;&nbsp;|&nbsp;&nbsp;</span></div>
+				<div class="floatLeft"><a href="http://support.goo2o.com/entries/507111-terms-conditions" class="hyperlinkfont11_footer" title="Terms" target="_blank">Terms</a><span class="tableGreyText11">&nbsp;&nbsp;|&nbsp;&nbsp;</span></div>
+				<div class="floatLeft"><a href="http://support.goo2o.com/entries/505842-returns-replacements-refund" class="hyperlinkfont11_footer" title="Returns, Replacements and Refunds" target="_blank"> Returns, Replacements and Refunds</a><span class="tableGreyText11">&nbsp;&nbsp;|&nbsp;&nbsp;</span></div>
+					<div class="floatLeft"><a href="http://support.goo2o.com/entries/506151-user-protection-policy" class="hyperlinkfont11_footer" title="Purchase Protection" target="_blank">Purchase Protection</a></div>
+			</div>	
+		</div>
+		<div class="lh45">&nbsp;</div>
+	</div>
+</div>
+<?php
+//echo "<pre>";
+    //print_r($_SESSION);
+$genObj = new General();
+if($genObj->isadmin())
+{
+//include_once('chatfooter.phtml'); 
+}
+	 ?>
+<!--User Window Ends here-->
+<?php 
+ $display='none';
+if($_SESSION['totalnew']>0){
+   // $display='block';
+    
+    } //echo $_SESSION['totalnew'];
+	
+	?>
+    
+<div id="inboxNotificationMSG" class="inboxNotificationMSG" style="display:<?=$display?>;">
+
+    
+    
+    <div id="alert_msg">
+	<div class="alertmsgleft"></div>
+	<div class="alertmsgmiddle">
+		<div><a href="javascript:void(0)" class="crossicon" title="Close"  id="closeupdater"></a></div>
+
+		<div class="alert_msgcontainer">
+			<div class="aler_msgicon"></div>
+			<div class="alert_msg">You have new message(s)</strong> in your inbox.</div>
+		
+		
+		</div>
+	
+	
+	</div>
+	<div class="alertmsgright"></div>
+	
+
+
+
+
+</div>

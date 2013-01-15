@@ -1,0 +1,128 @@
+<script language="javascript">
+function toggle() {
+	var ele = document.getElementById("dnt_get_mail");
+	var text = document.getElementById("click_fill");
+	if(ele.style.display == "block") {
+    		ele.style.display = "none";
+  	}
+	else {
+		ele.style.display = "block";
+	}
+}
+</script>
+<?php $display='style="display: none;"';
+$userDetails = $this->loggedUserDetail;
+
+?>
+<table cellpadding="0" cellspacing="0" border="0" width="760" align="center">
+	<tr>
+		<td height="27">&nbsp;</td>
+	</tr>
+    <tr>
+    	<td valign="bottom">
+            <div class="wid92"><a href="<?=HTTP_SERVER_ROOTS?>"><img src="/images/secure/logo.gif" /></a></div>
+            <div class="floatLeft header_txt" style="padding-top:30px;">iglobul helps you buy & sell live deals with real-time conversation. </div>
+    	</td>
+    </tr>
+    <tr>
+    	<td height="10" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td class="step_bg">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td height="40" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+        <td valign="top">
+
+			<div class="clearBoth subscribe_heading"><?php if($_GET['time']=='exceed'){echo "Confirm your email address";}else{echo "Check your email";}?></div>
+		</td>
+    </tr>
+
+    <tr>
+    	<td height="10" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td valign="top"><?php if($_GET['time']=='exceed'){?>
+				<div class="wid650">Hi <strong><?=$_SESSION['customer_first_name']?></strong>, to continue using iGlobul, please click on the link we sent to <strong><?=$userDetails[0]['user_email_address']?></strong>. This will confirm your email as your contact address.</div>
+				<div class="lh18">&nbsp;</div>
+        	<?php }else{?>Just verify yourself to complete registration, click the link in the email that we sent to <strong><?=$userDetails[0]['user_email_address']?></strong>
+			<?php }?>
+        </td>
+    </tr>
+	 <tr>
+    	<td height="16" class="height_alert" id="messageverify">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td height="20" class="fs0">&nbsp;</td>
+    </tr>
+    <tr>
+    	<td valign="top">
+        	<div class="clearBoth"><a id="click_fill" href="javascript:toggle();" class="email_not_get" title="Click Here">&nbsp;</a></div>
+        </td>
+    </tr>
+    <tr>
+    	<td height="36" class="fs0">&nbsp;</td>
+    </tr>
+    <tr id="dnt_get_mail" <?=$display?>>
+    	<td>
+        	<table cellpadding="0" cellspacing="0" border="0">
+            	<tr>
+                	<td width="372" valign="top" align="left">
+
+                    	<div class="clearBoth">
+                        	<div class="clearBoth">Check to see if your email is correct, or enter a different address:</div>
+                            <div class="lh17">&nbsp;</div>
+							<div class="lh5">&nbsp;</div>
+                            <div class="clearBoth"><input type="text" value="<?=$userDetails[0]['user_email_address']?>" name="emailid" id="emailid" class="verify_input" /></div>
+                        </div>
+                        <div class="clearBoth under_input">Enter an email address that works</div>
+                        <div class="lh18">&nbsp;</div>
+						<div class="clearBoth" id="verifyerror" style="display:none;" >
+								<div class="height_alert" id="valerrormessage" style="width:370px;">&nbsp;</div>
+								<div class="lh18">&nbsp;</div>
+						</div>
+                        <div class="resend_email mailsend"><input type="image" title="Resend Email" class="btn_wid101"></div>
+                    </td>
+                    <td width="50" valign="top" align="left"><img src="/images/secure/or.gif" border="0" /></td>
+                    <td align="left" valign="top">
+                    	<div class="clearBoth">
+                        	Check your email's Junk/Bulk folder, because it's possible our email will be accidentally placed there. If you do find it in your Junk/Bulk folder, please remember to mark it as "Not junk/spam".
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+    	<td height="70">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3" valign="middle">
+			<div class="wid575">
+				<div class="lh5">&nbsp;</div>
+				<div class="wid22">&nbsp;</div>
+            	<div class="wid553 bottomLine">
+					You have 5 days to verify your email address. So in case you havent found our mail in your inbox right now, proceed to dashboard instantly.</div>
+			</div>
+        </td>
+    </tr>
+    <tr>
+        <td height="45">&nbsp;</td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <div class="clearBoth">
+                <div class="wid186">
+				<input type="hidden" name="urlid" id="urlid" value="<?=$url?>" />
+                <?php if($_GET['time']!='exceed'){?><div class="floatLeft proceed_to redirect"></div><?php }?>
+				<?php if($_GET['time']=='exceed'){?><div class="floatLeft proceed_to_time redirecttime"></div><?php }?>
+				</div>
+            </div>
+        </td>
+    </tr>
+	<tr>
+        <td height="30">&nbsp;</td>
+    </tr>
+</table>

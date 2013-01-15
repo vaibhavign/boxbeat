@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<title>Welcome to Goo2o Store: Login or create a new Goo2o ID</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Goo2o Store is a complete and multi channel ecommerce solution which helps you to buy and sell live with real-time conversation. It also offers you to create your own fully functional online shopping store." />
+
+<meta name="keywords" content="Goo2o, Goo2o Merchant Solution, goo2o ID, id, buy & sell, live deals, real time conversation, goo2o merchant, goo2o store, goo2o merchant store, setup store, online store, online shopping store, create a store, shopping store, goo2o merchant solution, gms, GMS, shopping experience, seller protection, buyer protection, real-time conversation, free goo2o id, goo2o technologies" />
+
+<?php  echo $this->javascriptHelper();  ?>
+
+<?php echo $this->dataHelper();  ?>
+
+</head>
+
+<body >
+
+<div class="wid100per">
+ccccc
+	<table cellpadding="0" cellspacing="0" border="0" width="960" align="center">
+
+    	<tr>
+
+        	<td>
+
+            	<div class="clearBoth">
+
+                    <div style="clear:both; padding-top:20px;">
+
+                        <div class="logoBlock"><a href="<?php echo HTTP_SERVER; ?>" title="Goo2o.com"><img src="/images/default/logo.png" border="0" alt="Goo2o" title="Goo2o" /></a></div>
+
+                        <div class="loginlink">
+
+                              <?php if($_SESSION['USER']['userDetails'][0]['user_full_name']!=''){?>
+                             <span style="color:#000000;">Logged in as </span><span style="color:#000000; font-weight:bold;"><?=$_SESSION['USER']['userDetails'][0]['user_full_name']?>.</span> (<a href="<?php  echo HTTPS_SERVER ?>/admin/create/signout" class="headerlink" title="Not you">Not you?</a>)</span>
+							<?php } else {?>
+							 <a href="<?php  echo HTTPS_SECURE ?>/login" class="headerlink" title="Log in">Log in</a>
+							<?php } ?>
+							&nbsp;&nbsp;|&nbsp;&nbsp;
+							 <?php if($_SESSION['USER']['userDetails'][0]['user_full_name']!=''){?>
+							  <a href="<?php  echo HTTPS_SERVER ?>/myaccount" class="headerlink" title="My account">My account</a>
+							  
+							<?php } else {?>
+							 <a href="http://support.goo2o.com/" class="headerlink" title="Help center">Help center</a>
+							<?php } ?>
+
+                        </div>
+
+                    </div>
+
+                    <div class="headergap">&nbsp;</div>
+
+                    <div style="font-size:28px; color:#000;">Goo2o helps you buy &amp; sell live with real-time conversation.</div>                
+
+                </div>
+
+            </td>
+
+        </tr>
+
+    </table>
+
+	<div class="wid1000 body_margin">
+
+		<div class="wid1000_body">
+
+    <div class="clearBoth mainContainer" >
+
+	 <?php echo $this->layout()->content ?>
+
+  </div> 
+
+	</div>
+
+</div>
+
+</body>
+
+</html>
+

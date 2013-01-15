@@ -1,0 +1,282 @@
+<?php
+$genObj = new General();
+$userName = new Zend_Session_Namespace('USER');
+$originalUser = new Zend_Session_Namespace('original_login');
+$loginrole=$_GET['role'];
+$getMallsById=$genObj->getApiDetails($_GET['email']);
+
+if($_GET['modulename']=='admin'){
+	$managementClass = "selectedheader";
+	$menu = "style='display:block;'";
+} else {
+	$managementClass = "";
+	$menu = "style='display:none;'";
+}
+
+
+?>
+<!--<script src="/jscript/common/jquery-1.5.1.js" type="text/javascript"></script>-->
+<script type="text/javascript" >
+ jQuery(document).ready(function () {
+// JavaScript Document
+// file to list the page action upon which the tabs will be highlighted
+// Creating five tabs for the menu
+
+
+  var modulearray = new Array('Manage','Create','Design','Promote','Overview');
+  
+  var arrayTab = new Array('manageTab','createTab','designTab','promoteTab','overviewTab');
+  
+  var manageTab = new Array('list-order','orderdetail','returns','list-shipments','managepanel','listreviews','updatereview','managecategory','categorydetails','managebrands','branddetails',
+  'managevariations','managetestimonial','managefeatures','manageproduct','managedraft','draftdetail','productdetail','confirmdelivery','manage-invoice','view-invoice-details','customerlist','customerdetail','shipment-details','edit-carrier-details','editcarrierdetails','confirm-shipment','confirmshipment','return-item-details','manageforms','formdetail');
+  var createTab = new Array('placecategory','createpanel','categorybasicinfo','categoryimagemanager','categoryoptimize',
+    'categorypublish','brandbasicinfo','branduploadimage','brandoptimize','brandpublish','createvariation','createvariationgroup','addtogroup',
+    'addtestimonial','featurebasicinfo','setfeaturegroup','addgroups','optimize','termsandpolicies','variant','feature','imagemanager',
+    'basicinfo','add','publish','create-shipment','edit-shipment','create-step-one','create-step-two','fillforminfo','assignlabel','applyform');
+  var designTab = new Array('designpanel','banners-list','create-banner','create-page','pages-list','gift-certificate','store-design','my-templates');
+  var promoteTab = new Array('promotepanel','seosuitepanel','title','description','keyword','url','redirection','searchengine','creatediscountcoupons','managediscountcoupon','managegc','manage-purchased-gc','getsaleon','getfeedback','imageoptimization','robottxt','xmlsitemap','imageoptimizationedit','sell-on-facebook');
+  var overviewTab = new Array('page');
+  
+  var restrictTabs = new Array('variation','shipping','policy','banner','testimonial','inbox','addcategory','product','reviews','myreviews','features','addbrand','seosuite','coupons','design','giftcertificate','create-shipment','customers','form');
+
+    jQuery('.aclass').click(function(event){
+	event.preventDefault();
+	var elm=jQuery(this);
+
+	jQuery('#goo2oform').attr('action',elm.attr('href'));
+		jQuery('#fromaction').attr('value',elm.attr('href'));
+
+
+	jQuery('#goo2oform').submit();
+return false;
+	})
+	 
+    jQuery('.atab').bind('mouseover', function () {
+        jQuery('.submenu').hide();
+        var arrclass = jQuery(this).attr('class').split(' ');
+        var classarrow = arrclass[1].split('Tab');
+        if (classarrow[1] == "ActiveArrow") {
+            $('.' + classarrow[0].toLowerCase() + 'Tabmenu').addClass(classarrow[0].toLowerCase() + 'TabActivemenu').removeClass(classarrow[0].toLowerCase() + 'Tabmenu');
+            jQuery('.' + classarrow[0].toLowerCase() + 'TabActivemenu').show()
+        }
+        var tabId = jQuery(this).parent().attr('id');
+        jQuery('.' + tabId + 'Tabmenu').show()
+    });
+    jQuery('.submenu').mouseover(function () {
+        jQuery('.submenu').hide();
+        jQuery(this).show()
+    });
+    jQuery('.submenu').mouseout(function () {
+        var tempvar = jQuery(this).attr('rel');
+        var tempvar1 = jQuery(this).parent().attr('rel');
+        if (tempvar != tempvar1) {
+            jQuery(this).hide()
+        }
+    });
+    jQuery('#mainWrapper').bind('mousemove', function (e) {
+        var clientCoords = "( " + e.clientX + ", " + e.clientY + " )";
+        var submenuDivOffset = '';
+        var submenuDivOffsetHeight = '';
+        var submenuDivOffsetWidth = '';
+        divHeight = jQuery(this).css('height').split('px');
+        heightDiv = parseInt(divHeight[0]);
+        jQuery('.submenu').each(function () {
+            if (jQuery(this).css('display') == 'block') {
+                divHeight = jQuery(this).css('height').split('px');
+                submenuDivOffsetHeight = parseInt(divHeight[0]);
+                divWidth = jQuery(this).css('width').split('px');
+                submenuDivOffsetWidth = parseInt(divWidth[0]);
+                var offset = jQuery(this);
+                submenuDivOffset = offset.offset()
+            }
+        });
+        if (e.clientY > submenuDivOffsetHeight + submenuDivOffset.top || e.clientX < submenuDivOffset.left || e.clientX > submenuDivOffset.left + submenuDivOffsetWidth) {
+            jQuery('.submenu').hide()
+        }
+    });
+    jQuery('.atab').bind('mouseout', function () {
+        jQuery('.maintab').bind('mouseover', function () {
+            var tempvar = jQuery(this).attr('rel');
+            var tempvar1 = '';
+            jQuery('.submenu').each(function () {
+                if (jQuery(this).css('display') == 'block') tempvar1 = jQuery(this).attr('rel')
+            });
+            if (tempvar != tempvar1) {
+                jQuery('.submenu').hide()
+            }
+            var arrclass = jQuery(this).attr('class').split(' ');
+            var classarrow = arrclass[1].split('Tab');
+            var tabId = jQuery(this).children().attr('id');
+          
+            if(tabId===undefined || tabId=='' || tabId=='undefined')
+            {
+					
+					return false;
+			}
+			
+            var splitme = tabId.split('id');
+            jQuery('.' + splitme[0] + 'Tabmenu').css('display');
+            if (jQuery('.' + splitme[0] + 'Tabmenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'Tabmenu').show()
+            } else if (jQuery('.' + splitme[0] + 'TabActivemenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'TabActivemenu').show()
+            } else {}
+        });
+        jQuery('.maintab').bind('mouseout', function () {
+            var tempvar = jQuery(this).attr('rel');
+            var tempvar1 = jQuery(this).children().attr('rel');
+            if (tempvar != tempvar1) {
+                jQuery('.submenu').hide()
+            }
+            var tabId = jQuery(this).children().attr('id');
+             if(tabId===undefined || tabId=='' || tabId=='undefined')
+            {
+					
+					return false;
+			}
+            var splitme = tabId.split('id');
+            if (jQuery('.' + splitme[0] + 'Tabmenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'Tabmenu').show()
+            } else if (jQuery('.' + splitme[0] + 'TabActivemenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'TabActivemenu').show()
+            } else {}
+        })
+    });
+    jQuery('.o2ojsblock ,.logoBlock').bind('mouseover', function () {
+        jQuery('.submenu').hide()
+    });
+    jQuery('.create_ddown').mouseover(function () {
+        jQuery('.addClass').removeClass('create_tab').addClass('create_tabActive');
+        jQuery('.new_dropDown').show()
+    });
+    jQuery('.new_dropDown').click(function () {
+        jQuery('.addClass').addClass('create_tab').removeClass('create_tabActive');
+        jQuery('.new_dropDown').hide()
+    });
+    jQuery('.ChangeClass').click(function () {
+        jQuery('.HTabBlock').hide();
+        if (jQuery(this).hasClass('selectedheader')) {
+            //jQuery('.HTabBlock2').hide();
+            jQuery(this).removeClass('selectedheader')
+        } else {
+            //jQuery('.HTabBlock2').show();
+            jQuery(this).addClass('selectedheader');
+            jQuery('.accclass').removeClass('selectedheader')
+        }
+    });
+
+    jQuery('.maintab').click(function (e) {
+        var redirectURL = jQuery(this).attr('rel');
+
+		if(jQuery('#msgblock2').children().hasClass('headerTopMSGBlock')){
+		if (e.clientY < 205 && e.clientY > 172) {
+            if (redirectURL != undefined) {
+                window.location.href = "http://login.eshopbox.com/admin/" + redirectURL + "/" + redirectURL + "panel"
+            }
+        }
+		} else {
+		        //if (e.clientY < 147 && e.clientY > 125) {
+            if (redirectURL != undefined) {
+                window.location.href = "http://login.eshopbox.com/admin/" + redirectURL + "/" + redirectURL + "panel"
+           // }
+        }	
+		}
+		
+    })
+var urls = window.location.href	;
+
+            var spliturl = urls.split('/');
+            var pagetitle = spliturl[spliturl.length-1];
+	
+           /* for (a in modulearray) {
+                $('.' + modulearray[a] + 'TabActive').removeClass(modulearray[a] + 'TabActive').addClass(modulearray[a] + 'Tab');
+                $('.' + modulearray[a] + 'TabActiveArrow').removeClass(modulearray[a] + 'TabActiveArrow').addClass(modulearray[a] + 'TabArrow')
+            }*/
+            if (jQuery.inArray(pagetitle, manageTab) != -1) {
+                $('.' + modulearray[0] + 'Tab').addClass(modulearray[0] + 'TabActive').removeClass(modulearray[0] + 'Tab');
+                $('.' + modulearray[0] + 'TabArrow').addClass(modulearray[0] + 'TabActiveArrow').removeClass(modulearray[0] + 'TabArrow')
+            }
+            if (jQuery.inArray(pagetitle, createTab) != -1) {
+                $('.' + modulearray[1] + 'Tab').addClass(modulearray[1] + 'TabActive').removeClass(modulearray[1] + 'Tab');
+                $('.' + modulearray[1] + 'TabArrow').addClass(modulearray[1] + 'TabActiveArrow').removeClass(modulearray[1] + 'TabArrow')
+            }
+            if (jQuery.inArray(pagetitle, designTab) != -1) {
+                $('.' + modulearray[2] + 'Tab').addClass(modulearray[2] + 'TabActive').removeClass(modulearray[2] + 'Tab');
+                $('.' + modulearray[2] + 'TabArrow').addClass(modulearray[2] + 'TabActiveArrow').removeClass(modulearray[2] + 'TabArrow')
+            }
+            if (jQuery.inArray(pagetitle, promoteTab) != -1) {
+                $('.' + modulearray[3] + 'Tab').addClass(modulearray[3] + 'TabActive').removeClass(modulearray[3] + 'Tab');
+                $('.' + modulearray[3] + 'TabArrow').addClass(modulearray[3] + 'TabActiveArrow').removeClass(modulearray[3] + 'TabArrow')
+            }
+            if (jQuery.inArray(pagetitle, overviewTab) != -1) {
+                $('.' + modulearray[4] + 'Tab').addClass(modulearray[4] + 'TabActive').removeClass(modulearray[4] + 'Tab');
+                $('.' + modulearray[4] + 'TabArrow').addClass(modulearray[4] + 'TabActiveArrow').removeClass(modulearray[4] + 'TabArrow')
+            }
+            
+            if (pagetitle == 'page') {
+                $('.OverviewTab').addClass('OverviewTabActive').removeClass('OverviewTab')
+            }
+});
+
+
+        </script>
+
+<div class="headerMainCont"> 
+		<div class="mainWrapper">
+		<div class="logo"><a href="<?=HTTP_SERVER?>" title="e shopbox"><img src="<?php echo HTTP_ROOT?>/images/default/header/logo.png" /></a></div>
+		<div class="rightContent">
+			<div class="firstrow">
+				<div><b>Hi, <?php echo $_GET['userfullname']; ?> </b>&nbsp;|&nbsp; </div>
+				<div><a href="<?php echo HTTP_ROOT;?>/logout" title="Logout">Logout</a></div>
+			</div>
+			<div class="clear"></div>
+			<div class="borderBot"></div>
+			<div class="clear"></div>
+
+			<div class="firstrow">
+				<div><a href="<?php echo HTTP_ROOT;?>/admin/overview/page" class="<?php if($_GET['modulename']=='admin'){echo 'focus';}?>" title="Store management">Store management</a>&nbsp;|&nbsp;</div>
+				<div><a href="<?php echo HTTP_ROOT;?>/secure/accountsetting"  class="<?php if($_GET['modulename']=='secure'){echo 'focus';}?>" title="Settings">Settings</a>&nbsp;|&nbsp;</div>
+				<div><a href="<?php echo HTTPS_SERVER ?>/inbox/list" class="<?php if($_GET['modulename']=='default'){echo 'focus';}?>" title="Alerts" >Alerts</a>&nbsp;|&nbsp;</div>
+				<div><a href="http://support.goo2o.com" title="Help">Help</a></div>
+			</div>
+		</div>
+		<div class="lh25">&nbsp;</div>
+		<div class="floatL"><div class="headerBotBlockContainer">
+    	<div class="headerBotBlock">
+        	<?php 
+		    $checkDemoVal = $genObj->checkDemoUserValidity($_GET['apikey']);
+        	if($loginrole!=NULL && $checkDemoVal > 0){ ?>
+            	<div class="headerBotBlockLeftBlock">            	
+                    <div <?php  echo $menu;  ?> class="HTabBlock2 clearBoth">
+                    <?php echo $genObj->displayMenuNew($_GET['mallurl'],$_GET['role'],$_GET['ak'],$_GET['email']); ?>	
+                    </div>                
+            	</div>
+                <div <?php  echo $menu;  ?> class="headerBotBlockRightBlock">
+                    <div class="innerDivStore">
+                        <div class="container">
+                            <?php 
+                            if(!empty($getMallsById)) { 
+							echo '<select class="inpSelect o2ojsmallname" onchange="window.location.href=this.options[this.selectedIndex].value">';
+                                foreach($getMallsById as $mall_key => $mall_value){
+                                if($mall_value['store_apikey']==$_GET['storeapikey']) 
+                                    $selected=' selected="selected"';
+                                else
+                                    $selected='';
+                                ?>
+                                    <option <?php echo $selected;?> value="<?php echo HTTPS_SERVER ?>/admin/index/change-profile/a/<?php echo $mall_value['apikey']?>/u/<?php echo $mall_value['user_id']?>"><?php echo $mall_value['title'];?></option>
+                                <?php } 
+                                echo '</select>';
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+			<?php }?>
+        </div>
+    </div>
+    </div>
+		
+	</div>
+	
+	
+</div>

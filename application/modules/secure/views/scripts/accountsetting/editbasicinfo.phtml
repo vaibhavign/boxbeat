@@ -1,0 +1,184 @@
+<script type="text/javascript" src="/jscript/secure/ajaxupload.js" ></script>
+<form id="ajaxuploadform" action="/ajaxupload.php?filename=name&amp;maxSize=9999999999&amp;maxW=200&amp;fullPath=<?php echo HTTP_SERVER;?>/tmp/&amp;relPath=tmp/&amp;colorR=255&amp;colorG=255&amp;colorB=255&amp;maxH=300" method="post">
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+	<tr>
+    	<!--LEFT panel starts from here-->
+    	<td width="260" valign="top">
+        	<div class="editBasicInfoRightPanel">
+            	<div class="lh25">&nbsp;</div>
+            	<div class="businessDetialsLeftPanel">
+
+               <?php
+			 		$request = Zend_Controller_Front::getInstance()->getRequest();
+					$controllerName = $request->getControllerName();
+					$actionName = $request->getActionName();
+					$genObj = new General();
+					//$controllerName = "Store";
+					$abc = $genObj->displaySettingMenuNew($controllerName,$actionName);
+					echo $abc;
+				?>
+                </div>
+            	
+
+            </div>
+        </td>
+        <!--LEFT panel ends from here-->
+        <!--RIGHT panel starts from here-->
+        <td width="740" valign="top">
+        	<div class="editBasicInfoLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="floatLeft">
+                        <div class="floatLeft blueMainHeading">Account settings</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Edit basic info</b></div>
+                    </div>
+                    <div class="floatRight">
+                    	<div class="backArrow"></div>
+                        <div class="floatLeft"><a href="<?php echo HTTP_SECURE.'/accountsetting'; ?>" class="hyperLinkBlue13" title="Back to account settings">Back to account settings</a></div>
+                    </div>
+                </div>
+
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth content_text12">
+                    <div class="wid139"><b>Image</b></div>
+                    <div class="floatLeft">  
+                       <!--<div class="imageContainers" id="upload_area"></div>-->
+                        <?php 
+                       $this->userName = new Zend_Session_Namespace('original_login');
+                       if(file_exists('images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage))
+                        { ?>
+                    	<div class="imageContainers" id="upload_area" style=""><img src="<?php echo HTTP_SERVER.'/images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage;?>" height="100" width="100" alt="upload img" /></div>
+                        <?php } else { ?>
+                        <div class="imageContainers" id="upload_area"><img src="<?php echo HTTP_SERVER.'/images/secure/user_image/no_image.jpg';?>" height="100" width="100" alt="upload img" /></div>
+                        <?php } ?>
+                        <div class="floatLeft">
+                         
+                            <input type="file" style="cursor:pointer" name="name" id="file" title="Browse..." onchange="ajaxUpload(this.form,'/ajaxupload.php?filename=name&amp;maxSize=716800&amp;maxW=200&amp;userimage=<?php echo $this->userName->userId.'/'.$this->userimage; ?>&amp;fullPath=<?php echo HTTP_SERVER;?>/tmp/&amp;relPath=tmp/&amp;colorR=255&amp;colorG=255&amp;colorB=255&amp;maxH=300','upload_area','');document.getElementById('removeimage').style.display='none'; return false;" />
+                            <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth grey_text11">Max size of 700 KB. JPG, GIF, PNG</div>
+                            <div class="lh5">&nbsp;</div>
+                         </div>
+
+                        <div class="clearBoth">
+  
+                     		<!--<div class=""><input type="file" name="file" id="file" title="Browse..."/> </div>-->
+                                <img id="myImage" src="" style="display:none;"/>
+                        	<div class="floatLeft"><!--<input type="image" src="/images/secure/accountsetting/browse_btn.png" title="Browse" />--></div>                            
+                           
+                        </div>
+                        <div class="lh5">&nbsp;</div>
+                       <?php 
+                                      if($this->userimage == "no_image.jpg" || $this->userimage == ""){ ?>
+                        
+                      <?php  } else
+                      {?>
+                        <div class="clearBoth"><a title="Remove" class="hyperLinkBlue11" id="removeimage">Remove</a></div>
+                        <?php } ?>
+                    </div>
+
+                </div>
+                
+                    
+                <div class="lh15">&nbsp;</div>
+                <div class="clearBoth content_text12">
+                    <div class="wid139"><b>Name</b></div>
+                    <div class="floatLeft">
+                    	<div class="floatLeft">
+                            <div class="clearBoth"><input type="text" id="name" name="userfullname" class="inputWid272" value="<?php echo $this->userfullname ?>" onfocus="document.getElementById('error_name').style.display='none'"/></div>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth errorMsg" id="error_name"></div>
+                        
+                        </div>
+                    </div>
+                                
+                </div>
+                <div class="lh15">&nbsp;</div>
+                <div class="clearBoth content_text12">
+                    <div class="wid139"><b>Location</b></div>
+                    <div class="floatLeft">
+                     <select class="dropDownWid159" id="state_name" name="state_name">
+                	<option value='0' >Select state</option>
+                    <?php foreach($this->states as $key=>$state) { ?>
+                    	<option value="<?php echo $state['id'];?>"  <?php if($this->user_stateid == $state['id']) echo 'selected="selected"';?>><?php echo $state['state_name'];?></option>
+                    	<?php } ?>
+                    </select>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="clearBoth errorMsg" id="error_state_name"></div>
+                      <div class="dropDownWid159" id="dpd_city_name" style="display:none">
+                           <?//=$this->city;?>
+                       </div>
+                        
+                     </div>
+                    <div class="floatLeft">
+                            <div class="floatLeft"><input type="text" class="input-textField180" name="location" id="location" value="<?php echo $this->user_cityname; ?>" onfocus="document.getElementById('error_location_name').style.display='none'"/></div>
+                                <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth errorMsg" id="error_location_name"></div>
+
+                        </div>
+                   
+                    <div class="lh40">&nbsp;</div>
+                    <div class="wid160">
+                        <input type="hidden" name="pageaction" value="edituserinformation"/>
+                        <div class="floatLeft">
+                           <input type="submit" class="editinfobutton" title="Save Changes" value=""/>
+                        </div>
+                        <div class="floatRight"><a href="<?php echo HTTP_SECURE.'/accountsetting'; ?>" class="hyperLinkBlue12Lh25" title="Cancel">Cancel</a></div>
+                    </div>
+                    <div class="lh40">&nbsp;</div>
+                </div>
+              
+           </div>
+
+        </td>
+        <!--RIGHT panel ends from here-->
+    </tr>
+</table>
+</form>
+<table id="deletebox" style="display:none;" class="boxy-wrapper fixed" cellspacing="0" cellpadding="0" border="0" style="z-index: 1342; visibility: visible; left: 426px; top: 241px; opacity: 1;">
+    <tbody>
+        <tr>
+            <td class="top-left"></td>
+            <td class="top"></td>
+            <td class="top-right"></td>
+        </tr>
+        <tr>
+        <td class="left"></td>
+        <td class="boxy-inner">
+        <div class="title-bar">
+        <h2>Remove this image</h2>
+        <a class="close" alt="close" title="close" style="cursor:pointer">&nbsp;</a>
+        </div>
+            <table class="boxy-content" cellspacing="0" cellpadding="0" border="0" width="500" style="display: block;">
+                <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="popup_container">
+                                    <div class="lh30">&nbsp;</div>
+                                    <div class="deletePopupMsg" align="center">Are you sure you want to remove this image?</div>
+                                    <div class="lh30">&nbsp;</div>
+                                    <div class="popup_underline"></div>
+                                    <div class="lh7">&nbsp;</div>
+                                    <div class="floatRight">
+                                    <div class="floatLeft">
+                                     <a class="close cancel_link" title="Cancel" style="cursor:pointer">Cancel</a>
+                                    </div>
+                                    <div class="sendmsg_btn">
+                                    <input id="yesassign" type="image" src="/images/default/popup_ok_btn.gif" alt="Ok" title="Ok"/>
+                                    </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="right"></td>
+        </tr>
+        <tr>
+            <td class="bottom-left"></td>
+            <td class="bottom"></td>
+            <td class="bottom-right"></td>
+        </tr>
+    </tbody>
+</table>

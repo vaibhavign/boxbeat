@@ -1,0 +1,155 @@
+<div class="wid1000Auto">
+<?php if (!empty($this->errormaeesge)) {
+?>
+   <!-- <div class="wid1000mAuto">
+
+        <div class="cart_msg">
+            <div class="cart_msg_container">
+                <div class="cartmsg_icon"></div>
+                <div class="floatLeft">
+                    <div class="important_msg">Important messages</div>
+                <?php foreach ($this->errormaeesge as $key => $val) {
+ ?>
+                    <div class="lh12"></div>
+                    <div class="plz_note"><?=$val ?></div>
+<?php } ?>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="lh40">&nbsp;</div>-->
+<?php } ?>
+<div class="lh35">&nbsp;</div> 
+	<div class="clearBoth">	
+		<div class="headingBlue floatLeft">Choose where to ship each item</div>
+		<div class="floatRight"><a href="/cart/selectshippingaddress" class="hyperLinkBlue12 floatLeft" title="Ship my items to a single address">Ship my items to a single address</a><!--<div class="questMark"></div>--></div>
+	</div>
+	<div class="lh10">&nbsp;</div>
+	<div class="clearBoth contentTextGrey12Lh18">Please select address from drop down list. If you are not getting an address to ship, <a href="/cart/selectshippingaddress#addressform" title="enter a new shipping address" class="hyperLinkBlue12">enter a new shipping address</a>. Be sure to click on <b>&lsquo;update&rsquo;</b> after making any changes. When you click on remove the product will be removed from the order list.</div>
+	<div class="lh15">&nbsp;</div>
+	<div class="tableTopBar">
+		<div class="wid390">Items</div>
+		<div class="wid108">Quantity</div>
+		<div class="wid480">Send to</div>
+	</div>
+	<div class="clearBoth">
+	 <form id="checkout" action="/cart/updatecart" method="post">
+	
+	<?php
+                    if (!empty($this->checkoutdetail)) {
+                        $records = $this->checkoutdetail;
+                        $k = '1';
+                        foreach ($records as $key => $productdetail) {
+						
+                                        $productname=$productdetail->product_name;
+                                        
+                                        if(strlen($productdetail->variations[$productdetail->product_id]['allvariation']) > 0)
+                                        $productname=$productname.' - '.$productdetail->variations[$productdetail->product_id]['allvariation'];
+                                        //echo $productname
+                                        if(strlen($productname)>130)
+                                        $productname=substr($productname,0,130).'...';
+                                     
+                    ?>
+					<div class="lh10">&nbsp;</div>
+					<div class="clearBoth">
+		<div class="wid20">&nbsp;</div>
+		<div class="wid390">
+			<div class="clearBoth  contentTextGrey12Lh18"><b><?php echo $productname;?></b></div>
+			<div class="lh10">&nbsp;</div>
+			<div class="contentTextGrey11Lh18">Rs.<?php echo number_format(($productdetail->variations[$productdetail->product_id]['srp']*$productdetail->product_qty), 2, '.', ''); ?></div>
+			<div class="contentTextGrey11Lh18">Condition : <b><?= $productdetail->variations[$productdetail->product_id]['condition'];
+                    ?></b></div>
+			<div class="contentTextGrey11Lh18 wid430">Product Id : <b><?= $productdetail->product_id;
+                    ?></b></div>
+			<div class="contentTextGrey11Lh18 clearBoth">Bought from : <b><?=$productdetail->store_api_key[0]['title'];
+                                        ?></b></div>
+			<div class="lh5">&nbsp;</div>
+			<div class="wid88"><a  href="/cart/delete/id/<?=$productdetail->product_id; ?>/key/<?php echo $productdetail->store_api_key[0]['apikey'] ?>/vcode/<?=$productdetail->variationcode; ?>" class="hyperLinkBlue12" title="Remove">Remove</a></div>
+		 </div>
+		<div class="wid108"><select class="selectbox48 qtybox" id="qty_<?=$productdetail->product_id;
+                    ?>_<?php echo $productdetail->store_api_key[0]['apikey'] ?>" rel="<?php echo $productdetail->variations[$productdetail->product_id]['srp']; ?>" name="qty_<?php echo $key; ?>">
+<?php for ($i = 1; $i <= $productdetail->product_maxqty; $i++) { ?>
+                                        <option value="<?php echo $i; ?>" <?php if ($i == $productdetail->product_qty) {
+                                    echo 'selected';
+                                } ?>><?php echo $i; ?></option>
+<?php } ?>
+                                    </select></div>
+									<?php    $address = $this->shippingaddresses;
+
+									?>
+		<div class="wid480"><select class="selectbox248" name="addresss_<?php echo $key; ?>">
+
+                                            <option value="0">select</option>
+<?php
+;
+                                            foreach ($address as $key => $add) {
+ ?><option value="<?php echo $add['address_book_id']; ?>" <?php if ($add['address_book_id'] == $productdetail->address_book_id) {
+                                                    echo 'selected';
+                                                } ?>><?php echo $add['fullname']; ?>,<?php echo stripslashes($add['address']); ?>,<?php echo $add['cityname']; ?></option>
+                                        <?php } ?>
+                                            </select></div>
+		<div class="lh10">&nbsp;</div>
+		<div class="clearBoth errorMsg"><?php
+		
+                                            if (trim($productdetail->shipcost)==-1) {
+												//if($this->updateBtnClicked==1)
+                                               echo "Please select item shipping address.";
+                                            } 
+											 if (trim($productdetail->shipcost)=='error') {
+                                                echo "This item can not be shipped to the selected address. You may either change the address or remove the item.";
+                                            }
+                                        ?></div>
+		<div class="lh15">&nbsp;</div>
+		 <?php if($k < count($records)) { ?>
+		<div class="borderDashed">&nbsp;</div>
+		<?php } ?>
+	</div>
+					
+											
+				<?php $k++;} }?>
+	 
+	<div class="lh10">&nbsp;</div>
+	<!--<div class="clearBoth">
+		<div class="wid20">&nbsp;</div>
+		<div class="wid648">
+			<div class="clearBoth  contentTextGrey12Lh18"><b>iPod shuffle 2GB-Silver Personalized Silver nalized	iPod shuffle 2GB-Silver Personalized Silver nalized iPod<br />iPod shuffle 2GB-Silver Personalized Silver nalized iPod shuffle 2GB-Silver Personalized Silver nali</b></div>
+			<div class="lh10">&nbsp;</div>
+			<div class="contentTextGrey11Lh18">Rs.557.00</div>
+			<div class="contentTextGrey11Lh18">Condition : <b>used-like new</b></div>
+			<div class="contentTextGrey11Lh18 wid430">Product Id : <b>123456</b></div>
+			<div class="contentTextGrey11Lh18 floatLeft">Bought from : <b>Easyshop</b></div>
+			<div class="lh5">&nbsp;</div>
+			<div class="wid88"><a href="#" class="hyperLinkBlue12" title="Remove">Remove</a></div>
+		 </div>
+		<div class="wid108"><select><option>1</option></select></div>
+		<div class="wid224"><select><option>Shelly Gera, # no 666, Shankar Chowk, Gurgaon</option></select></div>
+		<div class="lh15">&nbsp;</div>
+		<div class="borderDashed">&nbsp;</div>
+	</div>
+	<div class="lh10">&nbsp;</div>
+	<div class="clearBoth">
+		<div class="wid20">&nbsp;</div>
+		<div class="wid648">
+			<div class="clearBoth  contentTextGrey12Lh18"><b>iPod shuffle 2GB-Silver Personalized Silver nalized	iPod shuffle 2GB-Silver Personalized Silver nalized iPod<br />iPod shuffle 2GB-Silver Personalized Silver nalized iPod shuffle 2GB-Silver Personalized Silver nali</b></div>
+			<div class="lh10">&nbsp;</div>
+			<div class="contentTextGrey11Lh18">Rs.557.00</div>
+			<div class="contentTextGrey11Lh18">Condition : <b>used-like new</b></div>
+			<div class="contentTextGrey11Lh18 wid430">Product Id : <b>123456</b></div>
+			<div class="contentTextGrey11Lh18 floatLeft">Bought from : <b>Easyshop</b></div>
+			<div class="lh5">&nbsp;</div>
+			<div class="wid88"><a href="#" class="hyperLinkBlue12" title="Remove">Remove</a></div>
+		 </div>
+		<div class="wid108"><select><option>1</option></select></div>
+		<div class="wid224"><select><option>Shruti #666, Vishram Chowk, Rohini</option></select></div>
+	</div>-->
+	
+	
+	<div class="lh85">&nbsp;</div>
+	<div class="buttonsContainer">
+		<div class="floatLeft"><input type="image" src="/images/secure/update_btn_ship.png" title="Update" name="update" id="update"/></div>
+		<div class="floatRight"><input type="image" src="/images/secure/payment_continue_btn.png" alt="Continue" title="Continue" name="continue" /></div>
+	</div>
+	</form>
+	</div>
+</div>	

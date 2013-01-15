@@ -1,0 +1,58 @@
+<form name="demo_store_creation" id="demo_store_creation" method="post">
+<noscript>
+        <meta http-equiv="refresh" content="0; URL=http://o2o.com/disable/browser/javaenable/1"/>
+</noscript>
+<div class="newStoreMainCont">
+	<div class="heading">Get started with Goo2o Merchant Solution</div>
+	<div class="lh5">&nbsp;</div>
+	<div class="headingList">
+		<div class="floatLeft">Fill the detail below to create fully functional online store. Don't worry you can change it later.</div>
+		<!--<div class="bullet"></div>
+		<div class="floatLeft">No hidden fees</div>
+		<div class="bullet"></div>
+		<div class="floatLeft">No Risk</div>
+		<div class="bullet"></div>
+		<div class="floatLeft">Try it free for <?php //echo $this->days; ?> days</div>
+-->		 
+	</div>
+	<div class="lh80">&nbsp;</div>
+	<div class="feildBox">
+		<div class="topCurve"></div>
+		<div class="feildBoxContent">
+			
+			<div class="wid312">
+				<div class="inputText"><span class="astrick">*&nbsp;</span>Store URL</div>
+				<div class="lh10">&nbsp;</div>
+				<div class="storeUrlInputBg">
+					<div class="left">http://www.</div>
+					<input type="text" name="domain_name" id="domain_name" value="<?php echo $this->store_url ; ?>" />
+					<div class="right">.mygoo2o.com</div>
+				</div>
+				<div class="lh5">&nbsp;</div>
+				<div class="errorMsg" id="error_store_url" style=" <?php echo $this->url_msg_display ;?>"><?php echo $this->url_error_msg ;?></div>
+			</div>
+			<div class="wid20">&nbsp;</div>
+			<div class="wid312">
+				<div class="inputText"><span class="astrick">*&nbsp;</span>Store name</div>
+				<div class="lh10">&nbsp;</div>
+				<div class="storeUrlInputBg"><input type="text" class="inputFeild" name="store_name" id="store_name" value="<?php echo stripslashes($this->store_name);?>" /></div>
+				<div class="lh5">&nbsp;</div>
+				<div class="errorMsg" id="error_store_name">Store name is too short</div>
+			</div>
+			<div class="wid20">&nbsp;</div>
+			<div class="wid312">
+				<div class="inputText"><span class="astrick">*&nbsp;</span>Contact number</div>
+				<div class="lh10">&nbsp;</div>
+				<div class="storeUrlInputBg"><input type="text" class="inputFeild" name="contact_no" id="contact_no" value="<?php echo $this->contact_no ; ?>" /></div>
+				<div class="lh5">&nbsp;</div>
+				<div class="errorMsg" id="error_contact">Please enter a valid contact number</div>
+			</div>
+		</div>
+		<div class="botCurve"></div>
+	</div>
+	<div class="lh55">&nbsp;</div>
+	<input type="image" src="/images/secure/demo/create_my_store_btn.png" title="CREATE MY STORE" id="create_demo" name="create_demo"/>
+	<div class="lh10">&nbsp;</div>
+	<div class="bottomText">By clicking on "Create my store", you are agreeing to the <a href="http://support.goo2o.com/entries/507111-terms-conditions" title="terms &amp; conditions." target="_blank">terms & conditions.</a></div>
+</div>
+</form>

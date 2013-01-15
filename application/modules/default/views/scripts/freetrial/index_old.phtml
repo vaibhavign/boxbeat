@@ -1,0 +1,195 @@
+<script>
+	$(document).ready(function() {
+		jQuery("#ururl").focus(function() {										
+			var ururltxt = jQuery("#ururl").attr('value');
+			jQuery("#ururlBG").addClass("ururlBGHover");
+			jQuery("#ururlBG").removeClass("ururlBG");
+			if(ururltxt=='Site URL'){
+				jQuery("#ururl").attr('value','');
+			}
+		});
+		jQuery("#ururl").blur(function() {
+			var ururltxt = jQuery("#ururl").attr('value');
+			jQuery("#ururlBG").addClass("ururlBG");
+			jQuery("#ururlBG").removeClass("ururlBGHover");
+			//alert(ururltxt);
+			if(ururltxt==''){
+				jQuery("#ururl").attr('value','Site URL');
+			}			
+		});
+		jQuery("#urname").focus(function() {										
+			var urnametxt = jQuery("#urname").attr('value');
+			//alert(urnametxt);
+			jQuery("#urnameBG").addClass("urnameBGHover");
+			jQuery("#urnameBG").removeClass("urnameBG");
+			//if(urnametxt=='Your name'){
+			//	jQuery("#urname").attr('value','');
+			//}
+		});
+		jQuery("#urname").blur(function() {
+			var urnametxt = jQuery("#urname").attr('value');
+			jQuery("#urnameBG").addClass("urnameBG");
+			jQuery("#urnameBG").removeClass("urnameBGHover");
+			//alert(urnametxt);
+			//if(urnametxt==''){
+			//	jQuery("#urname").attr('value','Your name');
+			//}			
+		});
+		jQuery("#uremail").focus(function() {										
+			var uremailtxt = jQuery("#uremail").attr('value');
+			//alert(uremailtxt);
+			jQuery("#uremailBG").addClass("uremailBGHover");
+			jQuery("#uremailBG").removeClass("uremailBG");
+			//if(uremailtxt=='Your@email.com'){
+			//	jQuery("#uremail").attr('value','');
+			//}
+		});
+		jQuery("#uremail").blur(function() {
+			var uremailtxt = jQuery("#uremail").attr('value');
+			jQuery("#uremailBG").addClass("uremailBG");
+			jQuery("#uremailBG").removeClass("uremailBGHover");
+			//alert(uremailtxt);
+			//if(uremailtxt==''){
+			//	jQuery("#uremail").attr('value','Your@email.com');
+			//}			
+		});
+		jQuery("#password").focus(function() {			
+			jQuery("#passwordBG").addClass("passwordBGHover");
+			jQuery("#passwordBG").removeClass("passwordBG");
+			jQuery("#password").hide();
+			jQuery("#password1").show();
+			document.getElementById('password1').focus();
+			
+		});
+		jQuery("#password1").blur(function() {
+			var passtxt = jQuery("#password1").attr('value');
+			jQuery("#passwordBG").addClass("passwordBG");
+			jQuery("#passwordBG").removeClass("passwordBGHover");
+			if((passtxt=='')||(passtxt=='password')){
+				jQuery("#password1").hide();
+				jQuery("#password").show();
+			}
+			else { 
+				//do nothing
+			}
+		});
+		jQuery("#urcontact").focus(function() {										
+			var urcontacttxt = jQuery("#urcontact").attr('value');
+			//alert(urcontacttxt);
+			jQuery("#urcontactBG").addClass("urcontactBGHover");
+			jQuery("#urcontactBG").removeClass("urcontactBG");
+			//if(urcontacttxt=='Contact number'){
+			//	jQuery("#urcontact").attr('value','');
+			//}
+		});
+		jQuery("#urcontact").blur(function() {
+			var urcontacttxt = jQuery("#urcontact").attr('value');
+			jQuery("#urcontactBG").addClass("urcontactBG");
+			jQuery("#urcontactBG").removeClass("urcontactBGHover");
+			//alert(urcontacttxt);
+			//if(urcontacttxt==''){
+			//	jQuery("#urcontact").attr('value','Contact number');
+			//}			
+		});
+	});
+</script>
+
+	<div class="mainHeader">
+		<div class="header" align="center">
+			<div class="floatLeft"><a href="/" title="eshopbox"><img src="/images/secure/elogin/signuplogo.png" alt="eshopbox" /></a></div>
+			<div class="signuptxt">Sign up for a free 15-day trial!</div>
+		</div>
+		<div class="clearBoth">
+			<div class="topBorder">&nbsp;</div>
+			<div class="botGap">&nbsp;</div>
+			<div class="loginContainer" align="center">
+				<div class="txtfieldBG">
+					<div id="ururlBG" class="ururlBG">
+						<input id="ururl" type="text" class="loginInput" value="Site URL" />
+						<div class="errorMSGurl">This field is mandatory.</div>
+					</div>
+					<div class="inputtxt">.myeshopbox.com</div>
+				</div>
+				<div class="signupBelowTxt">This will be your (temporary) website address; it must be 3-30 characters long <br />(only numbers & letters). you can change this later on.</div>
+				<div class="txtfieldBG">
+					<div class="inputtxt1">Your name</div>
+					<div id="urnameBG" class="urnameBG">
+						<input id="urname" type="text" class="loginInput" value="" />
+						<div class="errorMSG">This field is mandatory.</div>
+					</div>					
+				</div>
+				<div class="lh20">&nbsp;</div>
+				<div class="txtfieldBG">
+					<div class="inputtxt1">Email address</div>
+					<div id="uremailBG" class="uremailBG">
+						<input id="uremail" type="text" class="loginInput" value="" />
+						<div class="errorMSG">Enter a valid email address.</div>
+					</div>				
+				</div>
+				<div class="lh20">&nbsp;</div>
+				<div class="txtfieldBG">
+					<div class="inputtxt1">Email address</div>
+					<div id="passwordBG" class="passwordBG">
+						<input id="password" type="text" class="loginInput" value="" />
+						<input id="password1" type="password" class="loginInput" value="" />
+						<div class="errorMSG">Your password must contain atleast 6 characters.</div>
+					</div>				
+				</div>
+				<div class="lh20">&nbsp;</div>
+				<div class="txtfieldBG">
+					<div class="inputtxt1">Contact number</div>
+						<div id="urcontactBG" class="urcontactBG">
+						<input id="urcontact" type="text" class="loginInput" value="" />
+						<div class="errorMSG">Enter a valid contact number.</div>
+					</div>				
+				</div>
+				<div class="lh20">&nbsp;</div>
+				<div class="clearBoth">
+					<div class="txtfieldBG2">
+						<div class="captchaTxt">To prove you're not spam, select the word "<span>abcde</span>":</div>
+						<div class="captchaimg">
+							<ul>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+								<li>abcab</li>
+							</ul>
+						</div>			
+					</div>
+					<div class="errorMSGCaptcha">You did not select the correct word.</div>
+				</div>
+			</div>
+				<!--<div id="ururlBG" class="loginBG">
+					<input id="ururl" type="text" class="loginInput" value="StoreURL.myeshopbox.com" />
+					<span class="errorMSG">This field is mandatory.</span>
+				</div>
+				<div id="urnameBG" class="loginBG">
+					<input id="urname" type="text" class="loginInput" value="Your name" />
+					<span class="errorMSG">This field is mandatory.</span>
+				</div>
+				<div id="uremailBG" class="loginBG">
+					<input id="uremail" type="text" class="loginInput" value="Your@email.com" />
+					<span class="errorMSG">Enter a valid email address.</span>
+				</div>
+				<div id="passwordBG" class="passwordBG">
+					<input id="password" type="text" class="loginInput" value="password" />
+					<input id="password1" type="password" class="loginInput" value="" />
+					<span class="errorMSG">Your password must contain atleast 6 characters.</span>
+				</div>
+				<div id="urcontactBG" class="loginBG">
+					<input id="urcontact" type="text" class="loginInput" value="Contact number" />
+					<span class="errorMSG">Enter a valid contact number.</span>
+				</div>-->
+			<div class="lh30">&nbsp;</div>
+			<div class="loginBTN">
+				<div class="forgotpass"><a href="/secure/elogin" title="Cancel">Cancel</a></div>
+				<div class="floatRight"><input type="image" src="/images/secure/elogin/createstoreBtn.png" width="138" height="32" title="Create Store" alt="Create Store" /></div>
+			</div>
+			<div class="botGap">&nbsp;</div>
+			<div class="botBorder">&nbsp;</div>
+		</div>
+	</div>

@@ -1,0 +1,104 @@
+<div class="gc_body_width">
+	<!-- Header Start From here-->
+	<div class="clearBoth"><?php //include_once('includes/header.php'); ?></div>
+    <!-- Header Ends here-->
+    <div class="floatLeft">
+    <div class="lh35">&nbsp;</div>
+	<div class="gc_body_heading floatLeft">Please review & confirm your gift certificate order</div>
+    <div class="lh30">&nbsp;</div>
+    <div class="clearBoth">
+    	<div class="clearBoth">
+    		<div class="floatLeft">
+        		<div class=" review_billingaddress_heading"><strong>Basic Details</strong></div>
+            		<div class="review_billingaddress">
+                	<div class="lh10">&nbsp;</div>	
+                    <div class="clearBoth">
+                        <div class="gc_wid108">Sender name</div>
+                        <div class="gc_wid14">:</div>
+                        <div class="gc_wid330"><b><?php echo $this->gcpurchase['sender_name'];?></b></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>	
+                    <div class="clearBoth">
+                        <div class="gc_wid108">Sender email</div>
+                        <div class="gc_wid14">:</div>
+                        <div class="gc_wid330"><b><?php echo strtolower($this->gcpurchase['sender_email']);?></b></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>	
+                    <div class="clearBoth">
+                        <div class="gc_wid108">Message</div>
+                        <div class="gc_wid14">:</div>
+                        <div class="gc_wid330"><b> <?php echo stripslashes($this->gcpurchase['msg_textarea']);?></b></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>	
+                    <div class="clearBoth">
+                        <div class="gc_wid108">Sending date</div>
+                        <div class="gc_wid14">:</div>
+                        <div class="gc_wid330"><b> <?php echo $this->date_timestamp;?></b></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>	
+                    <div class="clearBoth">
+                        <div class="gc_wid108">Bought from</div>
+                        <div class="gc_wid14">:</div>
+                        <div class="gc_wid330"><b> <?php echo $this->mall_detail['title']?></b></div>
+                    </div>
+             	</div>
+        		</div>
+        	<!--<div class="floatRight">
+        	<div class="gc_payment_method">
+                	<div class="floatLeft payment_method_heading"><strong>Payment Method</strong></div>
+                    <div class="lh20">&nbsp;</div>	
+                    <div class="gc_payment_method_content">
+                    	<div class="gc_payment_content">
+                        	<div class="payment_payment_innerblock ">
+                                <div class="lh10">&nbsp;</div>	
+                                <div class="floatLeft"><?php //if($_SESSION['GCPURCHASE']['payment']=='cc'){ $images = 'payment_ebs.png'; echo 'Credit Card / Debit Card
+ //';}else if($_SESSION['GCPURCHASE']['payment']=='nb'){ $images = 'paymentmode_icon.png';  echo 'Net Banking';}else if($_SESSION['GCPURCHASE']['payment']=='dbd'){ $images = 'gift-purchased/payment_bank.png';  echo 'Direct Bank Deposit'; }?></div>
+                                <div class="lh10">&nbsp;</div>	
+                                <div class="floatRight"><img title="Payment mode" alt="Payment mode" src="/images/secure/<?php //echo $images; ?>"></div>
+                        	</div>
+                        
+                        </div>
+                    	<div class="lh15">&nbsp;</div>	
+                    </div>
+                </div>
+        </div>-->
+     	</div>
+        <div class="lh40">&nbsp;</div>
+        <div class="clearBoth">
+        	<div class="gc_review_tablebg">
+            	<div class="gc_wid10">&nbsp;</div>
+                <div class="gc_wid324">Recipient Name</div>
+                <div class="gc_wid395">Recipient Email</div>
+                <div class="gc_wid144">Quantity</div>
+                <div class="gc_wid120">Pricing</div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <?php foreach($this->gcpurchase['receipt_name'] as $receip_key => $receip_val){?>
+            <div class="clearBoth gc_review_content">
+            	<div class="gc_wid10">&nbsp;</div>
+                <div class="gc_wid324"><?php echo $receip_val; ?></div>
+                <div class="gc_wid395"><?php echo strtolower($this->gcpurchase['receipt_email'][$receip_key]); ?></div>
+                <div class="gc_wid144">1</div>
+                <div class="gc_wid120">Rs.<?php echo $this->gcpurchase['gift_amount']; ?></div>
+            </div>
+            <div class="gc_review_underline">&nbsp;</div>
+            <?php } ?>
+        </div>
+        <div class="lh25">&nbsp;</div>
+        <div class="gc_amountBlueBar">
+        	<div class="gc_wid776">&nbsp;</div>
+            <?php $count_receipt_email = count($this->gcpurchase['receipt_name']) ;
+				  $total_amounts = ($count_receipt_email * $this->gcpurchase['gift_amount']);
+			?>
+            <div class="gc_wid90 gc_ammountheading">Grand Total : </div>
+            <div class="gc_wid108 gc_ammountheading"><b>Rs.<?php echo $total_amounts ;?></b></div>
+        </div>
+        <div class="lh55">&nbsp;</div>
+        <div class="gc_reviewbtn_container" >
+        	<div class="floatLeft"><a href="/cart/set-gift-configure/flag/2" class="edit_order_btn" title="EDIT ORDER"><!--<input type="image" src="/images/secure/edit_order_btn.gif" class="cursor"  />--></a></div>
+            <div class="floatRight"><a href="/cart/well-done" class="pay_now_btn" title="PAY NOW"><!--<input type="image" src="/images/secure/pay_now_btn.gif" class="cursor" />--></a></div>
+      	</div>
+        <div class="lh55">&nbsp;</div>
+	</div>
+    </div>
+</div>

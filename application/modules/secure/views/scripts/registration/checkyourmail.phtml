@@ -1,0 +1,73 @@
+<div id="wid1000Auto">
+	<!--<div id="header-wrapper">
+		<div id="logo"><a href="#" title="Goo2o"><img src="images/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header-rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+        </div> -->
+     
+     <form name="checkmailform" action="/secure/registration/checkyourmail/passcode/<?=$this->vcodes;?>" method="post" id="checkmailform">
+    <div class="blueMainHeadingContainer">
+    	<div class="blueMainHeading floatLeft">Check your email</div>
+   </div>
+    <div class="clearBoth">
+    	<div class="lh60">&nbsp;</div>
+    	<div class="clearBoth content-text14">Just verify yourself to complete registration, click the link in the email that we sent to <b><?php echo $this->useremailaddress;?></b></div>
+
+        <div class="lh25">&nbsp;</div>
+        <div class="dashedBorderText14Lh25"><a id="regetmail" class="dashedBorderLink14Lh25" href="#" onclick="return false;"><b>Didn’t get the email?</b></a></div>
+        <div class="lh35">&nbsp;</div>
+   	</div>
+    <div class="clearBoth" id="showsendmail" style="display:<?php echo $this->display;?>">
+    	<div class="wid465">
+        	<div class="clearBoth content-text12">Check to see if your email is correct, or enter a different address:</div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft"><input type="text" id="user_email_address" name="newusrmail" class="input-textField230 content-text14Lh22" value="<?php echo $this->useremailaddresses; ?>" onblur="if(this.value==''){ this.value=this.defaultValue}" onfocus="if(this.value==this.defaultValue){this.value=''} " />
+             
+            </div>
+            <div class="suggestive-container floatLeft" id="show_hide_user_email_address" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_user_email_address"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+             </div>
+            <?php if($this->emailExist){?>
+             <div class="suggestive-container floatLeft" id="show_email_address" style="display:block">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_address">Email id already exists</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+            </div>
+              <?php } ?>
+            <div class="lh5">&nbsp;</div>
+            <div class="grey-text11">Enter an email address that works</div>
+            <div class="lh20">&nbsp;</div>
+            <div class="floatLeft">
+                <input type="submit" class="resentcheckmail_server" title="Resend email" id="resentmail" name="resentcheckmail"  value="" />
+                <!--<input type="image" src="images/resend_email.gif" class="cursor" title="Resend email" />-->
+
+            </div>
+
+        </div>
+        <div class="wid80"><img src="/images/secure/registration/restricted_seperaor.gif"/></div>
+        <div class="wid377 content-text12Lh20">
+        	Check your email&rsquo;s junk/ bulk folder, because it&rsquo;s possible our email will be accidentally placed there. If you do find it in your junk/bulk folder, please remember to mark it as &quot;Not junk/spam&quot;.
+
+
+        </div>
+
+    </div>
+     <input type="hidden" name="formaction" value="checkyourmail">
+                 <input type="hidden" name="vcode" value="<?php echo $this->vcodes; ?>">
+                 <input type="hidden" name="usernameid" value="<?php echo $this->userid; ?>">
+                 <input type="hidden" name="user_full_name" value="<?php echo $this->userfullname; ?>">
+    </form>
+    <div class="lh60">&nbsp;</div>
+    <div class="not_my_account_msg_box">You have 5 days to verify your email address. So in case you haven&rsquo;t found our mail in your inbox right now, proceed to dashboard instantly.</div>
+    <div class="lh40">&nbsp;</div>
+    <div class="clearBoth" align="center">
+       <?php if($this->usercancelstatus == 0) { ?>
+        <a href="<?php echo (($this->tab==2)?HTTP_SECURE.'/merchantenrollment/business-details':HTTP_SERVER.'/myaccount'); ?>"><img src="/images/secure/registration/proceed_to_my_account_btn.png" class="cursor" title="Proceed to my account"</a>
+      <?php } else {?>
+        <a href="<?php echo HTTP_SECURE.'/login/notmyaccount/passcode/'.$this->vcodes;?>"><img src="/images/secure/registration/proceed_to_my_account_btn.png" class="cursor" title="Proceed to my account"</a>
+        <?php } ?>
+    </div>
+    <div class="lh40">&nbsp;</div>
+
+</div>

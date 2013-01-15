@@ -1,0 +1,325 @@
+<?php  if($this->getdata['p']=='')$this->getdata['p']=1; ?>
+<table cellpadding="0" cellspacing="0" width="1000" border="0" align="center">
+	<tr>
+		<td height="40" valign="top" colspan="2"></td>
+	</tr>
+	<tr>
+		<td valign="top" height="32" colspan="2">
+			<?php 
+				
+				$class=new General();
+				$class->getpathheaderblock($this);
+			?>
+			<form name="chatid" >
+				<input type="hidden" name="cid" id="cid" value="" />
+			</form>
+		</td>
+	</tr>
+	<tr>
+		<td valign="top" colspan="2"><div class="bottomLineInbox">&nbsp;</div></td>
+	</tr>
+	<tr>
+		<td valign="top" width="738">
+			<div id="leftBlock">
+				<div class="listing_main_container">
+					<ul id="conversations">
+						<?php 
+							$data = $this->data;
+							//echo "<pre>";
+							//print_r($data );
+							//echo "</pre>";
+							if(!empty($this->data)){
+							for($i = ($this->getdata['p']<=1?0:($this->getdata['p']-1))*$this->recordperpage; $i<(($this->getdata['p']<=1?0:$this->getdata['p']-1)*$this->recordperpage)+$this->recordperpage;$i++){
+							if($this->totalrecord==$i)
+							break;
+							if($data[$i]['messagetype']==0 || $data[$i]['messagetype']==1)
+							{
+							$type='chat';
+							$cursor='curspointer';
+							}
+							if($data[$i]['messagetype']==2)
+							{
+							$type='request';
+							$cursor='curspointer';
+							}
+							if($data[$i]['messagetype']==3)
+							{
+							$type='dispute';
+							$cursor='curspointer';
+							}
+							if($data[$i]['messagetype']==4)
+							{
+							$type='notification';
+							$cursor='';
+							}
+							if($data[$i]['stared']==$this->currentid || $data[$i]['stared']==-1)
+							{
+							$bookicon='unbookmark_icon';
+							$booktitle='Starred';
+							}
+							else
+							{
+							$bookicon='bookmark_icon';
+							$booktitle='Not starred';
+							}
+							if($data[$i]['messagetype']!=4)
+							{
+							$addClas='jBodycontainer';
+							}
+						?>
+						<li class="<?=$addClas .' '. $cursor?>  dotted_borders  <?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'selected':'')?>" id="unreadbutton<?=$data[$i]['id']?>" rel="<?=$data[$i]['id']."^". $type."^".$data[$i]['i_id']?>">
+							<div class="listing_main_container">
+								<?php if($data[$i]['messagetype']==0 || $data[$i]['messagetype']==1){ ?>
+								<div class="innerblock">
+									<div class="imagecontainer">
+										<?=$data[$i]['image']?>
+									</div>
+									<div class="content_block" style="cursor:pointer; width:500px;">&nbsp;
+										<div class="floatLeft">
+											<a href="/inbox/detail/id/<?=$data[$i]['id']?>" class="unread_link" id="unreadlink" >
+												<?=$data[$i]['to']?>
+											</a>
+										</div>
+											<?php if($data[$i]['role']!='0'){?>
+												<div class="content_textpop  clearBoth" style="font-size:10px"><b><?=$data[$i]['role']?></b></div>
+											<?php } ?>
+										<div class="clearBoth">
+											<div class="content_text">
+												<?php if($data[$i]['chatdetail'][count($data[$i]['chatdetail'])-1]['from']==$this->currentid){echo '<div class="reply_icon"></div>';}?>
+												<div class="content_textpop">
+													<?=$data[$i]['chatdetail'][count($data[$i]['chatdetail'])-1]['message']?>
+												</div>
+												<div class="floatRight">
+													<div class="fewsecondtext" id="fewsecond">
+														<?=$data[$i]['time']?>
+													</div>
+													<div class="floatLeft" ><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>" style="font-size:10px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft " ><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php  } ?>
+								<?php if($data[$i]['messagetype']==2){?>
+								<div class="innerblock">
+									<div class="imagecontainer">
+										<?=$data[$i]['image']?>
+									</div>
+									<div class="content_block">
+										<div class="floatLeft"><a href="#" class="unread_link" id="unreadlink" >
+											<?=$data[$i]['to']?>
+											</a></div>
+										<div class="clearBoth">
+											<div class="content_text">												
+												<div class="floatLeft">
+												<?php if($data[$i]['role']!='0'){?>
+													<div class="clearBoth" style="font-size:10px"><b><?=$data[$i]['role']?></b></div>
+													<?php } ?>
+													<div class="clearBoth"><?=$data[$i]['order_item_id']?></div>
+													<div class="lh5">&nbsp;</div>
+													<div class="content_textpop clearBoth">
+														<?php if(empty($data[$i]['requestdetail'])){ echo  (($data[$i]['comment'])?"".$data[$i]['comment']."":'');} else {echo "".$data[$i]['requestdetail'][0]['message']."";} ?>
+													</div>
+													<div class="lh5">&nbsp;</div>
+													<div class="raised_text">
+														<?php if($data[$i]['request_status']==0)
+															echo 'Pending';
+															if($data[$i]['request_status']==1)
+															echo 'Accepted';
+															if($data[$i]['request_status']==2)
+															echo 'Declined';
+															if($data[$i]['request_status']==3)
+															echo 'Cancelled';														
+														?>
+													</div>
+												</div>
+												<div class="floatRight">
+													<div class="fewsecondtext">
+														<?=$data[$i]['time']?>
+													</div>
+													<div class="floatLeft"><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft"><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php  } ?>
+								<?php if($data[$i]['messagetype']==3){?>
+								<div class="innerblock">
+									<div class="imagecontainer">
+										<?=$data[$i]['image']?>
+									</div>
+									<div class="content_block">
+										<div class="floatLeft"><a href="#" class="unread_link" id="unreadlink" >
+											<?=$data[$i]['to']?>
+											</a></div>
+										<div class="clearBoth">
+											<div class="content_text">												
+												<div class="floatLeft">
+													<?php if($data[$i]['role']!='0'){?>
+													<div class="clearBoth" style="font-size:10px"><?=$data[$i]['role']?></div>
+													<?php } ?>
+													<div class="clearBoth"><?=$data[$i]['order_item_id']?></div>
+													<div class="lh5">&nbsp;</div>
+													<div class="content_textpop clearBoth">
+														<?php  if(empty($data[$i]['disputedetail'])){echo  (($data[$i]['comment']!='')?"".$data[$i]['comment']."":'');}else {echo  "".$data[$i]['disputedetail'][0]['message'].""; }?>
+													</div>
+													<div class="lh5">&nbsp;</div>
+													<div class="raised_text">
+														<?php if($data[$i]['request_status']==1)
+															echo 'Dispute raised';
+															if($data[$i]['request_status']==2)
+															echo 'Claim raised';
+															if($data[$i]['request_status']==3)
+															echo 'Solved';
+															if($data[$i]['request_status']==4)
+															echo 'Closed';														
+														?>
+													</div>
+												</div>
+												<div class="floatRight">
+													<div class="fewsecondtext">
+														<?=$data[$i]['time']?>
+													</div>
+													<!--<div class="floatLeft"><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft"><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>-->
+														<div class="floatLeft" ><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>" style="font-size:10px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft " ><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>								
+								<?php  } ?>
+								<?php if($data[$i]['messagetype']==4){ ?>
+								<div class="innerblock">
+									<div class="imagecontainer">
+										<?=$data[$i]['image']?>
+									</div>
+									<div class="content_block">
+										<div class="clearBoth"><a class="unread_link" id="unreadlink" style="cursor:default;" >
+											<?=$data[$i]['to']?>
+											</a></div>
+										<div class="clearBoth">
+											<div class="content_text_alert">
+											<?php if($data[$i]['role']!='0'){?>
+													<div class="clearBoth" style="font-size:10px"><b><?=$data[$i]['role']?></b></div>
+													<?php } ?>
+												<div class="content_textpop">
+													<?=$data[$i]['request_text']?>
+												</div>
+												<div class="floatRight">
+													<div class="fewsecondtext" id="fewsecond">
+														<?=$data[$i]['time']?>
+													</div>
+													<div class="floatLeft"  ><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>" style="font-size:10px;">&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft " ><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													
+													<!--
+													<div class="floatLeft"><span href="javascript:void(0)" class="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'unread_icon':'read_icon')?> jRead" id="unreadremoveclass" title="<?=((($data[$i]['readby']==0) || ($data[$i]['readby']!=$this->currentid) && ($data[$i]['readby']!=-1))?'Mark as read':'Mark as unread')?>" rel="<?=$data[$i]['id']?>" >&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+													<div class="floatLeft"><span href="javascript:void(0)" class="jBookmark <?=$bookicon?>" title="<?=$booktitle?>" rel="<?=$data[$i]['id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div>-->
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<?php  } ?>
+							</div>
+						</li>
+						<? }}else{
+							if($this->filter=='' || $this->filter=='conversations')
+							$messgae='No conversations yet. All your conversations will be listed here.';
+							if($this->filter=='request')
+							$messgae='No requests. It seems you have not made or received any request yet.';
+							if($this->filter=='dispute')
+							$messgae='No disputes. It seems you have not received or raise any disputes yet.';
+							if($this->filter=='starred')
+							$messgae='No starred messages. Stars let you give messages a special status to make them easier to find.';
+						?>
+						<li>
+							<div class="main_container" id="emptyList" style="font:Verdana, Arial, Helvetica, sans-serif; font-size:12px; color:#999999; text-align:center; cursor:default;" >
+								<?=$messgae;?>
+							</div>
+						</li>
+						<?php } ?>
+					</ul>
+				</div>
+				<div class="paginationGap">&nbsp;</div>
+				<div id="pageingdiv"></div>
+				<div class="floatRight" id="pagination">
+					<?php
+if(!empty($this->data) && count($this->data)>$this->recordperpage)
+{
+if($this->getdata['p']!=1){?>
+					<a href="/inbox/list/<?php if($this->filter){echo 'type/'.$this->filter.'/';}?>p/<?=$this->getdata['p']-1?>" class="pageinationNav" title="Previous">
+					<div class="prev">Prev</div>
+					</a>
+					<?php } ?>
+					<!--      <div class="singleActive">1</div>-->
+					<?php if($this->getdata['p']>1){$start=$this->getdata['p']-1;}else{$start=1;} for($i=$start,$m=0;$i<=$this->totalpage;$i++){
+if($this->getdata['p']!=$i)
+{
+?>
+					<a href="/inbox/list/<?php if($this->filter){echo 'type/'.$this->filter.'/';}?>p/<?=$i?>" class="pageinationNav" title="<?=$i?>">
+					<div class="singleNum">
+						<?=$i?>
+					</div>
+					</a>
+					<?php } else {?>
+					<div class="singleActive" title="<?=$i?>">
+						<?=$i?>
+					</div>
+					<?php }
+if($m==2)
+break;
+?>
+					<?php $m++;} ?>
+					<?php if($this->getdata['p']!=$this->totalpage){?>
+					<a href="/inbox/list/<?php if($this->filter){echo 'type/'.$this->filter.'/';}?>p/<?=$this->getdata['p']+1?>" class="pageinationNav" title="Next">
+					<div class="next">Next</div>
+					</a>
+					<?php }} ?>
+				</div>
+			</div></td>
+		<!--<td valign="top" width="262" class="left_border"><div id="rightblock">
+				<div class="inboxContainer">
+					<div class="start_btn">
+						<input id="ask-actuator" type="image" src="/images/admin/startnewconversation_btn.png" alt="Start a new conversation" title="Start a new conversation" />
+					</div>
+					<div style="clear:both;height:0px;">&nbsp;</div>
+					<div class="rightmenu">
+						<ul>
+							<li class="<?php if($this->filter==''){echo 'selected';}?>"><a href="/inbox/list" title="All Messages" id="allMessage">All Messages
+								<?php if($this->totalunread['total']>0){ echo '['.$this->totalunread['total'].']';}?>
+								</a></li>
+							<li class="<?php if($this->filter=='starred'){echo 'selected';}?>">
+								<div class="floatLeft"><a href="/inbox/list/type/starred" title="Starred">Starred</a></div>
+								<div class="bookmark_icon"></div>
+							</li>
+							<li class="<?php if($this->filter=='conversation'){echo 'selected';}?>"><a href="/inbox/list/type/conversation" title="Conversations" id="inboxMessage">Conversations
+								<?php if($this->totalunread['chat']>0){ echo '['.$this->totalunread['chat'].']';}?>
+								</a></li>
+							<li class="<?php if($this->filter=='request'){echo 'selected';}?>"><a href="/inbox/list/type/request" title="Requests" id="requestMessage">Requests
+								<?php if($this->totalunread['request']>0){ echo '['.$this->totalunread['request'].']';}?>
+								</a></li>
+							<li class="<?php if($this->filter=='dispute'){echo 'selected';}?>"><a href="/inbox/list/type/dispute" title="Disputes" id="disputeMessage">Disputes
+								<?php if($this->totalunread['dispute']>0){ echo '['.$this->totalunread['dispute'].']';}?>
+								</a></li>
+							<li class="<?php if($this->filter=='alert'){echo 'selected';}?>"><a href="/inbox/list/type/alert" title="Alerts" id="alertMessage">Alerts
+								<?php if($this->totalunread['alert']>0){ echo '['.$this->totalunread['alert'].']';}?>
+								</a></li>
+						</ul>
+					</div>
+					<div style="clear:both;height:20px;">&nbsp;</div>
+					<div class="dispute_btn" style="font-size: 12px;">Have problem with an order? </div>
+					<div style="clear:both;height:4px;">&nbsp;</div>
+					<div class="dispute" ><a href="<?php echo HTTP_ORDERS_URL;?>dispute/openadispute" title="Open a dispute">Open a dispute</a></div>
+				</div
+			</div></td>>-->
+	</tr>
+	<tr>
+		<td height="50" valign="top" colspan="2"></td>
+	</tr>
+</table>

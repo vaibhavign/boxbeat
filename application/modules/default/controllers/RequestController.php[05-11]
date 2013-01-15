@@ -1,0 +1,75 @@
+<?php 
+class Myaccount_RequestController extends Zend_Controller_Action {
+
+	function init() {
+		$this->request_model = new Myaccount_Model_RequestMapper();
+		$this->mapper=new Admin_Model_ConversationMapper();
+		$userName = new Zend_Session_Namespace('USER');
+		Zend_Layout::getMvcInstance()->setLayout('admin');
+        Zend_Layout::getMvcInstance()->setLayoutPath(APPLICATION_PATH . '/modules/admin/layouts');
+		$this->view->headLink()->appendStylesheet('/css/admin/admin.css');
+//		$this->view->headLink()->appendStylesheet('/css/myaccount/request/request.css');
+	}
+	
+	public function customerrequestlistingAction(){
+		$userName = new Zend_Session_Namespace('USER');
+		$this->userid = $userName->userId;
+		$userid = $this->userid;
+		//$this->_request->getParam('chat_id');
+		$chat_id = '1';
+		$requestListing = $this->request_model->requestListing($chat_id,$userid);
+		
+		 $paginator = Zend_Paginator::factory($requestListing);
+
+        $currentPage = 1;
+        //Check if the user is not on page 1
+        $i = $url['p'];
+        if (!empty($i)) { //Where i is the current page
+            $currentPage = $url['p'];
+        }
+
+        //Set the properties for the pagination
+        $paginator->setItemCountPerPage(5);
+
+        $paginator->setPageRange(4);
+
+        $paginator->setCurrentPageNumber($currentPage);
+		$this->view->paginator = $paginator;
+	}
+	
+	public function customerreturnrequestdetailsAction(){
+		//$chatid = $this->_request->getParam('chatid');
+		$userName = new Zend_Session_Namespace('USER');
+		$chatid = '43';
+		$messageData = $this->mapper->getConversationDetail($chatid);
+		$this->view->messageData = $messageData;
+		$this->view->userName=$userName->userDetails[0]['userName'];
+		$this->view->userId=$userName->userId;
+		$this->view->cid=$chatid;
+		$this->view->email = $messageData[0]['guestemail'];
+		$this->view->userfullname=$messageData[0]['guestname'];
+		/*echo '<pre>';
+		print_r($messageData);
+		exit;*/
+		if($messageData[0]['from']==$userName->userId)
+		{
+			$this->view->userfullname=$messageData[0]['userfrom'];
+			$this->view->email=$userName->userDetails[0]['user_email_address'];
+			if($messageData[0]['userfrom']=='')
+			{
+			$this->view->userfullname=$messageData[0]['guestname'];
+			$this->view->location='';
+			}
+			else
+			{
+			$this->view->location=$this->mapper->getLocationNamefromId($userName->userDetails[0]['user_location']);
+			}
+		}
+		else
+		{
+		
+		}
+	}
+
+}
+?>

@@ -1,0 +1,13 @@
+<?php
+$genObj = new General();
+$userName = new Zend_Session_Namespace('USER');
+$originalUser = new Zend_Session_Namespace('original_login');
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$controllerName = $request->getControllerName();
+$actionName = $request->getActionName();
+$moduleName = $request->getModuleName();
+
+
+ echo file_get_contents('http://login.eshopbox.com/header?email='.$_SESSION['USER']['userDetails'][0]['user_email_address'].'&role='.$userName->stores['0']['role'].'&apikey='.$_SESSION['USER']['stores'][0]['apikey'].'&mallurl='.$userName->stores['0']['mallurl'].'&storeapikey='.$userName->stores['0']['store_apikey'].'&userfullname='.urlencode($originalUser->user['0']['user_full_name']).'&ak='.$_SESSION['SESSION']['ApiKey'].'&modulename='.$moduleName);
+ 
+ 

@@ -1,0 +1,238 @@
+<div id="wid1000Auto">
+	<!--<div id="header-wrapper">
+		<div id="logo"><a href="#" title="Goo2o"><img src="/images/secure/registration/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header-rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+    </div>-->
+    <form id="regForm" name="regForm" action="" method="post">
+    <div class="clearBoth">
+    	<div class="blueMainHeadingContainer">
+    		<?php  if($_SESSION['fromstore']!=''){?> 
+ 			 <div class="blueMainHeading">Create a Goo2o ID to shop from <?php echo $_SESSION['fromstore'];?></div>
+                 <?php } else { 
+			if($_GET['tab']!=2 && $_SESSION['mypage']==''){?>
+                    <div class="blueMainHeading">Register to create a Goo2o ID</div>
+			<?php } else if($_SESSION['mypage']=='http://secure.o2o.com/demo/create-my-free-demo-store'){?>
+			        <div class="blueMainHeading">Create Goo2o ID to access your store</div>
+			<?php }else { echo $_SESSION['mypage']; ?>
+                <div class="blueMainHeading">Sign in/Register to get started with GMS</div>
+                <?php } } ?>
+            <div class="floatRight"><span class="content-text12">Already registered?</span> <a href="<?php echo HTTP_SECURE;?>/login" title="Sign in" class="hyperLinkBlue12">Sign in</a></div>
+        </div>
+        <div class="lh50">&nbsp;</div>
+        <div class="content-text14"><b>New to goo2o.com? Register below</b> </div>
+        <div class="lh10">&nbsp;</div>
+        <div class="clearBoth">
+        	<div class="clearBoth">
+        	<div class="wid255AlignR content-text12Lh20">My name is</div>
+            <div class="wid23AlignC content-text12Lh20">:</div>
+            <div class="floatLeft">
+            	<div class="clearBoth"><input type="text" class="input-textField230" maxlength="30" name="name" id="name" value="<?php echo $_POST['name']; ?>" onfocus="document.getElementById('sign_up_name').style.display='block',document.getElementById('show_hide').style.display='none',document.getElementById('show_hide_ok_name').style.display='none'"/></div>
+             </div>
+              <div class="sign-up-suggestive-container" id="sign_up_name" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif"  alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Enter your full name</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+              </div>
+                            <div class="suggestive-container" id="show_hide" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_name"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+                            </div>
+            <div class="suggestive-container" id="show_hide_ok_name" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+            </div>
+        </div>
+        	<div class="lh5">&nbsp;</div>
+        	<div class="clearBoth">
+                <div class="wid255AlignR content-text12Lh20">My username is</div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="clearBoth"><input type="text" class="input-textField230" maxlength="15" name="username" id="username" value="<?php echo $_REQUEST['username']; ?>" onfocus="document.getElementById('sign_up_username').style.display='block',document.getElementById('show_hide_username').style.display='none',document.getElementById('show_hide_ok_username').style.display='none'"/></div>
+                 </div>
+                  <div class="sign-up-suggestive-container" id="sign_up_username" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif"  alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Pick up a unique username for Goo2o</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+              </div>
+               <div class="suggestive-container" id="show_hide_username" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_username"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+               </div>
+             <div class="suggestive-container" id="show_hide_ok_username" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_username"><div class="available_tick"></div>Available</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+            </div>
+        	</div>
+            <div class="lh5">&nbsp;</div>
+        	<div class="clearBoth">
+                <div class="wid255AlignR content-text12Lh20">My email address is</div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="clearBoth"><input type="text" class="input-textField230" name="user_email_address" value="<?php echo $_REQUEST['user_email_address']; ?>" id="user_email_address" onfocus="document.getElementById('sign_up_email').style.display='block',document.getElementById('show_hide_user_email_address').style.display='none',document.getElementById('show_hide_ok_user_email_address').style.display='none'"/></div>
+                 </div>
+                 <div class="sign-up-suggestive-container" id="sign_up_email" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif" alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">We will send you a confirmation</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+                 </div>
+                  <div class="suggestive-container" id="show_hide_user_email_address" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_user_email_address"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+               </div>
+                 <div class="suggestive-container" id="show_hide_ok_user_email_address" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_user_email_address"><div class="available_tick"></div>Available</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+            </div>
+        	</div>
+            <div class="lh5">&nbsp;</div>
+        	<div class="clearBoth">
+                <div class="wid255AlignR content-text12Lh20">My mobile is</div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><input type="text" name="user_phone" id="user_phone" value="<?php echo $_POST['user_phone']; ?>" class="input-textField230" onfocus="document.getElementById('sign_up_user_phone').style.display='block',document.getElementById('show_hide_user_phone').style.display='none',document.getElementById('option_user_phone').style.display='none',document.getElementById('show_hide_ok_user_phone').style.display='none'"/></div>
+                    <div class="floatLeft grey-text11Lh20 adjustmentMar" id="option_user_phone">(Optional)</div>
+                 </div>
+                   <div class="sign-up-suggestive-container" id="sign_up_user_phone" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif" alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Enter your 10 digit mobile number</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+                 </div>
+                  <div class="suggestive-container" id="show_hide_user_phone" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_user_phone"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+               </div>
+                 <div class="suggestive-container" id="show_hide_ok_user_phone" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_user_phone"><div class="available_tick"></div>OK</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                </div>
+        	</div>
+        </div>
+         <div class="lh30">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="content-text14"><b>My current location is</b> </div>
+            <div class="lh10">&nbsp;</div>
+        	<div class="clearBoth">
+                <div class="wid255AlignR content-text12Lh20">City </div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+                <div class="floatLeft">
+                <div class="clearBoth" id="dpd_city_name" style="display:none">
+                    <?=$this->city;?>
+              	</div>
+                  <div class="clearBoth">
+                  <input type="text" class="input-textField180" name="location" id="location" value="<?php if($_POST['location']==''){echo '';} else{ echo $_POST['location'];}?>" onfocus="document.getElementById('show_hide_city_name').style.display='none'"/>
+                    </div>
+                 </div>
+                  <div class="sign-up-suggestive-container" id="sign_up_city_name" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif"  alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Please select a city</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+                 </div>
+                     <div class="suggestive-container" id="show_hide_city_name" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_city_name"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+                  </div>
+        	</div>
+            <div class="lh5">&nbsp;</div>
+                <div class="clearBoth">
+        	<div class="wid255AlignR content-text12Lh20">State</div>
+            <div class="wid23AlignC content-text12Lh20">:</div>
+            <div class="floatLeft">
+            	<div class="clearBoth">
+                	<select class="dropDown230" id="state_name" name="state_name" onfocus="document.getElementById('sign_up_state_name').style.display='block',document.getElementById('show_hide_state_name').style.display='none'">
+                	<option value='0' >Select state</option>
+                    <?php foreach($this->states as $key=>$state) { ?>
+                    	<option value="<?php echo $state['id'];?>"  <?php if($this->stateid == $state['id']) echo 'selected="selected"';?>><?php echo $state['state_name'];?></option>
+                    	<?php } ?>
+                    </select>
+              	</div>
+             </div>
+        </div>
+        <!-- <div class="sign-up-suggestive-container" id="sign_up_state_name" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif" alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Please select a state</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif" alt="" /></div>
+             </div>-->
+              <div class="suggestive-container" id="show_hide_state_name" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_state_name"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+               </div>
+        </div>
+        <div class="lh30">&nbsp;</div>
+       <div class="clearBoth">
+            <div class="content-text14"><b>Protect my information with a password</b> </div>
+            <div class="lh10">&nbsp;</div>
+        	<div class="clearBoth">
+                <div class="wid255AlignR content-text12Lh20">Enter a password</div>
+                <div class="wid23AlignC content-text12Lh20">:</div>
+                <div class="floatLeft"><input type="password" class="input-textField180" name="password" maxlength="15" id="password" value="<?php echo $_POST['password']; ?>" onfocus="document.getElementById('sign_up_password').style.display='block',document.getElementById('show_hide_password').style.display='none',document.getElementById('show_hide_ok_password').style.display='none'"/></div>
+                 <div class="sign-up-suggestive-container" id="sign_up_password" style="display:none">
+                 	<div class="floatLeft"><img src="/images/secure/registration/sign_up_left_arrow.gif" alt="" /></div>
+                    <div class="sign-up-suggestive-textContainer floatLeft">Minimum 6 characters or more (Be tricky)</div>
+                    <div class="floatLeft"><img src="/images/secure/registration/sign_up_right_curve.gif"  alt="" /></div>
+                 </div>
+                 <div class="suggestive-container" id="show_hide_password" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_password"></div>
+                                <div class="floatLeft"><img src="/images/secure/registration/suggestive-right-curve.gif" alt="Right curve" /></div>
+               </div>
+                 <div class="suggestive-container" id="show_hide_ok_password" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_password"><div class="available_tick"></div>OK</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+            </div>
+        	</div>
+        	<div class="lh5">&nbsp;</div>
+        </div>
+        <div class="lh30">&nbsp;</div>
+        <div class="clearBoth">
+        	<div class="content-text14"><b>Are you human?</b> </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="floatLeft grey-text11">Before we create your Goo2o ID, we need to make sure you’re not a computer</div>
+            <div class="lh10">&nbsp;</div>
+        	<div class="wid255AlignR content-text12Lh20">Type these words</div>
+            <div class="wid23AlignC content-text12Lh20">:</div>
+            <div class="floatLeft">
+            <div class="clearBoth">
+            	  <div class="floatLeft">
+                                	<div class="floatLeft jCaptcha"><?php  echo recaptcha_get_html($this->publickey, $errorRecaptcha); ?></div>
+                  </div>
+								<div class="clearBoth" id="inputMsg">
+									<div class="wid166">&nbsp;</div>
+										<!--<span class="sign-up-alert floatLeft">-->
+										 <?php
+										//if($this->totalattempt>0){ echo $this->captchaErr;}?>
+                                                                               <!-- </span>-->
+								</div>
+               </div>
+                             <div class="lh35">&nbsp;</div>
+                <div class="clearBoth"><!--<input type="image"  src="/images/secure/registration/create_account.gif" title="Create account" />-->
+                	<span id="signupbtn"><input type="submit" class="registerAccountBtn" title="Create account"  id="submit"  value="" name="submit" /></span><span id="loginload" class="floatLeft"><div style="display:none;"><img src="<?=DIR_WS_TEMPLATE_IMAGES?>loading1.gif" /></div></span>
+                    		<input type="hidden" name="action" value="process" />
+                                <input type="hidden" name="attempt" value="<?=$this->totalattempt?>" id="attempt" />
+				<input type="hidden" name="pkey" value="<?php echo $this->privatekey;?>" />
+                                <input type="hidden" name="tab" value="<?php echo $_GET['tab']?>" />
+				<input type="hidden" name="sapikey" value="<?php echo $_SESSION['spk'];?>" />
+                </div>
+                 <div class="lh10">&nbsp;</div>
+                <div class="floatLeft grey-text11">By clicking on &quot;Create Goo2o ID&quot;, you are agreeing to the <a href="http://support.goo2o.com/entries/507111-terms-conditions" title="Terms of Service" class="hyperLinkBlue11" target="_blank">Terms of Service</a> and the <a href="http://support.goo2o.com/entries/507112-privacy-policy" class="hyperLinkBlue11" title="Privacy Policy" target="_blank">Privacy Policy</a>.</div>
+<?php if($_SESSION['fromstore']!=''){?>
+		<div class="lh10">&nbsp;</div>
+	 <div class="clearBoth grey-text11">Signing up will authorize <?php echo $_SESSION['fromstore']?> access to your basic profile info and your ordered item history on the store. Nothing will be shared  with <?php echo $_SESSION['fromstore']?> until you Sign Up.
+</div>
+<?php } ?>
+            </div>
+        </div>
+        <div class="lh35">&nbsp;</div>
+    </div>
+    </form>
+</div>

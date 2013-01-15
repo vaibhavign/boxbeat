@@ -1,0 +1,110 @@
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+	<tr>
+    	<!--Right panel starts from here-->
+    	<td width="260" valign="top">
+        <div class="accountSettingRightPanel">
+            	
+    <div class="businessDetialsLeftPanel">
+    	<div class="lh25">&nbsp;</div>
+        
+		
+               <?php
+			 		$request = Zend_Controller_Front::getInstance()->getRequest();
+					$controllerName = $request->getControllerName();
+					$actionName = $request->getActionName();
+					$genObj = new General();
+					//$controllerName = "Store";
+
+					$abc = $genObj->displaySettingMenuNew($controllerName,$actionName);
+
+					echo $abc;
+				?>
+                
+                </div>
+            	
+       </div>
+        </td>
+        <!--Right panel ends from here-->
+        <!--Left panel starts from here-->
+        <td width="740" valign="top">
+        	<div class="accountSettingLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="floatLeft blueMainHeading">Account settings</div>
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+                    <?php 
+                     $this->userName = new Zend_Session_Namespace('original_login');
+                    if (file_exists('images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage))
+                     {
+                    $class=new General();
+                    $userid=$this->userName->userId;     
+                        ?>
+                         <div class="imageContainer"><img src="<?php echo HTTP_SERVER.'/images/secure/user_image/'.$this->userName->userId.'/'.$this->userimage;?>" height="36" width="30" alt="upload img" /></div>
+                        <?php } else { ?>
+                        <div class="imageContainer"><img src="<?php echo HTTP_SERVER.'/images/secure/user_image/no_image.jpg';?>" height="36" width="30" alt="upload img" /></div>
+                        <?php } ?>
+                    <div class="wid598">
+                        <div class="clearBoth content_text14"><b><?php echo $this->userName->user[0]['user_full_name'];?></b></div>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="clearBoth content_text12"><?php echo $this->user_state;?></div>
+                    </div>
+                    <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/editbasicinfo" class="hyperLinkBlue12None" title="Edit">Edit</a></div>
+                
+                </div>
+                <div class="lh25">&nbsp;</div>
+                <div class="borderDotted">&nbsp;</div>  
+                <div class="clearBoth content_text12">
+                    <div class="lh20">&nbsp;</div>
+                    <div class="wid180"><b>Email</b></div>
+                    <div class="widemail288">
+                        <div class="clearBoth"><?php echo $this->userName->user[0]['user_email_address'];?></div>
+                        <div class="lh10">&nbsp;</div>
+                         <?php foreach($this->alluseremail as $key=>$useremail){ ?>
+                       <div class="clearBoth"><?php echo $useremail['user_email']; ?></div>
+                        <div class="lh10">&nbsp;</div> 
+                        <?php } ?>
+                    </div>
+                    <div class="wid180 grey_text12"><i>...(Primary)</i></div>
+                     <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/editemail" class="hyperLinkBlue12None" title="Edit">Edit</a></div>
+                </div>  
+                <div class="lh10">&nbsp;</div>
+                <div class="clearBoth content_text12">
+	                <div class="solidBorderGrey">&nbsp;</div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="wid180"><b>Username</b></div>
+                    <div class="wid469"><?php echo $this->userName->user[0]['username'];?></div>
+                    <?php if($this->userName->user[0]['updatedusername_time']==0){?>
+                    <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/updateusername" class="hyperLinkBlue12None" title="Edit">Edit</a></div>
+                    <?php } else {?>
+                    <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/useralreadychanged" class="hyperLinkBlue12None" title="Edit">Edit</a></div>
+                    <?php }?>
+                     <div class="lh10">&nbsp;</div>
+                     <div class="solidBorderGrey">&nbsp;</div>
+                </div>
+                <div class="clearBoth content_text12">
+                    <div class="lh10">&nbsp;</div>
+                    <div class="wid180"><b>Password</b></div>
+                    <div class="wid469 grey_text12"><i><?php echo $this->passwordupdatedtime; ?></i></div>
+                     <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/updatepassword" class="hyperLinkBlue12None" title="Update">Update</a></div>
+                     <div class="lh10">&nbsp;</div>
+                     <div class="solidBorderGrey">&nbsp;</div>
+                </div>
+                <div class="clearBoth content_text12">
+                    <div class="lh10">&nbsp;</div>
+                    <div class="wid180"><b>Mobile</b></div>
+                    <div class="wid469 content_text12"><?php echo (($this->userName->user[0]['user_mobile']=='')?'<a href="'.HTTP_SECURE.'/accountsetting/editmobile" title="Add your mobile">Add your mobile</a>':$this->userName->user[0]['user_mobile']);?></div>
+                     <?php if($this->userName->user[0]['user_mobile']!=''){ ?> <div class="floatLeft"><a href="<?php echo HTTP_SECURE;?>/accountsetting/editmobile" class="hyperLinkBlue12None" title="Edit">Edit</a></div> <?php }?>
+                     <div class="lh65">&nbsp;</div>
+                     <div class="floatLeft" style="display:none"><a href="#" title="Deactivate my account" class="hyperLinkBlue12" >Deactivate my account</a></div>
+                    <div class="lh65">&nbsp;</div>
+                </div>
+                
+                
+           </div>
+        
+        </td>
+        <!--Left panel ends from here-->
+    </tr>
+</table>
+
+

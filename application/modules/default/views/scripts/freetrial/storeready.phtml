@@ -1,0 +1,42 @@
+<?php
+	//echo '<pre>';
+	
+	//print_r($this->sessDetails);
+
+
+?>
+
+<div class="mainHeader">
+		<div class="header" align="center"><a href="#" title="eshopbox"><img src="/images/secure/elogin/logo.png" alt="eshopbox" /></a></div>
+		<div class="clearBoth">
+			<div class="topBorder">&nbsp;</div>
+			<div class="botGap">&nbsp;</div>
+			<div class="loginContainer" align="center">
+				<div class="heading">Your store is ready to go....</div>
+				<div class="thnksText">Thanks for using eshopbox! we have sent you a Confirmation mail at <b><?php echo $this->sessDetails[0]['user_email_address'];  ?></b>. In case if you have not received the mail, <a href="#" title="resend confirmation">resend confirmation</a>.</div>
+				<div class="storeURL">
+					<div class="wid110">Store URL</div>
+					<div class="wid325">: <?php echo $this->sessDetails[0]['mallurl'];  ?></div>
+					<div class="lh20">&nbsp;</div>
+					<div class="wid110">Plan</div>
+					<div class="wid325">:<?php echo TRIAL_DAYS ?> days Free trial</div>
+					<div class="lh20">&nbsp;</div>
+					<div class="wid110">Expires on</div>
+					<div class="wid325">: <?php $new_timestamp =  strtotime("+".TRIAL_DAYS." days",$this->sessDetails[0]['create_date']); echo date('d-m-Y',$new_timestamp);   ?></div>
+					<div class="lh40"></div>
+					<div align="center"><input type="image" src="/images/secure/elogin/setupYourStorebtn.png" title="Setup your Store" /></div>
+				</div>
+				
+				
+			</div>
+			<div class="loginBTN">
+				
+			</div>
+			<div class="botGap">&nbsp;</div>
+			<div class="botBorder">&nbsp;</div>
+			<div class="freetrial">
+				<div class="newHere">Want to skip trial?</div>
+				<div class="startFTrail"><a href="#" title="Choose your plan now!">Choose your plan now!</a></div>
+			</div>
+		</div>
+	</div>

@@ -1,0 +1,155 @@
+<div class="checkout_mainwidth">
+	<!-- Body Block Start From here-->
+    <div class="lh35">&nbsp;</div> 
+    <div class="edit_saddress_leftblock">
+    	<form action="/cart/save" method="post" id="addressform">
+			<input type="hidden" name="officeaddress" id="officeaddress" value="<?=($this->addressdetail['officeaddress']?$this->addressdetail['officeaddress']:'0');?>" />
+			<?php if($this->addressdetail['address_book_id']){?>
+			<input type="hidden" name="addressid" id="addressid" value="<?=$this->addressdetail['address_book_id']?>" />
+			<?php } ?>
+    	<div class="checkout_heading">Enter a new shipping address</div>
+        <div class="lh10">&nbsp;</div>
+        <div class="edit_saddress_example">Be sure to click "Save this address" when done.</div>
+    	<div class="lh35">&nbsp;</div>
+         <div class="clearBoth" style="height:24px;">
+                            <div class="wid96" align="right">Full Name</div>
+                            <div class="floatLeft colAdjust">:</div>
+                            <div class="floatLeft"><input type="text" name="name" id="name" class="emailInput" value="<?=($this->addressdetail['fullname']!=''?$this->addressdetail['fullname']:'')?>"   /></div>
+                            <div class="wid14">&nbsp;</div>
+                            <div class="floatLeft" id="namediv" style="display:none;" >
+                                <div class="tooltipLeftbg">&nbsp;</div>
+                                <div class="tooltipMidbg"><div class="floatLeft toolTipText" id="namecontent" >Enter your full name here.</div></div>
+                                <div class="tooltipRighttbg">&nbsp;</div>
+                            </div>
+         </div>
+			<div class="lh7">&nbsp;</div>
+			<div class="clearBoth">
+				<div class="wid96" align="right">Address</div>
+				<div class="floatLeft colAdjust">:</div>
+				<div class="floatLeft"><textarea class="teaxAreaSelect" name="address" id="address" ><?=($this->addressdetail['address']!=''?$this->addressdetail['address']:'')?></textarea>
+				</div>
+				<div class="wid14">&nbsp;</div>
+				<div class="floatLeft" id="addressdiv" style="display:none;" >
+					<div class="tooltipLeftbg">&nbsp;</div>
+					<div class="tooltipMidbg"><div class="floatLeft toolTipText" id="addresscontent" >Enter your correct full address here.</div></div>
+					<div class="tooltipRighttbg">&nbsp;</div>
+				</div>
+			</div>
+			<div class="lh7">&nbsp;</div>
+			<div class="clearBoth lh26">
+				<div class="wid96" align="right">State</div>
+				<div class="floatLeft colAdjust">:</div>
+				<div class="floatLeft">
+					<select class="Jstatedropdown selectOption" name="state" id="state">
+					<option value="0">Select</option>
+					<?php foreach($this->states as $key=>$val){?>
+						<option value="<?=$val['id']?>" <?php if($this->addressdetail['state']!='' && $this->addressdetail['state']==$val['id']) echo "selected=selected";?>><?=$val['state_name']?></option>
+					<?php } ?>
+					</select>
+				</div>
+				<div class="wid14">&nbsp;</div>
+				<div class="floatLeft" id="statediv" style="display:none;">
+					<div class="tooltipLeftbg">&nbsp;</div>
+					<div class="tooltipMidbg"><div class="floatLeft toolTipText" id="statecontent">Select your state from the list.</div></div>
+					<div class="tooltipRighttbg">&nbsp;</div>
+				</div>
+			</div>
+			<div class="lh3">&nbsp;</div>
+			<div class="clearBoth lh26">
+				<div class="wid96" align="right">City</div>
+				<div class="floatLeft colAdjust">:</div>
+				<div class="floatLeft" id="city">
+					<select class="Jstatedropdown selectOption" name="city" id="city">
+					
+						<option  value="0" >Select</option>
+						<?php if(!empty($this->cities)){
+						 foreach($this->cities as $key=>$val){
+						?>
+						<option value="<?=$val['id']?>" <?php if($this->addressdetail['city']!='' && $this->addressdetail['city']==$val['id']) echo "selected=selected";?>><?=$val['cityname']?></option>
+						<?php }} ?>
+					</select>
+				</div>
+				<div class="wid14">&nbsp;</div>
+				<div class="floatLeft" id="citydiv" style="display:none;">
+					<div class="tooltipLeftbg">&nbsp;</div>
+					<div class="tooltipMidbg"><div class="floatLeft toolTipText" id="citycontent">Select your city from the list.</div></div>
+					<div class="tooltipRighttbg">&nbsp;</div>
+				</div>
+			</div>
+			<div class="lh5">&nbsp;</div>
+			<div class="clearBoth" style="height:24px;">
+				<div class="wid96" align="right">Zip Code</div>
+				<div class="floatLeft colAdjust">:</div>
+				<div class="floatLeft"><input type="text" name="zipcode" id="zipcode" class="emailInput1" value="<?=($this->addressdetail['zipcode']!=''?$this->addressdetail['zipcode']:'')?>" /></div>
+				<div class="wid14">&nbsp;</div>
+				<div class="floatLeft" id="zipcodediv" style="display:none;">
+					<div class="tooltipLeftbg">&nbsp;</div>
+					<div class="tooltipMidbg"><div class="floatLeft toolTipText" id="zipcodecontent">Enter your correct zipcode.</div></div>
+					<div class="tooltipRighttbg">&nbsp;</div>
+				</div>
+			</div>
+			<div class="lh7">&nbsp;</div>
+			<div class="clearBoth" style="height:24px;">
+				<div class="wid96" align="right">Phone</div>
+				<div class="floatLeft colAdjust">:</div>
+				<div class="floatLeft"><input type="text" name="phone" id="phone" class="emailInput"  value="<?=($this->addressdetail['phone']!=''?$this->addressdetail['phone']:'')?>" /></div>
+				<div class="wid14">&nbsp;</div>
+				<div class="floatLeft" id="phonediv" style="display:none;">
+					<div class="tooltipLeftbg">&nbsp;</div>
+					<div class="tooltipMidbg"><div class="floatLeft toolTipText" id="phonecontent">Enter your phone number here.</div></div>
+					<div class="tooltipRighttbg">&nbsp;</div>
+				</div>
+			</div>
+			<div class="lh30">&nbsp;</div>
+			<div class="clearBoth">
+				<div class="wid118">&nbsp;</div>
+				<?php if($this->addressdetail['officeaddress']!='' && $this->addressdetail['officeaddress']==1)
+					{
+						$addclass='chkBox_on';
+					}
+					else
+					{
+						$addclass='';
+					}
+					
+				?>
+				<div id="chkBoxes" class="chkBox <?=$addclass?>">&nbsp;</div>
+				<div class="wid8"></div>
+				<div class="floatLeft ofcAdres" id="clickable">Use it as office address</div>
+				<div class="wid25"></div>
+				<div class="floatLeft"><a href="#" class="quesMark" title="Mention your office address to get delivery on time"></a></div>
+			</div>
+            <div class="lh20">&nbsp;</div>
+            <div class="edit_saddress_button">
+            	<div class="floatLeft"><input type="image" id="saveForm" src="/images/secure/savethis_address_btn.png" alt="Save this address" title="Save this address" /></div>
+                <div class="wid12">&nbsp;</div>
+                <div class="floatLeft"><img id="saveForm"  style="cursor:pointer;" src="/images/secure/back_btn.png" alt="back" title="back" name="back" id="back" onclick="javascript:history.go(-1)" /></div>
+            </div>
+
+         </form>
+        </div>
+       
+     </div>
+     <div class="edit_saddress_middleblock">&nbsp;</div>
+    <div class="edit_saddress_rightblock">
+    	<div class="floatLeft checkout_signin_content"><strong>Address accuracy tips:</strong></div>
+        <div class="lh5">&nbsp;</div> 
+        <div class="floatLeft">
+			<div class="floatLeft">
+            	<div class="edit_saddress_bullet"></div>
+                <div class="floatLeft edit_saddress_righttext">Incorrectly entered  addresses may delay your order, so please double-check for errors. </div>
+            </div>
+            <div class="lh5">&nbsp;</div> 
+            <div class="floatLeft">
+            	<div class="edit_saddress_bullet"></div>
+                <div class="floatLeft edit_saddress_righttext">Do not enter specific dispatch instructions in any of the address fields.</div>
+            </div>        	
+       </div>
+       <div class="lh30">&nbsp;</div> 
+       <div class="edit_saddress_faqbg">FAQ</div>
+    
+    </div>
+
+    <!-- Body Block Ends here-->
+    <div class="lh110">&nbsp;</div>
+</div>

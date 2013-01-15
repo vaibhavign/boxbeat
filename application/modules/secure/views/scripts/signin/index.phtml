@@ -1,0 +1,42 @@
+<base href="<?=$this->domain?>" />
+
+<h1> Sign In to iglobul account </h1>
+<?= $this->form; ?>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('input').blur(function(){
+		var dataElements = $(this).attr('id');
+		//alert(dataElements);
+		formValidation(dataElements);
+	
+	});
+
+
+});
+
+function formValidation(id){
+  var data = {};
+  var url = "/api/signin/validateform";
+  $('input').each(function(){
+  	data[$(this).attr('id')] = $(this).val();
+  	$.post(url,data,function(resp){
+	$('#'+id).parent().append(getErrorHtml(resp[id],id))
+		
+	},'json');
+	
+	
+  });
+//console.log(data);
+}
+
+function getErrorHtml(formdata,id){
+
+var o = '<ul id="error"'+id+'class="errors">';
+	for(formkey in formdata){
+	 o +='<li>' + formdata[formkey] +'</li>';	
+	}
+	o += '</ul>';
+	return o;
+}
+</script>

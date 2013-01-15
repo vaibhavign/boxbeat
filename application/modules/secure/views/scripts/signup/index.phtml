@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Page</title>
+<?php echo $this->headLink()->appendStylesheet('/css/secure/signup.css');?>
+<?php echo $this->headLink()->appendStylesheet('/css/secure/stylesheet_header.css');?>
+<?php echo $this->headScript()->appendFile('/jscript/secure/login.js');?>
+<?php echo $this->headScript()->appendFile('/jscript/common/jquery-1.4.2.min.js');?>
+</head>
+<body>
+<table cellpadding="0" cellspacing="0"  border="0" width="100%">
+  <tr>
+    <td valign="top"><!-- Header Start From here-->
+      <table cellpadding="0" cellspacing="0" border="0" width="760" height="135" align="center">
+        <tr>
+          <td height="107"><div class="wid760 height107">
+              <div class="wid90 paddtop37"><a href="" title="iglobul.com"><img src="/images/logo.png" border="0" /></a></div>
+              <div class="floatLeft">
+                <div class="lh17">&nbsp;</div>
+                <div class="wid670">
+                  <div class="floatRight">
+                    <div class="lh7">&nbsp;</div>
+                    <?php  //if($_GET['main_page']!='checkout_signin'){?>
+                    <div class="clearBoth">
+                      <div class="floatLeft normal_text">
+                        <?php /*if($_GET['main_page']=='login'){*/ echo 'Not registered yet?'; //} else { echo 'Already registered?';} ?>
+                        <?php
+                                            //if($_GET['main_page']=='login' ){
+                                                echo '<a href="singin.php" class="header_link fwBold" title="Sign Up">Sign Up</a>';
+                                           /* } else {
+                                                echo '<a href="'.zen_href_link('login', '', 'SSL').'" class="header_link fwBold" title="Sign in">Sign in</a>';	
+                                            }*/
+											
+                                            ?>
+                      </div>
+                    </div>
+                    <?php //} ?>
+                  </div>
+                </div>
+                <div class="clearBoth height29">&nbsp;</div>
+                <div class="clearBoth">
+                  <div class="floatLeft blue_text">iglobul helps you buy &amp; sell live deals with real-time conversation.</div>
+                </div>
+              </div>
+            </div></td>
+        </tr>
+        <tr>
+          <td><div class="header_menu_border">&nbsp;</div>
+            <div class="clearBoth height29">
+              <div class="wid90">&nbsp;</div>
+              <div class="floatLeft paddtop14"><?php //echo zen_image(DIR_WS_TEMPLATE_IMAGES . 'signin_left_img.gif', ''); ?></div>
+              <div class="floatLeft menu" id="menumessage">
+                <?php /*if($_GET['main_page']=='login' || $_GET['main_page']=='checkout_signin'){ */
+                                echo 'Sign in, if you are already registered.'; 
+                                /*} else if($_GET['main_page']=='register_new') { 
+                                echo 'Sign up free. Within few seconds you will be set to buy &amp; sell.';
+								} else if($_GET['main_page']=='passwordrecover') { 
+								echo 'Forget your password?';	
+								} else if($_GET['main_page']=='mail_confirmation') { 
+								echo 'Your email address has been confirmed!';
+								} else if($_GET['main_page']=='manage_notifications') { 
+								echo 'Opt out of this notification!';
+								}else if($_GET['main_page']=='passwordreset'){
+									echo "Recover your iGlobul account";
+								}else if($_GET['main_page']=='changepasswordmessage'){
+									echo "Change your iglobul password.";
+								}else if($_GET['main_page']=='password_confirmation'){
+									echo "Change your iglobul password.";
+								}*/?>
+              </div>
+            </div>
+            <div class="header_menu_border">&nbsp;</div></td>
+        </tr>
+      </table>
+      <!-- Header Ends here--></td>
+  </tr>
+</table>
+
+<table cellpadding="0" cellspacing="0"  border="0" width="100%">
+	<tr>
+		<td valign="top" class="">
+			<!-- Header Start From here-->
+			
+			<!-- Header Ends here-->	
+		</td>
+	</tr> 
+ 
+ <tr>
+    	<td height="37">&nbsp;</td>
+    </tr>
+	<tr>
+		<!-- Body Block Start From here-->
+		<td valign="top">
+		<form id="regForm" name="regForm" action="" method="get">		
+			<table cellpadding="0" cellspacing="0" border="0" width="760" align="center">
+				<tr>
+					<td>
+                    	<div class="clearBoth">
+                        	<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Full Name</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="framefirstname">
+                                	<div class="floatLeft"><input type="text" name="fullname" id="firstname" value="<?php echo ($_POST['firstname']!='')?$_POST['firstname']:''; ?>" class="input_wid255_success" AUTOCOMPLETE="OFF" maxlength="30"/></div>															
+                                    <div class="inputMsg" id="inputMsgfirstname"><span class="alert">
+									 <?php if($messageStack->errors['firstname']['text']){echo "<br>"; print_r($messageStack->errors['firstname']['text']);}?>
+                               		</span></div>
+                                </div>
+                            </div>                           
+							<div class="lh7">&nbsp;</div>
+                            <div class="input_box_main">
+                            	<div class="inputLabel email_text paddtop2"><span class="alert">*</span>&nbsp;Username</div>
+                                <div class="inputGap">&nbsp;</div>
+								 <div class="input_bg" id="frameusername">                              
+                                	<div class="floatLeft"><input type="text" name="username" id="username" class="input_wid255_success" value="<?php if($_GET['shortcode']==''){echo ($_POST['username']!='')?$_POST['username']:''; }else { echo $_GET['shortcode'];} ?>" AUTOCOMPLETE="OFF" maxlength="20"/></div>
+									<div class="inputMsg" id="inputMsgusername"><span class="alert">
+									 <?php if($messageStack->errors['username']['text']){echo "<br>"; print_r($messageStack->errors['username']['text']);}?>
+                               		</span></div>
+							    </div>
+								<div class="clearBoth">
+									<div class="inputGap">&nbsp;</div>
+									<div class="inputLabel email_text">&nbsp;</div>
+									<div class="floatLeft image_size">(Your public profile: http://www.iglobul.com/username)</div>
+								</div>
+                            </div>
+                            <div class="lh7">&nbsp;</div>
+                            <div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Email Address</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="frameemail">
+                                	<div class="floatLeft"><input type="text" name="email" id="email" class="input_wid255_success" value="<?php echo ($_POST['email']!='')?$_POST['email']:''; ?>" AUTOCOMPLETE="OFF" /></div>
+									<div class="inputMsg" id="inputMsgemail">
+										<span class="alert">
+										 <?php if($messageStack->errors['email']['text']){echo "<br>"; print_r($messageStack->errors['email']['text']);}?>
+                               			</span>
+									</div>
+									
+									 
+                               		</div>
+                                </div>
+                            </div>
+                            <div class="lh7">&nbsp;</div>
+                          	  <div class="input_box_main">
+                            	<div class="inputLabel email_text padTop5"><span class="alert">*</span>&nbsp;Password</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="framepassword">
+                                	<div class="floatLeft"><input type="password" name="password" id="password" class="input_wid255_success" value="<?php echo ($_POST['password']!='')?$_POST['password']:''; ?>" AUTOCOMPLETE="OFF"/></div>
+									<div class="inputMsg" id="inputMsgpassword">
+										<span class="alert">
+										 <?php if($messageStack->errors['password']['text']){echo "<br>"; print_r($messageStack->errors['password']['text']);}?>
+                               			</span>
+									</div>
+									 
+                               		</div>
+                                </div>
+                            </div>                         
+                            </div>			
+							<div class="lh7">&nbsp;</div>
+							<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Location</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="state_bg_signup floatLeft">
+                                	<div class="floatLeft" style="height:30px">	
+										<div id="defCitydiv">
+											<select class="select_wid180" name="city" id="city">												
+												<?php foreach($this->cityList as $city){
+												echo"<option ".$selected." value=".$city->id.">".$city->cityname."</option>";
+												 }
+												?>	
+											</select>
+										</div>
+										<div class="inputMsg" id="inputMsg">
+										<span class="alert">
+										
+                               			</span>
+										</div>		
+									</div>
+                                </div>
+                            </div>
+							<div class="lh7">&nbsp;</div>
+							<!--<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4">&nbsp;Are you human?</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="floatLeft desc_text" style="height:30px; line-height:30px;">Before we create your account, we need to make sure you're not a computer.</div>
+                                </div>-->
+							<!--<div class="input_box_main">-->
+                            	<!-- Remove Phone no html and image from here-->
+							<!--<div class="input_box_main">
+								<div class="floatLeft">
+									<div class="lh75">&nbsp;</div>
+                            		<div class="type_text">Type the above words</div>
+								</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="floatLeft">
+                                	<div class="floatLeft">&nbsp;</div>
+										
+                                </div>
+								<div class="floatLeft" id="inputMsg">
+									<div class="wid166">&nbsp;</div>
+										<span class="alert floatLeft">
+										 <?php 
+										 //print_r($messageStack->errors);
+										 //if($messageStack->errors['captchamsg']['text']){ print_r($messageStack->errors['captchamsg']['text']);}?>
+                               			</span>
+								</div>
+                            </div>-->
+							<div class="lh16">&nbsp;</div>					
+							<div class="input_box_main">
+								<div class="signup_gap">&nbsp;</div>
+								<!--<div class="floatLeft paddleft60"><input type="image" id="submit" name="submit" value="" /></div>-->
+								<div class="floatLeft sign_up_btn paddleft60"><span id="signupbtn"><input type="submit" id="submit"  value="" name="submit" alt="Sign up" title="Sign up" /></span><span id="loginload" class="floatLeft"><div style="display:none;"><img src="<?=DIR_WS_TEMPLATE_IMAGES?>loading1.gif" /></div></span></div>
+								<input type="hidden" name="action" value="process" />
+								<input type="hidden" name="tab" value="<?php echo $_REQUEST['tab'];?>" />
+								<input type="hidden" name="productId" value="<?php echo $_REQUEST['productId'];?>">
+								<input type="hidden" name="commentbox" value="<?php echo $_REQUEST['commentbox'];?>">
+								<input type="hidden" name="uri" value="<?php echo $_REQUEST['uri'];?>" />
+								<input type="hidden" name="query" value="<?php echo $_REQUEST['query'];?>" />
+								<input type="hidden" name="redirect" value="<?php echo $_REQUEST['redirect'];?>" />
+								
+							</div>
+							
+							<div class="inputMsg" id="inputMsg">
+										<span class="alert">
+										 <?php 										 
+										 if($messageStack->errors['shortcode']['text']){echo "<br>"; print_r($messageStack->errors['shortcode']['text']);}?>
+                               			</span>
+							</div>	
+							
+                        </div>
+                    </td>
+				</tr>
+				<tr>
+					<td height="50">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="bottom_text">By clicking on "Sign up", you are agreeing to the <a href="http://support.iglobul.com/entries/337154-terms-condition" class="terms_link" title="Terms of Service">Terms of Service</a> and the <a href="http://support.iglobul.com/entries/337157-privacy-policy" class="terms_link" title="Privacy Policy">Privacy Policy</a>.</td>
+				</tr>
+				<tr>
+					<td height="40">&nbsp;</td>
+				</tr>
+			</table>
+         </form> 
+		</td>
+		<!-- Body Block Ends here-->
+	</tr>
+</table>
+</body>
+</html>

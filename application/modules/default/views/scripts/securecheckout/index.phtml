@@ -1,0 +1,200 @@
+<div class="mainContainer">
+        <div class="explore">
+            <div class="clearBoth">
+                <div class="floatLeft exploreText">Settings</div>
+            </div>
+            <div class="lh13">&nbsp;</div>
+            <div class="clearBoth">
+                	<div class="floatLeft">
+                    <div class="checkBoxActive">&nbsp;</div>
+                    <div class="floatLeft selection">Account</div>
+                </div>
+                	<div class="floatLeft padLeft15">
+                    <div class="checkBoxInactive">&nbsp;</div>
+                    <div class="floatLeft"><a href="profile_settings.php" class="news" title="Profile">Profile</a></div>
+                </div>
+                	<div class="floatLeft padLeft15">
+                        <div class="checkBoxInactive">&nbsp;</div>
+                        <div class="floatLeft"><a href="mobile_settings.php" class="news" title="Mobile">Mobile</a></div>
+                    </div>
+                    <div class="floatLeft padLeft15">
+                        <div class="checkBoxInactive">&nbsp;</div>
+                        <div class="floatLeft"><a href="prefrence_settings.php" class="news" title="Preference ">Preference</a></div>
+                    </div>
+                    <div class="floatLeft padLeft15">
+                        <div class="checkBoxInactive">&nbsp;</div>
+                        <div class="floatLeft"><a href="#" class="news" title="Verification ">Verification</a></div>
+                    </div>
+                    <div class="floatLeft padLeft15">
+                        <div class="checkBoxInactive">&nbsp;</div>
+                        <div class="floatLeft"><a href="#" class="news" title="Notification">Notification</a></div>
+                    </div>
+                    <div class="floatLeft padLeft15">
+                        <div class="checkBoxInactive">&nbsp;</div>
+                        <div class="floatLeft"><a href="#" class="news" title="Privacy">Privacy</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lh48">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="floatLeft padTopFour">
+                    <div class="floatLeft">Account Settings</div>
+                </div>
+            </div>
+            <div class="lh5">&nbsp;</div>
+            <div class="bgLine"></div>
+            <div class="clearBoth">
+            	<table cellpadding="0" cellspacing="0" border="0" width="1000">
+                	<tr>
+                    	<td height="20" class="fs0">&nbsp;</td>
+                    </tr>
+                    <tr>
+                    	<td width="675" valign="top" align="left">
+                        <form method="post" name="form1" id="form1" action="">
+                    		<div class="peopleListLeftPan">
+                                <div class="clearBoth">
+                                	<div class="clearBoth">
+                                        <div class="wid141 settingsName" align="right">Name :</div>
+                                        <div class="wid33">&nbsp;</div>
+                                        <input type="hidden" name="customers_id" id="customers_id" value="<?=$this->checkUserInfo['0']['id']?>" />
+                                        <div class="floatLeft">
+                                            <div class="clearBoth settingsName"><strong><?php echo $this->checkUserInfo[0]['user_full_name'];?></strong></div>
+                                            <div class="lh10">&nbsp;</div>
+                                            <div class="clearBoth useOptional">You can change your name on your <a href="/profile_setting" class="unfollow" title="profile settings">profile settings</a>.</div>
+                                    	</div>
+                                </div>
+                                	<div class="lh17">&nbsp;</div>
+                                	<div class="clearBoth">
+                                	<div class="wid141 settingsName" align="right">User Name :</div>
+                                    <div class="wid33">&nbsp;</div>
+                                    <div class="wid326">
+                                    	<input type="text" class="settings_input_wid marBot5" value="<?php echo $this->checkUserInfo[0]['username'];?>"  name="username" id="username"/><br />
+										<span class="useOptional">Your public profile: http://goo2o.com/<?php echo $this->checkUserInfo[0]['username'];?></span>
+                                    </div>
+                                    <div class="inputMsg" id="inputMsgusername"></div>
+                                </div>
+                                	<div class="lh17">&nbsp;</div>
+                                	<div class="clearBoth">
+                                        <div class="wid141 settingsName" align="right">Email :</div>
+                                        <div class="wid33">&nbsp;</div>
+                                        <div class="wid326">
+                                            <input type="text" class="settings_input_wid" value="<?php echo $this->checkUserInfo[0]['user_email_address'];?>"  name="email" id="email"/>
+                                        </div>
+                                        <div class="floatLeft useOptional padTop5" id="verify"><?php echo $this->verification;?></div>
+                                        <div class="inputMsg" id="inputMsgemail"></div>
+                                	</div>
+                                    <div class="lh5">&nbsp;</div>
+                                    <?php if($emailflag==0){?>
+                                        		<div class="floatLeft useOptional" id="valerrormessage">Please verify your email.Didn't get email? <a title="Resend email" class="change_image mailsend cursor_pointer" id="resend">Resend email</a>.</div>
+										<?php }?>
+                                    
+                                    
+                                    <div class="lh36">&nbsp;</div>
+                                    <div class="clearBoth">
+                                        <div class="wid141 settingsName" align="right">&nbsp;</div>
+                                        <div class="wid33">&nbsp;</div>
+                                        <input type="hidden" id="sessionEmail" name="sessionEmail" value="<?php echo $this->checkUserInfo[0]['user_email_address'];?>" />
+                                        <div class="floatLeft"><input type="image" src="images/default/save_btn.gif" border="0" title="Save" name="save1" id="save1" value="save"/></div>
+                                	</div>
+                                   </form> 
+                                    <div class="lh41">&nbsp;</div>
+                                    
+                                    <form name="form2" id="form2" method="post" action="">
+                                    <div class="clearBoth">
+                                		<div class="wid141 settingsName" align="right">Current Password :</div>
+                                    	<div class="wid33">&nbsp;</div>
+                                    	<div class="wid326">
+                                    		<input type="password" class="settings_input_cur marBot5" name="old_password" id="old_password" /><br />
+											 <span class="useOptional"><a href="#" class="unfollow change_image openPopDiv cursor_pointer" title="Forgot your password?" id="forgotPwd" rev="<?php echo $this->checkUserInfo[0]['user_email_address'];?>">Forgot your password?</a></span>
+                                    	</div>
+                                         <div class="inputMsg" id="inputMsgold_password"></div>
+                                	</div>
+                                    <div class="lh17">&nbsp;</div>
+                                    <div class="clearBoth">
+                                		<div class="wid141 settingsName" align="right">New Password :</div>
+                                    	<div class="wid33">&nbsp;</div>
+                                    	<div class="wid326">
+                                    		<input type="password" class="settings_input_cur" name="new_password" id="new_password"/><br />
+                                    	</div>
+                                        <div class="inputMsg" id="inputMsgnew_password"></div>
+                                	</div>
+                                    <div class="lh9">&nbsp;</div>
+                                    <div class="clearBoth">
+                                		<div class="wid141 settingsName" align="right">Confirm Password :</div>
+                                    	<div class="wid33">&nbsp;</div>
+                                    	<div class="wid326">
+                                    		<input type="password" class="settings_input_cur" name="confirm_password" id="confirm_password"/><br />
+                                    	</div>
+                                        <div class="inputMsg" id="inputMsgconfirm_password"></div>
+                                	</div>
+                                    <div class="lh20">&nbsp;</div>
+                                    <div class="clearBoth">
+                                        <div class="wid141 settingsName" align="right">&nbsp;</div>
+                                        <div class="wid33">&nbsp;</div>
+                                        <div class="floatLeft"><input type="image" src="images/default/change.gif" border="0" title="Change" name="save2" id="save2" value="change"/></div>
+                                        <input type="hidden" name="status" id="status" value="<?=$this->msg?>" />
+                                	</div>
+                                    </form>
+                                </div>
+                            </div>
+            			</td>
+                        <td width="325" valign="top" align="left">
+                            <div class="peopleListRightPan">
+                            	<div class="clearBoth">
+                                	<div class="clearBoth settingsName"><strong>Basic Info:</strong></div>
+                                    <div class="lh13">&nbsp;</div>
+                                    <div class="clearBoth">
+                                    	<div class="wid19"><span class="leftArrow"></span></div>
+                                        <div class="rightBlockText">From here you can change your basic account info.</div>
+                                    </div>
+                                    <div class="lh10">&nbsp;</div>
+                                    <div class="clearBoth">
+                                    	<div class="wid19"><span class="leftArrow"></span></div>
+                                        <div class="rightBlockText">Your Email ID will be used for all future correspondence with you.</div>
+                                    </div>
+                                </div>
+                                <div class="lh20">&nbsp;</div>
+                                <div class="clearBoth">
+                                	<div class="clearBoth settingsName"><strong>Tips:</strong></div>
+                                    <div class="lh13">&nbsp;</div>
+                                    <div class="clearBoth">
+                                    	<div class="wid19"><span class="leftArrow"></span></div>
+                                        <div class="rightBlockText">Anytime you can change your Go o2o username.</div>
+                                    </div>
+                                    <div class="lh10">&nbsp;</div>
+                                    <div class="clearBoth">
+                                    	<div class="wid19"><span class="leftArrow"></span></div>
+                                        <div class="rightBlockText">After changing it, make sure to let your followers know, So that you can continue receiving all of your messages with your new user name.</div>
+                                    </div>
+                                    <div class="lh29">&nbsp;</div>
+                                    <div class="clearBoth">
+                                    	<div class="clearBoth settingsName"><strong>Connect Accounts</strong></div>
+                                        <div class="lh13">&nbsp;</div>
+                                        <div class="clearBoth">
+                                        	<div class="floatLeft"><a href="#" class="twitter" title="Twitter">&nbsp;</a></div>
+                                            <div class="floatLeft"><a href="#" class="twitterNav" title="Twitter">Twitter</a></div>
+                                        </div>
+                                        <div class="lh10">&nbsp;</div>
+                                        <input type="image" src="images/default/connect_twitter.gif" border="0" title="Connect Twitter Account" />
+                                        <div class="lh25">&nbsp;</div>
+                                        <div class="clearBoth">
+                                        	<div class="floatLeft"><a href="#" class="facebook" title="Facebook">&nbsp;</a></div>
+                                            <div class="floatLeft"><a href="#" class="twitterNav" title="Facebook">Facebook</a></div>
+                                        </div>
+                                        <div class="lh10">&nbsp;</div>
+                                        <div class="clearBoth">
+                                        	<div class="clearBoth useOptional">Connected as: <a href="#" class="naming" title="Anant Asthana">Anant Asthana</a></div>
+                                            <div class="lh5">&nbsp;</div>
+                                            <div class="clearBoth"><a href="#" class="naming" title="Disconnect facebook account">Disconnect facebook account</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            			</td>
+            		</tr>
+                    <tr>
+                    	<td height="50">&nbsp;</td>
+                    </tr>
+            	</table>
+            </div>
+        </div>

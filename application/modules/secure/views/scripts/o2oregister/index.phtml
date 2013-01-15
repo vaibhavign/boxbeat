@@ -1,0 +1,169 @@
+<?php
+$messageStack = $this->errors;
+
+?>
+<table cellpadding="0" cellspacing="0"  border="0" width="100%">
+	<tr>
+		<td valign="top" class="">
+			<!-- Header Start From here-->
+			
+			<!-- Header Ends here-->	
+		</td>
+	</tr> 
+ 
+ <tr>
+    	<td height="37">&nbsp;</td>
+    </tr>
+	<tr>
+		<!-- Body Block Start From here-->
+		<td valign="top">
+		<form id="regForm" name="regForm" action="" method="post">		
+			<table cellpadding="0" cellspacing="0" border="0" width="760" align="center">
+				<tr>
+					<td>
+                    	<div class="clearBoth">
+                        	<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Full Name</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="framefirstname">
+                                	<div class="floatLeft"><input type="text" name="user_full_name" id="user_full_name" value="<?php echo ($_POST['user_full_name']!='')?$_POST['user_full_name']:''; ?>" class="input_wid255_success" AUTOCOMPLETE="OFF" maxlength="30"/></div>
+                                    <div class="inputMsg" id="inputMsgfirstname"><span class="alert">
+									 <?php if($messageStack['name']){ echo $messageStack['name'];}?>
+                               		</span></div>
+                                </div>
+                            </div>                           
+							<div class="lh7">&nbsp;</div>
+                            <div class="input_box_main">
+                            	<div class="inputLabel email_text paddtop2"><span class="alert">*</span>&nbsp;Username</div>
+                                <div class="inputGap">&nbsp;</div>
+								 <div class="input_bg" id="frameusername">                              
+                                	<div class="floatLeft"><input type="text" name="username" id="username" class="input_wid255_success" value="<?php if($_GET['shortcode']==''){echo ($_POST['username']!='')?$_POST['username']:''; }else { echo $_GET['shortcode'];} ?>" AUTOCOMPLETE="OFF" maxlength="20"/></div>
+									<div class="inputMsg" id="inputMsgusername"><span class="alert">
+									 <?php if($messageStack['username']){ echo $messageStack['username'];}?>
+                               		</span></div>
+							    </div>
+								<div class="clearBoth">
+									<div class="inputGap">&nbsp;</div>
+									<div class="inputLabel email_text">&nbsp;</div>
+									<div class="floatLeft image_size">(Your public profile: http://www.iglobul.com/username)</div>
+								</div>
+                            </div>
+                            <div class="lh7">&nbsp;</div>
+                            <div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Email Address</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="frameuser_email_address">
+                                	<div class="floatLeft"><input type="text" name="user_email_address" id="user_email_address" class="input_wid255_success" value="<?php echo ($_POST['user_email_address']!='')?$_POST['user_email_address']:''; ?>" AUTOCOMPLETE="OFF" /></div>
+									<div class="inputMsg" id="inputMsguser_email_address">
+										<span class="alert">
+										<?php if($messageStack['email']){ echo $messageStack['email'];}?>
+                               			</span>
+									</div>
+									
+									 
+                               		</div>
+                                </div>
+                            </div>
+                            <div class="lh7">&nbsp;</div>
+                          	  <div class="input_box_main">
+                            	<div class="inputLabel email_text padTop5"><span class="alert">*</span>&nbsp;Password</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="input_bg" id="framepassword">
+                                	<div class="floatLeft"><input type="password" name="password" id="password" class="input_wid255_success" value="<?php echo ($_POST['password']!='')?$_POST['password']:''; ?>" AUTOCOMPLETE="OFF"/></div>
+									<div class="inputMsg" id="inputMsgpassword">
+										<span class="alert">
+										<?php if($messageStack['password']){ echo $messageStack['password'];}?>
+                               			</span>
+									</div>
+									 
+                               		</div>
+                                </div>
+                            </div>                         
+                            </div>														
+							<div class="lh7">&nbsp;</div>
+							<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4"><span class="alert">*</span>&nbsp;Location</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="state_bg_signup floatLeft">
+                                	<div class="floatLeft" style="height:30px">										
+										<div id="defCitydiv" style="display:block">
+											 <?php  echo $this->country;   ?>
+										</div>
+										<div class="inputMsg" id="inputMsg">
+										<span class="alert">
+										
+                               			</span>
+										</div>		
+									</div>
+                                </div>
+                            </div>
+							<div class="lh7">&nbsp;</div>
+							<div class="input_box_main">
+                            	<div class="inputLabel email_text padTop4">&nbsp;Are you human?</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="floatLeft desc_text" style="height:30px; line-height:30px;">Before we create your account, we need to make sure you�re not a computer.</div>
+                                </div>
+							<div class="input_box_main">
+                            	<!-- Remove Phone no html and image from here-->
+							<div class="input_box_main">
+								<div class="floatLeft">
+									<div class="lh75">&nbsp;</div>
+                            		<div class="type_text">Type the above words</div>
+								</div>
+                                <div class="inputGap">&nbsp;</div>
+                                <div class="floatLeft">
+                                	<div class="floatLeft"><?php  echo recaptcha_get_html($this->publickey, $errorRecaptcha); ?></div>
+										
+                                </div>
+								<div class="floatLeft" id="inputMsg">
+									<div class="wid166">&nbsp;</div>
+										<span class="alert floatLeft">
+										 <?php
+                                                                               if($messageStack['captchamsg']){ echo $messageStack['captchamsg'];}
+										 //print_r($messageStack->errors);
+										// if($error['captchamsg']){ echo $error['captchamsg'];}?>
+                               			</span>
+								</div>
+                               
+                            </div>
+							<div class="lh16">&nbsp;</div>					
+							<div class="input_box_main">
+								<div class="signup_gap">&nbsp;</div>
+								<!--<div class="floatLeft paddleft60"><input type="image" id="submit" name="submit" value="" /></div>-->
+								<div class="floatLeft sign_up_btn paddleft60"><span id="signupbtn"><input type="submit" id="submit"  value="" name="submit" alt="Sign up" title="Sign up" /></span><span id="loginload" class="floatLeft"><div style="display:none;"><img src="<?=DIR_WS_TEMPLATE_IMAGES?>loading1.gif" /></div></span></div>
+								<input type="hidden" name="action" value="process" />
+								<input type="hidden" name="tab" value="<?php echo $_REQUEST['tab'];?>" />
+								<input type="hidden" name="productId" value="<?php echo $_REQUEST['productId'];?>">
+								<input type="hidden" name="commentbox" value="<?php echo $_REQUEST['commentbox'];?>">
+								<input type="hidden" name="uri" value="<?php echo $_REQUEST['uri'];?>" />
+								<input type="hidden" name="query" value="<?php echo $_REQUEST['query'];?>" />
+								<input type="hidden" name="redirect" value="<?php echo $_REQUEST['redirect'];?>" />
+                                                                <input type="hidden" name="pkey" value="<?php echo $this->privatekey;?>" />
+								
+							</div>
+							
+							<div class="inputMsg" id="inputMsg">
+										<span class="alert">
+										 <?php 										 
+										 if($messageStack->errors['shortcode']['text']){echo "<br>"; print_r($messageStack->errors['shortcode']['text']);}?>
+                               			</span>
+							</div>	
+							
+                        </div>
+                    </td>
+				</tr>
+				<tr>
+					<td height="50">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="bottom_text">By clicking on "Sign up", you are agreeing to the <a href="http://support.iglobul.com/entries/337154-terms-condition" class="terms_link" title="Terms of Service">Terms of Service</a> and the <a href="http://support.iglobul.com/entries/337157-privacy-policy" class="terms_link" title="Privacy Policy">Privacy Policy</a>.</td>
+				</tr>
+				<tr>
+					<td height="40">&nbsp;</td>
+				</tr>
+			</table>
+         </form> 
+		</td>
+		<!-- Body Block Ends here-->
+	</tr>
+</table>

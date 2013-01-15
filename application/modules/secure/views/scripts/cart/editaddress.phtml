@@ -1,0 +1,176 @@
+	<form id="submitshippingform" name="add_address" method="post" action="/secure/cart/updatemyaddress">
+<table cellpadding="0" cellspacing="0" border="0" width="900" align="center">
+	<tr>
+    	<td height="33">&nbsp;</td>
+    </tr>
+    <tr>
+		<td>
+			<div class="floatLeft shipping_billing_detail"><?=$this->text?></div>
+			<div class="floatRight padtop5"><span class=""><< </span><a href="<?=$this->back?>" class="back">Back</a></div>
+		</td>
+	</tr>
+	<tr>
+		<td class="lh2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="heading_border">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="fs0" height="20">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="4" id="shippingdetail" >
+		
+				<table cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Title</td>
+					<td id="gtitle">
+
+						<select class="field_border inner_field wid58" name="gtitle">
+							<option value="1" <?php if($this->addressDetail['entry_gender']=='1') echo 'selected="selected"' ?>>Mr.</option>
+							<option value="2" <?php if($this->addressDetail['entry_gender']=='0') echo 'selected="selected"' ?>>Ms.</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="3">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">First Name</td>
+					<td>
+						<input type="text" name="guestfname" id="guestfname" class="wid205 field_border inner_field" value="<?=$this->addressDetail['entry_firstname']?>" />
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="fname" style="color:#FF0000; font-size:12; font-weight:500; display:none;"></div></td>
+				</tr>
+
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Last Name</td>
+					<td>
+						<input type="text" name="guestlname" id="guestlname" class="wid205 field_border inner_field" value="<?=$this->addressDetail['entry_lastname']?>" />
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="lname" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Address Line 1</td>
+					<td>
+						<input type="text" name="guestadd1" id="guestadd1" class="wid296 field_border inner_field" value="<?=$this->addressDetail['entry_street_address']?>" />
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="add1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11"></td>
+					<td width="111" class="title">Address Line 2</td>
+					<td>
+						<input type="text" name="guestadd2" id="guestadd2" class="wid296 field_border inner_field" value="<?=$this->addressDetail['entry_suburb']?>" />
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="3"></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Country</td>
+					<td>
+						<select class="field_border country country_bg select_wid180">
+							<option>India</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="3">&nbsp;<div class="wid203" id="fname" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">State/Province</td>
+					<td id="state"><select name="shippingstate" id="shippingstate" class="Jstatedropdown">
+							<option value="0">Select</option>
+							<?php
+								foreach($this->states as $statesKey=>$statesVal)
+									{ ?>
+								<option value="<?=$statesVal['id']?>"  <?php if($this->addressDetail['entry_state']==$statesVal['id']){echo 'selected';}?>><?=$statesVal['state_name']?></option>
+							<?php
+									}
+							?> 
+							
+						</select></td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="stateerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">City</td>
+					<td id="city">
+					<select name="shippingcity" id="shippingcity">
+							<option value="0">Select</option>
+							<?php
+								foreach($this->cities as $cityKey=>$cityVal)
+									{ ?>
+								<option value="<?=$cityVal['id']?>" <?php if($this->addressDetail['entry_city']==$cityVal['id']){echo 'selected';}?>><?=$cityVal['cityname']?></option>
+							<?php
+									}
+							?> 
+							
+						</select></td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="cityerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Pin/Zip Code</td>
+					<td>
+						<input type="text" name="pzcode" id="pzcode" class="wid140 field_border inner_field" value="<?=$this->addressDetail['entry_postcode']?>" />
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="pcoderr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td class="alert" width="11">*</td>
+					<td width="111" class="title">Phone Number</td>
+					<td>
+						<input type="text" name="guestcontact" id="guestcontact" class="wid140 field_border inner_field" value="<?=$this->addressDetail['entry_phone']?>" />
+				<input type="hidden" name="update" value="<?=$this->addressid?>" />		
+				<input type="hidden" name="billing" value="<?=$this->type?>" />
+				<input type="hidden" name="productid" value="<?=$this->pid?>" />
+					</td>
+				</tr>
+				<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+					<td nowrap="nowrap"><div class="wid203" id="phonerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<div class="clearBoth">
+							<div class="wid122">&nbsp;</div>
+							<div class="floatLeft"><input type="image" src="/images/secure/save.gif" border="0" alt="Save" title="Save" id="Editshipping" style="cursor:pointer;" name="address" />
+							</div>
+							<div class="wid12">&nbsp;</div>
+							<div class="floatLeft" onclick="window.location='<?=$this->back?>'" ><img src="/images/secure/cancel.gif" border="0" alt="Cancel" title="Cancel" style="cursor:pointer;" id="backshipping"  />
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+			
+		</td>
+	</tr>
+</table>
+</form>	

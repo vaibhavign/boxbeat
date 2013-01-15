@@ -1,0 +1,234 @@
+<link rel="stylesheet" type="text/css" href="/css/default/popup.css" />
+<form action="javascript:void(0);" id="editemailForm" name="editemailForm" method="POST">
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+	<tr>
+    	<!--Right panel starts from here-->
+    	<td width="260" valign="top">
+        	<div class="editEmailRightPanel">
+            	<div class="lh25">&nbsp;</div>
+            	<div class="businessDetialsLeftPanel">
+				<div class="businessDetailsLinks">	
+               <?php
+			 		$request = Zend_Controller_Front::getInstance()->getRequest();
+					$controllerName = $request->getControllerName();
+					$actionName = $request->getActionName();
+					$genObj = new General();
+					//$controllerName = "Store";
+					$abc = $genObj->displaySettingMenuNew($controllerName,$actionName);
+					echo $abc;
+		?>
+                </div>
+            	</div>
+
+            </div>
+        </td>
+        <!--Right panel ends from here-->
+        <!--Left panel starts from here-->
+        <td width="740" valign="top">
+        	<div class="editEmailLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="floatLeft">
+                        <div class="floatLeft blueMainHeading">Account settings</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Edit your email</b></div>
+                    </div>
+                    <div class="floatRight">
+                    	<div class="backArrow"></div>
+                        <div class="floatLeft"><a href="<?php echo HTTP_SECURE.'/accountsetting'; ?>" class="hyperLinkBlue13" title="Back to account settings">Back to account settings</a></div>
+                    </div>
+                </div>
+                <div class="lh25">&nbsp;</div>
+                <div class="grey_text12">Here you can change your Primary email and also you can add multiple emails to receive alerts from goo2o.</div>
+                <div class="lh50">&nbsp;</div>
+                <div class="clearBoth content_text12">
+                    <div class="wid180"><b>Existing email address(s)</b></div>
+                    <div class="widemail252">
+                    	<div class="clearBoth content_text12"><?php echo $this->useremail;?></div>
+                        <?php foreach($this->alluseremail as $key=>$useremail){?>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth content_text12"><?php echo $useremail['user_email']; ?> </div>
+                        <?php }if($this->allverified==0){?>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="floatLeft"><a id="addanotheremail" href="javascript:void(0)" class="hyperLinkBlue11" title="Add another email" >Add another email</a></div>    
+                        <div class="wid25">&nbsp;</div>
+                       <?php } ?>
+                    </div>
+                    <div class="floatLeft">
+                    	<div class="floatLeft grey_text12"><i>...(Primary)</i></div>
+                        
+                        <?php foreach($this->alluseremail as $key=>$useremail){?>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth">
+                            <div class="floatLeft">
+                                <a title="Remove" rel="<?php echo $useremail['id'].'^'.$useremail['user_email'];?>" class="hyperLinkBlue12None removeuseremail" style="cursor:pointer;">Remove</a>
+                            </div>
+                            <div class="wid25">&nbsp;</div>
+                            <?php $class=new General();
+                            $emailverification_status=$class->checkemailverification($useremail['id']);
+                            if($emailverification_status=='1'){?>
+                            <div class="floatLeft"><a class="hyperLinkBlue12None makeitprimary" title="Make it primary" href="javascript:void(0)" rel="<?php echo $useremail['id'].'^'.$useremail['user_email'];?>">Make it primary</a></div> <?php } ?>
+                        </div>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="lh40">&nbsp;</div>
+                <?php reset($this->alluseremail);
+                foreach($this->alluseremail as $key=>$useremail){
+                    $emailverification_status=$class->checkemailverification($useremail['id']);
+                    if($emailverification_status =='0'){?>   
+                <div class="clearBoth">
+                    <div class=" floatLeft content_text12">Please check your email at <b><?php echo $useremail['user_email']; ?></b> to verify the address.</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class=" floatLeft content_text12">
+                        <a href="javascript:void(0)" title="Resend confirmation mail" class="hyperLinkBlue12 resendemail" rel="<?php echo $useremail['id'];?>">Resend confirmation mail</a>
+                    </div>
+                    <div class="lh15">&nbsp;</div>
+                </div>
+                 <?php } 
+                 } ?>
+             <div id="hideemailupdate" style="display:none">
+              <div class="lh40">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid139 content_text12Lh20"><b>New email</b></div>
+                    <div class="floatLeft"><input name="user_email_address" id="user_email_address" type="text" class="inputWid153"  onfocus="document.getElementById('useremailerrorMsg').style.display='none'"/>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="clearBoth errorMsg" id="useremailerrorMsg"></div>
+                    	<div class="lh15">&nbsp;</div>
+                    	<div class="borderSeprator">&nbsp;</div>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth content_text12"><b>To save the above changes, enter your password below:</b></div>
+                        <div class="lh10">&nbsp;</div>
+                        <div class="clearBoth">
+                        	<div class="wid68 grey_text12Lh20"><b>Password</b></div>
+                            <div class="floatLeft">
+                                <input name="password" id="password" type="password" class="inputWid153" onfocus="document.getElementById('error_user_currentpass').style.display='none'"/>
+                                <div class="lh5">&nbsp;</div>
+                            <div class="clearBoth errorMsg" id="error_user_currentpass"></div>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="lh55">&nbsp;</div>
+              	<div class="wid160">
+                    <div class="floatLeft">
+                             <input type="submit" class="edituseremailButton" title="Save Changes" value=""/>
+                            <!--<input type="image" class="cursor" src="/images/secure/accountsetting/save_changes.png" title="Save Changes" />-->
+                        </div>
+                        <div class="floatRight"><a href="<?php echo HTTP_SECURE.'/accountsetting';?>" class="hyperLinkBlue12Lh25" title="Cancel">Cancel</a></div>
+                    </div>
+              </div>
+           </div>
+
+        </td>
+        <!--Left panel ends from here-->
+    </tr>
+</table>
+</form>
+<table id="removethismail" style="display:none" class="boxy-wrapper fixed" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+    <tr>
+        <td class="top-left"></td>
+        <td class="top"></td>
+        <td class="top-right"></td>
+    </tr>
+    <tr>
+    <td class="left"></td>
+    <td class="boxy-inner">
+    <div class="title-bar">
+    <h2>Remove email</h2>
+    <a class="close" alt="close" title="close" style="cursor:pointer">&nbsp;</a>
+    </div>
+    <table class="popup_border boxy-content" cellspacing="0" cellpadding="0" border="0" width="500" style="display: block;">
+    <tbody>
+    <tr>
+    <td valign="top">
+    <div class="popup_container">
+    <div style="font-size:12px; line-height:20px; color:#393939; font-family:Arial,Helvetica,sans-serif;">
+    Once the email is removed from my account settings,all the alerts linked with this email will be transfered to your primary email address.
+    <br>
+    <br>
+    Are you sure to remove
+    <b><span id="myemailid"></span></b>
+    from your Goo2o account?
+    </div>
+    <div class="lh30">&nbsp;</div>
+    <div class="popup_underline"></div>
+    <div class="lh7">&nbsp;</div>
+    <div class="floatRight">
+    <div class="floatLeft">
+    <a class="close cancel_link" title="Cancel" style="cursor:pointer">Cancel</a>
+    </div>
+    <div class="sendmsg_btn">
+    <input id="deletenow" type="image" rel="91" src="/images/default/popup_ok_btn.gif" alt="Ok" title="Ok">
+    </div>
+    </div>
+    </div>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </td>
+    <td class="right"></td>
+    </tr>
+    <tr>
+    <td class="bottom-left"></td>
+    <td class="bottom"></td>
+    <td class="bottom-right"></td>
+    </tr>
+    </tbody>
+</table>
+<table id="makesprimary" style="display:none;" class="boxy-wrapper fixed" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td class="top-left"></td>
+            <td class="top"></td>
+            <td class="top-right"></td>
+        </tr>
+        <tr>
+        <td class="left"></td>
+        <td class="boxy-inner">
+        <div class="title-bar">
+        <h2>Make it primary</h2>
+        <a class="close" alt="close" title="close" style="cursor:pointer">&nbsp;</a>
+        </div>
+            <table class="popup_border boxy-content" cellspacing="0" cellpadding="0" border="0" width="500" style="display: block;">
+                <tbody>
+                        <tr>
+                            <td valign="top">
+                                <div class="popup_container">
+                                    <div style="font-size:12px; line-height:20px; color:#393939; font-family:Arial,Helvetica,sans-serif;">
+                                    <div class="lh30">&nbsp;</div>
+                                    <div>Once you change your primary email address, your login credentials will also get changed to the <b><span id="firstmail"></span></b>. After the changes are completed, for security purpose you have to sign in again with your new primary email and current password to access your Goo2o account.<br><br>Are you sure you want to make <b><span id="secondmail"></span></b> as your primary email address for your goo2o account?</div>
+                                    <div class="lh30">&nbsp;</div>
+                                    <div class="popup_underline"></div>
+                                    <div class="lh7">&nbsp;</div>
+                                    <div class="floatRight">
+                                    <div class="floatLeft">
+                                     <a class="close cancel_link" title="Cancel" style="cursor:pointer">Cancel</a>
+                                    </div>
+                                    <div class="sendmsg_btn">
+                                    <input id="nowmakesprimary" type="image" src="/images/default/popup_ok_btn.gif" alt="Ok" title="Ok"/>
+                                    </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="right"></td>
+        </tr>
+        <tr>
+            <td class="bottom-left"></td>
+            <td class="bottom"></td>
+            <td class="bottom-right"></td>
+        </tr>
+    </tbody>
+</table>

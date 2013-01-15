@@ -1,0 +1,314 @@
+<link rel="stylesheet" type="text/css" href="/css/default/attachfile.css"/>
+<script language="javascript" type="text/javascript" src="/jscript/default/customer_open_a_dispute.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+				   
+   jQuery('#fileupload').bind('click',function(){
+
+												   
+frm = '<div class=selectPopups><div class=outerBorder><div class=blackBorder><div class=addChangeReq><div class=lh6>&nbsp;</div><div class=floatLeft><div class=wid17>&nbsp;</div><div class=floatLeft>Attach file</div></div><div class=floatRight><div class="floatLeft marginTop"><input id=closeLinkTop type=image src="/images/default/close.gif" title=Close alt=Close></div><div class=wid12>&nbsp;</div></div></div><div align="center"><img id="loading" src="/images/default/loading.gif" style="display:none;" ><div class=lh20>&nbsp;</div><div class=wid25>&nbsp;</div><div class=floatLeft><form enctype="multipart/form-data" method="post" action="" name="form"><div class=clearBoth><div class="contentText wid96">Name of the file</div><div class=floatLeft><div class=clearBoth><input type="text" name="filenamedispute" id="filenamedispute" /></div><div class="clearBoth exampleText"><b>E.g.</b>Invoice, Proof of dispatch, Image, etc</div><div class="fileErrorMsg errorMsg floatLeft"></div></div></div><div class=lh10>&nbsp;</div><div class=clearBoth><div class="contentText wid96">Select file</div><div class="wid15 contentText">:</div><div class=floatLeft><div class=floatLeft curpointer><input id="fileToUpload" name="fileToUpload" type="file" class="input curpointer" title=Browse></div><div class=wid5>&nbsp;</div><div class="floatLeft curpointer" style="cursor:pointer;"><input class=curpointer type=reset name=Clear title=Reset></div><div class="clearBoth validationText floatLeft" id="uploadedFileError"></div></div></div><div class=lh30>&nbsp;</div><div class=bgLine></div><div class=clearBoth><div class=lh10>&nbsp;</div><div class=btn_container><div class="floatLeft curpointer"><button id="buttonUpload" class="button curpointer" title="Upload" onclick="return ajaxFileUpload();">Upload</button></div><div class=floatRight style="cursor:pointer;"><a id=closeLink class="cancelHyperlink curpointer" title=Cancel>Cancel</a></div></div></div></div></form><div class=lh15>&nbsp;</div></div></div></div>';		
+
+jQuery("body").append('<div id="detail" class="selectPopup">'+frm+'</div>');	
+
+        jQuery("#lightbox").css({
+            "height":jQuery(document).height() -116,
+            "width":jQuery('body').width(),
+            "position": "absolute",
+            "top" : 0, 
+            "left" : 0, 
+            "z-index":998
+        }).show();	
+					
+					
+        window.scrollTo(0,jQuery(window).scrollTop());
+        jQuery(".selectPopups").css({
+            "position": "absolute",  
+            "top" : jQuery(window).scrollTop()+jQuery(window).height()/2-jQuery(".selectPopups").height()/2, 
+            "left" : jQuery(window).width()/2-jQuery(".selectPopups").width()/2,
+            "z-index":999
+        });  
+	jQuery('.outerBorder').css('height','260px');
+	jQuery('.blackBorder').css('height','259px');
+       // jQuery(".selectPopups").fadeIn();
+					
+        jQuery(".cancelHyperlink, #closeLinkTop").bind('click',function(){
+            jQuery("#lightbox").fadeOut();
+            jQuery(".selectPopups").fadeOut(300);
+            jQuery('.selectPopups').html('');
+            jQuery(".selectPopup").fadeOut(300);
+            jQuery('.selectPopup').remove();
+        });
+    });
+});
+
+
+function ajaxFileUpload()
+	{
+                $('.fileErrorMsg').text('');
+                $('#uploadedFileError').text('');
+		//starti1ng setting some animation when the ajax starts and completes
+		$("#loading")
+		.ajaxStart(function(){
+			$(this).show();
+		})
+		.ajaxComplete(function(){
+			$(this).hide();
+		});
+		
+                    var filenamedispute = $('#filenamedispute').val();
+                    var RegEx = /^[a-zA-Z ]+$/
+                    if(filenamedispute == ''){
+                       $('.fileErrorMsg').text('Please enter a file name.');
+                        $('#filenamedispute').focus();
+                        return false;
+                    }else if(!RegEx.test(filenamedispute)){
+                        $('.fileErrorMsg').text('Please enter a valid file name.');
+                        $('#filenamedispute').focus();
+                        return false;
+                    }
+		/*
+			prepareing ajax file upload
+			url: the url of script file handling the uploaded files
+                        fileElementId: the file type of input element id and it will be the index of  $_FILES Array()
+			dataType: it support json, xml
+			secureuri:use secure protocol
+			success: call back function when the ajax complete
+			error: callback function when the ajax failed
+			
+                */
+		$.ajaxFileUpload
+		(
+			{
+				url:'/dispute/doajaxfileupload', 
+				secureuri:false,
+				fileElementId:'fileToUpload',
+				dataType: 'json',
+				success: function (data, status)
+				{
+					if(typeof(data.error) != 'undefined')
+					{
+						if(data.error != '')
+						{
+                                                    $('#uploadedFileError').text(data.error);
+                                                    $('#fileToUpload').focus();
+                                                    return false;
+							//alert(data.error);
+                                                        
+						}else
+						{
+							$msg = (data.msg).split(':'); 
+							
+						var struct ='<div class="clearBoth"><div class="wid12">&nbsp;</div><div class="floatLeft"><div class="wid20"><div class="lh5">&nbsp;</div><label><input type="checkbox" name="mycheckbox" checked class="file_to_upload" value="'+$msg[2]+'"/></label>&nbsp;&nbsp;</div><div class="floatLeft"><a href=/images/uploads/temp/'+$msg[1]+'/'+$msg[2]+' class="blueHyperLink"title="'+$msg[2]+'">'+$msg[2]+'</a>&nbsp;<span class="file_kbText">'+$msg[1]+'</span></div></div></div>';
+						jQuery('#attachfiles').append(struct);
+						
+						            jQuery("#lightbox").fadeOut();
+            jQuery(".selectPopups").fadeOut(300);
+            jQuery('.selectPopups').html('');
+						jQuery(".selectPopup").fadeOut(300);
+            jQuery('.selectPopup').remove();
+							
+							//alert(data.msg);
+						}
+					}
+				},
+				error: function (data, status, e)
+				{
+					alert(e);
+				}
+			}
+		)
+		return false;
+	} 					   
+ 
+</script>
+<?php $orderItemDetails = $this->orderItemDetails;
+$itemStatusName = $this->itemStatusName;
+$reasonsAndExample = $this->reasonsAndExample;
+$randDisputeid = rand(8888,99999);
+?>
+<div id="request_for_return_center"><input type="hidden" name="orderItemId" id="orderItemId" value="<?php echo $orderItemDetails['order_item_id'];?>" />
+    <div class="lh42">&nbsp;</div>
+		<!----Bof headingSection----->
+            <div class="clearBoth" id="headingSection">
+            <div class="floatLeft">
+            <div class="clearBoth main-top-heading">Resolution Centre</div>
+            <div class="lh3">&nbsp;</div>
+            <div class="desc-text">To start a resolution process, complete the following details with relevant information which will help you to solve a dispute conveniently.</div>
+            </div>
+        </div>
+        <!----Eof headingSection----->
+        <div class="lh35">&nbsp;</div>           
+        <!--Update Starts Here-->
+      	<div class="clearBoth">
+            <!----Bof Manage Request strips----->
+            <div class="clearBoth" id="manageOrderStrip">
+                <div class="clearBoth">
+                    <div class="floatLeft contentBlueHeading">Open a Dispute</div> 
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="borderBottom">&nbsp;</div>
+             </div>
+             <div class="lh25">&nbsp;</div>
+             <!--main content starts from here-->
+             <div class="topGreyBox">
+             	<div class="floatLeft">
+                	<div class="wid108"><b>Order item Id</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft">OR_<?php echo $orderItemDetails['payment_module'];?>_<?php echo $orderItemDetails['order_id'];?>_<?php echo $orderItemDetails['order_item_id'];?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Order Date</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo date('F j, Y',$orderItemDetails['order_place_date']);?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Bought from</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo $orderItemDetails['title'];?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Item name</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo $orderItemDetails['product_name'];?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Product Id</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo $orderItemDetails['product_id'];?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Condition</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <?php if($orderItemDetails['product_condition']==0){
+							$condition = 'New';
+						}elseif($orderItemDetails['product_condition']==1){
+							$condition = 'Old';	
+						}?>
+                    <div class="floatLeft">Used like <?php echo $condition;?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Variation</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo $orderItemDetails['product_variation'];?></div>
+                </div>
+                <div class="lh7">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid108"><b>Status</b></div>
+                    <div class="wid16"><b>:</b></div>
+                    <div class="floatLeft"><?php echo $itemStatusName[0]['status'];?></div>
+                </div>	
+             </div>
+             <div class="lh35">&nbsp;</div>
+             <div class="clearBoth">
+                <div class="contentSubHeading">Why do you want to raise a dispute?</div>
+                <div class="clearBoth content-text12">Please select a reason from the below mentioned list for which you want to raise a dispute</div>
+                <div class="lh15">&nbsp;</div>
+                <div  class="floatLeft reasonClick">
+                <?php foreach($reasonsAndExample as $key=>$val){ 
+                    if($val['reason_example']!=''){ ?>
+                    <div class="clearBoth">
+                        <div class="wid37" id="reasonClick"><input type="radio" name="raise_dispute" value="<?php echo $val['id'];?>" id="reasonRadio"/></div>
+                        <div class="floatLeft">
+                            <div class="clearBoth content-text12"><?php echo $val['reason_name'];?></div>
+                            <div class="clearBoth exampleText"><b>e.g.</b> <?php echo $val['example_1']?></div>
+                            <?php if($val['example_2']!=''){?>
+                            <div class="exampleAdjustment">&nbsp;</div>
+                            <div class="floatLeft exampleText"><?php echo $val['example_2']?></div>
+                            <?php }?>
+                        </div>
+                    </div>
+                    <?php }}?>
+			<div class="errorMsg">
+				<div style="width:50px; float:left;">&nbsp;</div>
+				<div class="reasonError floatLeft"></div>
+			</div>
+                 </div>
+             </div>
+             
+             
+             <div class="lh10">&nbsp;</div>
+            
+             <div class="clearBoth">
+                <div  class="floatLeft" id="subReasons"></div>
+             	
+             </div>
+		<div class="lh10">&nbsp;</div>
+		<div class="errorMsg clearBoth">
+			<div style="width:50px; float:left;">&nbsp;</div>
+			<div class="subReasonError floatLeft"></div>
+		</div>
+             <div class="lh10">&nbsp;</div>
+             <div class="floatLeft">
+             	<div class="floatLeft contentSubHeading">Attach necessary documents required to open a dispute</div>
+               <!-- <span class="attactment_img" ></span>&nbsp;<a href="#" title="Attach a file" class="blueHyperLink">Attach a file</a>-->
+                <div class="floatLeft"><span class="attactment_img"></span>&nbsp;<a id="fileupload" title="Attach a file" class="blueHyperLink curpointer">Attach a file</a></div></div>
+<!--             <div><input id="file_upload" name="file_upload" type="file"/></div>
+                <div><a href="javascript:jQuery('#file_upload').uploadifyUpload();">Upload Files</a></div>-->
+                <div class="clearBoth exampleText"><b>e.g.</b> Proof of damage in case of item received is damaged</div>
+                <!--<div class="floatLeft">
+                <a  id="fileupload" name="fileupload" >File Upload</a>
+                </div>-->
+                <div class="lh15">&nbsp;</div>
+                
+                <div id="attachfiles" >
+<!--                <div class="clearBoth">
+                	<div class="wid12">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="wid20"><div class="lh5">&nbsp;</div><label class="checkbox_off checkboxclass"><input type="checkbox" class="input_checkbox" /></label>&nbsp;&nbsp;</div>
+                       <div class="floatLeft"><a href="#" class="blueHyperLink" title="Proof of delivery.jpg">Proof of delivery.jpg</a>&nbsp;<span class="file_kbText">24K</span>	</div>
+                        
+                    </div>
+                </div>
+                <div class="clearBoth">
+                	<div class="wid12">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="wid20"><div class="lh5">&nbsp;</div><label class="checkbox_off checkboxclass"><input type="checkbox" class="input_checkbox" /></label></div>
+                       <div class="floatLeft"><a href="#" class="blueHyperLink" title="Proof of Dispatch.PDF ">Proof of Dispatch.PDF</a>&nbsp;<span class="file_kbText">1.58</span>	</div>
+                        
+                    </div>
+                </div>
+ -->               
+                </div>
+                <div class="lh30">&nbsp;</div>
+                <div class="contentSubHeading">Give a small description about the reason of your dispute .</div>
+                <div class="clearBoth descriptionText">Please provide some additional information for the dispute. Be as specific as possible about a problem and let the store owner know how they can help you by providing some options for resolution.</div>
+                <div class="floatLeft"><textarea class="textEditor" id="description"></textarea></div>
+                <div class="lh25">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="wid20">
+                    	<div class="lh5">&nbsp;</div>
+                        <input name="terms" type="checkbox" id="my_checkbox" value="false"/>
+                  	</div>
+			<div class="floatLeft">
+                	<div class="floatLeft exampleText"  style="padding-top:3px">By selecting this, I am agreeing to the <a class="blueHyperLink curpointer" title="terms and conditions">terms and conditions</a> mentioned by Goo2o Resolution Center for raising a dispute.</div>
+			<div class="lh5">&nbsp;</div>
+			<div class="errorMsgText errorMsg clearBoth"></div>
+			</div>
+                </div>
+              </div>
+		
+             <div class="lh85">&nbsp;</div>
+              <div class="clearBoth">
+                <div class="buttons">
+                	
+                	<div class="floatLeft"><form action="/dispute/#openadispute" method="post"><input type="image" src="/images/default/back_btn.png" class="cursor" title="Back" /></form></div>
+                    <div class="wid16">&nbsp;</div>
+                    <div class="floatLeft"><input type="image" src="/images/default/open_dispute_btn.png" class="cursor" title="Open a Dispute" id="submitDispute"/></div>
+                </div>
+              </div>
+              <div class="lh60">&nbsp;</div>
+             <!--main content ends from here-->
+        </div>    	  
+        <input type="hidden" name="randdisputeid" id="randdisputeid" value="<?php echo $randDisputeid;  ?>" />
+        <!--Updates Ends Here-->
+        <div class="lh394">&nbsp;</div>
+
+<div id="lightbox"> </div>

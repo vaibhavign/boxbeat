@@ -1,0 +1,97 @@
+<?php
+$bankreview = $this->reviewbank;
+?>
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+    <tr>
+        <!--LEFT PANEL starts from here-->
+        <td width="260" valign="top">
+            <div class="reviewLeftPanel">
+                <div class="lh25">&nbsp;</div>
+                <div class="businessDetialsLeftPanel">
+
+<?php
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$controllerName = $request->getControllerName();
+$actionName = $request->getActionName();
+$genObj = new General();
+//$controllerName = "Store";
+$abc = $genObj->displaySettingMenuNew($controllerName, $actionName);
+echo $abc;
+?>
+
+                </div>
+
+            </div>
+        </td>
+        <!--LEFT PANEL ends from here-->
+        <!--RIGHT PANEL starts from here-->
+        <td width="740" valign="top">
+            <div class="reviewRightPanel">
+                <div class="lh25">&nbsp;</div>
+              <div class="clearBoth">
+ <div class="blueMainHeading">Store settings</div>
+                <div class="lh15">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="floatLeft content_text16">Checkout</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Review your bank details</b></div>
+                    </div>
+                    <div class="floatRight">
+                        <div class="backArrow"></div>
+                        <div class="floatLeft"><a href="/checkout-settings/bankaccountlisting" class="hyperLinkBlue13" title="Back to checkout">Back to checkout</a></div>
+                    </div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+                     <div class="lh25">&nbsp;</div>
+
+                </div>
+               
+                <div class="clearBoth greyText12Lh20">Please review the details that you have provided is complete and accurate. In case of an inaccurate information, you will be charged with Rs.250. Once a bank account is saved, you will not be able to edit the existing bank details.</div>
+                <div class="lh10">&nbsp;</div>
+                <div class="lh25">&nbsp;</div>
+                <div class="content_text14"><b>Review your bank details:</b></div>
+                <div class="lh20">&nbsp;</div>
+                <div class="clearBoth">
+                    <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>Name</b></div>
+                        <div class="floatLeft"><?php echo $bankreview['fullname']; ?></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>Bank Name</b></div>
+                        <div class="floatLeft"><?php echo $bankreview['bankname']; ?></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>Branch Name</b></div>
+                        <div class="floatLeft"><?php echo $bankreview['branch_name']; ?></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>IFSC Code</b></div>
+                        <div class="floatLeft"><?php echo $bankreview['ifsc_code']; ?></div>
+                    </div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>Account Number</b></div>
+                        <div class="floatLeft"><?php echo $bankreview['account_number']; ?></div>
+                    </div>
+                        <div class="lh10">&nbsp;</div>
+                       <div class="clearBoth content_text12Lh20">
+                        <div class="wid143 "><b>Pan Number</b></div>
+                        <div class="floatLeft"  style="text-transform:uppercase;"><?php echo $bankreview['pan_number']; ?></div>
+                    </div>
+                </div>
+                <div class="lh45">&nbsp;</div>
+                <div class="wid128">
+                    <div class="floatLeft"><a href="/checkout-settings/addabankaccount/edit/true"><img src="/images/secure/edit_btn.png" title="Edit" /></a></div>
+                    <div class="floatRight"><a href="/checkout-settings/bankaccountlisting/save/account"><img src="/images/secure/save_btn.png" title="Save" /></a></div>
+                </div>
+                <div class="lh40">&nbsp;</div>
+            </div>
+        </td>
+        <!--RIGHT PANEL ends from here-->
+    </tr>
+</table>

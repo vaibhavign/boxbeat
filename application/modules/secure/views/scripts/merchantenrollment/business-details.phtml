@@ -1,0 +1,233 @@
+<div id="wid1000Auto">
+	<!--left panel starts from here-->
+     <form id="business_details_form" name="business_details_form" action="" method="post">
+    	<div class="wid650">
+        <div class="blueMainHeading">Business Details</div>
+        <div class="lh5">&nbsp;</div>
+        <div class="grey_text12Lh20 wid640">Please ensure that information you provide matches with the documents you provide.</div>
+        <div class="lh12">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="content_text14"><b>Business Info</b></div>
+            <div class="lh20">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Business Name</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><input type="text" class="input_textField230" id="business_name" name="business_name" value="<?php if($this->business_name != ''){ echo stripslashes($this->business_name); }else { echo ''; }?>"/></div>
+                    		<div class="suggestive-container" id="show_hide_business_name">
+                            	<div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                                <div class="suggestive-textContainer" id="error_business_name"></div>
+                                <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                            </div>
+                            <div class="suggestive-container" id="show_hide_ok_business_name" style="display:none">
+                            	<div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                                <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                                <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+           					</div>
+                    <!--<div class="clearBoth grey_text11Lh17 wid325">Your company name which may be different from your store name
+    <b>e.g.</b> Mishra Communication</div>-->
+                </div>
+            </div>
+            <div class="lh12">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Business Filing Status</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft">
+                        <select class="wid228 content_text12Lh20" id="business_type" name="business_type">
+                            <option value="0">Please Select</option>
+                            <?php foreach($this->business_type_array as $business_key => $business_value){
+										if($this->business_type == $business_key){
+											$selected = 'selected="selected"';
+										}else{
+											$selected = '';
+										}
+								?>
+                            <option value="<?php echo $business_key ;?>" <?php echo $selected ;?>><?php echo $business_value ;?></option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                    <div class="suggestive-container floatLeft" id="show_hide_business_type">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_business_type"></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_business_type" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                    <!--<div class="clearBoth grey_text11Lh17 wid325">Type of business you are associated with<br />
+    <b>e.g.</b> Sole Proprietorship</div>-->
+                
+                </div>
+            
+            
+            </div>
+        </div>
+        <div class="lh30">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="content_text14"><b>Billing Details</b></div>
+            <div class="lh20">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Billing Address</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><textarea class="textArea230" id="business_address" name="business_address"><?php if($this->business_address != ''){ echo stripslashes($this->business_address); }else { echo ''; }?></textarea></div>
+                        <div class="suggestive-container floatLeft" id="show_hide_business_address">
+                            <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                            <div class="suggestive-textContainer" id="error_business_address"></div>
+                            <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                        </div>
+                        <div class="suggestive-container" id="show_hide_ok_business_address" style="display:none">
+                            <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                            <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                            <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                        </div>
+                    <!--<div class="clearBoth grey_text11Lh17 wid325">Your full address where we can send your billing details.</div>-->
+                </div>
+            </div>
+            <div class="lh12">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">State</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft">
+                        <select class="wid178 content_text12Lh20" id="select_state" name="state">
+                            <option value="0">Please Select</option>
+						<?php foreach($this->states as $key=>$state) { 
+								if($this->select_state == $state['id']){
+									$state_selected = 'selected="selected"';
+								}else{
+									$state_selected = '';
+								}
+						?>
+                            <option value="<?php echo $state['id'];?>"<?php echo $state_selected ;?>><?php echo $state['state_name'];?></option>
+                            <?php } ?>
+
+                        </select>
+                    </div>
+                    <div class="suggestive-container floatLeft" id="show_hide_select_state">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_select_state"></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_select_state" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                </div>
+            
+            
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">City</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft" id="dpd_city_name">
+                   		<?php echo $this->city;?>
+                    </div>
+                    <div class="suggestive-container floatLeft" id="show_hide_city_name">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_city_name"></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_select_city" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Pincode</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><input type="text" class="input_textField100" id="pincode" name="pincode" value="<?php if($this->pincode != ''){ echo $this->pincode; }else { echo ''; }?>"/></div>
+                    <div class="suggestive-container floatLeft" id="show_hide_pincode">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_pincode"></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_pincode" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lh30">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="content_text14"><b>Store details</b></div>
+            <div class="lh20">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Name your store</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><input type="text" class="input_textField230" name="store_name" id="store_name" value="<?php if($this->store_name != ''){ echo stripslashes($this->store_name); }else { echo ''; }?>" <?php echo $this->readonly;?>/></div>
+                    <div class="suggestive-container floatLeft" id="show_hide_store_name" style=" <?php echo $this->display ; ?> ">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_store_name"><?php echo $this->error_msg ; ?></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_store_name" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                    <!--<div class="clearBoth grey_text11Lh17">Name of your goo2o ecommerce store. This will be used as an header for all pages on your website.<br />
+    <b>e.g.</b> Easystore</div>-->
+                </div>
+            </div>
+            <div class="lh12">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="wid136AlignR">Store web Address</div>
+                <div class="wid22padd8 content_text12Lh20">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><label class="content_text12Lh20">http://www.&nbsp;</label><input type="text" class="input_textField178 content_text12Lh20" id="store_url" name="store_url" value="<?php if($this->store_url != ''){ echo $this->store_url; }else { echo ''; }?>" <?php echo $this->readonly;?>/>&nbsp;<span class="content_text12Lh20">&nbsp;.mygoo2o.com</span></div>
+                    <div class="suggestive-container floatLeft" id="show_hide_store_url" style=" <?php echo $this->url_msg_display ; ?> ">
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-left-arrow.gif" alt="Left arrow" /></div>
+                        <div class="suggestive-textContainer" id="error_store_url"><?php echo $this->url_error_msg ; ?></div>
+                        <div class="floatLeft"><img src="/images/secure/merchantenrollment/suggestive-right-curve.gif" alt="Right curve" /></div>
+                    </div>
+                    <div class="suggestive-container" id="show_hide_ok_store_url" style="display:none">
+                        <div class="floatLeft"><img src="/images/secure/registration/available_left.png" alt="Left arrow" /></div>
+                        <div class="available-textContainer" id="ok_name"><div class="available_tick"></div>OK</div>
+                        <div class="floatLeft"><img src="/images/secure/registration/available_right.png" alt="Right curve" /></div>
+                    </div>
+                    <div class="clearBoth grey_text11Lh17">If you have your own domain such as <b>www.easyshop.com</b> you can add it later</div>
+                </div>
+            </div>
+        </div>
+        <div class="lh45">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="wid158">&nbsp;</div>
+            <div class="floatLeft"><a href="<?php echo HTTP_SERVER;?>/admin/overview/page" class="cancel_btn" title="CANCEL"></a><!--<input type="submit" class="cursor cancel_btn" title="CANCEL" id="business_cancel" name="business_cancel"/>--></div>
+            <div class="wid17">&nbsp;</div>
+            <div class="floatLeft"><input type="submit" class="cursor continue_btn" title="CONTINUE" id="continue_business_detail" name="continue_business_detail" value="continue_to_payment"/></div>
+            <input type="hidden" name="action" value="process" />
+        </div>
+        <div class="lh45">&nbsp;</div>
+    </div>
+     </form>
+     <!--left panel ends from here-->
+    <!--right panel starts from here-->
+    <div class="right_block">
+    	<div class="content_text14"><b>Can I switch my store to a different web address later?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20">Yes, you can. You just need to provide the web address which you want your store to be mapped with. If you already own a domain name, we can map your store with that domain name too.</div>
+        <div class="lh20">&nbsp;</div>
+    	<div class="content_text14"><b>I need help in setting up and managing my store. Whom should I contact?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20">Well we are more than happy to help. One of our support executive will soon get in touch with you and guide you through the set up process. And you can always view our self service <a href="http://wiki.goingo2o.com" class="hyperLinkBlue12" title="support portal">support portal</a>.</div>
+        <div class="lh20">&nbsp;</div>
+    	<div class="content_text14"><b>I am not able to decide my store name. Can I change it later?</b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="content_text12Lh20">Don't worry. Just proceed with a temporary name currently. If you wish you can change it later from your store settings.</div>
+    </div>
+    <!--right panel starts from here-->
+</div>

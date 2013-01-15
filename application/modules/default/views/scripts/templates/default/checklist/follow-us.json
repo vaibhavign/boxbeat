@@ -1,0 +1,12 @@
+{
+	"css":["#follow-us" ,"#follow-us .heading","#follow-us .content",
+			"#follow-us .content .container","#follow-us .content .link","#follow-us .content a",
+			"#follow-us .content a:hover","#follow-us .facebook_icon_light",
+			"#follow-us .facebook_icon","#follow-us .twitter_icon",
+			"#follow-us .twitter_icon_light","#follow-us .facebook_icon_dark",
+			"#follow-us .twitter_icon_dark"
+		  ],
+	"image":["facebook_icon_light.png","twitter_icon_light.png","facebook_icon_dark.png","twitter_icon_dark.png"
+			]
+	
+}

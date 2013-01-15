@@ -1,0 +1,28 @@
+
+<div id="wid1000Auto">
+	<!--<div id="header-wrapper">
+		<div id="logo"><a href="#" title="Goo2o"><img src="images/logo_blue.gif" alt="logo" /></a></div>
+        <div class="header-rightText">Goo2o helps you buy & sell live with real-time conversation.</div>
+        </div>-->
+    <div class="clearBoth">
+    	<div class="blueMainHeadingContainer">
+    		<div class="blueMainHeading floatLeft">Not your account</div>
+            <div class="floatRight content-text12">Already registered? <a href="<?php echo HTTPS_SECURE;?>/login" class="hyperLinkBlue12" title="Sign in">Sign in</a></div>
+        </div>
+        <div class="lh35">&nbsp;</div>
+        <div class="wid734Auto content-text14Lh22">If the email address does not belong to <b><?php echo $this->useremailname; ?></b>,then please confirm so that we may remove your email <span class="content-textGreen18"><?php echo $this->useremailaddress; ?></span> from this account.</div>
+        <div class="lh110">&nbsp;</div>
+        <div class="wid453Auto">
+            <form name="notmyaccount" method="post" action="">
+        	<div class="wid410Auto">
+                <input type="hidden" name="formaction" value="notmyaccount">
+                <input type="hidden" name="vcode" value="<?php echo $this->vcodes; ?>">
+                <input type="hidden" name="usernameid" value="<?php echo $this->usernameid; ?>">
+                <div class="floatLeft"><input type="submit" class="notmynewaccountbutton" title="This is not my account"  id="notmyaccount" name="notmyaccount" value="" />   </div>         
+                <div class="floatRight"><a href="<?php if($this->userid=='') {echo HTTP_SECURE.'/login';} else{ echo HTTP_SERVER.'/myaccount'; }?>" class="hyperLinkBlack13BLh34" title="Never mind this is my account">Never mind this is my account</a></div>
+                </div>
+                 </form>
+           
+        </div>
+     </div>
+</div>

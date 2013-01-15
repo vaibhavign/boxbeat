@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<title><?php echo PAGE_TITLE.' ';  ?></title>
+        <meta name="keywords" content=" <?php echo PAGE_META_KEYWORD ; ?>" />
+        <meta name="description" content= " <?php echo PAGE_META_DESCRIPTION ; ?> " />
+       
+        <?php echo $this->headTitle() ?>
+        <?php echo $this->headLink(); ?>
+        <?php //echo $this->headScript(); ?>
+        <?php echo $this->cssHelper(); ?>
+        <?php echo $this->JavascriptHelper(); ?>
+        <?php 
+     // TITLE_SEPERATOR TITLE_SEPERATOR_TEXT
+        //echo getAnalyticCode($_SESSION['USER']['userId']);// function saved in general_functions.php ; takes user id as a paramenter and return the analytic code if saved. 
+       
+        ?>
+        <?php // include('jsfeedback.phtml');?>
+        <!--
+        <script src="/jscript/admin/jquery.tabSlideOut.v1.3.js"></script>
+
+        <script>
+            $(function(){
+                $('.slide-out-div').tabSlideOut({
+                    tabHandle: '.handle',                              //class of the element that will be your tab
+                    pathToTabImage: '//images/admin/contact_tab.gif',          //path to the image for the tab (optionaly can be set using css)
+                    imageHeight: '122px',                               //height of tab image
+                    imageWidth: '40px',                               //width of tab image    
+                    tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
+                    speed: 300,                                        //speed of animation
+                    action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                    topPos: '200px',                                   //position from the top
+                    fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
+                });
+            });
+
+        </script>
+
+        <style type="text/css" media="screen">
+
+            .slide-out-div {
+                padding: 20px;
+                width: 1000px;
+                background: #f2f2f2;
+                border: #29216d 2px solid;
+            }
+-->
+
+
+        
+        
+        <script type="text/javascript" >
+            (function(jQuery){
+jQuery.closeupdater=function()
+	{
+            {
+                     //jQuery('#newMessageCounter').text(0);
+                       jQuery('#inboxNotificationMSG').css('display','none');
+			jQuery.ajax({ //ajax here for fetch dynamic data from database use json object
+					type:'get',
+					dataType:'json',
+					url:'/inbox/closeu',
+					data:'',
+					success:function (responseData, status, XMLHttpRequest) {
+						 
+                                               
+						}
+						});	
+		}
+	}
+	})(jQuery);            
+(function(jQuery){
+jQuery.newMessageUpdater=function()
+	{
+            jQuery('#inboxNotificationMSG').css('top',$(window).height()-100); 
+            
+             var oldcounters=jQuery('.inboxNotificationTops').text().replace("(","");
+	     var old=oldcounters.replace(")","");
+
+		if(old=='' || old===null)
+		{
+			oldcounters=0;
+		}
+		else
+		{
+			oldcounters=old;
+		}
+//alert(oldcounters);
+		
+		{
+			jQuery.ajax({ //ajax here for fetch dynamic data from database use json object
+					type:'get',
+					dataType:'json',
+					url:'/inbox/nmu/time/'+jQuery.time,
+					data:'',
+					success:function (responseData, status, XMLHttpRequest) {
+						var data=responseData;
+						jQuery.time=data.time;
+
+                                                if(data.totalupper>0)
+                                                    {
+                                                     jQuery('.inboxNotificationTops').html('('+data.totalupper+')') ;  
+                                                    }
+                                                    else
+                                                       {
+                                                        jQuery('.inboxNotificationTops').css('display','none');   
+                                                           
+                                                       } 
+                                                 //jQuery('#inboxNotificationMSG').css('display','block');
+                                               // alert(data.total);
+                                                if(data.totalupper>oldcounters)
+                                                {
+                                                   // var oldcounter=parseInt(jQuery('#newMessageCounter').text());
+                                                  //  jQuery('#newMessageCounter').text(data.total);
+                                                    jQuery('#inboxNotificationMSG').fadeIn('slow');
+						   setTimeout("jQuery('#inboxNotificationMSG').fadeOut('slow')",5000);	
+                                                    
+                                                    
+                                                }  
+                                                jQuery('#closeupdater').bind('click',function(){
+                                                    
+                                                   jQuery.closeupdater();
+                                                })
+						}
+						});	
+		}
+	}
+	})(jQuery);  
+/*$(document).ready(function(){$("ul.subnav").parent().append("<span style='float:right; width:32px;'></span>");$("ul.topnav li span").hover(function(){$(this).parent().find("ul.subnav").slideDown('fast').show();$(this).parent().hover(function(){},function(){$(this).parent().find("ul.subnav").slideUp('slow')})}).hover(function(){$(this).addClass("subhover")},function(){$(this).removeClass("subhover")})}); */
+jQuery(document).ready(function(){jQuery('.atab').bind('mouseover',function(){jQuery('.submenu').hide();var arrclass=jQuery(this).attr('class').split(' ');var classarrow=arrclass[1].split('Tab');if(classarrow[1]=="ActiveArrow"){$('.'+classarrow[0].toLowerCase()+'Tabmenu').addClass(classarrow[0].toLowerCase()+'TabActivemenu').removeClass(classarrow[0].toLowerCase()+'Tabmenu');jQuery('.'+classarrow[0].toLowerCase()+'TabActivemenu').show()}var tabId=jQuery(this).parent().attr('id');jQuery('.'+tabId+'Tabmenu').show()});jQuery('.submenu').mouseover(function(){jQuery('.submenu').hide();jQuery(this).show()});jQuery('.submenu').mouseout(function(){var tempvar=jQuery(this).attr('rel');var tempvar1=jQuery(this).parent().attr('rel');if(tempvar!=tempvar1){jQuery(this).hide()}});jQuery('#mainWrapper').bind('mousemove',function(e){var clientCoords="( "+e.clientX+", "+e.clientY+" )";var submenuDivOffset='';var submenuDivOffsetHeight='';var submenuDivOffsetWidth='';divHeight=jQuery(this).css('height').split('px');heightDiv=parseInt(divHeight[0]);jQuery('.submenu').each(function(){if(jQuery(this).css('display')=='block'){divHeight=jQuery(this).css('height').split('px');submenuDivOffsetHeight=parseInt(divHeight[0]);divWidth=jQuery(this).css('width').split('px');submenuDivOffsetWidth=parseInt(divWidth[0]);var offset=jQuery(this);submenuDivOffset=offset.offset()}});if(e.clientY>submenuDivOffsetHeight+submenuDivOffset.top||e.clientX<submenuDivOffset.left||e.clientX>submenuDivOffset.left+submenuDivOffsetWidth){jQuery('.submenu').hide()}});jQuery('.atab').bind('mouseout',function(){jQuery('.maintab').bind('mouseover',function(){var tempvar=jQuery(this).attr('rel');var tempvar1='';jQuery('.submenu').each(function(){if(jQuery(this).css('display')=='block')tempvar1=jQuery(this).attr('rel')});if(tempvar!=tempvar1){jQuery('.submenu').hide()}var arrclass=jQuery(this).attr('class').split(' ');var classarrow=arrclass[1].split('Tab');var tabId=jQuery(this).children().attr('id');var splitme=tabId.split('id');jQuery('.'+splitme[0]+'Tabmenu').css('display');if(jQuery('.'+splitme[0]+'Tabmenu').css('display')=='block'){jQuery('.'+splitme[0]+'Tabmenu').show()}else if(jQuery('.'+splitme[0]+'TabActivemenu').css('display')=='block'){jQuery('.'+splitme[0]+'TabActivemenu').show()}else{}});jQuery('.maintab').bind('mouseout',function(){var tempvar=jQuery(this).attr('rel');var tempvar1=jQuery(this).children().attr('rel');if(tempvar!=tempvar1){jQuery('.submenu').hide()}var tabId=jQuery(this).children().attr('id');var splitme=tabId.split('id');if(jQuery('.'+splitme[0]+'Tabmenu').css('display')=='block'){jQuery('.'+splitme[0]+'Tabmenu').show()}else if(jQuery('.'+splitme[0]+'TabActivemenu').css('display')=='block'){jQuery('.'+splitme[0]+'TabActivemenu').show()}else{}})});jQuery('.o2ojsblock ,.o2otopgap').bind('mouseover',function(){jQuery('.submenu').hide()});jQuery('.create_ddown').mouseover(function(){jQuery('.addClass').removeClass('create_tab').addClass('create_tabActive');jQuery('.new_dropDown').show()});jQuery('.new_dropDown').click(function(){jQuery('.addClass').addClass('create_tab').removeClass('create_tabActive');jQuery('.new_dropDown').hide()});jQuery('.ChangeClass').click(function(){jQuery('.HTabBlock').hide();if(jQuery(this).hasClass('selected')){jQuery('.HTabBlock2').hide();jQuery(this).removeClass('selected')}else{jQuery('.HTabBlock2').show();jQuery(this).addClass('selected');jQuery('.accclass').removeClass('selected')}});jQuery('.accclass').click(function(){jQuery('.HTabBlock').hide();if(jQuery(this).hasClass('selected')){jQuery(this).removeClass('selected')}else{jQuery('.HTabBlock2').hide();jQuery('.ChangeClass').removeClass('selected');jQuery(this).addClass('selected')}});jQuery('.maintab').click(function(e){var redirectURL=jQuery(this).attr('rel');if(e.clientY<147&&e.clientY>125){if(redirectURL!=undefined){window.location.href="/admin/"+redirectURL+"/#"+redirectURL+"panel"}}})});
+
+
+
+
+var xyz="test12";var statusRefresh="";var refreshId=setInterval(function(statusRefresh){responseStatus=false;o2o.ajax({type:'get',dataType:'json',url:'/admin/orders/a21457856894124',data:'page='+pagetitle,success:function(responseData,status,XMLHttpRequest){statusRefresh=responseData;for(i in responseData){if(responseData[i]==1){responseStatus=true}}if(responseStatus){$(window).trigger('hashchange','valid')}return statusRefresh}})},900000);var cache={'':$('.bbq-default')};$(function(cache,refreshId){$('#refdi').bind('click',function(event){event.preventDefault();cache={'':$('.bbq-default')};$('.bbq-content').load(pagetitle,function(){$('#loadingdiv').show();$('.tmp-cont').html(' ');$('#loadingdiv').hide();$('.ref').hide();$("html, body").scrollTop(0)})});$(window).bind('hashchange',function(e,param1){if(param1=="valid"){$.getJSON('/admin/orders/a21457856894124',function(data){var tmp=[];var userIds=[];y=0;for(x in data){if(y>0){tmp[y]=data[x]}else{userIds[0]=data[x]}y++}if(tmp[1]==1){if(pagetitle=="list-order"){$('.ref').show();jQuery.fn.resetUpdator(userIds[0],1)}else{$('.ref').hide();jQuery.fn.resetUpdator(userIds[0],1);cache={'':$('.bbq-default')}}}else{$('.ref').hide();jQuery.fn.resetUpdator(userIds[0],1);cache={'':$('.bbq-default')}}})}else{var url=$.param.fragment();spliturl=url.split('/');pagetitle=spliturl[0];for(a in modulearray){$('.'+modulearray[a]+'TabActive').removeClass(modulearray[a]+'TabActive').addClass(modulearray[a]+'Tab');$('.'+modulearray[a]+'TabActiveArrow').removeClass(modulearray[a]+'TabActiveArrow').addClass(modulearray[a]+'TabArrow')}if(jQuery.inArray(pagetitle,manageTab)!=-1){$('.'+modulearray[0]+'Tab').addClass(modulearray[0]+'TabActive').removeClass(modulearray[0]+'Tab');$('.'+modulearray[0]+'TabArrow').addClass(modulearray[0]+'TabActiveArrow').removeClass(modulearray[0]+'TabArrow')}if(jQuery.inArray(pagetitle,createTab)!=-1){$('.'+modulearray[1]+'Tab').addClass(modulearray[1]+'TabActive').removeClass(modulearray[1]+'Tab');$('.'+modulearray[1]+'TabArrow').addClass(modulearray[1]+'TabActiveArrow').removeClass(modulearray[1]+'TabArrow')}if(jQuery.inArray(pagetitle,designTab)!=-1){$('.'+modulearray[2]+'Tab').addClass(modulearray[2]+'TabActive').removeClass(modulearray[2]+'Tab');$('.'+modulearray[2]+'TabArrow').addClass(modulearray[2]+'TabActiveArrow').removeClass(modulearray[2]+'TabArrow')}if(jQuery.inArray(pagetitle,promoteTab)!=-1){$('.'+modulearray[3]+'Tab').addClass(modulearray[3]+'TabActive').removeClass(modulearray[3]+'Tab');$('.'+modulearray[3]+'TabArrow').addClass(modulearray[3]+'TabActiveArrow').removeClass(modulearray[3]+'TabArrow')}if(jQuery.inArray(pagetitle,overviewTab)!=-1){$('.'+modulearray[4]+'Tab').addClass(modulearray[4]+'TabActive').removeClass(modulearray[4]+'Tab');$('.'+modulearray[4]+'TabArrow').addClass(modulearray[4]+'TabActiveArrow').removeClass(modulearray[4]+'TabArrow')}if(jQuery.inArray(pagetitle,arrayTab[a])){}if(pagetitle=='page'){$('.OverviewTab').addClass('OverviewTabActive').removeClass('OverviewTab')}var styleSheets=document.styleSheets;var urlloc=window.location.href;spliturlloc=urlloc.split('/');var allsuspects=document.getElementsByTagName('script');var verType=8;var insertincache=true;var urlloc=window.location.href;spliturlloc=urlloc.split('/');for(abc in spliturlloc){if(jQuery.inArray(spliturlloc[abc],restrictTabs)!=-1){insertincache=false}if(spliturlloc[abc]=="r"){cache={'':$('.bbq-default')};replacedString=urlloc.replace("r/r/","")}}var url=$.param.fragment();spliturl=url.split('/');pagetitle=spliturl[0];if(url=="list-order/p/2/abc"){var x;var tmpArray=new Array();for(x in cache){if(x!='list-order/p/2'){tmpArray[x]=cache[x]}}cache="";cache=tmpArray}var htmlStr=$('.bbq-content').html();$('.tmp-cont').html(htmlStr);$('a.bbq-current').removeClass('bbq-current');$('.bbq-content').children(':visible').hide();$('.tmp-cont').removeClass('dispnone');url&&$('a[href="#'+url+'"]').addClass('bbq-current');if(cache[url]){$('.tmp-cont').html(' ');$('.tmp-cont').addClass('dispnone');cache[url].show();$("html, body").animate({scrollTop:0},"fast");if(spliturlloc[6]==undefined){editoption="none"}else{editoption=spliturlloc[6]}if(spliturlloc[7]==undefined){addcondition="none"}else{addcondition=spliturlloc[7]}jQuery.fn.pagetitle(pagetitle,spliturlloc[3],editoption,addcondition)}else{$('#loadingdiv').show();if(insertincache){cache[url]=$('<div class="bbq-item"/>').appendTo('.bbq-content').load(url,function(){$('#loadingdiv').show();$('.tmp-cont').html(' ');$('#loadingdiv').hide();$("html, body").scrollTop(0)});if(spliturlloc[6]==undefined){editoption="none"}else{editoption=spliturlloc[6]}if(spliturlloc[7]==undefined){addcondition="none"}else{addcondition=spliturlloc[7]}jQuery.fn.pagetitle(pagetitle,spliturlloc[3],editoption,addcondition)}else{$('.bbq-content').load(url,function(){$('#loadingdiv').show();$('.tmp-cont').html(' ');$('#loadingdiv').hide();$("html, body").scrollTop(0)});if(spliturlloc[6]==undefined){editoption="none"}else{editoption=spliturlloc[6]}if(spliturlloc[7]==undefined){addcondition="none"}else{addcondition=spliturlloc[7]}jQuery.fn.pagetitle(pagetitle,spliturlloc[3],editoption,addcondition)}}}});$(window).trigger('hashchange')});jQuery.fn.pagetitle=function(pagetitle,module,editoption){o2o.ajax({type:'get',dataType:'html',url:'/4094328.php',data:'page='+pagetitle+'&module='+module+'&editoption='+editoption+'&value='+addcondition,success:function(responseData,status,XMLHttpRequest){document.title=responseData}})};jQuery.fn.refreshValues=function(values){var refValues=values};jQuery.fn.resetUpdator=function(user,block){o2o.ajax({type:'get',dataType:'html',url:'/admin/orders/a21457856894124',data:'user='+user+'&block='+block,success:function(responseData,status,XMLHttpRequest){}})};
+//$(function(){
+  
+  // Syntax highlighter.  SyntaxHighlighter.highlight();
+  
+//});
+jQuery(document).keydown(function(e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+        if(jQuery('#storenamedropdown').is(':visible'))
+        	jQuery('#storenamedropdown').hide();
+    }
+});
+jQuery(document).ready(function(){
+    jQuery('#inboxNotificationMSG').css('top',$(window).height()-100); 
+        setInterval('jQuery.newMessageUpdater()',10000);
+    jQuery('#closeupdater').bind('click',function(){
+                                                    
+          jQuery.closeupdater();
+         })
+	jQuery("#seller_header_block, #select_arrow").bind('click',function(){
+		jQuery('#storenamedropdown').toggle();
+		jQuery('.storenameddown_default').toggle();
+	});		
+});
+
+        </script>
+        
+    </head>
+    <body>
+        <div class="slide-out-div">
+            <a class="handle" href=""></a>
+             <?php //include "feedback.phtml"; ?>
+        </div>
+		<div class="clearBoth" id="haaaaaader" ><?php include "adminheader.phtml"; ?></div>
+        <div id="mainWrapper" class="clearBoth">
+			<table cellpadding="0" cellspacing="0" border="0" width="1000" align="center">
+                <tr>
+                    <td>
+                       <div class="clearBoth" style="min-height:400px;"><?php echo $this->layout()->content ?></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">&nbsp;</td>
+                </tr>
+            </table>
+            <?php include "adminfooter.phtml"; ?>  
+		
+        </div>
+
+
+
+    </body>
+</html> <?php
+            //  echo $this->layout()->content ?>

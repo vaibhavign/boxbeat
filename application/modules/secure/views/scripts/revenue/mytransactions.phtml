@@ -1,0 +1,55 @@
+<script>
+	jQuery(document).ready(function(){
+		jQuery('#plus_icon').click(function(){
+				jQuery('.openContainer').slideToggle(500);
+				jQuery('#transactionContainer').addClass('tableSelectedBg');
+				jQuery('#plus_icon').hide();
+				jQuery('.minus_icon').show();
+				
+							   });
+	});
+</script>
+<?php  
+	//echo "<pre>";
+	//print_r($this->transactionListingArray);	
+
+
+?>
+
+
+<div class="lh42">&nbsp;</div>
+<div class="wid1000Auto">
+	<div class="mainTopHeading">Transactions</div>
+	<div class="lh3">&nbsp;</div>
+    <div class="mainTopSubHeading">List of all transactions made using your Goo2o ID.</div>
+    <div class="lh42">&nbsp;</div>
+    <div class="clearBoth">
+    	<div class="floatLeft mainPageBlueHeading">My Transactions</div>
+        <div class="floatRight">
+            <div class="placeholdertxt">
+                <a title="Back to myaccount" href="javascript:history.go(-1)">Back to my account</a>
+            </div>
+            <div class="backarrow">&nbsp;</div>
+        </div>
+    </div>
+    <div class="lh3">&nbsp;</div>
+    <div class="solidMainBorder">&nbsp;</div>
+    <div class="lh25">&nbsp;</div>
+
+        <div class="floatLeft">
+            <?php
+			
+							$genObj = new General();
+				echo $genObj->nocontentMessage('mytransactions');
+			
+			?>
+    <div class="lh10">&nbsp;</div>
+    <div class="clearBoth">
+    	
+    </div>
+    <div class="lh55">&nbsp;</div>
+ 	<div class="clearBoth">
+    	<div class="floatRight"></div>
+    </div>
+    <div class="lh55">&nbsp;</div>
+</div>

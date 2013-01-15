@@ -1,0 +1,206 @@
+<table style=" width:1000px; margin:auto;" cellpadding="0" cellspacing="0">
+	<tr valign="top" style="font-size:0px;" >
+		<td align="right" colspan="2" height="5"></td>
+	</tr>
+	<tr valign="top" style="font-size:0px;" >
+		<td align="right" colspan="2"><input type="image" src="/images/secure/print_btn.png" alt="Print" title="Print" onclick="window.print() " /></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:24px; color:#000000; text-align:left;"> Acknowledgement for Order OR-<?php echo $this->detail[0]['storeid']?>-<?php echo $this->detail[0]['orderid']?> from <?php echo $this->detail[0]['storename']?></td>
+	</tr>
+	<tr>
+		<td colspan="2" height="5"></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; ">Date: <?php echo date("M d, Y",$this->detail[0]['datepalced'])?></td>
+	</tr>
+	<tr>
+		<td colspan="2" height="15"></td>
+	</tr>
+	<tr>
+		<td colspan="2" style="border-bottom:4px solid #000000; font-size:0px; height:4px; clear:both; width:1000px;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2" style=" height:20px; clear:both;">&nbsp;</td>
+	</tr>
+	<tr>
+		<td valign="top"><table cellpadding="0" cellspacing="0" width="483" bgcolor="#f1f1f1" height="182">
+				<tr>
+					<td width="483" valign="top">
+						<table cellpadding="0" cellspacing="0" >
+							<tr>
+								<td height="12"></td>
+							</tr>
+							<tr>
+								<td width="18"></td>
+								<td style=" font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#000000;">Billing Information:</td>
+							</tr>
+							<tr>
+								<td height="15"></td>
+							</tr>
+							<tr>
+								<td width="18"></td>
+								<td style="font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#000000; line-height:24px;">
+									<div style="width:435px; word-wrap: break-word;">
+										<?php echo $this->detail[0]['billing'][0]['fullname']?><br />
+										<?php echo stripslashes($this->detail[0]['billing'][0]['address'])?><br />
+										<?php echo $this->detail[0]['billing'][0]['city']?>, <?php echo $this->detail[0]['billing'][0]['state']?>-<?php echo $this->detail[0]['billing'][0]['zipcode']?><br />
+										Email: <?php echo $this->useremail;?><br />
+										<?php echo $this->detail[0]['billing'][0]['phone']?>
+									</div>
+								</td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></td>
+		<td valign="top"><table cellpadding="0" cellspacing="0" width="483" bgcolor="#f1f1f1" height="182">
+				<tr>
+					<td width="483" valign="top"><table cellpadding="0" cellspacing="0" >
+							<tr>
+								<td height="12"></td>
+							</tr>
+							<tr>
+								<td width="18"></td>
+								<td style=" font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#000000;">Payment Information:</td>
+							</tr>
+							<tr>
+								<td height="15"></td>
+							</tr>
+							<tr>
+								<td width="18"></td>
+								<td style="  font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#000000; line-height:24px;">Payment mode: <?php echo $this->detail[0]['paymentmode']['pay_mod_desc']?> ( <?php echo $this->detail[0]['paymentmode']['long_desc']?>)<br />
+									Total Payment: Rs.<?php echo number_format($this->totalpaymentTotal-$this->totaltominus,2,'.','');?></td>
+							</tr>
+						</table></td>
+				</tr>
+			</table></td>
+	</tr>
+	<tr>
+		<td style="height:52px;" colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan="2"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+				<tr style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#000000; height:25px; ">
+					<td style="width:310px; padding-right:10px; border-top:1px solid #000000; border-bottom:1px solid #000000; ">Product</td>
+					<td style="width:235px; padding-right:10px; border-top:1px solid #000000; border-bottom:1px solid #000000;">Shipping Address</td>
+					<td style="width:115px; padding-right:10px; border-top:1px solid #000000; border-bottom:1px solid #000000;">Quantity</td>
+					<td style="width:251px; text-align:right; padding-right:10px; border-top:1px solid #000000; border-bottom:1px solid #000000;">Price (Rs.)</td>
+				</tr>
+				<?php foreach($this->detail as $key=>$val){ ?>
+				<tr style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000; text-decoration:none; height:35px;">
+					<td style="width:310px; line-height:20px;  " valign="top"><div style="float:left; padding-top:5px;"><?php echo $val['productname'] ;if($val['product_variation']!='') echo '-'.$val['product_variation'];?></div>
+						<div style="clear:both; padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000;">Condition: <?php echo $val['product_condition']?></div>
+						<div style="clear:both; padding-top:5px; padding-bottom:10px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000;">Product ID: <?php echo $val['product_id']?></div></td>
+					<td style="width:235px; line-height:20px; " valign="top"><div style="float:left; line-height:20px; padding-top:5px;"> 
+						<div style="width:225px; word-wrap: break-word;">	
+							<?php echo $this->detail[0]['shipping'][0]['fullname']?><br />
+							<?php echo stripslashes($this->detail[0]['shipping'][0]['address'])?><br />
+							<?php echo $this->detail[0]['shipping'][0]['city']?>, <?php echo $this->detail[0]['shipping'][0]['state']?>-<?php echo $this->detail[0]['shipping'][0]['zipcode']?><br />
+							<?php echo $this->detail[0]['shipping'][0]['phone']?> </div>
+						</div>
+					</td>
+					<td style="width:115px; padding-top:15px;" valign="top"><?php echo $val['order_item_total'];?></td>
+					<td style="width:270px; padding-right:10px;" valign="top"><table cellpadding="0" cellspacing="0" border="0" align="right">
+							<tr>
+								<td colspan="2" height="5" style="line-height:5px; font-size:5px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td colspan="2" align="right"><?php echo number_format($val['product_mrp']*$val['order_item_total'],2,'.','');?></td>
+							</tr>
+							<tr>
+								<td colspan="2" height="5" style="line-height:5px; font-size:5px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Shipping&nbsp;:</td>
+								<td align="right" style="padding-left:10px;"><?php echo number_format($val['productshipping'],2,'.','');?></td>
+							</tr>
+							<?php  if($this->discountdetail[$val['item_id']]['value']){?>
+							<tr>
+								<td colspan="2" height="5" style="line-height:5px; font-size:5px;">&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Discount Coupon <?php echo $this->discountdetail[$val['item_id']]['code']?> applied</td>
+								<td align="right">-<?php echo number_format($this->discountdetail[$val['item_id']]['value'],2,'.','');?></td>
+							</tr>
+							<?php } ?>
+						</table>
+						<!--<div style="padding-top:5px; text-align:right;"><?php echo number_format($val['product_mrp'],2,'.','');?></div>
+								<div style="clear:both; text-align:right; padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;">
+									<div style="width:200px; float:left; text-align:right;">Shipping:</div>
+									<div style="float:left; text-align:right; padding-left:12px;"><?php echo number_format($val['productshipping'],2,'.','');?></div>
+								</div>
+								<?php  //if($this->discountdetail[$val['item_id']]['value']){?>
+								<div style="clear:both; text-align:right; padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#000000;">
+									<div style="width:200px; float:left; text-align:right;">  Discount Coupon <?php echo $this->discountdetail[$val['item_id']]['code']?> applied</div>
+									<div style="float:left; text-align:right; padding-left:8px;">-<?php echo number_format($this->discountdetail[$val['item_id']]['value'],2,'.','');?></div>
+								</div>-->
+						<?php //} ?></td>
+				</tr>
+				<tr>
+					<td colspan="5" height="10"></td>
+				</tr>
+				<tr>
+					<td colspan="5" style="border-bottom:1px dashed #000000; height:1px; clear:both; font-size:0px;">&nbsp;</td>
+				</tr>
+				<?php } ?>
+			</table></td>
+	</tr>
+	<tr>
+		<td colspan="5" height="10"></td>
+	</tr>
+	<tr>
+		<td colspan="5" align="right"><?php if($this->discountdetail['shippingvalue']){?>
+		<table cellpadding="0" cellspacing="0" align="right" border="0" style="clear:both;">
+				<tr>
+					<td width="147" style=" text-align:center;">
+						<td width="230" height="28" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; padding:0 0 0 0px;">Discount Coupon <?php echo $this->discountdetail['shippingcode']?> applied</td>
+						<td width="149" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:0 0 0 0px; text-align:right;" height="28" >Rs.-<?php echo number_format($this->discountdetail['shippingvalue'],2,'.','');?></td>
+					</td>					
+				</tr>
+			</table>
+			<?php   } ?>
+			<?php if($this->discountdetail['ordervalue']){?>
+			<table cellpadding="0" cellspacing="0" align="right" border="0" style="clear:both;">
+				<tr>
+					<td width="147" style=" text-align:center;">
+						<td width="230" height="28" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; padding:0 0 0 0px;">Discount Coupon <?php echo $this->discountdetail['ordercode']?> applied</td>
+						<td width="149" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:0 0 0 0px; text-align:right;" height="28" >Rs.-<?php echo number_format($this->discountdetail['ordershippingcode'],2,'.','');?></td>
+					</td>					
+				</tr>
+			</table>
+		
+			<?php   } ?>
+			<?php if($this->discountdetail['giftcertificatevalue']){?>
+			<table cellpadding="0" cellspacing="0" align="right" border="0" style="clear:both;">
+				<tr>
+					<td width="147" style=" text-align:center;">
+						<td width="230" height="28" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; padding:0 0 0 0px;">Gift certificate <?php echo $this->discountdetail['giftcertificatecouponcode']?> applied</td>
+						<td width="149" style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; padding:0 0 0 0px; text-align:right;" height="28" >Rs.-<?php echo number_format($this->discountdetail['giftcertificatevalue'],2,'.','');?></td>
+					</td>					
+				</tr>
+			</table>
+			<?php   } ?>
+			<table cellpadding="0" cellspacing="0" align="right" border="0" style="clear:both;">
+				<tr>
+					<td width="147" style="border:#080808 solid 1px; text-align:center;">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="184" height="28" bgcolor="#f1f1f1" style=" font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; padding:0 0 0 0px;">Total payment made</td>
+							</tr>
+						</table>
+					</td>
+					<td width="147" style="border:#080808 solid 1px; border-left:0px none; text-align:center;">
+						<table cellpadding="0" cellspacing="0">
+							<tr>
+								<td width="184" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; padding:0 10px 0 0px; text-align:right;" height="28" bgcolor="#f1f1f1">Rs.<?php echo number_format($this->totalpaymentTotal-$this->totaltominus,2,'.','');?></td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="5" style="height:30px;"></td>
+	</tr>
+</table>

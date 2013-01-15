@@ -1,0 +1,78 @@
+<form name="demo_store_creation" id="demo_store_creation" method="post">
+<table cellpadding="0" cellspacing="0" border="0" align="center" width="1000">
+	<tr>
+		<td>
+			<div class="blueHeading">Create your Goo2o Merchant Store</div>
+			<div class="lh5">&nbsp;</div>
+			<div class="descText"><div class="floatLeft">Fully functional</div>  <div class="bullet"></div>  <div class="floatLeft">No hidden fees</div> <div class="bullet"></div>   <div class="floatLeft">No risk</div>  <div class="bullet"></div>  <div class="floatLeft">Try it free for 15 days</div></div>
+		</td>
+	</tr>
+	<tr>
+		<td height="80"></td>
+	</tr>
+	<tr>
+		<td valign="top">
+			<table cellpadding="0" cellspacing="0" border="0"  width="1000">
+				<tr>
+					<td width="12"><div class="leftCurve"></div></td>
+					<td width="976"><div class="topMidcont">&nbsp;</div></td>
+					<td width="12"><div class="rightCurve"></div></td>
+				</tr>
+				<tr>
+					<td width="12" class="centerLeft"></td>
+					<td width="976" valign="top">
+						<div class="centerContent">
+							<div class="wid312">
+								<div class="textFieldText"><span class="errorMsgText">*</span> Store domain</div>
+								<div class="lh10">&nbsp;</div>
+								<div class="inputBg">
+									<div class="floatLeft"><span>http://www.</span></div>
+									<div class="floatLeft"><input type="text" name="domain_name" class="domainfield" id="domain_name" value="<?php echo $this->domain_name; ?>"/></div>
+									<div class="floatLeft"><span>.mygoo2o.com</span></div>
+								</div>
+								<div class="lh5">&nbsp;</div>
+								<div class="errorMsgText" id="error_store_url" style=" <?php echo $this->url_msg_display; ?>"><?php echo $this->url_error_msg; ?></div>
+							</div>
+							<div class="wid20">&nbsp;</div>
+							<div class="wid312">
+								<div class="textFieldText"><span class="errorMsgText">*</span> Store name</div>
+								<div class="lh10">&nbsp;</div>
+								<div class="inputBg">
+									<input type="text" name="store_name" class="inputfield " id="store_name" value="<?php echo stripslashes($this->store_name); ?>" />
+								</div>
+								<div class="lh5">&nbsp;</div>
+								<div class="errorMsgText" id="error_store_name">Please enter a store domain name.</div>
+							</div>
+							<div class="wid20">&nbsp;</div>
+							<div class="wid312">
+								<div class="textFieldText"><span class="errorMsgText">*</span> Contact number</div>
+								<div class="lh10">&nbsp;</div>
+								<div class="inputBg">
+									<input type="text" name="contact_no" id="contact_no" value="<?php echo $this->contact_no; ?>" class="inputfield" />
+								</div>
+								<div class="lh5">&nbsp;</div>
+								<div class="errorMsgText" id="error_contact">Please enter a store domain name.</div>
+							</div>
+						</div>
+					</td>
+					<td width="12" class="centerRight"></td>
+				</tr>
+				<tr>
+					<td width="12"><div class="botLeftCurve"></div></td>
+					<td width="976"><div class="botMidcont">&nbsp;</div></td>
+					<td width="12"><div class="botRightCurve"></div></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr><td height="53"></td></tr>
+	<tr>
+		<td>
+			<div class="floatLeft"><input type="submit" class="create_btn cursor_pointer" alt="CREATE MY STORE" title="CREATE MY STORE" id="create_demo" value="" name="create_demo" /><input type="hidden" name="action" value="process" /></div>
+			<div class="lh10">&nbsp;</div>
+			<div class="lh5">&nbsp;</div>
+			<div class="floatLeft contentTextGrey12">By clicking on "Create my store", you are agreeing to the <a href="http://support.goo2o.com/entries/507111-terms-conditions" class="termConditionLink" title="terms & conditions" target="_blank">terms & conditions</a></div>
+		</td>
+	</tr>
+</table>
+</form>

@@ -1,0 +1,78 @@
+<table cellpadding="0"  cellspacing="0" border="0" width="100%" class="footer_border">
+	<tr>
+    	<td height="15"></td>
+    </tr>
+	<tr>
+    	<td valign="top">
+        	<table cellpadding="0"  cellspacing="0" border="0" width="960" align="center">
+            	<tr>
+    			<td valign="top" width="319">
+                	<div class="floatLeft">
+                    	<div class="footer_wid350 logged_heading"><strong>Logged in as:</strong></div>
+                        <div class="lh5">&nbsp;</div>
+
+                        <div class="logged_heading footer_wid350"><?php echo $_SESSION['original_login']['user'][0]['user_email_address'];?></div>
+                    </div>
+                </td>
+                <td class="termstext" valign="top">
+					<div class="floatLeft">
+						<div class="floatLeft"><a href="#" title="Terms" class="termslink">Terms</a></div>
+						<div class="footer_bullet">&nbsp;</div> 
+						<div class="floatLeft"><a href="#" title="Privacy" class="termslink">Privacy</a></div>
+
+						<div class="lh5">&nbsp;</div>
+						<div class="floatLeft"><a href="#" title="View all policies" class="termslink">View all policies</a></div>
+					</div>
+                </td>
+                <td>
+                	<div class="floatRight">
+                    	<div class="floatLeft logged_heading">Copyright &copy; 2011-2012 Goo2o Technologies (P) Ltd.</div>
+                        <div class="lh5">&nbsp;</div>
+
+                        <div class="clearBoth logged_heading tar">All Rights Reserved.</div>
+					</div>
+                </td>
+             </tr>
+           </table>
+        </td>
+    </tr>
+	<tr>
+    	<td height="30"></td>
+    </tr>
+</table>
+<?php
+//echo "<pre>";
+    //print_r($_SESSION);
+
+	 ?>
+<!--User Window Ends here-->
+<?php 
+ $display='none';
+	?>
+    
+<div id="inboxNotificationMSG" class="inboxNotificationMSG" style="display:<?=$display?>;">
+
+    
+    
+    <div id="alert_msg">
+	<div class="alertmsgleft"></div>
+	<div class="alertmsgmiddle">
+		<div><a href="javascript:void(0)" class="crossicon" title="Close"  id="closeupdater"></a></div>
+
+		<div class="alert_msgcontainer">
+			<div class="aler_msgicon"></div>
+			<div class="alert_msg">You have new message(s) in your inbox.</div>
+		
+		
+		</div>
+	
+	
+	</div>
+	<div class="alertmsgright"></div>
+	
+
+
+
+
+</div>
+</div>

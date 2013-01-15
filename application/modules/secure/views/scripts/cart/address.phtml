@@ -1,0 +1,353 @@
+<form name="guestbillingdetail" id="submitshippingform" action="/secure/cart/addaddress" method="post">
+<table cellpadding="0" cellspacing="0" border="0" width="900" align="center">
+	<tr>
+    	<td height="33">&nbsp;</td>
+    </tr>
+    <tr>
+		<td class="shipping_billing_detail">Shipping & Billing Details</td>
+	</tr>
+	<tr>
+		<td class="lh2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="heading_border"></td>
+	</tr>
+	<tr>
+		<td class="fs0" height="20">&nbsp;</td>
+	</tr>
+<!-- Check box is Checked -->
+		<tr>
+			<td colspan="4" id="shippingdetail" >
+					<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="enter_billing_details" colspan="3">Please enter your Shipping detail:</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="20" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Title</td>
+						<td id="gtitle">
+							<select class="field_border inner_field wid58" name="gtitle">
+								<option value="1" selected="selected">Mr.</option>
+								<option value="2">Ms.</option>
+								<option value="3">Mrs.</option>
+							</select>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">First Name</td>
+						<td>
+							<input type="text" name="guestfname" id="guestfname" class="wid205 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203 " id="fname" style="color:#FF0000; font-size:12; font-weight:500; display:none;">&nbsp;</div></td>
+					</tr>
+	
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Last Name</td>
+						<td>
+							<input type="text" name="guestlname" id="guestlname" class="wid205 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="lname" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Address Line 1</td>
+						<td>
+							<input type="text" name="guestadd1" id="guestadd1" class="wid296 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="add1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">&nbsp;</td>
+						<td width="111" class="title">Address Line 2</td>
+						<td>
+							<input type="text" name="guestadd2" id="guestadd2" class="wid296 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="add2" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Country</td>
+						<td>
+							<select class="field_border country country_bg select_wid180">
+								<option>India</option>
+							</select>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="3">&nbsp;<div class="wid203" id="fname" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">State/Province</td>
+						<td id="state">
+						<select name="shippingstate" id="shippingstate"  class="Jstatedropdown">
+							<option value="0">Select</option>
+							<?php
+							
+								foreach($this->states as $statesKey=>$statesVal)
+									{ ?>
+								<option value="<?=$statesVal['id']?>"><?=$statesVal['state_name']?></option>
+							<?php
+									}
+							?> 
+							
+						</select>
+						
+						
+						
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="stateerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">City</td>
+						<td id="city">
+						<select name="shippingcity" id="shippingcity">
+							<option value="0">Select</option>
+							<?php
+								foreach($this->cities as $cityKey=>$cityVal)
+									{ ?>
+								<option value="<?=$statesVal['id']?>"><?=$cityVal['cityname']?></option>
+							<?php
+									}
+							?> 
+							
+						</select>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="cityerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Pin/Zip Code</td>
+						<td>
+							<input type="text" name="pzcode" id="pzcode" class="wid140 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="pcoderr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Phone Number</td>
+						<td>
+							<input type="text" name="guestcontact" id="guestcontact" class="wid140 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="phonerr" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+<!-- END Checked box Code -->
+				<tr>
+					<td colspan="4">
+						<input type="checkbox" name="checkshow" id="checkshow" checked="checked" onClick="" /> Use this address as my billing address as well
+					</td>
+				</tr>
+				<tr>
+					<td class="fs0" height="35" colspan="4">&nbsp;</td>
+				</tr>
+<!-- If check box is unchecked -->
+		<tr>
+			<td colspan="4" id="billingdetail" style="display:none;">
+				<table cellpadding="0" cellspacing="0" border="0">
+					<tr>
+						<td class="enter_billing_details" colspan="3">Please enter your Billing detail:</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="20" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Title</td>
+						<td id="gtitle1">
+							<select class="field_border inner_field wid58" name="gtitle1">
+								<option value="1" selected="selected">Mr.</option>
+								<option value="2">Ms.</option>
+								<option value="3">Mrs.</option>
+							</select>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="3">&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">First Name</td>
+						<td>
+							<input type="text" name="guestfname1" id="guestfname1" class="wid205 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="fname1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+	
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Last Name</td>
+						<td>
+							<input type="text" name="guestlname1" id="guestlname1" class="wid205 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="lname1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Address Line 1</td>
+						<td>
+							<input type="text" name="guestadd11" id="guestadd11" class="wid296 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="add11" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">&nbsp;</td>
+						<td width="111" class="title">Address Line 2</td>
+						<td>
+							<input type="text" name="guestadd12" id="guestadd12" class="wid296 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="add12" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Country</td>
+						<td>
+							<select class="field_border country country_bg select_wid180">
+								<option>India</option>
+							</select>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="3">&nbsp;<div class="wid203" id="fname" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">State/Province</td>
+						<td id="state1">
+						<select name="shippingstate1" id="shippingstate1" class="Jstatedropdown">
+							<option value="0">Select</option>
+							<?php
+								foreach($this->states as $statesKey=>$statesVal)
+									{ ?>
+								<option value="<?=$statesVal['id']?>"><?=$statesVal['state_name']?></option>
+							<?php
+									}
+							?> 
+							
+						</select></td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="stateerr1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">City</td>
+						<td id="city1"><select name="shippingcity1" id="shippingcity1">
+							<option value="0">Select</option>
+							<?php
+								foreach($this->cities as $cityKey=>$cityVal)
+									{ ?>
+								<option value="<?=$statesVal['id']?>"><?=$cityVal['cityname']?></option>
+							<?php
+									}
+							?> 
+							
+						</select></td>
+						<td>&nbsp;</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="cityerr1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Pin/Zip Code</td>
+						<td>
+							<input type="text" name="pzcode1" id="pzcode1" class="wid140 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="pcoderr1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					<tr>
+						<td class="alert" width="11">*</td>
+						<td width="111" class="title">Phone Number</td>
+						<td>
+							<input type="text" name="guestcontact1" id="guestcontact1" class="wid140 field_border inner_field" value="" />
+						</td>
+					</tr>
+					<tr>
+						<td class="fs0" height="8" colspan="2">&nbsp;</td>
+						<td nowrap="nowrap"><div class="wid203" id="phonerr1" style="color:#FF0000; font-size:12; font-weight:500;display:none;"></div></td>
+					</tr>
+					</tr>
+					<tr>
+						<td colspan="4">&nbsp;</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+<!--Unchecked box code is End-->
+				<tr>
+					<td colspan="3">
+						<div class="clearBoth">
+							<div class="wid30">&nbsp;</div>
+							<div class="floatLeft"><img src="/images/secure/save.gif" border="0" alt="Save" title="Save" id="Saveshipping" style="cursor:pointer;" />
+							</div>
+							<div class="wid12">&nbsp;</div>
+							<div class="floatLeft"><img src="/images/secure/cancel.gif" id="backshipping" border="0" alt="Cancel" title="Cancel" style="cursor:pointer;"  />
+							</div>
+						</div>
+					</td>
+				</tr>
+</table>
+</form>

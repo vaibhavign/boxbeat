@@ -1,0 +1,9 @@
+<div class="activedemostore_container">
+    <div class="blueHeading">Sorry you cannot get a free Demo Store.</div>
+    <div class="lh15">&nbsp;</div>
+    <div class="headlinetext">You already have an Active <?php if($this->mall_detail[0]['store_owner_type']==1){ echo 'Demo';}?> Goo2o Store associated with this email ID</div>
+    <div class="lh12">&nbsp;</div>
+    <div class="headlinetext">Your Goo2o store URL is:&nbsp;<b><?php echo $this->mall_detail[0]['mallurl'] ;?></b></div>
+    <div class="lh50">&nbsp;</div>
+    <div class="activedemostore_content">To manage your store <a href="<?php echo HTTP_SERVER ;?>/admin/overview/#page" class="clicklink" title="click here">click here</a>.</div>
+</div>

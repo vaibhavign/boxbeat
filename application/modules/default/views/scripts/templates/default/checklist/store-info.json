@@ -1,0 +1,8 @@
+{
+	"css":["#store-info" ,"#store-info .heading",
+			"#store-info .content ul","#store-info .content ul li","#store-info .content ul li a",
+			"#store-info .content ul li a:hover"
+		  ]
+	
+			  
+}

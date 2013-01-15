@@ -1,0 +1,152 @@
+<div class="gc_body_width">
+	<form name="configure_gc" id="configure_gc" method="post">
+    <input type="hidden" name="mini" id="mini" value="<?php echo $this->gift_data['min_price'];?>" />
+    <input type="hidden" name="maxi" id="maxi" value="<?php echo $this->gift_data['max_price'];?>" />
+    <input type="hidden" name="gc_id" id="gc_id" value="<?php echo $this->order_gc_create_id ; ?>" />
+     <div class="floatLeft">
+        <div class="gc_body_heading floatLeft">Fill the details required to send gift certificate</div>
+        <div class="lh30">&nbsp;</div>
+        <div class="floatLeft">
+        <?php //echo '<pre>'; print_r($_SESSION['GCPURCHASE']);?>
+            <div class="floatLeft">
+                <div class="gc_wid195 gc_manage_default_content">Gift certificate template</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft">
+                    <div class="clearBoth gc_manage_default_content"><b><?php echo $this->gift_data['name'] ; ?></b></div>
+                    <div class="lh3">&nbsp;</div>
+                    <div class="clearBoth"><img src="<?php echo HTTP_SADMIN; ?>/images/superadmin/design/thumbnail/<?php echo $this->gift_data['thumb_image'];?>" alt="<?php echo $this->gift_data['name'];?>" title="<?php echo $this->gift_data['name'];?>" /></div>
+                </div>
+            </div>
+            <div class="lh15">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="gc_wid195 gc_manage_default_content"><span class="gc_astrick">*&nbsp;</span>Amount</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft">
+                    <div class=" floatLeft"><input type="text" class="gc_amount_input" id="gift_amount" name="gift_amount" value="<?php if($_SESSION['GCPURCHASE']['gift_amount']!=''){ echo $_SESSION['GCPURCHASE']['gift_amount'] ; }else{ echo ''; }?>"/>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="gc_errorMsg clearBoth" id="amount_error"></div>
+                    </div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft gc_account_maxlimit"><?php $minprice = $this->gift_data['min_price']; $maxprice = $this->gift_data['max_price']; if($minprice > 0 && $maxprice!=0){ echo "Rs. ". $minprice . "-"; } else if($minprice > 0 && $maxprice==0) { echo "Above Rs. ".$minprice;} ?><?php ?><?php if($minprice == 0 && $maxprice > 0){ echo "Upto Rs. " .$maxprice; } else if($maxprice > 0 && $minprice != 0){ echo "Rs. ".$maxprice; } ?>
+                    
+                    
+                    <!--Minimum limit is Rs.500--></div>
+                </div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="gc_wid195 gc_manage_default_content"><span class="gc_astrick">*&nbsp;</span>Sender details</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft">
+                    <div class="floatLeft"><input type="text" class="gc_sender_input" value="<?php if($_SESSION['GCPURCHASE']['sender_name']!=''){ echo $_SESSION['GCPURCHASE']['sender_name'] ; }else{ echo 'Enter name'; }?>"onfocus="if(this.value=='Enter name'){this.value=''} " onblur="if(this.value==''){ this.value='Enter name'}" id="sender_name" name="sender_name" maxlength="30"/>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="gc_errorMsg clearBoth" id="sender_name_error"></div>
+                 	</div>
+                    <div class="floatLeft content-text12Lh20"><input type="text" class="gc_sender_input" value="<?php if($_SESSION['GCPURCHASE']['sender_email']!=''){ echo $_SESSION['GCPURCHASE']['sender_email'] ; }else{ echo 'Enter email'; }?>" onfocus="if(this.value=='Enter email'){this.value=''} " onblur="if(this.value==''){ this.value='Enter email'}" id="sender_email" name="sender_email"/>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="gc_errorMsg clearBoth" id="sender_email_error"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="gc_wid195 gc_manage_default_content"><span class="gc_astrick">*&nbsp;</span>Recipient details</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft wid700">
+                    <div class="clearBoth" id="main_container_textbox" rel="<?php echo $this->counter_value; ?>">
+                        <?php $count = count($_SESSION['GCPURCHASE']['receipt_name']);
+							if($_SESSION['GCPURCHASE']['receipt_name']!=''){ 
+								foreach($_SESSION['GCPURCHASE']['receipt_name'] as $key =>$val){
+						?>
+                        	<div class="counter clearBoth" id="textbox<?php echo $key+1 ;?>">
+                            <div class="floatLeft"><input type="text" name="receipt_name[]" id="recName_<?php echo $key+1 ;?>" class="rec_name gc_sender_input recName" value="<?php echo $val; ?>" onfocus="if(this.value=='Enter name'){this.value=''} " onblur="if(this.value==''){ this.value='Enter name'}" maxlength="30"/>
+                            	<div class="lh5">&nbsp;</div>
+                    			<div class="gc_errorMsg clearBoth" id="recipeint_name_error_<?php echo $key+1 ;?>"></div>
+                            </div>
+                            <div class="floatLeft"><input type="text" name="receipt_email[]" id="recEmail_<?php echo $key+1 ;?>" class="rec_email gc_sender_input" value="<?php echo $_SESSION['GCPURCHASE']['receipt_email'][$key]?>" onfocus="if(this.value=='Enter email'){this.value=''} " onblur="if(this.value==''){ this.value='Enter email'}"/>
+                            	<div class="lh5">&nbsp;</div>
+                    			<div class="gc_errorMsg clearBoth" id="recipeint_email_error_<?php echo $key+1 ;?>"></div>
+                            </div>
+                            <?php if($count == ($key+1)){?>
+                            	<div class="floatLeft" id="addmorediv"><a class="gc_manage_setprice_link" title="Add more recipient" id="add_more_receipt">Add more recipient</a></div>
+                            <?php }else{?>
+								<div class="floatLeft"><a class="gc_manage_setprice_link remove_class senderdet" title="Remove" id="remove<?php echo $key+1 ;?>" rel="<?php echo  $key+1 ;?>">Remove</a></div>
+							<?php }?>
+                        </div>
+                        <div class="lh10" id="length<?php echo $key+1 ;?>">&nbsp;</div>
+                        <?php }
+							}else{?>
+                      		<div class="counter clearBoth" id="textbox1">
+                                <div class="floatLeft"><input type="text" name="receipt_name[]" id="recName_1" class="rec_name gc_sender_input recName" value="Enter name" onfocus="if(this.value=='Enter name'){this.value=''} " onblur="if(this.value==''){ this.value='Enter name'}" maxlength="30"/>
+                                	<div class="lh5">&nbsp;</div>
+                    				<div class="gc_errorMsg clearBoth" id="recipeint_name_error_1"></div>
+                                </div>
+                                <div class="floatLeft"><input type="text" name="receipt_email[]" class="gc_sender_input rec_email" id="recEmail_1"value="Enter email" onfocus="if(this.value=='Enter email'){this.value=''} " onblur="if(this.value==''){ this.value='Enter email'}"/>
+                                	<div class="lh5">&nbsp;</div>
+                    				<div class="gc_errorMsg clearBoth" id="recipeint_email_error_1"></div>
+                                </div>
+                                <div class="floatLeft" id="addmorediv"><a class="gc_manage_setprice_link" title="Add more recipient" id="add_more_receipt">Add more recipient</a></div>
+                                <div class="lh10">&nbsp;</div>
+                        </div>
+					  <?php }?>
+                    </div>
+                </div>
+            </div>
+            <?php if($_SESSION['GCPURCHASE']['receipt_name']==''){ ?>
+             	
+             <?php } ?>
+            <div class="floatLeft">
+                <div class="floatLeft">
+                    <div class="lh30">&nbsp;</div>
+                    <div class="gc_wid195 gc_manage_default_content">Message</div>
+                    <div class="gc_wid16 gc_manage_default_content">:</div>
+                </div>
+                <div class="gc_wid390">
+                    <div class="floatRight gc_manage_default_content"><b><span id="msgCounter">150</span></b></div>
+                    <div class="clearBoth"><textarea class="gc_message_textarea" id="msg_textarea" name="msg_textarea"><?php if($_SESSION['GCPURCHASE']['msg_textarea']!=''){ echo $_SESSION['GCPURCHASE']['msg_textarea'] ; }else{ echo 'I am sending you a gift certificate. Buy anything as per your wish.'; }?></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="gc_wid195 gc_manage_default_content">Sending date</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft">
+                    <div class=" floatLeft"><input type="text" class="gc_amount_input" value="<?php if($_SESSION['GCPURCHASE']['sending_date']!=''){ echo $_SESSION['GCPURCHASE']['sending_date'] ; }else{ echo 'Now'; }?>" id="datepicker"  name="sending_date" readonly="readonly"/></div>
+                    <!--<div class="floatLeft"><a class="gc_calendericon" title="Calender" id=""></a></div>-->
+                </div>
+            </div>
+            <div class="lh30">&nbsp;</div>
+            <div class="gc_amountBlueBar">
+                <div class="clearBoth">
+                <div class="gc_wid181 gc_ammountheading">Amount</div>
+                <div class="gc_wid16 gc_manage_default_content">:</div>
+                <div class="floatLeft">
+                    <div class="clearBoth gc_ammountheading"><b><span id="total_value">Rs.<?php if($_SESSION['GCPURCHASE']['gift_amount']!=''){ echo $count*$_SESSION['GCPURCHASE']['gift_amount'] ; }else{ echo '0'; }?></span></b></div>
+                </div>
+            </div>
+            </div>
+             
+            <div class="lh50">&nbsp;</div>
+            <?php 	if($_SESSION['GCPURCHASE']['condition']=='on'){
+							$condition_checked = 'checked="checked"';
+					}else{
+							$condition_checked = '';
+					}?>
+            <div class="floatLeft">
+                    <div class="floatLeft">
+                    	<div class="checkBox"><input type="checkbox" id="conditions" name="condition" class="gc_checkbox_default" <?php echo $condition_checked; ?>/><!--<a href='javascript:void(0);' class="gc_checkbox_default checkbox_off" rel="checkbox_off" id="click_CheckBox">--></a></div>
+                    </div>
+                    <div class="floatLeft gc_configure_content">I understand & agree to the <a href="#" class="gc_manage_setprice_link" title="terms & conditions">terms & conditions</a> of gift certificates.</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="gc_errorMsg clearBoth" id="term_condition"></div>
+            </div>
+            <div class="lh60">&nbsp;</div>
+            <div class="clearBoth" align="center"><input type="image" src="/images/secure/gift-purchased/continue_btn.gif" class="cursor" id="continue_gc_detail" name="continue_gc_detail" title="CONTINUE" alt="CONTINUE"/></div>
+    
+        
+        </div>
+    </div>
+   	</form>
+    <div class="lh110">&nbsp;</div>
+</div>

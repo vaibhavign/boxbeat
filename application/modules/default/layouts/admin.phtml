@@ -1,0 +1,38 @@
+<html>
+	<head>
+                         <?php echo $this->headTitle() ?>
+			<?php echo $this->headLink(); ?>
+			<?php echo $this->headScript(); ?>
+                        <?php echo $this->cssHelper();  ?>
+
+			</head>
+			<body>
+	<div id="mainWrapper"  >
+  
+		<table cellpadding="0" cellspacing="0" border="0" align="center" width="760">
+			<tr>
+				<td id="main_body_height" valign="top">
+					<table align="center" width="970" border="0" cellspacing="0" cellpadding="0" id="contentMainWrapper">
+					<tr>
+					 <td  id="navColumnOne" valign="top">
+					</td>
+					
+						<td valign="top" style="min-width:520px;">
+							 <?php  echo $this->layout()->content ?>
+					
+				      </td>
+					<td id="navColumnTwo" class="columnRight" valign="top">
+					
+					
+					</tr>
+		</table>
+				</td>
+			</tr>
+		</table>
+	  
+</div>
+			
+		
+		 
+			 </body>
+			 </html>

@@ -1,0 +1,148 @@
+<form action="/secure/cart/update" method="post">
+	<table cellpadding="0" cellspacing="0" border="0" width="900" align="center">
+	<tr>
+		<td height="21">&nbsp;</td>
+	</tr>
+  <?php if(!empty($this->cartitems))
+ 	 {
+	// echo "<pre>";
+	// print_r($this->cartitems);
+	 ?>
+	 <tr>
+    	<td>
+		<tr>
+                	<td>
+						<div class="clearBoth wid900">
+							<table width="900" border="0" cellpadding="0" cellspacing="0" class="clearBoth carthead  bgblue">
+							<tr>
+							<td width="5" height="22" bgcolor="#e7e7e7">&nbsp;</td>
+							<td width="77" class="cart" bgcolor="#e7e7e7">Cart Items</td>
+							<td width="311" class="cart" bgcolor="#e7e7e7"> Item Name</td>
+							<td width="150" class="cart" bgcolor="#e7e7e7">Item Price <img src="/images/secure/rs_icon.gif" border="0" /></td>
+							<td width="100" class="cart" bgcolor="#e7e7e7">&nbsp;</td>
+							<td width="73" class="cart" bgcolor="#e7e7e7">Qty.</td>
+							<td width="184" class="cart" bgcolor="#e7e7e7">Item Total <img src="/images/secure/rs_icon.gif" border="0" /></td>
+						</tr>
+					</table>
+		<?php	
+			$i=1;
+		    foreach($this->cartitems as $keyCart=>$valCart)
+			{
+			
+			?>
+			
+			<div class="clearBoth">
+							<table width="900" border="0" cellpadding="0" cellspacing="0">
+								  <tr>
+									<td colspan="8" ></td>
+										</tr>
+									<tr>
+										<td colspan="8" height="10">&nbsp;</td>
+									</tr>
+								<tr>
+									
+									<td width="77" colspan="2" valign="top">
+							<div class="product_border shopppingcartimg60"><img src="<?=$valCart->productImageSrc?>" title="<?= stripslashes($valCart->productName)?>" height="50" width="50"></div>
+									</td>
+						<td width="311" valign="top">
+                    	<div class="clearBoth">
+                        	<div class="wid210"><a href="<?=$valCart->productUrl?>" class="product_name" title="<?=stripslashes($valCart->productName)?>"  target="_blank"><?=stripslashes($valCart->productName)?></a></div>
+                            <div class="lh8">&nbsp;</div>
+					
+                            <div class="clearBoth added">Added from <a href="<?=$valCart->storeurl[0]['store_url']?>" class="sketcheeze" title="<?=$valCart->storeurl[0]['store_title']?>" target="_blank"><?=$valCart->storeurl[0]['store_title']?></a></div>
+                        </div>
+                    
+											
+										
+									<td width="150" valign="top">	
+                                    	<div class="clearBoth">
+                                        	<div class="floatLeft" style="width:15px;"></div>
+                                            <div class="floatLeft">
+												<?=$valCart->productSrp?>
+                                            </div>
+                                        </div>
+									</td>
+									<td width="100" valign="top" >
+										<div class="clearBoth">
+                                        	<div class="floatLeft" style="width:15px;"></div>
+                                            <div class="floatLeft">
+												&nbsp;
+                                       		</div>
+                                       </div>
+									</td>
+									<td width="73" valign="top">
+									<select name="productQty<?=$i?>"  onchange="this.form.submit()">
+					  <?php
+					
+					   for($qty=1;$qty<=$valCart->productMaxQty;$qty++)
+					   {
+					   ?>
+						<option <?php if($qty==$valCart->productQty) echo 'selected';?>><?=$qty?></option>
+					 <?php	
+					   }
+					   ?>
+					</select>
+										<div class="clearBoth"><a  id="remove_<?=$i?>" href="/secure/cart/delete/id/<?=$valCart->productId?>/key/<?=$valCart->storeApiKey?>" class="ana opendeletePopup" title="Delete">Delete</a></div>
+									</td>
+										<?php 
+										$checkoutTotal=($order->products[$i]['final_price']*$actualQuantity); 
+								 //$checkTotal=currenciesConverter($checkoutTotal,1,'','1','1'); ?>
+									<td width="184" valign="top" >
+										<?=number_format($valCart->productSrp * $valCart->productQty,2)?>
+									</td>
+								</tr>
+								
+								<?php if($addressid!=0){?>
+								<?php 
+								
+								if($class!=''){?>
+								<tr>
+									<td colspan="8" align="center" >seller does not ship this item in your selected location.<a class="ana" href="<?php echo $productLink[0].'/'.$productLink[3].'/shipping';?>" target="_blank" >Check where it ships</a>.</td>
+								</tr>
+									<?php } 
+									
+									?>
+									<?php } 
+									
+									?>
+								
+				<tr>
+                	<td colspan="8" class="fs0" height="6">&nbsp;</td>
+                </tr>
+                <tr>
+                	<td colspan="8" class="bg1"></td>
+                </tr>
+                <tr>
+                	<td colspan="8" class="fs0" height="6">&nbsp;</td>
+                </tr>
+                
+                
+							</table>
+								 
+								 
+							 </div>
+			  <input type="hidden" name="productid<?=$i?>" id="productid" value="<?=$valCart->productId?>">
+			  <input type="hidden" name="storeapikey<?=$i?>" id="storeapikey" value="<?=$valCart->storeApiKey?>">
+				<?php 
+				
+			$i++;
+			}?>
+			 <tr>
+                	<td colspan="8"  height="6" align="right"><a href="/secure/cart/checkout"><img src="/images/secure/procceedto_checkout_btn.jpg" border="0" title="Proceed to checkout" /></a></td>
+                </tr>	
+		<?php
+				
+			}
+			else
+			{		
+       ?>
+	   <tr>
+		<td colspan="8"  height="6" align="center">  You haven't added any item in your cart yet</td>
+	</tr>
+	 
+	   <?php } ?>
+		      	
+				
+</table>
+</form>
+

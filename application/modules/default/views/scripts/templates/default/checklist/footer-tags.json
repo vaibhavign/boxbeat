@@ -1,0 +1,8 @@
+{
+	"css":["#footer-tags" ,"#footer-tags .heading",
+			"#footer-tags .content ul","#footer-tags .content ul li","#footer-tags .content ul li a",
+			"#footer-tags .content ul li a:hover"
+		  ]
+	
+			  
+}

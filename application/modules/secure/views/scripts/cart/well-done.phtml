@@ -1,0 +1,221 @@
+<div class="gc_body_width">
+
+	<!-- Header Start From here-->
+
+	<div class="clearBoth"><?php //include_once('includes/header.php'); ?></div>
+
+    <!-- Header Ends here-->
+
+    
+
+    <!-- Body Block Start From here-->
+
+    <div class="lh35">&nbsp;</div> 
+
+    <div class="edit_saddress_leftblock">
+
+    	<div class="clearBoth">
+
+        	<div class="floatLeft">
+
+        		<div class="welldone_thanksbg">Thanks for shopping with Goo2o powered store. Visit us anytime, we are always open</div>
+
+                <div class="lh10">&nbsp;</div>
+
+                <div class="floatLeft welldone_orderno">Gift Certificate Order Number :  <strong>GC-<?php echo $this->gift_inserted_details ; ?></strong></div>
+
+            </div>
+
+            <div class="floatLeft"><img src="/images/secure/welldone_24_7.png" alt="24/7" title="24/7" /></div>
+
+        </div>
+
+        <div class="lh90">&nbsp;</div>
+
+        <div class="floatLeft">
+
+        	<div class="floatLeft select_saddress_heading"><strong>What's Next</strong></div>
+
+            <div class="lh10">&nbsp;</div>
+
+            <div class="floatLeft">
+
+                <div class="floatLeft">
+
+                    <div class="welldone_bullet"></div>
+
+                    <div class="checkout_signin_content floatLeft">We have sent a confirmation email to you with your order details .</div>
+
+                </div>
+
+                <div class="lh2">&nbsp;</div>
+
+               <div class="floatLeft">
+
+                    <div class="welldone_bullet"></div>
+
+                    <div class="checkout_signin_content floatLeft">You can see all your purchases in <a href="http://goo2ostore.com/myaccount/buyer/#buyer-purchase-list" class="track_link" title="My Gift Certificate.">My Gift Certificate.</a>.</div>
+
+                </div>
+
+                
+
+
+
+            </div>
+
+       </div>
+
+       <div class="lh30">&nbsp;</div>
+
+       <div class="floatRight">
+
+       		<div class="floatLeft"><a href="http://goo2ostore.com/myaccount/buyer/#buyer-purchase-list"><input type="image" src="/images/secure/view_order_details.gif" alt="VIEW ORDER DETAILS" title="VIEW ORDER DETAILS" /></a></div>
+
+            <div class="welldone_btnGap">&nbsp;</div>
+
+            <div class="floatLeft"><input type="image" src="/images/secure/continue_shopping.gif" alt="CONTINUE SHOPPING" title="CONTINUE SHOPPING" /></div>
+
+       </div>
+
+       <div class="lh60">&nbsp;</div>
+
+       <div class="welldone_underline"></div>
+
+       <div class="lh10">&nbsp;</div>
+
+       <div class="floatLeft">
+
+       		<div class="floatLeft select_saddress_heading"><strong>Get in touch with our support team</strong></div>
+
+        	<div class="lh20">&nbsp;</div>
+
+            <div class="floatLeft">
+
+            	<div class="welldone_wid155">
+
+                	<div class="welldone_emailicon"></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="edit_saddress_example"><strong>Shoot out an email:</strong></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="welldone_content floatLeft">Send an email at :</div>
+
+                    <div class="clearBoth welldone_supportcontent"><strong>support@iglobul.com</strong></div>
+
+                    <div class="lh5">&nbsp;</div>
+
+                    <div class="floatLeft welldone_examplecontent">(we will try to get back to you within 24hours)</div>
+
+                 </div>
+
+                 <div class="welldone_supportGap">&nbsp;</div>
+
+                 <div class="welldone_wid155">
+
+                	<div class="welldone_ringicon"></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="edit_saddress_example"><strong>Give us a ring:</strong></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="welldone_content floatLeft">Call us: <strong>0124-4338911 or 0124-3983111</strong></div>
+
+                    <div class="lh5">&nbsp;</div>
+
+                    <div class="floatLeft welldone_examplecontent">(Monday –Saturday, 10:00 AM to 7:00 PM)</div>
+
+                 </div>
+
+                 <div class="welldone_supportGap">&nbsp;</div>
+
+                 <div class="welldone_wid155">
+
+                	<div class="welldone_noteicon"></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="edit_saddress_example"><strong>Drop us a note:</strong></div>
+
+                    <div class="lh10">&nbsp;</div>
+
+                    <div class="welldone_content floatLeft">465, The Elements,<br />Udhyog Vihar, Phase V, Gurgaon-122016, Haryana,India.</div>
+
+                 </div>
+
+            </div>
+
+       </div>
+
+     </div>
+
+     <div class="edit_saddress_middleblock">&nbsp;</div>
+
+		<?php $count_receipt_email = count($this->final_gcpurchase['receipt_name']) ;
+
+              $total_amounts = ($count_receipt_email * $this->final_gcpurchase['gift_amount']);?>    
+
+        <div class="edit_saddress_rightblock">
+
+    	<div class="floatLeft">
+
+            <div class="floatLeft welldone_content">You have made a purchase of worth <strong>Rs.<?php echo $total_amounts;?></strong></div>
+
+            <div class="lh2">&nbsp;</div> 
+
+            <div class="floatLeft welldone_content">Your gift certificate will be sent via mail on <strong><?php echo $this->date_sending;?></strong></div>
+
+            
+
+        </div>
+
+       <div class="lh20">&nbsp;</div> 
+
+       <div class="welldone_rightblock">
+
+       		<div class="floatLeft welldone_rightblock_heading">Your shopped gift certificate</div>
+
+            <div class="welldone_underline"></div>
+
+            <div class="welldone_imageblock">
+
+            	 <div class="lh20">&nbsp;</div> 
+
+            	<div class="clearBoth" align="center">
+
+            		
+
+                	<div align="center" class="welldone_image"><img src="<?php echo HTTP_SADMIN; ?>/images/superadmin/design/thumbnail/<?php echo $this->gift_purchanse_date['thumb_image'];?>" alt="<?php echo $this->gift_purchanse_date['name'];?>" title="<?php echo $this->gift_purchanse_date['name'];?>" /></div>
+
+                    <div class="lh7">&nbsp;</div>
+
+                    <div align="center" class="gc_configure_content"><b><?php echo $this->gift_purchanse_date['name'] ; ?></b></div> 
+
+
+
+            	</div>
+
+                <div class="lh20">&nbsp;</div> 
+
+            
+
+            </div>
+
+       
+
+       
+
+       </div>
+
+    </div>
+
+    <!-- Body Block Ends here-->
+
+
+</div>
+

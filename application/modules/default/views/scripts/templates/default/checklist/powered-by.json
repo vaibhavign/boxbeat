@@ -1,0 +1,8 @@
+{
+	"css":["#powered-by" ,"#powered-by .heading",
+			"#powered-by .content ul","#powered-by .content ul li","#powered-by .content ul li a",
+			"#powered-by .content ul li a:hover"
+		  ]
+	
+			  
+}

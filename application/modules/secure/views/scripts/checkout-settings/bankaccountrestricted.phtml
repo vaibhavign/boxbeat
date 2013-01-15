@@ -1,0 +1,66 @@
+<table cellpadding="0" cellspacing="0" align="center" width="1000">
+	<tr>
+    	<!--LEFT PANEL starts from here-->
+    	<td width="260" valign="top">
+        	<div class="bank_account_restrictedLeftPanel">
+            	<div class="lh25">&nbsp;</div>
+            	<div class="businessDetialsLeftPanel">
+					
+               <?php
+			 		$request = Zend_Controller_Front::getInstance()->getRequest();
+					$controllerName = $request->getControllerName();
+					$actionName = $request->getActionName();
+					$genObj = new General();
+					//$controllerName = "Store";
+					$abc = $genObj->displaySettingMenuNew($controllerName,$actionName);
+					echo $abc;
+                                       // echo_pre($this->bankaccountDetails);
+				?>
+                
+            	</div>
+            	
+            </div>
+        </td>
+        <!--LEFT PANEL ends from here-->
+        <!--RIGHT PANEL starts from here-->
+        <td width="740" valign="top">
+        	<div class="bank_account_restrictedRightPanel">
+                <div class="lh25">&nbsp;</div>
+                   <div class="clearBoth">
+                        <div class="blueMainHeading">Store settings</div>
+                    <div class="lh15">&nbsp;</div>
+
+                    <div class="solidBorder">&nbsp;</div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft">
+                        <div class="floatLeft content_text16">Checkout</div>
+                        <div class="navArrow">&nbsp;</div>
+                        <div class="floatLeft content_text15Lh25"><b>Bank account restricted</b></div>
+                    </div>
+                    <div class="floatRight">
+                        <div class="backArrow"></div>
+                        <div class="floatLeft"><a href="/checkout-settings/bankaccountlisting" class="hyperLinkBlue13" title="Back to checkout">Back to checkout</a></div>
+                    </div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="solidBorder">&nbsp;</div>
+                     <div class="lh25">&nbsp;</div>
+
+                </div>
+                <div class="lh25">&nbsp;</div>
+                <div class="bankAccountContainer">Bank account : <?php echo $this->bankaccountDetails[0]['bankname']; ?>, XX-<?php echo substr($this->bankaccountDetails[0]['account_number'],-4,4);?> is restricted!!</div>
+                <div class="lh25">&nbsp;</div>
+                <div class="floatLeft greyText12Lh20">
+                   Goo2o has restricts your account as you had made several attempts for confirming the bank account with incorrect details. Unless this account is re-activated, you will not be able to receive any payments for the products sold from your online store.
+                </div>
+                <div class="lh15">&nbsp;</div>
+                 <div class="floatLeft greyText12Lh20">
+                To re-activate your existing bank account, contact Goo2o customer support and follow the instructions.
+                </div>
+                <div class="lh15">&nbsp;</div>
+                <div class="greyText12Lh20">To create a new bank account, <a href="/checkout-settings/addabankaccount" title="Click here" class="hyperLinkBlue12">Click here</a></div>
+                <div class="lh40">&nbsp;</div>
+           </div>
+        </td>
+        <!--RIGHT PANEL ends from here-->
+    </tr>
+</table>

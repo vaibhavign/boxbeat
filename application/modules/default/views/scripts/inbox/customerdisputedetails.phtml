@@ -1,0 +1,239 @@
+<link rel="stylesheet" type="text/css" href="/css/default/customerdisputedetails.css"/>
+<script language="javascript" type="text/javascript" src="/jscript/default/customer_dispute_details.js"></script>
+
+<?php $disputeDetail = $this->disputeDetail;
+$disputeMessages = $this->disputeMessages;
+$dropDown = $this->dropDown;
+$remark = $this->remark;
+$documents = $this->documents;
+$randDisputeid = rand(8888,99999);
+?>
+<table cellpadding="0" cellspacing="0" width="100%" border="0"><input type="hidden" name="disputeId" id="disputeId" value="<?php echo $disputeDetail['dispute_id'];?>" />
+        <tr>
+        	<td height="40"></td>
+        </tr>
+        <tr>
+        	<td valign="top">
+            	<table cellpadding="0" cellspacing="0" width="1000" border="0" align="center">
+                	<tr>
+                    	<td>
+                    	<div class="clearBoth">
+                                	<div class="main-top-heading">Dispute Details</div>
+                                    <div class="lh3">&nbsp;</div>
+                                    <div class="desc-text">View detailed information of a dispute raised against a transaction.</div>
+                                </div>
+                     	<div class="lh35">&nbsp;</div>
+                        </td>
+                     </tr>
+                	<tr>
+                    	<td valign="top" height="30">
+                        
+                        	<div class="clearBoth">
+                            	<div class="contentBlueHeading">Dispute against order item Id OR_<?php echo $disputeDetail['payment_module'];?>_<?php echo $disputeDetail['order_id'];?>_<?php echo $disputeDetail['order_item_id'];?></div>
+                                <div class="floatRight">
+                                <?php echo $dropDown;?>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td valign="top"><div class="borderBottom">&nbsp;</div></td>
+                    </tr>
+                    <tr> <td height="25"></td></tr>
+                	<tr>
+                		<td valign="top">
+                        	<div id="main-block-details">
+                            	<div class="table_heading">Dispute Summary</div>
+                                <div class="lh15">&nbsp;</div>
+                            	<div class="clearBoth">
+                                	<div class="table-top-bar">
+                                        <div class="wid10">&nbsp;</div>
+                                        <div class="wid145">Order Item Details</div>
+                                        <div class="wid288">Item Details</div>
+                                        <div class="wid288">Reason for Dispute</div>
+                                        <div class="wid182">Dispute raised by</div>
+										<div class="floatLeft">Status</div>
+									</div>
+                                    <div class="clearBoth">
+                                        <div class="orderDetails">
+                                            <div class="clearBoth content-text12Lh18">OR_<?php echo $disputeDetail['payment_module'];?>_<?php echo $disputeDetail['order_id'];?>_<?php echo $disputeDetail['order_item_id'];?></div>
+                                            <div class="lh3">&nbsp;</div>
+                                            <div class="clearBoth content-text12Lh18"><?php echo date('F j, Y',$disputeDetail['order_place_date']);?></div>
+                                            <div class="lh3">&nbsp;</div>
+                                            <div class="clearBoth content-text12Lh18"><?php echo $disputeDetail['status_name'];?></div>
+                                        </div>
+                                        <div class="borderRight"></div>
+                                        <div class="reason_itemDetails"><?php echo $disputeDetail[''];?>
+                                            <div class="clearBoth content-text12Lh18"><b><?php echo $disputeDetail['product_name'];?></b></div>
+                                            <div class="lh3">&nbsp;</div>
+                                             <?php if($orderItemDetails['product_condition']==0){
+													$condition = 'New';
+													}elseif($orderItemDetails['product_condition']==1){
+													$condition = 'Old';	
+													}?>
+                                            <div class="clearBoth content-text12Lh18">Condition: Used like <?php echo $condition;?></div>
+                                            <div class="lh3">&nbsp;</div>
+                                            <div class="clearBoth content-text12Lh18">Variation: <?php echo $disputeDetail['product_variation'];?></div>
+                                            <div class="lh3">&nbsp;</div>
+                                            <div class="clearBoth content-text12Lh18">Product Id: <?php echo $disputeDetail['product_id'];?></div>
+                                        </div>
+                                        <div class="borderRight"></div>
+                                        <div class="reason_itemDetails">
+                                            <div class="clearBoth content-text12Lh18"><?php echo $disputeDetail['reasonName'];?></div>
+                                            <div class="lh15">&nbsp;</div>
+                                            <div class="clearBoth content-text12Lh18"><?php echo $disputeDetail['subreason_name'];?></div>
+                                        </div>
+                                        <div class="borderRight"></div>
+                                        <div class="disputeRaised">
+                                        	<div class="clearBoth content-text12Lh18"><?php echo $disputeDetail['dispute_raised_by_name'];?></div>
+                                        </div>
+                                        <div class="borderRight"></div>
+                                        <div class="Status content-text12Lh18">
+                                        <?php if($disputeDetail['dispute_status']==1){
+												$dispute_name= 'Dispute raised';
+											}elseif($disputeDetail['dispute_status']==2){
+												$dispute_name= 'Claim raised';
+											}elseif($disputeDetail['dispute_status']==3){
+												$dispute_name= 'Solved';
+											}elseif($disputeDetail['dispute_status']==4){
+												$dispute_name= 'Closed';
+											}?>
+                                        	<div class="clearBoth content-text12Lh18"><?php echo $dispute_name;?></div>
+                                        </div>
+                                        <div class="lh15">&nbsp;</div>
+                                     </div>
+                                     <div class="clearBoth">
+                                        	<div class="wid10">&nbsp;</div>
+                                            <div class="content-text12Lh18"><?php echo $remark;?></i></div>
+                                        </div>
+                                </div>
+                                <div class="lh45">&nbsp;</div>
+                                <div class="table_heading clearBoth">Conversation</div>
+                                <div class="lh5">&nbsp;</div>
+                                <div class="conversation-container">
+                                <?php if($disputeMessages['request_description']!=''){?>
+                            		<ul>
+                                        <li class="dotted_border">
+                                        <li <?php if($this->userId==$disputeDetail['request_buyer_id']){echo 'class = "dotted_border selected"';} else {}?>>
+                                            <div class="cdispute_container">
+                                                <div class="innerblock">
+                                                    <div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                    <?php if($this->userId==$disputeDetail['request_buyer_id']){
+															$name = 'me';
+															}
+															elseif($this->userId==$disputeDetail['request_seller_id']){
+															$name = 'me';		
+															}
+														?>
+                                                        <div class="floatLeft"><a href="#" class="me_link" title="Me"><?php echo $name; ?></a></div>
+                                                        <div class="clearBoth">
+                                                            <div class="wid900">
+                                                                <div class="clearBoth"><?php echo $disputeMessages['request_description']; ?></div>
+                                                            </div>
+							<div class="floatRight">
+                                                                <div class="date_text"></div>
+                                                                <div class="date_text"><?php echo date("d/m/y g:i a",$disputeDetail['order_place_date']);?></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        </li>
+                                      
+                                    </ul>
+                                    <?php }?>
+                                
+                                <?php for ($i = 0; $i < count($disputeMessages)-1; $i++) { ?>
+                                	<ul>
+                                    	<li <?php if ($disputeMessages['name'] == me) {echo 'class = "dotted_border selected"';} else {} ?>>
+                                        	<div class="conversation_liContainer">
+                                            	<div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                            	<div class="floatLeft">
+                                                	
+                                                    <div class="clearBoth">
+                                                		<div class="content_block">
+                                                        	<div class="clearBoth"><a href="#" class="user_link" title="me"><?php echo $disputeMessages[$i]['name']; ?></a></div>
+                                                            <div class="clearBoth">
+                                                            	<div class="wid920">
+                                                                <div class="wid815">
+                                                                <div class="clearBoth"><?php echo $disputeMessages[$i]['message'];?></div>
+                                                            </div>
+                                                        		<div class="floatRight">
+                                                        	<div class="date_text"><?php echo date('d/m/y   h:i A',strtotime($disputeMessages[$i]['time']));?></div>
+                                                        </div>
+                                                        	</div>
+                                                            </div>
+                                                            
+                                                            
+                                                    	</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <?php }?>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td height="50" valign="top"></td>
+                    </tr>
+                    <tr>
+                    	<td valign="top">
+                        	<div id="Cmsgbox">
+                            	<div class="imagecontainer"><img src="/images/default/user_pic.png" title="User Image"  alt="User Image"/></div>
+                            	<div class="msgboxbg">
+                              		<textarea cols="0" rows="0" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(this.value == '') this.value = this.defaultValue;">Your message here...</textarea>  
+                                </div>
+                                <div class="clearBoth">
+                                	<div class="reply_btn"><img src="/images/default/reply_dim_btn.png" alt="Reply" title="Reply" /></div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                     <tr>
+                    	<td height="90" valign="top"></td>
+                    </tr>
+                    <tr>
+                    	<td valign="top">
+                        	<div class="bottomLinks">
+                            	<div class="dotted_border1">&nbsp;</div>
+                                <div class="lh10">&nbsp;</div>
+                                <div class="downloadText">Downloads:</div>
+                                <div class="lh10">&nbsp;</div>
+                                <?php for($i=0;$i<count($documents['downloaded']);$i++){?>
+                                <div class="clearBoth">
+                                	<ul>
+                                    	<li><a href="#" title="<?php echo $documents['downloaded'][$i]?>"><?php echo $documents['downloaded'][$i];?></a></li>
+                                    </ul>
+                                </div>
+                                <?php }?>
+                                <div class="lh20">&nbsp;</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td valign="top">
+                        	<div class="bottomLinks">
+                            	<div class="dotted_border1">&nbsp;</div>
+                                <div class="lh10">&nbsp;</div>
+                                <div class="downloadText">Uploads:</div>
+                                <div class="lh10">&nbsp;</div>
+                                <?php for($i=0;$i<count($documents['uploaded']);$i++){?>
+                                <div class="clearBoth">
+                                	<ul>
+                                    	<li><a href="#" title="<?php echo $documents['uploaded'][$i]?>"><?php echo $documents['uploaded'][$i];?></a></li>
+                                    </ul>
+                                </div>
+                                <?php }?>
+                            </div><input type="hidden" name="randdisputeid" id="randdisputeid" value="<?php echo $disputeDetail['dispute_id'];  ?>" />
+                        </td>
+                    </tr>
+                    <tr><td height="50"></td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div id="lightbox"> </div>

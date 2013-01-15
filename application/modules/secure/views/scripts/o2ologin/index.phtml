@@ -1,0 +1,138 @@
+<?php 
+ $height='158';
+
+//echo "<pre>";
+//print_r($this);
+
+?>
+
+<form name="loginform" id="loginform" method="post">
+	<table cellpadding="0" cellspacing="0" border="0" width="100%">
+		<tr>
+			<td height="18" bgcolor="3c3c3c"></td>
+		</tr>
+		<tr>
+			<td valign="top" align="center" bgcolor="3c3c3c">
+				<div class="floatLeft">
+					<div class="goo2ologinlogo"><img src="/images/secure/goo2ologin/goo2ologoblack.png" alt="Go o2o" title="Go o2o" /></div>
+					<?php if($_GET[type]!=5){?>
+					<div class="goo2ologin_heading">Goo2o Login</div>
+					<?php } ?>
+				</div>
+			</td>
+		</tr>
+		<tr>
+			<td height="10" bgcolor="3c3c3c"></td>
+		</tr>
+		
+		<tr>
+			<td valign="top"><div class="goo2ologin_seperator"></div></td>
+		</tr>
+		<tr>
+			<td height="30"></td>
+		</tr>
+		<tr>
+			<td><div class="floatLeft goo2ologin_content paddLeft35">Login to use your Goo2o ID with <b><?php echo $_GET['store']; ?></b></div></td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" width="431" align="center">
+					<?php if($_GET['type']!=5){?>
+					<tr>
+						<td valign="top">
+							<div class="goo2ologin_container">
+								
+								<div class="lh30">&nbsp;</div>
+								<div class="floatLeft">
+									<div class="floatLeft">
+										<div class="wid142 goo2ologin_emailheading">Email address/username </div>
+										<div class="goo2ologin_semicolon"> :</div>
+										<div class="floatLeft">
+											<input type="text" class="goo2ologin_emailinput" id="txtname"  value="<?php if($this->usernamepost != '') { echo $this->usernamepost; } ?>" name="username"/>
+											<?php  if($this->userErr){ $height=$height-5;?>
+											<div class="suggestive-container" id="show_hide_password" style="display:block;font-size: 11px;
+				font-family: Arial, Helvetica, sans-serif;
+				color: red;
+				line-height: 20px"> It can’t be blank </div>
+											<?php } ?>
+										</div>
+										<div class="lh10">&nbsp;</div>
+										<div class="floatLeft">
+											<div class="wid142 goo2ologin_emailheading">Password </div>
+											<div class="goo2ologin_semicolon"> :</div>
+											<div class="floatLeft">
+												<div class="floatLeft">
+													<input id="password" type="password" class="goo2ologin_emailinput" value="<?php if($this->passwordpost!= '') { echo $this->passwordpost; } ?>" name="password"  />
+													<?php  if($this->passErr){ $height=$height-11;?>
+													<div class="suggestive-container" id="show_hide_password" style="display:block;font-size: 11px;
+				font-family: Arial, Helvetica, sans-serif;
+				color: red;
+				line-height: 20px"> It can’t be blank </div>
+													<?php } ?>
+												</div>
+												<div class="lh20">&nbsp;</div>
+												<div class="floatLeft"><a href="javascript:void(0)" class="forgot_link" onclick="self.close();opener.parent.location='<?php echo HTTP_SECURE ?>/login/forgetpassword'">Forgot your password?</a></div>
+												<div class="lh15">&nbsp;</div>
+												<div class="floatLeft">
+													<div class="floatLeft goo2ologin_checkbox">
+														<input name="remember"   type="checkbox" <?php if($_COOKIE['c_n']!='' || $this->captchapost==1){?> checked="checked" <?php } ?>>
+													</div>
+													<div class="floatLeft goo2ologin_keeplogintext">Keep me logged in</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td valign="top">
+							<?php if($this->passwordpost!='' && $this->usernamepost!=''){
+								$height='98';
+							?>
+							<div class="floatLeft" style="width:200px;">&nbsp;</div>
+							<div class="sign_in_errorMsgBox floatLeft" style="margin-top:20px;" >Wrong username/email and password combination!</div>
+							<?php } ?>
+						</td>
+					</tr>
+					<tr>
+						<td height="<?php echo $height?>px"></td>
+					</tr>
+					<?php }else {?>
+					<tr>
+						<td valign="top" bgcolor="#ececec" height="49"><div class="wid399" style="font:Verdana, Arial, Helvetica, sans-serif ; font-size:12px; margin-top:10px;"> Any orders placed will not be honored or fulfilled as this facility is currently not available for this store. It will be available soon…. </div></td>
+					</tr>
+					<?php } ?>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table cellpadding="0" cellspacing="0" border="0" valign="top" bgcolor="#ececec" height="49" style="padding:0 10px; border-top:1px solid #c4c4c4;position:absolute; bottom:0px;" width="100%">
+					<tr>					
+						<td>
+							<div class="wid399">
+								<div class="floatLeft"><a href="javascript:void(0)" class="creategoo2o_link" title="Create a Goo2o ID" onclick="<?php $_SESSION['mypage']=$_GET['id'];$_SESSION['fromstore']=$_GET['store'];$_SESSION['spk']=$_GET['spk'];?>self.close();window.open('<?php echo HTTP_SECURE ?>/registration','blank')">Create a Goo2o ID</a></div>
+								<div class="floatRight">
+									<div class="lh10">&nbsp;</div>
+									<div class="floatLeft">
+										<input type="image" src="/images/secure/goo2ologin/goo2ologin_btn.png" alt="Login" title="Login" id="submit" name="login" />
+									</div>
+									<div class="goo2obuttongap">&nbsp;</div>
+									<div class="floatLeft">
+										<input type="image" src="/images/secure/goo2ologin/goo2ocancel_btn.png" alt="Cancel" title="Cancel" onclick="self.close();" />
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<input type="hidden" name="action" id="action" value="process"  />
+	<input type="hidden" name="tab" value="<?php echo $this->tabs ;?>" />
+	<input type="hidden" name="pkey" value="<?php echo $this->privatekey;?>" />
+	
+</form>

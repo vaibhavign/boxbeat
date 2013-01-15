@@ -1,0 +1,256 @@
+<?if($_GET['email']==''){?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<? } ?>
+      <!--<title><?php //echo PAGE_TITLE.' ';  ?></title>-->
+    	<?php echo $this->headTitle().' ';  ?>
+        <meta name="keywords" content=" <?php echo PAGE_META_KEYWORD ; ?>" />
+        <meta name="description" content= " <?php echo PAGE_META_DESCRIPTION ; ?> " />
+        <?php //echo $this->headTitle() ?>
+        <?php //echo $this->headLink(); ?>
+        <?php echo $this->cssHelper(); ?>
+        <?php //echo $this->headScript(); ?>
+        <?php echo $this->JavascriptHelper(); ?>
+        <link href="https://goo2ostore.com/css/secure/admin.css" media="screen" rel="stylesheet" type="text/css" >
+        <?php
+     // TITLE_SEPERATOR TITLE_SEPERATOR_TEXT
+        //echo getAnalyticCode($_SESSION['USER']['userId']);// function saved in general_functions.php ; takes user id as a paramenter and return the analytic code if saved.
+        ?>
+        <?php // include('jsfeedback.phtml');?>
+        <!--
+        <script src="/jscript/admin/jquery.tabSlideOut.v1.3.js"></script>
+        <script>
+            $(function(){
+                $('.slide-out-div').tabSlideOut({
+                    tabHandle: '.handle',                              //class of the element that will be your tab
+                    pathToTabImage: '//images/admin/contact_tab.gif',          //path to the image for the tab (optionaly can be set using css)
+                    imageHeight: '122px',                               //height of tab image
+                    imageWidth: '40px',                               //width of tab image
+                    tabLocation: 'right',                               //side of screen where tab lives, top, right, bottom, or left
+                    speed: 300,                                        //speed of animation
+                    action: 'click',                                   //options: 'click' or 'hover', action to trigger animation
+                    topPos: '200px',                                   //position from the top
+                    fixedPosition: false                               //options: true makes it stick(fixed position) on scroll
+                });
+            });
+        </script>
+        <style type="text/css" media="screen">
+            .slide-out-div {
+                padding: 20px;
+                width: 1000px;
+                background: #f2f2f2;
+                border: #29216d 2px solid;
+            }
+-->
+        <script type="text/javascript" >
+   
+/*$(document).ready(function(){$("ul.subnav").parent().append("<span style='float:right; width:32px;'></span>");$("ul.topnav li span").hover(function(){$(this).parent().find("ul.subnav").slideDown('fast').show();$(this).parent().hover(function(){},function(){$(this).parent().find("ul.subnav").slideUp('slow')})}).hover(function(){$(this).addClass("subhover")},function(){$(this).removeClass("subhover")})}); */
+jQuery(document).ready(function () {
+    jQuery('.atab').bind('mouseover', function () {
+        jQuery('.submenu').hide();
+        var arrclass = jQuery(this).attr('class').split(' ');
+        var classarrow = arrclass[1].split('Tab');
+        if (classarrow[1] == "ActiveArrow") {
+            $('.' + classarrow[0].toLowerCase() + 'Tabmenu').addClass(classarrow[0].toLowerCase() + 'TabActivemenu').removeClass(classarrow[0].toLowerCase() + 'Tabmenu');
+            jQuery('.' + classarrow[0].toLowerCase() + 'TabActivemenu').show()
+        }
+        var tabId = jQuery(this).parent().attr('id');
+        jQuery('.' + tabId + 'Tabmenu').show()
+    });
+    jQuery('.submenu').mouseover(function () {
+        jQuery('.submenu').hide();
+        jQuery(this).show()
+    });
+    jQuery('.submenu').mouseout(function () {
+        var tempvar = jQuery(this).attr('rel');
+        var tempvar1 = jQuery(this).parent().attr('rel');
+        if (tempvar != tempvar1) {
+            jQuery(this).hide()
+        }
+    });
+    jQuery('#mainWrapper').bind('mousemove', function (e) {
+        var clientCoords = "( " + e.clientX + ", " + e.clientY + " )";
+        var submenuDivOffset = '';
+        var submenuDivOffsetHeight = '';
+        var submenuDivOffsetWidth = '';
+        divHeight = jQuery(this).css('height').split('px');
+        heightDiv = parseInt(divHeight[0]);
+        jQuery('.submenu').each(function () {
+            if (jQuery(this).css('display') == 'block') {
+                divHeight = jQuery(this).css('height').split('px');
+                submenuDivOffsetHeight = parseInt(divHeight[0]);
+                divWidth = jQuery(this).css('width').split('px');
+                submenuDivOffsetWidth = parseInt(divWidth[0]);
+                var offset = jQuery(this);
+                submenuDivOffset = offset.offset()
+            }
+        });
+        if (e.clientY > submenuDivOffsetHeight + submenuDivOffset.top || e.clientX < submenuDivOffset.left || e.clientX > submenuDivOffset.left + submenuDivOffsetWidth) {
+            jQuery('.submenu').hide()
+        }
+    });
+    jQuery('.atab').bind('mouseout', function () {
+        jQuery('.maintab').bind('mouseover', function () {
+            var tempvar = jQuery(this).attr('rel');
+            var tempvar1 = '';
+            jQuery('.submenu').each(function () {
+                if (jQuery(this).css('display') == 'block') tempvar1 = jQuery(this).attr('rel')
+            });
+            if (tempvar != tempvar1) {
+                jQuery('.submenu').hide()
+            }
+            var arrclass = jQuery(this).attr('class').split(' ');
+            var classarrow = arrclass[1].split('Tab');
+            var tabId = jQuery(this).children().attr('id');
+            var splitme = tabId.split('id');
+            jQuery('.' + splitme[0] + 'Tabmenu').css('display');
+            if (jQuery('.' + splitme[0] + 'Tabmenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'Tabmenu').show()
+            } else if (jQuery('.' + splitme[0] + 'TabActivemenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'TabActivemenu').show()
+            } else {}
+        });
+        jQuery('.maintab').bind('mouseout', function () {
+            var tempvar = jQuery(this).attr('rel');
+            var tempvar1 = jQuery(this).children().attr('rel');
+            if (tempvar != tempvar1) {
+                jQuery('.submenu').hide()
+            }
+            var tabId = jQuery(this).children().attr('id');
+            var splitme = tabId.split('id');
+            if (jQuery('.' + splitme[0] + 'Tabmenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'Tabmenu').show()
+            } else if (jQuery('.' + splitme[0] + 'TabActivemenu').css('display') == 'block') {
+                jQuery('.' + splitme[0] + 'TabActivemenu').show()
+            } else {}
+        })
+    });
+    jQuery('.o2ojsblock ,.logoBlock').bind('mouseover', function () {
+        jQuery('.submenu').hide()
+    });
+    jQuery('.create_ddown').mouseover(function () {
+        jQuery('.addClass').removeClass('create_tab').addClass('create_tabActive');
+        jQuery('.new_dropDown').show()
+    });
+    jQuery('.new_dropDown').click(function () {
+        jQuery('.addClass').addClass('create_tab').removeClass('create_tabActive');
+        jQuery('.new_dropDown').hide()
+    });
+    jQuery('.ChangeClass').click(function () {
+        jQuery('.HTabBlock').hide();
+        if (jQuery(this).hasClass('selectedheader')) {
+            //jQuery('.HTabBlock2').hide();
+            jQuery(this).removeClass('selectedheader')
+        } else {
+            //jQuery('.HTabBlock2').show();
+            jQuery(this).addClass('selectedheader');
+            jQuery('.accclass').removeClass('selectedheader')
+        }
+    });
+    /*jQuery('.accclass').click(function () {
+        //jQuery('.HTabBlock').hide();
+        if (jQuery(this).hasClass('selectedheader')) {
+            jQuery(this).removeClass('selectedheader')
+        } else {
+            //jQuery('.HTabBlock2').hide();
+            jQuery('.ChangeClass').removeClass('selectedheader');
+            jQuery(this).addClass('selectedheader')
+        }
+    });
+	jQuery('.inbaccclass').click(function () {
+        //jQuery('.HTabBlock').hide();
+        if (jQuery(this).hasClass('selectedheader')) {
+            jQuery(this).removeClass('selectedheader')
+        } else {
+            //jQuery('.HTabBlock2').hide();
+            jQuery('.ChangeClass').removeClass('selectedheader');
+            jQuery(this).addClass('selectedheader')
+        }
+    });*/
+    jQuery('.maintab').click(function (e) {
+        var redirectURL = jQuery(this).attr('rel');
+		if(jQuery('#msgblock2').children().hasClass('headerTopMSGBlock')){
+		if (e.clientY < 205 && e.clientY > 172) {
+            if (redirectURL != undefined) {
+                window.location.href = "/admin/" + redirectURL + "/" + redirectURL + "panel"
+            }
+        }
+		} else {
+		        if (e.clientY < 147 && e.clientY > 125) {
+            if (redirectURL != undefined) {
+                window.location.href = "/admin/" + redirectURL + "/" + redirectURL + "panel"
+            }
+        }
+		}
+		/*
+		if (e.clientY < 260 && e.clientY > 227) {
+            if (redirectURL != undefined) {
+                window.location.href = "/admin/" + redirectURL + "/#" + redirectURL + "panel"
+            }
+        }
+		*/
+    })
+});
+//$(function(){
+  // Syntax highlighter.  SyntaxHighlighter.highlight();
+//});
+jQuery(document).keydown(function(e) {
+    // ESCAPE key pressed
+    if (e.keyCode == 27) {
+        if(jQuery('#storenamedropdown').is(':visible'))
+        	jQuery('#storenamedropdown').hide();
+    }
+});
+jQuery(document).ready(function(){
+    jQuery('#inboxNotificationMSG').css('top',$(window).height()-100);
+       // setInterval('jQuery.newMessageUpdater()',10000);
+    jQuery('#closeupdater').bind('click',function(){
+          jQuery.closeupdater();
+         })
+	jQuery("#seller_header_block, #select_arrow").bind('click',function(){
+		jQuery('#storenamedropdown').toggle();
+		jQuery('.storenameddown_default').toggle();
+	});
+});
+        </script>
+<?if($_GET['email']==''){?>
+    </head>
+    <body>
+<?php }  $form='<form name="goo2oform" id="goo2oform" method="post" action="">';
+								$form.="<input type='hidden' name='authid' value='".Zend_Session::getId()."'>";
+								$form.="<input type='hidden' name='sessionvalue'  value='". json_encode($_SESSION)."'>";
+								
+								$form.='</form>';
+								echo $form;?>
+        
+		<div class="clearBoth" id="" ><?php include "adminheader.phtml"; ?></div>
+<?if($_GET['email']==''){?>
+        <div id="mainWrapper" class="clearBoth">
+			<table cellpadding="0" cellspacing="0" border="0" width="1000" align="center">
+                <tr>
+                    <td>
+                       <div class="clearBoth" style="min-height:400px;"><?php echo $this->layout()->content ?></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="60">&nbsp;</td>
+                </tr>
+            </table>
+		
+            <?php include "adminfooter.phtml";  ?>
+        </div>
+<?php } 
+
+								
+								//echo '<script>document.forms["goo2oform"].submit();</script>';
+								
+?>
+
+<?if($_GET['email']==''){?>
+    </body>
+
+</html> <?php } ?> <?php
+            //  echo $this->layout()->content ?>

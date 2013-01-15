@@ -1,0 +1,256 @@
+<div class="checkout_mainwidth">
+	<!-- Body Block Start From here--> 
+    <div class="checkout_registration_width">
+<div class="lh35">&nbsp;</div> 
+	 <div class="floatLeft"><img src="/images/secure/thanks_shooping.png" alt="Thanks Shopping with us" title="Thanks Shopping with us" /></div>
+    <div class="lh35">&nbsp;</div> 
+    <div class="floatLeft welldone_content">You have <?php   echo $this->totalitem;?> items worth <strong>Rs. <?php  echo  number_format((($this->totalamount)-($this->minusDisCount)),2,'.','');  ?></strong>. Please note your order number for future reference</div>
+     <div class="lh15">&nbsp;</div> 
+	 <div class="tableTopBar">
+	 	<div class="wid395">Store</div>
+		<div class="wid565">Your shopped items</div>
+	</div>
+	<?php 
+	
+	$obj = new Encryption();
+	//echo "<pre>";
+	//print_r( get_class_methods('Encryption'));
+	foreach($this->welldonedata as $wellkey=>$wellval) {// echo "<pre>"; print_r($wellval[0]->store_api_key); ?>
+	<div class="table_content">
+	<div class="lh10">&nbsp;</div> 
+		<div class="floatLeft">
+			<div class="wid395">
+			<div class="floatLeft "><a href="<?php echo $wellval[0]->store_api_key[0]['mallurl'] ?>" target="_blank" class="easyshop_content" title="<?php  echo $wellval[0]->store_api_key[0]['title'] ?>"><?php  echo $wellval[0]->store_api_key[0]['title'] ?></a></div>
+			<div class="lh10">&nbsp;</div> 
+			<?php if($wellval[0]->store_api_key[0]['trade_activation']==1){?>
+			<div class="floatLeft"><a href="<?php  echo HTTP_SERVER.'/myaccount/buyer/#purchase-details/oid/'.$obj->encode($this->welldonedata[$wellkey]['orderid']); ?>" class="easyshop_ordercontent" target="_blank">OR-<?php  echo $wellval[0]->store_api_key[0]['mallid'] ?>-<?php echo $this->welldonedata[$wellkey]['orderid']?></a></div>
+			 <div class="lh35">&nbsp;</div> 
+			 <div class="floatLeft welldone_standardtext">View <a href="/cart/acknowledgement/oid/<?php echo $this->welldonedata[$wellkey]['orderid']?>" class="receipt_link" title="acknowledgement receipt" target="_blank">acknowledgement receipt</a></div>
+		</div>
+		<?php }else {?>
+<div class="floatLeft easyshop_ordercontent"></div>
+			 <div class="lh35">&nbsp;</div> 
+			 <div class="floatLeft welldone_standardtext" style="color:red;">Any order placed on this store will not be completed because this store is currently under construction.</div>
+		</div>
+		<?php } ?>
+			<div class="wid565">
+			<div class="shopped_item">
+				<ul>
+				<?php foreach($wellval as $k=>$val){ if($val->product_name=='') continue; ?>
+					<li>
+						<div class="wid106">
+							<div class="wid92" align="center"><a href="<?php echo $val->product_url;?>" target="_blank"><img src="<?php echo $val->productImageSrc;?>" alt="<?php echo $val->product_name;?>" title="<?php echo $val->product_name;?>" align="center" /></a></div>
+							<div class="lh10">&nbsp;</div>
+							<div align="center"><a href="<?php echo $val->product_url;?>" title="<?php echo $val->product_name;?>"  target="_blank" class="shoppeditem_link"><?php echo $val->product_name;?></a></div>
+						</div>
+					
+					</li>
+				<?php } ?>	
+				
+				</ul>
+				
+			
+			</div>
+		</div>
+		</div>
+	</div>
+<div class="welldone_underline"></div>
+	<?php } ?>
+	<!--<div class="welldone_underline"></div>
+	<div class="table_content">
+	<div class="lh10">&nbsp;</div> 
+		<div class="floatLeft">
+			<div class="wid395">
+			<div class="floatLeft"><a href="#" class="easyshop_content" title="Easy Shop Store">Easy Shop Store</a></div>
+			<div class="lh10">&nbsp;</div> 
+			<div class="floatLeft"><a href="#" class="easyshop_ordercontent" title="OR_123456">OR_123456</a></div>
+			 <div class="lh35">&nbsp;</div> 
+			 <div class="floatLeft welldone_standardtext">View <a href="#" class="receipt_link" title="acknowledgement receipt">acknowledgement receipt</a></div>
+		</div>
+			<div class="wid565">
+			<div class="shopped_item">
+				<ul>
+					<li>
+						<div class="wid106">
+							<div class="wid92"><a href="#"><img src="images/welldone_thumb.png" alt="thumb" title="thumb" /></a></div>
+							<div class="lh10">&nbsp;</div>
+							<div align="center"><a href="#" title="Apple iPhone 3 8GB" class="shoppeditem_link">Apple iPhone 3 8GB</a></div>
+						</div>
+					
+					</li>
+					<li>
+						<div class="wid106">
+							<div class="wid92"><a href="#"><img src="images/welldone_thumb.png" alt="thumb" title="thumb" /></a></div>
+							<div class="lh10">&nbsp;</div>
+							<div align="center"><a href="#" title="Apple iPhone 3 8GB" class="shoppeditem_link">Apple iPhone 3 8GB Apple iPhone 3 8GB</a></div>
+						</div>
+					
+					</li>
+					<li>
+						<div class="wid106">
+							<div class="wid92"><a href="#"><img src="images/welldone_thumb.png" alt="thumb" title="thumb" /></a></div>
+							<div class="lh10">&nbsp;</div>
+							<div align="center"><a href="#" title="Apple iPhone 3 8GB" class="shoppeditem_link">Apple iPhone 3 8GB</a></div>
+						</div>
+					
+					</li>
+					<li>
+						<div class="wid106">
+							<div class="wid92"><a href="#"><img src="images/welldone_thumb.png" alt="thumb" title="thumb" /></a></div>
+							<div class="lh10">&nbsp;</div>
+							<div align="center"><a href="#" title="Apple iPhone 3 8GB" class="shoppeditem_link">Apple iPhone 3 8GB</a></div>
+						</div>
+					
+					</li>
+				</ul>
+				
+			
+			</div>
+		</div>
+		</div>
+	</div><div class="welldone_underline"></div>-->
+	
+	<div class="lh40">&nbsp;</div>
+	<div class="floatLeft">
+		<div class="floatLeft welldone_content"><strong>What’s Next</strong></div>
+		<div class="lh15">&nbsp;</div> 
+		<div class="floatLeft">
+			<div class="welldone_arrow"></div>
+			<div class="floatLeft welldone_standardtext">You can see your all purchases  in <a href="<?php echo HTTP_SERVER.'/myaccount/buyer/#purchase-listing'?>" class="receipt_link" title="my purchases" target="_blank">my purchases</a>.</div>		</div>
+		<div class="lh10">&nbsp;</div> 
+		<div class="floatLeft">
+			<div class="welldone_arrow"></div>
+			<div class="floatLeft welldone_standardtext">In case of any query, you can always start a conversation with seller from your <a href="<?php echo HTTP_SERVER.'/inbox/#list'?>" class="receipt_link" title="inbox" target="_blank">inbox</a> or <a href="<?php echo HTTP_SERVER.'/myaccount/buyer/#purchase-listing'?>" class="receipt_link" title="my purchases" target="_blank">my purchases</a>.</div>		
+			</div>
+	
+	
+	</div>
+	<div class="lh70">&nbsp;</div>
+	<div align="center"><input type="image" src="/images/secure/backtomyaccount_btn.png" alt="BACK TO MY ACCOUNT" title="BACK TO MY ACCOUNT" onclick="window.location='<?php echo HTTP_SERVER.'/myaccount'?>'" /></div>
+	
+    
+    <!-- Body Block Ends here-->
+	<div class="lh145">&nbsp;</div>
+	
+	
+</div>
+</div>
+</div>
+<!--<div class="checkout_mainwidth">
+<!-- Body Block Start From here
+    <div class="lh35">&nbsp;</div> 
+    <div class="edit_saddress_leftblock">
+    	<div class="clearBoth">
+        	<div class="floatLeft">
+        		<div class="welldone_thanksbg">Thanks for shopping with <span class="goo2o">goo2o.com</span> Visit us anytime, we are always open</div>
+                <div class="lh10">&nbsp;</div>
+                <div class="floatLeft welldone_orderno">Order Number : <strong>OR-<?php echo $paymentmode_type; ?>-<?php echo $order_no; ?></strong></div>
+            </div>
+            <div class="floatLeft"><img src="/images/secure/welldone_24_7.png" alt="24/7" title="24/7" /></div>
+        </div>
+        <div class="lh90">&nbsp;</div>
+        <div class="floatLeft">
+        	<div class="floatLeft select_saddress_heading"><strong>What’s Next</strong></div>
+            <div class="lh10">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="floatLeft">
+                    <div class="welldone_bullet"></div>
+                    <div class="checkout_signin_content floatLeft">We have sent a confirmation email to you with your order details .</div>
+                </div>
+                <div class="lh2">&nbsp;</div>
+               <div class="floatLeft">
+                    <div class="welldone_bullet"></div>
+                    <div class="checkout_signin_content floatLeft">To see the current status of your  order, <a href="#" class="track_link" title="track my order">track my order</a>.</div>
+                </div>
+                <div class="lh2">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="welldone_bullet"></div>
+                    <div class="checkout_signin_content floatLeft">You can see your all purchases  in <a href="#" class="track_link" title="my purchases">my purchases</a>.</div>
+                </div>
+
+            </div>
+       </div>
+       <div class="lh30">&nbsp;</div>
+       <div class="welldone_btnblock">
+       		<div class="floatLeft"><input type="image" src="/images/secure/view_orderdetail_btn.png" alt="View order details" title="View order details" /></div>
+            <div class="welldone_btnGap">&nbsp;</div>
+            <div class="floatLeft"><input type="image" src="/images/secure/continue_shopping_btn.png" alt="Continue shopping" title="Continue shopping" /></div>
+       </div>
+       <div class="lh60">&nbsp;</div>
+       <div class="welldone_underline"></div>
+       <div class="lh10">&nbsp;</div>
+       <div class="floatLeft">
+       		<div class="floatLeft select_saddress_heading"><strong>Get in touch with our support team</strong></div>
+        	<div class="lh20">&nbsp;</div>
+            <div class="floatLeft">
+            	<div class="welldone_wid155">
+                	<div class="welldone_emailicon"></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="edit_saddress_example"><strong>Shoot out an email:</strong></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="welldone_content floatLeft">Send an email at :</div>
+                    <div class="clearBoth welldone_supportcontent"><strong>support@iglobul.com</strong></div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft welldone_examplecontent">(we will try to get back to you within 24hours)</div>
+                 </div>
+                 <div class="welldone_supportGap">&nbsp;</div>
+                 <div class="welldone_wid155">
+                	<div class="welldone_ringicon"></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="edit_saddress_example"><strong>Give us a ring:</strong></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="welldone_content floatLeft">Call us: <strong>0124-4338911 or 0124-3983111</strong></div>
+                    <div class="lh5">&nbsp;</div>
+                    <div class="floatLeft welldone_examplecontent">(Monday –Saturday, 10:00 AM to 7:00 PM)</div>
+                 </div>
+                 <div class="welldone_supportGap">&nbsp;</div>
+                 <div class="welldone_wid155">
+                	<div class="welldone_noteicon"></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="edit_saddress_example"><strong>Drop us a note:</strong></div>
+                    <div class="lh10">&nbsp;</div>
+                    <div class="welldone_content floatLeft">465, The Elements,<br />Udhyog Vihar, Phase V, Gurgaon-122016, Haryana,India.</div>
+                 </div>
+            </div>
+       </div>
+     </div>
+     <div class="edit_saddress_middleblock">&nbsp;</div>
+    <div class="edit_saddress_rightblock">
+    	<div class="floatLeft">
+            <div class="floatLeft welldone_content">You have <?php echo count($data); ?> items worth <strong>Rs. <?php echo $total_pamt; ?></strong></div>
+            <!--<div class="lh2">&nbsp;</div>
+            <div class="floatLeft welldone_content">Estimated delivery date  : <strong>21st April,2011</strong></div>
+            <div class="lh2">&nbsp;</div> 
+            <div class="floatLeft welldone_content">Estimated dispatch date : <strong>19th April 2011</strong></div>
+        </div>
+       <div class="lh20">&nbsp;</div> 
+       <div class="welldone_rightblock">
+       		<div class="floatLeft welldone_rightblock_heading">Your shopped items</div>
+            <div class="welldone_underline"></div>
+            <div class="welldone_imageblock">
+           	<div class="clearBoth">
+			<?php if(count($data) > 0) { ?>
+			<?php $i=0; foreach($data as $key=>$val) { $i++; ?>
+            	<div class="lh20">&nbsp;</div> 
+            		<div class="welldone_wid110">
+                	<div align="center" class="welldone_image"><a href="<?php echo $val->product_url; ?>"><img src="<?php echo $this->cart_model->getSmallImage($val->product_id); ?>" alt="<?php echo $val->product_name; ?>" title="<?php echo $val->product_name; ?>" /></a></div>
+                    <div class="lh7">&nbsp;</div>
+                    <div align="center"><a href="<?php echo $val->product_url; ?>" class="welldone_productlink" title="<?php echo $val->product_name; ?>"><?php echo $val->product_name; ?></a></div>
+                	</div>
+					<?php if(($i%2) != 0) { ?>
+                	<div class="welldone_imageGap">&nbsp;</div>
+					<?php } ?>
+			<?php } } else { ?>
+			Please contact to your site administrator.
+			<?php } ?>	
+           	</div>
+            <div class="lh20">&nbsp;</div> 
+            </div>
+       
+       
+       </div>
+    </div>
+    <!-- Body Block Ends here
+    <div class="lh110">&nbsp;</div>
+</div>
+-->

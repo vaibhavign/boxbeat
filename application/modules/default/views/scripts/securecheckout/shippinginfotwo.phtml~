@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="css/style.css" type="text/css" rel="stylesheet" media="screen" />
+</head>
+
+<body>
+	<div class="makepurchase">
+		<div class="chechoutHeadingMain">
+			<div align="center" class="logostyle">A one Music & Computers</div>
+			<div class="userstyle">Hi, <strong>Prateek Dimri</strong></div>
+			<div class="chechoutHeading">Secure Checkout</div>
+			<div class="chechoutHeadingBorder"></div>
+		</div>
+		<div class="chechoutBodyMain">
+			<div class="checkoutNavShippingInfo1"></div>
+			<div>
+				<div class="leftBlock">
+					<div class="newaddressBlock">
+						<div class="clear">
+							<div class="heading">Add new Address</div>
+							<div class="chngadd"><a href="#" title="Change Address">Select existing Address</a></div>
+						</div>
+						<div class="shadowborder">&nbsp;</div>
+						<div class="nametxtbox">
+							<input type="text" value="Full Name" />
+						</div>
+						<div class="nametxtbox">
+							<textarea>Street Address</textarea>
+						</div>
+						<div class="selectBox">
+							<select>
+								<option>State</option>
+							</select>&nbsp;&nbsp;<select>
+								<option>City</option>
+							</select>
+						</div>
+						<div class="nametxtbox">
+							<input type="text" value="Postal / Zip Code" />
+						</div>
+						<div class="mobiletxtbox">
+							<div class="fixnum">+91</div>
+							<div class="floatLeft"><input type="text" value="Mobile No." /></div>
+						</div>
+						<div class="lh15"></div>
+					</div>
+					<div class="clearnexrowcontinue">
+						<input type="image" src="images/continuebtn.png" align="right" title="PAY NOW" />
+					</div>
+				</div>
+				<div class="rightBlock">
+					<div class="cartsummBlock">
+						<div class="heading">Cart Summary</div>
+						<div class="shadowborder">&nbsp;</div>
+						<div>
+							<table cellpadding="0" cellspacing="0" border="0">
+								<tr>
+									<th width="200" valign="top">Item</th>
+									<th width="140" valign="top">Shipping price</th>
+									<th width="50" valign="top">Qty.</th>
+									<th width="100" valign="top">Sub-total</th>
+								</tr>
+								<tr>
+									<td>Via Mazzini Orange...</td>
+									<td> Rs. 200 </td>
+									<td>1</td>
+									<td> Rs. 20200</td>
+								</tr>
+								<tr>
+									<td>Orange Handbag</td>
+									<td> Rs. 200 </td>
+									<td>1</td>
+									<td> Rs. 20200</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<div class="clear">
+											<div class="leftalign"><strong>Total</strong></div>
+											<div class="rightalign"><strong>Rs. 40000.00</strong></div>
+										</div>										
+									</td>									
+								</tr>								
+							</table>
+						</div>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<link rel="stylesheet" type="text/css" href="/css/myaccount/buyer/requestachangeinshippingaddress.css"/>
+<script type="text/javascript" src="/jscript/myaccount/buyer/requestachangeinshippingaddress.js"></script>
+<script>
+    alert('ankit');
+    </script>
+
+<div id="orderListContainer">
+	<!----Bof header Section----->
+    	<div class="clearBoth"></div>
+    <!----Eof header Section----->
+    <div class="heightGap42">&nbsp;</div>
+    <?php $orderItemDetails = $this->orderItemDetails;
+	$allStates = $this->allStates;?>
+	<div class="containerOrderListing"><input type="hidden" name="order_item_id" id="order_item_id" value="<?php echo $orderItemDetails['data']['order_item_id'];?>" />
+        <!----Bof headingSection----->
+        <div class="clearBoth">
+            <div class="floatLeft">
+                <div class="clearBoth ordersHeading">Requests</div>
+                <div class="heightGap">&nbsp;</div>
+                <div class="orderDetails">Fill-in the details required to request a change in shipping address. This is only a request to change an existing shipping address. A shipping address can only be changed, if a store owner approves the request.</div>
+           </div>
+       </div>	
+        <div class="heightGap20">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="clearBoth">
+                <div class="floatLeft manageOrder">Request for a Change in Shipping Address</div>
+            </div>
+            <div class="heightGap6">&nbsp;</div>
+            <div class="bgLine1">&nbsp;</div>
+        </div>
+        <div class="lh25">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="imgContainer"><img src="/images/admin/orders/img_cont_img.png" /></div>
+            <div class="wid20">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="clearBoth contentText capitalize"><?php echo $orderItemDetails['data']['product_name'];?></div>
+                <div class="lh10">&nbsp;</div>
+               <div class="clearBoth contentText">
+                    <span class="floatLeft"><b>Order Item ID :</b>  OR_<?php echo $orderItemDetails['data']['payment_module'];?>_<?php echo $orderItemDetails['data']['order_id'];?>_<?php echo $orderItemDetails['data']['order_item_id'];?></span><span class="wid45">&nbsp;</span>
+                   
+                </div> 
+                <div class="lh10">&nbsp;</div>
+                <div class="clearBoth contentText"><b>bought from :</b>  <?php echo $orderItemDetails['data']['title'];?></div>
+                <div class="lh30">&nbsp;</div>
+            </div>             
+      	</div>
+        <div class="clearBoth">
+        	<div class="contentHeading">Existing Shipping Address:</div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid73 contentText"><b>Address</b></div>
+                <div class="floatLeft contentText"><?php echo $orderItemDetails['data']['address'];?></div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid73 contentText"><b>City</b></div>
+                <div class="floatLeft contentText"><?php echo $orderItemDetails['data']['city'];?></div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid73 contentText"><b>State</b></div>
+                <div class="floatLeft contentText"><?php echo $orderItemDetails['data']['state'];?></div>
+            </div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid73 contentText"><b>Pincode</b></div>
+                <div class="floatLeft contentText"><?php echo $orderItemDetails['data']['zipcode'];?></div>
+            </div>
+        	
+        </div>
+        <?php if(!empty($orderItemDetails['address_book'])){?>
+        <div class="clearBoth" id="addressBook"><input type="hidden" name="order_address_id" id="order_address_id" value="<?php echo $orderItemDetails['data']['order_address_id'];?>" /> 
+        	<div class="lh30">&nbsp;</div>
+        	<div class="contentHeading">Please choose a different shipping address from the address book or <span><a id="ship_address_link" class="linkText" title="enter a new shipping address" style="cursor:pointer">enter a new shipping address</a></span></div>
+            <div class="heightGap20">&nbsp;</div>
+            <div class="clearBoth">
+            	<!--<div class="wid24">&nbsp;</div>-->
+                <div class="floatLeft radioClick">
+                <?php for($i=0; $i<count($orderItemDetails['address_book']);$i++){?>
+                	<div class="wid327">
+                    	<div class="radioAdjustment floatLeft" id="<?php echo $orderItemDetails['address_book'][$i]['address_book_id'];?>"><input type="radio" name="address" value="<?php echo $orderItemDetails['address_book'][$i]['address_book_id'];?>" id="<?php echo $orderItemDetails['address_book'][$i]['address_book_id'];?>" <?php if($i==0){ echo 'checked=""';}?>/></div>
+                        <div class="floatLeft capitalize">
+                        	<div class="radioText"><?php echo $orderItemDetails['address_book'][$i]['fullname'];?><br />
+                                <?php echo $orderItemDetails['address_book'][$i]['address'];?>,<br />
+                                <?php echo $orderItemDetails['address_book'][$i]['city_name'];?><br />
+                                <?php echo $orderItemDetails['address_book'][$i]['state_name'];?><br />
+                                <?php echo $orderItemDetails['address_book'][$i]['zipcode'];?>
+                           	</div>
+                        </div>
+                     </div>
+                     <?php }?>
+                  
+                </div>
+            </div>
+        </div>
+        <?php }//else{?>
+        <div class="clearBoth" id="new_shippingAddressBlock"><input type="hidden" id="customers_id" value="<?php echo $orderItemDetails['data']['order_item_owner'];?>" /> <input type="hidden" id="customers_name" value="<?php echo $orderItemDetails['data']['fullname'];?>" />
+        	<div class="lh30">&nbsp;</div>
+        	<div class="contentHeading">Please enter a new shipping address or <span><a class="linkText" id="existingAddress" title=" select a different existing address" style="cursor:pointer">select a different existing address</a></span></div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid82 contentText"><b>Address</b></div>
+                <div class="floatLeft"><textarea class="inputText259" id="address" name="address"></textarea></div>
+                <div class="error" id="errorMsgaddress"></div>
+            </div>
+            <div class="heightGap6">&nbsp;</div>
+             <div class="clearBoth">
+            	<div class="wid82 contentText"><b>State</b></div>
+                <div class="floatLeft errorMsgfocusstate"><select id="getcities" name="state">
+                <option value="0">Select State</option>
+                <?php foreach($allStates as $states){?>
+                <option id="<?php echo $states['id'];?>" value="<?php echo $states['id'];?>"><?php echo $states['state_name'];?></option>
+				<?php }?>
+                </select></div>
+                <div  id="errorMsgstate" class="error">&nbsp;</div>
+            </div>
+          	<div class="heightGap6">&nbsp;</div>
+             <div class="clearBoth">
+            	<div class="wid82 contentText"><b>City</b></div>
+                <div class="floatLeft" id="allcities"><select id="cityname" style="width:190px; height:20px"><option></option></select></div>
+            </div>
+            <div class="heightGap6">&nbsp;</div>
+            <div class="clearBoth">
+            	<div class="wid82 contentText"><b>Pincode</b></div>
+                <div class="floatLeft"><input type="text" class="inputText89" id="pincode" name="pincode" /></div>
+                <div  id="errorMsgpincode" class="error">&nbsp;</div>
+            </div>
+        </div><?php //}?>
+        <div class="lh25">&nbsp;</div>
+        <div class="clearBoth">
+            <div class="contentHeading">Give a small description about the reason for change in shipping address.</div>
+            <div class="heightGap">&nbsp;</div>
+            <div class="contentText">Explaining a detailed reason for a change in your shipping address will assist a store owner in  processing the request more easily.</div>
+            <div class="lh10">&nbsp;</div>
+            <div class="clearBoth"><textarea class="inputText601" name="description" id="description"></textarea></div>
+            <div class="heightGap">&nbsp;</div>
+            <div class="clearBoth">
+                <div class="exampleText"><b>e.g.</b> As I will not be available at my old shipping address because I am shifting to U.P, I request you to change my shipping address and deliver my order in the new shipping address.</div>
+        	</div>
+        </div>
+        <div class="lh60">&nbsp;</div>
+        <div class="bottom_buttons">
+        	<div class="floatLeft"><input type="image" class="cursor" src="/images/myaccount/buyer/cancel_btn.png" title="Cancel" /></div>
+            <div class="floatRight"><input type="image" class="cursor" src="/images/myaccount/buyer/send_request_btn.png" title="Send Request" id="sendRequest"/></div>
+       </div>
+      <div class="lh60">&nbsp;</div>
+    </div>
+</div>

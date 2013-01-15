@@ -1,0 +1,35 @@
+<div class="mainHeader">
+		<div class="header" align="center"><a href="<?=HTTP_SECURE?>" title="eshopbox"><img src="/images/secure/elogin/logo.png" alt="eshopbox" /></a></div>
+		<form name="loginform" id="loginform" >
+		<div class="clearBoth">
+			<div class="topBorder">&nbsp;</div>
+			<div class="botGap">&nbsp;</div>
+			<div align="center" class="verifyErrorMSG">Sorry, we couldn't verify your email and password.</div>
+			<div class="loginContainer" align="center">
+				<div id="loginBG" class="loginBG">
+					<input id="login" type="text" class="loginInput" value="email address / username"  name="username" autocomplete="off"/>
+					<div class="errorMSG">This field is mandatory.</div>
+				</div>
+				<div id="passwordBG" class="passwordBG">
+					<input id="password" type="text" class="loginInput" value="password" />
+					<input id="password1" type="password" class="loginInput"  name="password1" autocomplete="off"/>
+					<input  type="hidden" class="loginInput"  name="redirecturl" id="redirecturl" value="<?php echo $this->redirecturl;?>" autocomplete="off"/>
+					<input  type="hidden" class="loginInput"  name="tab" id="tab" value="<?php echo $this->tab;?>" autocomplete="off"/>
+					<div class="errorMSG">This field is mandatory.</div>
+				</div>
+			</div>
+			<div class="loginBTN">
+				<div class="forgotpass"><a href="/forgotpassword" title="Forgot password?">Forgot password?</a></div>
+				<div class="floatRight"><input type="image" src="/images/secure/elogin/loginBtn.png" width="80" height="32" title="Login" alt="Login" id="LoginBtn" /></div>
+			</div>
+			<div class="botGap">&nbsp;</div>
+			<div class="botBorder">&nbsp;</div>
+			<div class="freetrial">
+				<div class="newHere">Hello! New Here?</div>
+				<div class="startFTrail"><a href="http://signup.myeshopbox.com/freetrial" title="Start a free trial">Start a free trial</a></div>
+			</div>
+		</div>
+		</form>
+
+
+	</div>

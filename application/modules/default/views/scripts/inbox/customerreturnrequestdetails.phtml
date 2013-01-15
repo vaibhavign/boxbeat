@@ -1,0 +1,205 @@
+<link rel="stylesheet" type="text/css" href="/css/default/customerreturnrequestdetails.css"/>
+<script src="js/jquery-1.5.1.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		
+		jQuery("#actionbutton").click(function(e){
+				jQuery(this).addClass('actionbuttonlick').removeClass('actionbuttondefault');									  
+				jQuery('#actiondropdown').toggle();	
+				
+			});	
+		
+		jQuery(document).mouseup(function(e) {
+				if(jQuery(e.target).parent("a#actiondropdown").length==0) {
+					jQuery("#actiondropdown").hide();
+					jQuery('#actionbutton').removeClass('actionbuttonlick').addClass('actionbuttondefault');			
+				}
+			});		
+	});
+</script>
+<?php $returnMessageData = $this->returnMessageData;
+$returnData = $this->returnData;?>
+<table cellpadding="0" cellspacing="0" width="100%" border="0">
+        <tr>
+        	<td height="40"></td>
+        </tr>
+        <tr>
+        	<td valign="top">
+            	<table cellpadding="0" cellspacing="0" width="1000" border="0" align="center">
+                	<tr>
+                    	<td valign="top" height="26">
+                        	<div class="clearBoth" id="bodytopbar">
+                            	<div class="topbarheading"><?php echo $returnData[0]['name']?></div>
+                                <div class="floatRight">
+                                	<div class="floatLeft"><a href="inbox_listing.php" class="back_link" title="Back to requests"><span class="backtoarrow"></span>Back to requests</a></div>				
+                                </div>
+                           </div>
+                           <!-- Action Drop Down  Start Form here-->
+                           <div id="actiondropdown">
+                           		<ul>
+                                	<li><a href="inbox_listing.php" title="Mark as unread">Mark as unread</a></li>
+                                    <li><a href="popup.php" title="Delete conversation" >Delete conversation</a></li>
+                                    <li><a href="popup.php" title="New conversation">New conversation</a></li>
+                                    <li><a href="popup.php" title="Report/Block user">Report/Block user</a></li>
+                                </ul>
+                           </div>
+                           <!-- Action Drop Down Down here-->
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td valign="top"><div class="bottomline">&nbsp;</div></td>
+                    </tr>
+                	<tr>
+                		<td valign="top">
+                        	<div id="leftBlock">
+                            	<div class="floatLeft">
+                                	<div class="floatLeft">
+                                    	<div class="email_heading">Order Item ID </div>
+                                        <div class="email_seperator">:</div>
+                                        <div class="email_text">OR_<?php echo $returnData[0]['payment_module'];?>_<?php echo $returnData[0]['order_id'];?>_<?php echo $returnData[0]['order_item_id'];?></div> 
+                                    </div>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Quantity to be returned</div>
+                                        <div class="email_seperator">:</div>
+                                        <div class="email_text"><?php echo $returnData[0]['quantity'];?></div> 
+                                    </div>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Expected Shipping Cost</div>
+                                        <div class="email_seperator">:</div>
+                                        <div class="email_text">Rs. <?php echo $returnData[0]['ship_cost'];?></div> 
+                                    </div>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Requested for</div>
+                                        <div class="email_seperator">:</div>
+                                        <?php if($returnData[0]['return_type']==1){
+												$return_type = 'Retuen';
+												}elseif($returnData[0]['return_type']==2){
+												$return_type = 'Replacement';
+											}?>
+                                        <div class="email_text"><?php echo $return_type;?></div> 
+                                    </div>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Reason</div>
+                                        <div class="email_seperator">:</div>
+                                        <div class="email_text"><?php echo $returnData[0]['request_reason'];?> </div> 
+                                    </div>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Status</div>
+                                        <div class="email_seperator">:</div>
+                                         <?php if($orderData[0]['request_status']==0){
+												$request = 'Request Opened';
+											}else if($orderData[0]['request_status']==1){
+												$request = 'Request Accepted';	
+											}else {
+												$request = 'Request Declined';	
+											}?>
+                                        <div class="email_text"><?php echo $request;?></div> 
+                                    </div>
+                           		</div>
+                                <div class="main_container">
+                                	<ul>
+                                    <?php for($i=0 ; $i<count($returnMessageData); $i++){?>
+                                    	<li class="dotted_border selected">
+                                        	<div class="main_container">
+                                            	<div class="innerblock">
+                                                	<div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                    	<div class="floatLeft"><a href="#" class="me_link" title="me"><?php echo $returnMessageData[$i]['name'];?></a></div>
+                                                        <div class="clearBoth">
+                                                        	<div class="wid440">
+                                                            	<!--<div class="clearBoth">I have received an item significantly different than what was described by a store 																	owner<br />
+																I have received a completely different item</div>-->
+                                                                <div class="clearBoth"><?php echo $returnMessageData[$i]['message'];?></div>
+                                                            </div>																		 																		 															<div class="floatRight">
+                                                            	<div class="date_text"><?php echo $returnMessageData[$i]['time'];?></div>
+                                                                <!--<div class="dategap">&nbsp;</div>
+                                                                <div class="date_text">11:00 AM</div>-->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </li>
+                                        <?php }?>
+                                        <!--<li class="dotted_border ">
+                                        	<div class="main_container">
+                                            	<div class="innerblock">
+                                                	<div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                    	<div class="floatLeft"><a href="#" class="me_link" title="Anant Asthana">Anant Asthana</a></div>
+                                                        <div class="clearBoth">
+                                                        	<div class="wid440">
+                                                            	<div class="clearBoth">Hi<br />
+But I shipped the items as per you ordered.</div>
+                                                                
+                                                            </div>																		 																		 															<div class="floatRight">
+                                                            	<div class="date_text">26/06/11</div>
+                                                                <div class="dategap">&nbsp;</div>
+                                                                <div class="date_text">11:00 AM</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </li>
+                                        <li class="selected">
+                                        	<div class="main_container">
+                                            	<div class="innerblock">
+                                                	<div class="imagecontainer"><img src="/images/default/userthumb.png"  /></div>
+                                                    <div class="content_block">
+                                                    	<div class="floatLeft"><a href="#" class="me_link" title="me">me</a></div>
+                                                        <div class="clearBoth">
+                                                        	<div class="wid440">
+                                                            	<div class="clearBoth">But the product I received, is totally different from what I ordered<br />
+																	I ordered for a Zigtech but received Air<br />
+																	<div class="wid440">
+                                                                    	<div class="floatLeft">Kindly check them out and try to arrange a replacement for me</div>
+                                                                        
+                                                                   	</div>
+                                                                    
+                                                              	</div>
+                                                                
+                                                            </div>																		 																		 															<div class="floatRight">
+                                                            	<div class="clearBoth">
+                                                                    <div class="date_text">26/06/11</div>
+                                                                    <div class="dategap">&nbsp;</div>
+                                                                    <div class="date_text">11:00 AM</div>
+                                                                </div>
+																<div class="lh32">&nbsp;</div>			
+                                                                <div class="clearBoth">
+                                                                     <div class="date_text">26/06/11</div>
+                                                                    <div class="dategap">&nbsp;</div>
+                                                                    <div class="date_text">11:00 AM</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                               </div>
+                                           </div>
+                                        </li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td height="50" valign="top"></td>
+                    </tr>
+                    <tr>
+                    	<td valign="top">
+                        	<div id="msgbox">
+                            	<div class="imagecontainer"><img src="/images/default/user_pic.png" title="User Image"  alt="User Image"/></div>
+                            	<div class="msgboxbg">
+                              		<textarea cols="0" rows="0" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(this.value == '') this.value = this.defaultValue;">Your message here...</textarea>  
+                                </div>
+                                <div class="reply_btn"><img src="/images/default/reply_dim_btn.png" alt="Reply" title="Reply" /></div>
+                           </div>
+                        </td>
+                    </tr>
+                     <tr>
+                    	<td height="50" valign="top"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+   </table>

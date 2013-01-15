@@ -1,0 +1,143 @@
+<script language="javascript" type="text/javascript" src="/jscript/default/inbox.js"></script>
+<script>
+	jQuery(document).ready(function() {
+		
+		jQuery("#actionbutton").click(function(event){
+			event.preventDefault();
+				jQuery(this).addClass('actionbuttonlick').removeClass('actionbuttondefault');									  
+				jQuery('#actiondropdown').toggle();	
+				
+			});	
+		
+		jQuery(document).mouseup(function(e) {
+				if(jQuery(e.target).parent("a#actiondropdown").length==0) {
+					jQuery("#actiondropdown").hide();
+					jQuery('#actionbutton').removeClass('actionbuttonlick').addClass('actionbuttondefault');			
+				}
+			});		
+
+	});
+</script>
+<link href="/css/default/inbox_detail.css" media="screen" rel="stylesheet" type="text/css" >
+
+<? $messagedata = $this->messagedata; ?>
+	<table cellpadding="0" cellspacing="0" width="100%" border="0">
+        <tr>
+        	<td valign="top">
+            	<table cellpadding="0" cellspacing="0" width="1000" border="0" align="center">
+					 <tr>
+                    	<td height="40" valign="top" colspan="2"></td>
+                    </tr>
+					<tr>
+						<td colspan="2">
+							<?php
+                                                       // echo "<pre>";
+                                                       // print_r($this);
+							
+								$class=new General();
+							$class->getpathheaderblock($this);
+ 						 	?>
+							<form name="chatid" >
+							<input type="hidden" name="cid" id="cid" value="<?=$this->cid?>" />
+							</form>
+						</td>
+					</tr>
+                	
+                	<tr>
+                		<td valign="top">
+                        	<div id="leftBlock">
+                            	<div class="floatLeft">
+                                    <?php   if($this->otheruserdetail['email']!='0')  { ?>
+                                	<div class="floatLeft">
+                                    	<div class="email_heading">Email</div>
+                                        <div class="email_seperator">:</div>
+                                     	<div class="email_text"><?=$this->otheruserdetail['email'];?></div>
+                                    </div>
+                                    <?php } ?>
+                                    <?php if($this->otheruserdetail['guest']==0){?>
+                                    <div class="clearBoth">
+                                    	<div class="email_heading">Location</div>
+                                        <div class="email_seperator">:</div>
+					<div class="email_text"><?=$this->otheruserdetail['location'];?></div>
+                                    </div>
+                                    <?php  }  ?>
+                           		</div>
+								
+                                <div class="main_container margintop12">
+								
+							
+                                	<ul id="cdetail"><?php
+								//$generalobj	
+    								for($i =0; $i< count($messagedata);$i++) 
+									{
+									if($messagedata[$i]['from']==$this->userId)
+									{
+									$me='me';
+                                                                        $bgClas='selected-detail';
+									}
+									else
+									{
+									$me=$messagedata[$i]['userfrom'];
+                                                                        $bgClas='';
+									if($messagedata[$i]['userfrom']=='')
+									{
+									$me=$messagedata[$i]['guestname'];	
+									
+									}
+									}?>
+
+                                    	<li class="<?php if($i!=count($messagedata)-1){?>dotted_borders <?php } ?> <?php echo    $bgClas;?>">
+                                        	<div class="main_container">
+                                            	<div class="innerblock">
+                                                	<div class="imagecontainer"><?= $messagedata[$i]['image']?></div>
+                                                    <div class="content_block">
+                                                    	<div class="floatLeft"><a  class="me_link" ><?=$me?></a></div>
+                                                        <div class="clearBoth">
+                                                        	<div class="floatLeft messageslist" ><?= $messagedata[$i]['message']?></div>												<div class="floatRight">
+                                                            	<!--<div class="date_text"><?=$messagedata[$i]['time']?></div>-->
+                                                                <!--<div class="dategap">&nbsp;</div>-->
+                                                              
+                                                              
+                                                            
+                                                            
+                                                                
+                                                               
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           </div>
+                                        </li>
+                                        <?  }?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                    	<td height="50" valign="top"></td>
+                    </tr>
+                    <?php if($this->otheruserdetail['guest']==0){?>
+                    <tr>
+                    	<td valign="top">
+						<form name="replay" id="replay" >
+						<input type="hidden" name="chatid" id="chatid"  value="<?=$this->cid?>" />
+						                        	<div id="msgbox">
+                            	<div class="imagecontainer"><?=$this->otheruserdetail['image'];?></div>
+                            	<div class="msgboxbg">
+                              		<textarea cols="0" rows="0" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(this.value == '') this.value = this.defaultValue;" name="message" id="message" class="expand26-60" style="height: 26px;line-height: 13px; overflow: auto; padding-top: 0px; padding-bottom: 0px;" >Your message here...</textarea>  
+                                </div>
+                                <div class="reply_btn"><img src="/images/default/reply_btn_inactive.png" alt="Reply" title="Reply" id="replayBtn" style="cursor: default;" /></div>
+                                
+                            </div>
+							</form>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                     <tr>
+                    	<td height="50" valign="top"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>

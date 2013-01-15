@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Login Page</title>
+<?php echo $this->headLink()->appendStylesheet('/css/secure/stylesheet_header.css');?>
+<?php echo $this->headLink()->appendStylesheet('/css/secure/login.css');?>
+<?php echo $this->headScript()->appendFile('/jscript/secure/login.js');?>
+<?php echo $this->headScript()->appendFile('/jscript/common/o2olib.js');?>
+
+</head>
+<body>
+<table cellpadding="0" cellspacing="0"  border="0" width="100%">
+
+</table>
+<table cellpadding="0" cellspacing="0" border="0" width="760" align="center">
+    <tr>
+		<td colspan="4">
+        	<form name="loginform" id="loginform" method="get">
+        	<table cellpadding="0" cellspacing="0" border="0" align="center" width="100%">
+				<tr>
+					<td height="37" colspan="4">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="6">&nbsp;</td>
+					<td width="100" class=" paddtop2" valign="top">Email Address/Username</td>
+					<td width="14">&nbsp;</td>
+					<td width="480">
+                    	<div class="" id="framelogin-email-address">
+                            <div class="floatLeft"><input type="text" id="login-email-address" value="<?php if($_GET['username'] != '') { echo $_GET['username']; } else { echo base64_decode($_COOKIE['username']); }?>" name="username"  class="" /></div>															
+                            <div class="inputMsg" id="inputMsglogin-email-address"><span class="alert">
+                             <?php echo $this->usererr ; ?>
+                            </span></div>
+                    	</div>
+                    </td>
+				</tr>
+				<tr>
+					<td height="13" class="fs0" colspan="4">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="6">&nbsp;</td>
+					<td width="50" class=" paddtop2" valign="top">Password</td>
+					<td width="1">&nbsp;</td>
+					<td width="480">
+                    	<div class="" id="framepassword-login">
+                        	<div class="floatLeft"><input type="password" id="password-login" value="<?php if($_GET['password'] != '') { echo $_GET['password']; } else { echo base64_decode($_COOKIE['userpass']); }?>" name="password" class="" /></div>
+                        	<div class="inputMsg" id="inputMsgpassword-login">
+                            <span class="alert">
+                             <?php   echo $this->passerr ; ?>                              		   </span>
+                            </div>
+                        </div>
+                    </td>
+				</tr>
+				<tr>
+					<td height="13" class="fs0" colspan="4">&nbsp;</td>
+				</tr>
+
+				<tr>
+				    <td height="13" class="fs0" colspan="4">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="66">&nbsp;</td>
+					<td width="200">&nbsp;</td>
+					<td width="14">&nbsp;</td>
+					<td width="480">
+					<div id="dispcap" style="display:none;">
+					
+					<?php //echo recaptcha_get_html($publickey, $errorRecaptcha); ?>
+					 <span class="alert"><?php if($messageStack->errors['login']['text']){print_r($messageStack->errors['login']['text']);} ?></span>
+					
+					</div> <div id="repmsg" class="alert"></div>	
+						</td>
+				</tr>
+                <tr>
+                	<td colspan="4" height="20">&nbsp;</td>
+                </tr>
+				<tr>
+					<td width="66">&nbsp;</td>
+					<td width="200">&nbsp;</td>
+					<td width="14">&nbsp;</td>
+					<td width="480">
+						<div class="clearBoth" style="width:480px;">
+							<div class="floatLeft paddtop7">
+								<div class="floatLeft">
+			
+								 </div>
+								
+							</div>
+							<div class="floatLeft">
+								<input type="submit" name="login" id="signinsubmit" value="" class="sign_in_btn" title="Sign in"/>
+								<span id="loginload" class="floatLeft">&nbsp;</span>
+							</div>
+							
+                        </div>	
+						</div>
+                        <input type="hidden" name="actionw" id="action" value="process"  />
+						<input type="button" name="btn1" id="btn1" value="submit" />
+						<input type="hidden" name="clsess" id="clsess" value="<?php echo $_GET['sess']; ?>"
+					</td>
+				</tr>
+			</table>
+			</form>
+        </td>
+    </tr>
+	<tr>
+		<td height="40" colspan="4">&nbsp;</td>
+	</tr>
+</table>
+<script type="text/javascript">
+var rec = "abc";
+
+
+</script>
+</body>
+</html>

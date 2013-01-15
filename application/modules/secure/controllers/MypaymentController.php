@@ -1,0 +1,380 @@
+<?php
+
+/**
+ * @author : Vaibhav Sharma
+ * Used for Setting bank account and verification
+ * Used DML library for the data manipulation 
+ * Zend Validate class for validation
+ * $mapper  => Secure_Model_MypaymentMapper();
+ * Creation date : 11-11-2011
+ * Confirmbank account is dependent on superadmin which is not yet decided
+ * used setting_bank_transaction table for validating the entries
+ * Values used for testing amount = 1.50 transaction id = abcd123456
+ * modified data : 13-11-2011
+ * reason : 
+ */
+class Secure_MypaymentController extends Zend_Controller_Action {
+    
+    private $notification;
+    
+    public function init() {
+        $this->view->headLink()->appendStylesheet('/css/secure/headersetting.css');
+        $this->view->controller = $this->_request->getParam('controller');
+        Zend_Layout::getMvcInstance()->setLayout('securesetting');
+        Zend_Layout::getMvcInstance()->setLayoutPath(APPLICATION_PATH . '/modules/secure/layouts');
+        $this->view->headLink()->appendStylesheet('/css/secure/mypapment_index.css');
+        $this->mapp = new Secure_Model_MypaymentMapper();
+        $this->orgLogin = new Zend_Session_Namespace('original_login');
+        $this->notification = new Notification();
+        //echo_pre($_SESSION['original_login']['user'][0]);
+    }
+
+    public function indexAction() {
+        if($_SESSION['test']){
+           unset($_SESSION['test']);
+        }else{
+            $this->mapp->redirectToaddAccount($this->orgLogin->apikey);
+        }
+        $this->view->headTitle('My payment -' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $this->userName = new Zend_Session_Namespace('USER');
+        $userlocation = $_SESSION['USER']['userDetails'][0]['user_location'];
+        $userstate_city = explode(',', $userlocation);
+        $mapper = new Secure_Model_AccountsettingMapper();
+        $userstate = $mapper->getuserstate($userstate_city[0]);
+        $usercity = $mapper->getusercity($userstate_city[1]);
+        $this->view->user_state = $userstate;
+        $this->view->user_city = $usercity;
+        $this->view->userimage = $this->userName->userDetails[0]['user_image'];
+    }
+    public function noAccountAction() {
+        $this->view->headTitle('Checkout -' . $_SESSION['USER']['userDetails'][0]['title'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $this->title = new Zend_Session_Namespace('USER');
+        $userlocation = $_SESSION['USER']['userDetails'][0]['user_location'];
+        $userstate_city = explode(',', $userlocation);
+        $mapper = new Secure_Model_AccountsettingMapper();
+        $userstate = $mapper->getuserstate($userstate_city[0]);
+        $usercity = $mapper->getusercity($userstate_city[1]);
+        $this->view->user_state = $userstate;
+        $this->view->user_city = $usercity;
+        $this->view->userimage = $this->title->userDetails[0]['user_image'];
+    }
+
+    public function addabankaccountAction() {
+        $url = $this->_request->getParams();
+        if ($url['edit'] == 'true') {
+            $this->view->headTitle('Edit bank account - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        } else {
+            $this->view->headTitle('Add bank account - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        }
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $this->userName = new Zend_Session_Namespace('USER');
+        $this->bank = new Zend_Session_Namespace('BANK');
+        $url = $this->_request->getParams();
+
+        if (isset($_POST['isposted'])) {
+            unset($errorMsg);
+            $error = false;
+            $validateEmpty = new Zend_Validate_NotEmpty();
+            $validatorOnlyAlphabets = new Zend_Validate_Alpha(array('allowWhiteSpace' => true));
+            $validatorMinMax11 = new Zend_Validate_StringLength(array('min' => 11, 'max' => 11));
+			$validatorMinMax10 = new Zend_Validate_StringLength(array('min' => 10, 'max' => 10));
+            $validatorMinMax1016 = new Zend_Validate_StringLength(array('min' => 10, 'max' => 16));
+			$validatorMinMax232 = new Zend_Validate_StringLength(array('min' => 2, 'max' => 32));
+            $validatorMinMax814 = new Zend_Validate_StringLength(array('min' => 8, 'max' => 14));
+            $validatorOnlyAlphaNumeric = new Zend_Validate_Alnum();
+            $validatorOnlyNumeric = new Zend_Validate_Digits();
+
+            // Validation starts here
+			
+            // Validation for fullname
+            if (!$validateEmpty->isValid($_POST['fullname'])) {
+                $error = true;
+                $errorMsg['name'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if (!$validatorOnlyAlphabets->isValid($_POST['fullname'])) {
+                    $error = true;
+                    $errorMsg['name'] = "Please enter a valid full name";
+                } else {
+                        if (!$validatorMinMax232->isValid($_POST['fullname'])) {
+							 $error = true;
+                    		 $errorMsg['name'] = "Input length is not proper. Try between 2 and 32 characters";
+						}
+                }
+            }
+            // End validation for fullname
+            // Validation for bankname
+            if (!$validateEmpty->isValid($_POST['bankname'])) {
+                $error = true;
+                $errorMsg['bankname'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if (!$validatorOnlyAlphabets->isValid($_POST['bankname'])) {
+                    $error = true;
+                    $errorMsg['bankname'] = "Please enter a valid bank name";
+                } else {
+                     if (!$validatorMinMax232->isValid($_POST['bankname'])) {
+							 $error = true;
+                    		$errorMsg['bankname'] = "Input length is not proper. Try between 2 and 32 characters";
+						}
+                }
+            }
+            // End Validation for bankname
+            // Validation for IFSC Code
+
+            if (!$validateEmpty->isValid($_POST['ifsc_code'])) {
+                $error = true;
+                $errorMsg['ifsccode'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if ($validatorOnlyAlphaNumeric->isValid($_POST['ifsc_code'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['ifsccode'] = "Please enter a valid IFSC code";
+                }
+
+                if ($validatorMinMax11->isValid($_POST['ifsc_code'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['ifsccode'] = "Please enter a valid IFSC code";
+                }
+            }
+
+            // End Validation for IFSC Code
+            // Validation for account number
+
+            if (!$validateEmpty->isValid($_POST['account_number'])) {
+                $error = true;
+                $errorMsg['accountnum1'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if ($validatorOnlyNumeric->isValid($_POST['account_number'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['accountnum1'] = "Please enter a valid account number";
+                }
+                if ($validatorMinMax1016->isValid($_POST['account_number'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['accountnum1'] = "Please enter a valid account number";
+                }
+                if (sizeof($this->mapp->returnBankAccountStatus(trim($_POST['account_number']))) > 0) {
+                    $error = true;
+                    $errorMsg['accountnum1'] = "This bank account already exists.Please enter a new bank account.";
+                } else {
+                    // do nothing					
+                }
+            }
+
+            // End Validation for account number
+            // Validation for Re-enter Account Number
+
+            if (!$validateEmpty->isValid($_POST['re_account_number'])) {
+                $error = true;
+                $errorMsg['accountnum2'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if ($validatorOnlyNumeric->isValid($_POST['re_account_number'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['accountnum2'] = "Please enter a valid account number";
+                }
+                if ($validatorMinMax1016->isValid($_POST['re_account_number'])) {
+                    // value contains only allowed chars
+
+                    if ($_POST['re_account_number'] != $_POST['account_number']) {
+                        $error = true;
+                        $errorMsg['accountnum2'] = "Account number didn't match";
+                    }
+                } else {
+                    $error = true;
+                    $errorMsg['accountnum2'] = "Please enter a valid account number";
+                }
+            }
+            // End Validation for Re-enter Account number
+            // Validation for pan card number
+            
+            if (!$validateEmpty->isValid($_POST['pan_card_number'])) {
+                $error = true;
+                $errorMsg['pan_card_number'] = "It can't be blank";
+            } else {
+               if (!$validatorMinMax10->isValid($_POST['pan_card_number'])) {
+                    $error = true;
+                    $errorMsg['pan_card_number'] = "Please enter valid PAN number";
+                } else {
+                  
+                    if (!validatePanCardNumber(strtoupper($_POST['pan_card_number']))) {
+
+                        $error = true;
+                        $errorMsg['pan_card_number'] = "Please enter a valid PAN number.";
+                    }
+                }
+            }
+            // End Validation for pan card number
+            // Validation for bank name
+            
+            if (!$validateEmpty->isValid($_POST['bankname'])) {
+                $error = true;
+                $errorMsg['branchname'] = "It can't be blank";
+            } else {
+                // only alphbets to be used space allowed no special character
+                if ($validatorOnlyAlphabets->isValid($_POST['bankname'])) {
+                    // value contains only allowed chars
+                } else {
+                    $error = true;
+                    $errorMsg['branchname'] = "Please enter a valid branch name";
+                }
+            }
+            // End Validation for bank name
+            
+
+            $this->bank->bank2 = $_POST;
+            if (!$error) {
+                $this->_redirect('mypayment/bankreview');
+            }
+            $postDataArray = $_POST;
+        } else if ($url['edit'] == 'true') {
+
+            $postDataArray = $this->bank->bank2;
+        } else {
+            $postDataArray = "";
+        }
+        $this->view->dispData = $postDataArray;
+        $this->view->errorMessages = $errorMsg;
+    }
+
+    public function bankreviewAction() {
+        $this->view->headTitle('Review bank details - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $this->bank = new Zend_Session_Namespace('BANK');
+        $this->view->reviewbank = $_SESSION['BANK']['bank2'];
+    }
+
+    public function bankaccountlistingAction() {
+        unset($_SESSION['test']);
+        $val = $this->mapp->checking($this->orgLogin->apikey);
+        if($val!=''){
+            $_SESSION['test'] = 'true';
+            header("Location: ".HTTPS_SECURE."/mypayment/index");
+        }
+        $this->view->headTitle('My payments - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $url = $this->_request->getParams();
+        $mapper = new Secure_Model_MypaymentMapper();
+        $orgLogin = new Zend_Session_Namespace('original_login');
+        if ($url['save'] == 'account') {
+            $this->bank = new Zend_Session_Namespace('BANK');
+            if (isset($this->bank->bank2['account_number'])) {
+                $mapper->saveBankAccount($this->bank->bank2, $orgLogin->apikey);
+                unset($this->bank->bank2);
+                $this->_redirect('mypayment/bankaccountlisting');
+            }
+        }
+        $mapper = new Secure_Model_MypaymentMapper();
+        $this->view->accountListing = $mapper->getBankAccountLisiting($orgLogin->apikey);
+    }
+
+    public function confirmbankaccountAction() {
+        $this->view->headTitle('Confirm bank account - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $validateEmpty = new Zend_Validate_NotEmpty();
+        $validatorFloat = new Zend_Validate_Float(array('locale' => 'en_US'));
+        $validatorOnlyAlphaNumeric = new Zend_Validate_Alnum();
+        $url = $this->_request->getParams();
+        $mapper = new Secure_Model_MypaymentMapper();
+        $errorMsg = "";
+        if (isset($_POST['posted'])) {
+            // code for validation
+            $error = false;
+            if (!$validateEmpty->isValid($_POST['transid'])) {
+                $error = true;
+                $errorMsg['transid'] = "It can't be blank";
+            }else{
+                if (!$validatorOnlyAlphaNumeric->isValid($_POST['transid'])) {
+                    $error = true;
+                    $errorMsg['transid'] = "Please enter a valid Transaction Id";
+                }
+            }
+
+
+            if (!$validateEmpty->isValid($_POST['amount'])) {
+                $error = true;
+                $errorMsg['amount'] = "It can't be blank";
+            } else {
+                if (!$validatorFloat->isValid($_POST['amount'])) {
+                    $error = true;
+                    $errorMsg['amount'] = "Please enter a valid amount";
+                }
+            }
+
+            if (!$error) {
+                //$mapper->increaseCounter($url['acid']);
+                $returnStatus = $mapper->validateTransactionandAmount($_POST['transid'], $_POST['amount'], $url['acid']);
+                if ($returnStatus == "success") {
+                    $rs = $mapper->getTriggerInfo($url['acid'],1);
+                    $this->notification->triggerFire(93,$rs);
+                    $this->_redirect('mypayment/bankaccountconfirmedsuccess/acid/' . $url['acid']);
+                } else {
+                    $error = true;
+					
+                    $errorMsg['transid'] = "Please enter a valid Transaction Details";	
+                }
+            }
+        }
+        $this->view->errorMessages = $errorMsg;
+        $this->view->bankaccountDetails = $mapper->getBankDetails($url['acid']);
+    }
+
+    public function bankaccountconfirmedsuccessAction() {
+        $this->view->headTitle('Bank account confirmed - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $url = $this->_request->getParams();
+        $mapper = new Secure_Model_MypaymentMapper();
+        $this->view->bankaccountDetails = $mapper->getBankDetails($url['acid']);
+    }
+
+    public function bankaccountrestrictedAction() {
+        Zend_Layout::getMvcInstance()->setLayout('secure');
+        Zend_Layout::getMvcInstance()->setLayoutPath(APPLICATION_PATH . '/modules/secure/layouts');
+        $this->view->headTitle('Bank Account Restricted - ' . $_SESSION['USER']['userDetails'][0]['username'] . PAGE_EXTENSION);
+        $this->view->headMeta()->setName('keywords', 'Account setting , GoO2o Technologies');
+        $this->view->headMeta()->setName('description', 'Account setting , GoO2o Technologies');
+        $url = $this->_request->getParams();
+        $mapper = new Secure_Model_MypaymentMapper();
+        $this->view->bankaccountDetails = $mapper->getBankDetails($url['acid']);
+    }
+
+    public function makeprimaryAction() {
+        $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender(true);
+        $acidId = $_GET['acid'];
+        $mapper = new Secure_Model_MypaymentMapper();
+        $this->view->bankaccountDetails = $mapper->makeprimary($acidId);
+    }
+
+    public function removeaccountAction() {
+        $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender(true);
+        $acidId = $_GET['acid'];
+        $mapper = new Secure_Model_MypaymentMapper();
+        $this->view->bankaccountDetails = $mapper->removeAccount($acidId);
+    }
+
+}
+
+// End Class
+?>

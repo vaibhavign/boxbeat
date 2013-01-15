@@ -1,0 +1,8 @@
+{
+	"css":["#footer-brands" ,"#footer-brands .heading",
+			"#footer-brands .content ul","#footer-brands .content ul li","#footer-brands .content ul li a",
+			"#footer-brands .content ul li a:hover"
+		  ]
+	
+			  
+}

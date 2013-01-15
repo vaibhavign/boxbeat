@@ -1,0 +1,605 @@
+<?php
+$reviewdata = $this->reviewdata;
+$count_reviewdata = count($reviewdata);
+$billingdata = $this->billingdata;
+$total_pamt = $this->total_pamt;
+$paymentmethod = $this->paymentmethod;
+/*echo "<pre>";
+print_r($billingdata);
+*/?>
+<div class="checkout_mainwidth">
+	<!-- Body Block Start From here--> 
+    <div class="checkout_registration_width">
+	<?php if((!empty($this->recentpaidOrder)) && ($this->recentpaidOrder[0]->store_api_key[0]['trade_activation']=='1')){
+	
+	
+	?>
+   <div class="congratulations_container">
+						<div class="lh15">&nbsp;</div>
+						<div class="congratulations_message">
+							<div class="congratulations_container">Well Done!! You have made the payment for your order from <span class="easyshop_text"><?php echo $this->recentpaidOrder[0]->store_api_key[0]['title']?></span>. Please note your <span class="easyshop_text">Order ID OR-<?php echo $this->recentpaidOrder[0]->store_api_key[0]['mallid']?>-<?php echo $this->recentpaidOrder['orderid']?></span> for future reference.</div>
+							<div class="lh15">&nbsp;</div>
+						<div class="floatLeft review_standardcontent2">You can view the <a href="/cart/acknowledgement/oid/<?php echo $this->recentpaidOrder['orderid']?>" class="hyperLinkBlue12" target="_blank">acknowledgement receipt</a> and can now make payment for your other order.</div>
+							
+							</div>
+					</div>
+    	<div class="lh35">&nbsp;</div>
+	<?php } ?>
+<?php if((!empty($this->recentpaidOrder)) && ($this->recentpaidOrder[0]->store_api_key[0]['trade_activation']!='1' )){
+	
+	
+	?>
+   <div class="congratulations_container">
+						<div class="lh15">&nbsp;</div>
+						<div class="congratulations_message">
+							<div class="congratulations_container">Any order placed on this store will not be completed because this store is currently under construction.</div>
+														
+							</div>
+					</div>
+    	<div class="lh35">&nbsp;</div>
+	<?php } ?>		
+        <div class="checkout_heading">Please Review and confirm your order</div>
+        <div class="lh10">&nbsp;</div>
+		<div class="lh35">&nbsp;</div>	
+		<div class="floatLeft">
+            	<div class="review_billingaddress">
+                	<div class="floatLeft review_billingaddress_heading"><strong>Billing Address</strong></div>
+                    <div class="lh20">&nbsp;</div>	
+                    <div class="review_billing_content">
+                    	<div class="floatLeft shipAddWrap">
+						<?php
+						foreach($billingdata as $key=>$val)
+							{
+								echo ucwords(strtolower($val['fullname'])), ", <br /> ", stripslashes($val['address']), ", <br />", $val['cityname'], ",  <br />", $val['state_name'], ", <br /> Phone: ",  $val['phone'];
+							}
+						?></div>
+                    	<div class="lh10">&nbsp;</div>	
+                    	<!--<div class="floatLeft"><a href="/cart/checkout" title="Change" class="checkout_already_inuse_link">Change</a></div>
+                    	<div class="lh15">&nbsp;</div>-->	
+                    </div>
+                </div>
+                <div class="review_billingaddressGap">&nbsp;</div>
+                <div class="review_billingaddress">
+                	<div class="floatLeft review_billingaddress_heading"><strong>Payment Method</strong></div>
+                    <div class="lh20">&nbsp;</div>	
+					<?php if(count($paymentmethod) > 0) { ?>
+					
+					<?php foreach($paymentmethod as $key=>$val) { ?>
+					<div class="review_billing_content">
+					<div class="review_payment_content">
+					<div class="review_payment_innerblock">
+							<div class="lh10">&nbsp;</div>	
+							<div class="floatLeft"><?php echo $val['pay_mod_desc']; ?></div>
+							<div class="floatRight"><img src="/images/secure/<?php echo $val['pay_mod_image']; ?>" alt="<?php echo $val['pay_mod_desc']; ?>" title="<?php echo $val['pay_mod_desc']; ?>" /></div>
+							<div class="lh10">&nbsp;</div>	
+						</div>
+						</div>
+					<div class="lh15">&nbsp;</div>	
+					
+					<div class="lh15">&nbsp;</div>	
+				</div>
+                    
+					<?php } } else { ?>
+					please contact to your site administrator.
+					<?php } ?>
+                </div>
+            </div>
+			
+			<div class="lh35">&nbsp;</div>
+	<div class="floatLeft review_standardcontent">You have  <?php echo $this->totaldata; ?> item(s) worth <strong>Rs.<?php echo number_format($total_pamt-$this->totaldiscount,2,'.',''); ?>.</strong><?php // if(count($reviewdata)>1){?> Your order contains item(s) from different sellers<?php //} ?></div>
+	<div class="lh10">&nbsp;</div>
+		
+        	
+				<?php //echo "<pre>";
+				//print_r($reviewdata);
+				//echo "</pre>";
+ if($count_reviewdata >0) { $ko=1; ?>
+				
+				<table cellpadding="0" cellspacing="0" border="0" width="100%" class="review_tableborder">
+			<tr>
+				<td width="10" class="review_heading_bgcolor"></td>
+				<td width="410" class="review_content_heading review_heading_bgcolor">Items</td>
+				<td width="10" class="review_heading_bgcolor"></td>
+				<td width="100" class="review_content_heading review_heading_bgcolor">Quantity</td>
+				<td width="10" class="review_heading_bgcolor"></td>
+				<td width="240" class="review_content_heading review_heading_bgcolor">Shipping Address</td>
+				<td width="10" class="review_heading_bgcolor"></td>
+				<td width="210" class="review_content_heading review_heading_bgcolor">Pricing( including shipping )</td>
+			</tr>
+			
+				
+				<?php foreach($reviewdata as $key=>$productdetails) {  
+				$totalAmount=0;
+				$currentApikey=$key;
+				
+				?>
+				<?php
+				
+				$sub=0;
+				foreach($productdetails as $key=>$productdetail) 
+				{
+				
+				
+				/*echo "<pre>";
+				print_r($productdetail);
+				exit;*/
+				?>
+                <tr>
+                	<td height="15" colspan="8"></td>
+                </tr>
+                <tr>
+                	<td width="10"></td>
+                    <td width="345" valign="top">
+                    	<div class="review_content_wid345">
+                            <?php
+                                        $productname=$productdetail->product_name;
+
+                                        if(strlen($productdetail->variations[$productdetail->product_id]['allvariation']) > 0)
+                                        $productname=$productname.' - '.$productdetail->variations[$productdetail->product_id]['allvariation'];
+                                        //echo $productname
+                                        if(strlen($productname)>130)
+                                        $productname=substr($productname,0,130).'...';
+                                        ?>
+							<?php if($sub==0){?>
+								<tr>
+									<td></td>
+										<td colspan="6" class="review_itemadded">Items added from <strong><?=$productdetail->store_api_key[0]['title']; ?></strong></td>
+									<td></td>
+								</tr>			
+							
+							<?php } ?>
+							
+								<tr>
+									<td valign="top" height="15" colspan="8"></td>
+								</tr>
+								<tr>
+									<td width="10"></td>
+									<td width="410" class="review_standardcontent">
+										<div class="floatLeft">
+											<div class="floatLeft review_content_heading_width"><strong><?=$productname?></strong></div>
+											<div class="clearBoth">
+											<div class="lh10">&nbsp;</div>
+											<div class="floatLeft">
+												<div class="floatLeft review_content_variation">Condition :</div>
+												<div class="floatLeft review_content_variation"><strong><?= $productdetail->variations[$productdetail->product_id]['condition']; ?></strong></div>
+											</div>
+											<div class="lh5">&nbsp;</div>
+											<div class="floatLeft">
+												<div class="floatLeft review_content_variation">Product Id :</div>
+												<div class="floatLeft review_content_variation"><strong><?= $productdetail->product_id; ?></strong></div>
+											</div>
+										</div>
+										</div>
+										</td>
+									<td width="10" class=""></td>
+									<td width="100" class="review_standardcontent" valign="top"><strong><?php echo $productdetail->product_qty;?></strong></td>
+									<td width="10" class=""></td>
+									<td width="270" class="review_standardcontent" valign="top"><?php
+									$address = $this->cart_model->getShippingAddressesSecure($productdetail->address_book_id); 
+							foreach($address as $key=>$val)
+							{
+								echo '<div class="shipAddWrap">'.ucwords(strtolower($val['fullname'])), ", ", stripslashes($val['address']), ", <br />", $val['cityname'], ", ", $val['state_name'].'</div>';
+							}
+									
+									?></td>
+									<td width="10" class=""></td>
+									<td width="210" class="review_standardcontentRight "valign="top">Rs. 
+										<?php 
+											echo number_format(($productdetail->variations[$productdetail->product_id]['srp']*$productdetail->product_qty)+(($productdetail->shipcost)*$productdetail->product_qty),2,'.','');
+											$totalAmount+=$productdetails->purchase_amt;									
+										?>
+									</td>									
+								</tr>
+								<tr>
+									<td valign="top" height="15" colspan="8"></td>
+								</tr>	
+								<!--<tr>
+									<td valign="top" colspan="8"><div class="review_content_underline"></div></td>
+								</tr>-->	
+								<tr>
+									<td valign="top" height="15" colspan="8"></td>
+								</tr>
+<?php if($this->e==$currentApikey){?>
+								<tr>
+				<td></td>
+				<td valign="top" colspan="6">
+					<div class="floatLeft">
+						<div class="alert_message">Due to some problem the payment for your order from <?=$productdetail->store_api_key[0]['title']; ?> could not be completed. Please try again by clicking on "Pay Now".</div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+<?php } ?>
+
+<?php if($productdetail->store_api_key[0]['trade_activation']==0 || $productdetail->store_api_key[0]['trade_activation']==2){?>
+								<tr>
+				<td></td>
+				<td valign="top" colspan="6">
+					<div class="floatLeft">
+						<div class="alert_message">Any order placed on this store will not be completed because this store is currently under construction.
+</div>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+<?php } ?>
+                        	<!--<div class="review_content_heading_width review_content"><?=$productname?></div>
+							<?php if($productdetail->variations[$productdetail->product_id]['allvariation']) {?>
+                            <div class="lh10">&nbsp;</div>
+                            <div class="floatLeft review_content_variation">Variation : <strong><?= $productdetail->variations[$productdetail->product_id]['allvariation']; ?></strong></div>
+							<?php } ?>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="floatLeft review_content_variation">Condition : <strong><?= $productdetail->variations[$productdetail->product_id]['condition']; ?></strong></div>
+                            <div class="lh5">&nbsp;</div>
+                            <div class="floatLeft review_content_variation">Product Id : <strong><?= $productdetail->product_id; ?></strong></div>
+                          </div> -->
+                   <!-- </td>
+                    <td width="15"></td>
+                    <td width="100" class="review_content" valign="top">-->
+						<!--<?php if($sub==0){?>
+						<div class="lh23">&nbsp;</div>
+						<?php } ?>
+					<strong><?= $productdetail->product_qty; ?></strong></td>
+                    <td width="10"></td>
+                    <td width="270" valign="top">
+                    	<div class="review_content_wid270">
+						<?php if($sub==0){?>
+						<div class="lh23">&nbsp;</div>
+						<?php } ?>
+                    		<div class="review_content_shipping_width review_content">
+							<?php 
+							$address = $this->cart_model->getShippingAddressesSecure($productdetail->address_book_id); 
+							foreach($address as $key=>$val)
+							{
+								echo ucwords(strtolower($val['fullname'])), ", ", $val['address'], ", <br />", $val['cityname'], ", ", $val['state_name'];
+							}
+							?>
+							</div>    
+                        	<div class="lh35">&nbsp;</div>-->
+                           <!-- <div class="floatLeft review_content_variation"> Bought from : <strong><?=$productdetail->store_api_key[0]['title']; ?></strong></div>-->
+                        </div>
+                    <!--</td>
+                    <td width="10"></td>
+                    <td width="240" valign="top">
+                      <div class="review_content_wid240">
+					  
+                      	<div class="floatLeft">
+							<?php if($sub==0){?>
+						<div class="lh23">&nbsp;</div>
+						<?php } ?>
+						Rs.	<?php echo number_format(($productdetail->variations[$productdetail->product_id]['srp']*$productdetail->product_qty)+(($productdetail->shipcost)*$productdetail->product_qty),2,'.','');
+						$totalAmount+=$productdetail->purchase_amt;
+						 ?>
+                        	<!--<div class="floatLeft review_content_srp_width">SRP:</div>
+                            <div class="floatLeft review_content_srp_price" id="divTotal_<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">Rs.<?php echo number_format(($productdetail->variations[$productdetail->product_id]['srp']),2,'.',''); ?></div>-->
+                        </div>
+                       <!-- <div class="lh5">&nbsp;</div>
+                        <div class="floatLeft">
+                        	<div class="floatLeft review_content_srp_width">Shipping:</div>
+                            <div class="floatLeft review_content_srp_price">Rs.<?php
+								/*if(($productdetail->shipcost) == 'error')
+								{
+								echo number_format((0),2,'.',''); 
+								}
+								else
+								{
+								$scost = number_format(($productdetail->shipcost),2,'.',''); 
+								$pqty = $productdetail->product_qty;
+								$nscost = $pqty * $scost;
+								echo number_format(($nscost),2,'.',''); 
+								}*/
+								?>
+								</div>
+                        </div>
+                        <div class="review_content_pricing_underline"></div>
+                        <div class="floatLeft">
+                        	<div class="floatLeft review_content_srp_width"><strong>Item Total</strong></div>
+                            <div class="floatLeft review_content_srp_price"><strong>Rs.<?php echo $productdetail->purchase_amt; ?></strong></div>
+                        </div>
+                      
+                      
+                      </div>-->
+                    </td>
+                </tr> 
+				
+                <tr>
+                	<td height="15" colspan="8"></td>
+                </tr>
+				<tr>
+                    <td valign="top" class="review_content_underline" colspan="8">&nbsp;</td>
+                </tr>
+                <?php /* echo "<pre>";print_r($reviewdata[$productdetail->storeApiKey]); */if($sub < count($reviewdata[$productdetail->storeApiKey])-1) { ?>
+		
+                <?php }else { ?>
+				<tr>
+				<td valign="top" colspan="8">
+					<table cellpadding="0" cellspacing="0" border="0" align="right">
+						<tr><td height="10" colspan="2">&nbsp;</td></tr>
+						<tr>
+							<td class="total_title">Total:</td>
+							<td class="review_price">Rs. <?php echo number_format($totalAmount,2,'.',''); ?></td>
+						</tr>
+						<tr><td height="10" colspan="2">&nbsp;</td></tr>
+						<?php 
+							$disamount=0;
+							if(!empty($this->coupons)) {  
+							foreach($this->coupons as $key=>$val)
+							{   
+							foreach($val as $k=>$v)
+							{
+							if($k==$currentApikey)
+							{	
+							foreach($v as $lk=>$lv){ 
+						?>
+						<tr>
+							<td class="total_title">Discount coupon<?php echo $lv['ccode']?> applied:</td>
+							<td class="review_price"><?php $disamount+= $lv['less']?>- Rs.<?php echo  number_format($lv['less'],2,'.','');?></td>
+						</tr>
+						<?php } } } } } ?>
+						<?php 
+							$disamountgc=0; if(!empty($this->gccoupons)){
+							foreach($this->gccoupons as $keygc=>$valgc){ if($keygc==$currentApikey){ 
+						?>
+						<tr><td height="10" colspan="2">&nbsp;</td></tr>
+						<tr>
+							<td class="total_title">Gift certificate<?php echo $valgc['ccode']?> applied:</td>
+							<td class="review_price"><?php $disamountgc+=$valgc['less'];?>- Rs.<?php echo  number_format($valgc['less'],2,'.','');?></td>
+						</tr>
+						<?php } } } ?>
+						<?php if($disamountgc>0 ||  $disamount>0){?>
+						<tr><td height="10" colspan="2">&nbsp;</td></tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td class="price_container review_price">Rs.<?php echo number_format(($totalAmount-($disamount+$disamountgc)),2,'.',''); ?></td>
+						</tr>
+						<?php } ?>
+						<tr><td height="20" colspan="2">&nbsp;</td></tr>
+						<tr>
+							<td colspan="2">
+								<form action="/cart/pgtrans" method="post">
+									<div class="paynow_btn"><input type="image" alt="PAY NOW" title="PAY NOW" src="/images/secure/pay_now.png" /></div>
+									<input type="hidden" name="transtype" id="transtype" value="checkout" />
+									<input type="hidden" name="transapikey" id="transapikey" value="<?php echo $productdetail->storeApiKey;?>" />
+									<input type="hidden" name="transsessionname" id="transsessionname" value="Api_Model_Review_PG" />
+									<input type="hidden" name="discountvalue" id="discountvalue" value="<?php echo ($disamount+$disamountgc);?>" />
+<input type="hidden" name="totalpay" id="totalpay" value="<?php echo ($totalAmount-($disamount+$disamountgc));?>" />
+								</form>
+							</td>
+						</tr>
+					</table>
+					<!--<div class="total_container">
+						<div class="lh10">&nbsp;</div>
+						<div class="floatLeft">
+							<div class="floatLeft total_title">Total:</div>
+							<div class="floatLeft review_price">Rs. <?php echo number_format($totalAmount,2,'.',''); ?></div>
+						</div>
+						<div class="lh10">&nbsp;</div>
+						<?php $disamount=0;
+						if(!empty($this->coupons)) {  
+						foreach($this->coupons as $key=>$val)
+						{   
+						foreach($val as $k=>$v)
+						{
+						 if($k==$currentApikey)
+								{	
+						 foreach($v as $lk=>$lv){ 
+						?>
+						<div class="floatLeft">
+							<div class="floatLeft total_title">Discount coupon<?php echo $lv['ccode']?> applied:</div>
+							<div class="floatLeft review_price"> <?php $disamount+= $lv['less']?>- Rs.<?php echo  number_format($lv['less'],2,'.','');?></div>
+						</div>
+						<?php } } } } } ?>
+					<?php $disamountgc=0; if(!empty($this->gccoupons)){
+					foreach($this->gccoupons as $keygc=>$valgc){ if($keygc==$currentApikey){ ?>
+<div class="floatLeft">
+							<div class="floatLeft total_title">Gift certificate<?php echo $valgc['ccode']?> applied:</div>
+							<div class="floatLeft review_price"> <?php $disamountgc+=$valgc['less'];?>- Rs.<?php echo  number_format($valgc['less'],2,'.','');?></div>
+						</div>
+					<?php } } } ?>
+
+						<?php if($disamountgc>0 ||  $disamount>0){?>
+						<div class="lh10">&nbsp;</div>
+						<div class="price_container">Rs.<?php echo number_format(($totalAmount-($disamount+$disamountgc)),2,'.',''); ?></div>
+						<?php } ?>
+						<div class="lh20">&nbsp;</div>
+							<form action="/cart/pgtrans" method="post">
+						<div class="paynow_btn"><input type="image" src="/images/secure/pay_now.png" /></div>
+							<input type="hidden" name="transtype" id="transtype" value="checkout" />
+							<input type="hidden" name="transapikey" id="transapikey" value="<?php echo $productdetail->storeApiKey;?>" />
+							<input type="hidden" name="transsessionname" id="transsessionname" value="Api_Model_Review_PG" />
+							<input type="hidden" name="discountvalue" id="discountvalue" value="<?php echo ($disamount+$disamountgc);?>" />
+						</form>
+					</div>-->
+					
+				</td>
+			</tr>
+			
+				<!--<tr>
+				<td width="10"></td>
+				<td width="345" valign="top">&nbsp;</td>
+				<td width="15">&nbsp;</td>
+				<td width="100" class="review_content" valign="top"></td>
+				<td width="10"></td>
+				<td width="270" valign="top">
+					<!--<div class="clearBoth contentText12">Gift certificate GC135373</div>
+					<div class="lh15">&nbsp;</div>
+					<div class="clearBoth contentText12">Total amount to be paid to <?=$productdetail->store_api_key[0]['title']; ?>:</div>
+				</td>
+				<td width="10"></td>
+				<td width="240" valign="top">
+				  <div class="review_content_wid240">
+					<!--<div class="floatLeft">
+						<div class="floatLeft review_content_srp_price">-200</div>
+					</div>
+					<div class="review_content_pricing_underline"></div>
+					<div class="lh5">&nbsp;</div>
+					<div class="floatLeft">
+						<div class="floatLeft review_content_srp_price"><strong>Rs.<?php echo number_format($totalAmount,2,'.',''); ?></strong></div>
+					</div>
+					<div class="lh10">&nbsp;</div>
+					<form action="/cart/pgtrans" method="post">
+					
+					<div class="floatLeft"><input type="image" src="/images/secure/pay_now.png" title="PAY NOW" /></div>
+					<input type="hidden" name="transtype" id="transtype" value="checkout" />
+					<input type="hidden" name="transapikey" id="transapikey" value="<?php echo $productdetail->storeApiKey;?>" />
+					<input type="hidden" name="transsessionname" id="transsessionname" value="Api_Model_Review_PG" />
+					
+					
+				</div>
+				</td>
+			</tr>-->
+				<?php  } ?>
+                <tr>
+                	<td height="15" colspan="8"></td>
+                </tr>
+				<?php 
+				$sub++;
+				} ?>
+				<?php  if(count($reviewdata)!=$ko){?>
+				<tr>
+                    <td valign="top" class="" colspan="8" ><div class="review_content_solidunderline"></div></td>
+                </tr>
+				<?php $ko++; } }?>
+				
+					</table>
+				<?php
+				
+				
+				 } else { ?>
+				Please contact to site administrator.
+				<?php } ?>
+		
+          <!--  <div class="lh40">&nbsp;</div>	
+            <table cellpadding="0" cellspacing="0" border="0" width="585">
+            	<tr>
+            		<td width="10" class="review_heading_bgcolor"></td>
+                    <td width="345" class="review_content_heading review_heading_bgcolor">Order Summary</td>
+                    <td width="70" class="review_heading_bgcolor"></td>
+                    <td width="150" valign="top" class="review_summary_text review_heading_bgcolor"></td>
+                    <td width="10" class="review_heading_bgcolor"></td>
+                </tr>
+                 <tr>
+                	<td height="10" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"></td>
+                    <td width="345" valign="top"><div class="floatLeft review_summary_text review_content_heading_width">Sum of Item Total</div></td>
+                    <td width="70"></td>
+                    <td width="150" valign="top" class="review_summary_text">Rs.<?php echo $total_pamt; ?></td>
+                    <td width="10"></td>
+            	</tr>
+                 <tr>
+                	<td height="10" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"></td>
+                    <td width="345" valign="top"><div class="floatLeft review_summary_text"><a href="#" class="review_gc_link" title="Gift certificate">Gift certificate</a> (Newstore)</div></td>
+                    <td width="70"></td>
+                    <td width="150" valign="top" class="review_summary_text">Rs.100</td>
+                    <td width="10"></td>
+            	</tr>
+                <tr>
+                	<td height="10" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"></td>
+                    <td width="345" valign="top"><div class="floatLeft review_summary_text"><a href="#" class="review_gc_link" title="Gift certificate">Gift certificate</a> (Newstore)</div></td>
+                    <td width="70"></td>
+                    <td width="150" valign="top" class="review_summary_text">Rs.100</td>
+                    <td width="10"></td>
+            	</tr>
+                  <tr>
+                	<td height="10" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"></td>
+                    <td width="345" valign="top"><div class="floatLeft review_summary_text"><a href="#" class="review_gc_link" title="Gift certificate">Gift certificate</a> (Newstore)</div></td>
+                    <td width="70"></td>
+                    <td width="150" valign="top" class="review_summary_text">-</td>
+                    <td width="10"></td>
+            	</tr>
+                  <tr>
+                	<td height="10" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"></td>
+                    <td width="345" valign="top"><div class="floatLeft review_summary_text"><a href="#" class="review_gc_link" title="Gift certificate">Gift certificate</a> (Newstore)</div></td>
+                    <td width="70"></td>
+                    <td width="150" valign="top" class="review_summary_text">Rs.50</td>
+                    <td width="10"></td>
+            	</tr>
+                <tr>
+                	<td height="30" colspan="5"></td>
+                </tr>
+                <tr>
+            		<td width="10"><div class="review_total_left">&nbsp;</div></td>
+                    <td width="345"><div class="review_total_heading review_total_bgcolor">Grand Total:</div></td>
+                    <td width="70"><div class="review_total_bgcolor">&nbsp;</div></td>
+                    <td width="160" valign="top"><div class="review_total_heading review_total_bgcolor">Rs.485.90</div></td>
+                    <td width="10"><div class="review_total_right">&nbsp;</div></td>
+                </tr>
+                
+            
+            
+            
+            </table>
+            <div class="lh40">&nbsp;</div>	
+            <div class="floatLeft">
+            	<div class="review_billingaddress">
+                	<div class="floatLeft review_billingaddress_heading"><strong>Billing Address</strong></div>
+                    <div class="lh20">&nbsp;</div>	
+                    <div class="review_billing_content">
+                    	<div class="floatLeft">
+						<?php
+						foreach($billingdata as $key=>$val)
+							{
+								echo ucwords(strtolower($val['fullname'])), ", <br /> ", $val['address'], ", <br />", $val['cityname'], ", ", $val['state_name'], ", <br /> Phone: ",  $val['phone'];
+							}
+						?></div>
+                    	<div class="lh10">&nbsp;</div>	
+                    	<div class="floatLeft"><a href="/cart/checkout" title="Change" class="checkout_already_inuse_link">Change</a></div>
+                    	<div class="lh15">&nbsp;</div>	
+                    </div>
+                </div>
+                <div class="review_billingaddressGap">&nbsp;</div>
+                <div class="review_billingaddress">
+                	<div class="floatLeft review_billingaddress_heading"><strong>Payment Method</strong></div>
+                    <div class="lh20">&nbsp;</div>	
+					<?php if(count($paymentmethod) > 0) { ?>
+					<?php foreach($paymentmethod as $key=>$val) { ?>
+                    <div class="review_billing_content">
+                    	<div class="review_payment_content">
+                        	<div class="review_payment_innerblock">
+                                <div class="lh10">&nbsp;</div>	
+                                <div class="floatLeft"><?php echo $val['pay_mod_desc']; ?></div>
+                                <div class="lh10">&nbsp;</div>	
+                                <div class="floatRight"><img src="/images/secure/<?php echo $val['pay_mod_image']; ?>" alt="<?php echo $val['pay_mod_desc']; ?>" title="<?php echo $val['pay_mod_desc']; ?>" /></div>
+                        	</div>
+                        
+                        </div>
+                    	<div class="lh15">&nbsp;</div>	
+                    	<div class="floatLeft paddleft17"><a href="/cart/checkout" title="Change" class="checkout_already_inuse_link">Change</a></div>
+                    	<div class="lh15">&nbsp;</div>	
+                    </div>
+					<?php } } else { ?>
+					please contact to your site administrator.
+					<?php } ?>
+                </div>
+            </div>-->
+        </div>  
+       <div class="lh15">&nbsp;</div>
+		<div class="bottomText clearBoth ">By clicking on "Pay Now", you have agreed to the terms & conditions.</div>
+		<div class="lh90">&nbsp;</div>
+        <div class="review_buttonblock"> 
+		<!--<div class="review_buttonGap">&nbsp;</div>-->
+        	<div class="floatRight"><img src="/images/secure/editorder_btn.png"  alt="EDIT ORDER" title="EDIT ORDER" name="edit" onclick="window.location='/cart/checkoutaddress'" style="cursor:pointer;" /></div>
+          <!-- 
+            <div class="floatLeft"><input type="image" src="/images/secure/confirmorder_btn.png"  alt="CONFIRM ORDER" title="CONFIRM ORDER" name="confirm" /></div>-->
+        
+        
+        </div>
+      
+    </div>
+    <!-- Body Block Ends here-->
+   
+</div>

@@ -1,0 +1,97 @@
+<?php
+$generalobj=new General();
+
+$img=$generalobj->getuserimageSrc($this->detail->userId,40,40,'small',1);
+
+
+?>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr>
+	<td height="18" bgcolor="3c3c3c"></td>
+</tr>
+<tr>
+	<td valign="top" bgcolor="3c3c3c">
+		<div class="floatLeft">
+			<div class="goo2ologinlogo"><img src="/images/secure/goo2ologin/goo2ologoblack.png" alt="Go o2o" title="Go o2o" /></div>
+			<div class="goo2ologin_heading">Request for permission</div>
+		</div>    	
+    </td>
+</tr>
+<tr>
+	<td height="10" bgcolor="3c3c3c"></td>
+</tr>
+<tr>
+	<td valign="top"><div class="goo2ologin_seperator"></div></td>
+</tr>
+<tr>
+	<td height="20"></td>
+</tr>
+<tr>
+	<td valign="top">
+    	<div class="goo2ologin_container">
+        	<div class="floatLeft goo2ologin_content"><?php echo $_GET['shop']?> is requesting permission to do the following:</div>
+            <div class="lh20">&nbsp;</div>
+            <div class="floatLeft">
+            	<div class="floatLeft">
+                	<div class="floatLeft goo2orequest_user_pic"><?php echo $img;?></div>
+                    <div class="wid299">
+                    	<div class="floatLeft goo2ologin_content"><strong>Access my basic information</strong></div>
+                        <div class="floatLeft goo2orequest_content">Includes name, profile picture, location, contact no. and any other information I've made public.</div>
+                    </div>
+                
+                
+                </div>
+                 <div class="lh20">&nbsp;</div>
+                <div class="floatLeft">
+                	<div class="floatLeft goo2orequest_msg_icon">&nbsp;</div>
+                    <div class="wid299">
+                    	<div class="floatLeft goo2ologin_content"><strong>Send me email</strong></div>
+                        <div class="floatLeft goo2orequest_content"><?php echo $_GET['shop']?> may mail me directly at </div>
+                        <div class="floatLeft goo2orequest_content"><strong><?php echo $this->detail->userDetails[0]['user_email_address'];?>.</strong></div>
+                    </div>
+                </div>
+                 <div class="lh20">&nbsp;</div>
+                <div class="floatLeft">
+                	<div class="floatLeft goo2orequest_access_icon">&nbsp;</div>
+                    <div class="wid299">
+                    	<div class="floatLeft goo2ologin_content"><strong>Access my profile information</strong></div>
+                        <div class="floatLeft goo2orequest_content">My activities on <?php echo $_GET['shop']?> like orders, gift certificates, items added in my shopping cart or in my wishlist.</div>
+                      
+                    </div>
+                
+                
+                </div>
+             </div>
+              <div class="lh60">&nbsp;</div>
+             <div class="floatLeft goo2oreq_agreetext">By processing you agree to <strong>Goo2o</strong> <a href="javascript:void(0)" class="goo2ologin_termslink" title="terms & privacy">terms & privacy</a> policy.</div>
+             <div class="lh15">&nbsp;</div>
+        	</div>
+    	</td>
+	</tr>
+    <tr>
+		<td valign="top">
+			<table cellpadding="0" cellspacing="0" border="0" valign="top" bgcolor="#ececec" height="49" style="padding:0 10px; border-top:1px solid #c4c4c4;position:absolute; bottom:0px;" width="100%">
+				<tr>
+					<td>
+			<form action="/o2ologin/deny">
+			<div class="wid399">
+			<div class="floatRight">
+			<div class="lh10">&nbsp;</div>
+			<input type="hidden" name="skey" value="<?php echo $_GET['skey'];?>">
+			
+			<div class="floatLeft"><input type="image" src="/images/secure/goo2ologin/goo2oallow_btn.png" alt="Allow" title="Allow" /></div>
+			<div class="goo2obuttongap">&nbsp;</div>
+			<div class="floatLeft"><img  src="/images/secure/goo2ologin/goo2odeny_btn.png" alt="Deny" title="Deny" style="cursor:pointer;" onclick="self.close();" /></div>
+			
+			</div>
+			
+			</div>
+			
+						   </form>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>	
+	</table>

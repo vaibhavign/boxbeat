@@ -1,0 +1,267 @@
+<?php
+$request = Zend_Controller_Front::getInstance()->getRequest();
+$controllerName = $request->getControllerName();
+$actionName = $request->getActionName();
+$moduleName = $request->getModuleName();
+$this->mapper = new Default_Model_InboxMapper();
+$unreadMessage=$this->mapper->getUnreadmessage();
+$totalmessage=  $unreadMessage['total'];
+
+if($moduleName=='admin'){
+	$managementClass = "selected";
+	$menu = "style='display:block;'";
+} else {
+	$managementClass = "";
+	$menu = "style='display:none;'";
+}
+if ($this->displaytype == '')
+    $this->displaytype = 'none';
+//	echo $GENERAL_OBJ ;
+	$genObj = new General();
+	$getMallsById=$genObj->getApiDetails($_SESSION['USER']['userDetails'][0]['user_email_address']);
+	$CLASS= $genObj->getHeaderButtonClass($controllerName ,$actionName);
+$userstatus=$genObj->checkuserverification($_SESSION['USER']['userDetails']['0']['vcode']);
+$originalUser = new Zend_Session_Namespace('original_login');
+$userName = new Zend_Session_Namespace('USER');
+$loginrole=$userName->stores['0']['role'];
+if($loginrole==NULL){
+$storemanagementlink=HTTPS_SECURE.'/merchantenrollment/business-details';
+$createstorelink=CREATE_STORE;
+$title=CREATE_STORE;
+} else {
+$storemanagementlink= HTTP_SERVER."/admin/index/change-profile/a/".$getMallsById[0]['apikey']."/u/".$getMallsById[0]['user_id'];
+$createstorelink=STORE_MANAGEMENT;
+$title=$getMallsById[0]['title'];
+}
+$cartSession = new Zend_Session_Namespace('Api_Model_Cart');
+$carttotal=count($session->items);
+
+/*
+echo '<pre>';
+print_r($originalUser->user['0']['user_full_name']);
+echo '</pre>';
+*/
+if($userstatus)
+{
+  /// echo "<pre>";
+   // print_r($_SERVER);
+   // echo "</pre>";
+
+?>
+<script >
+ function resendurl(url)
+ {
+ 
+ window.location.href=url+'?return='+encodeURIComponent(window.location);
+
+ }
+</script>
+<input type="hidden" name="userstatus" id="userstatus" value="<?php echo $userstatus;?>" />
+<input type="hidden" name="floatmenuexceeds" id="floatmenuexceeds" value="60" />
+<div class="wid100Per" id="header_topmessage">
+	<div class="lh15">&nbsp;</div>
+	<div class="wid1000Auto">
+    	<div class="wid925"><b>Verify your email address to continue access to your Goo2o account.</b> A verification message was sent to <b><?php
+echo($_SESSION['USER']['userDetails']['0']['user_email_address']);?></b></div>
+        <div class="lh5">&nbsp;</div>
+        <div class="wid925">
+        	<div class="floatLeft"><a onclick="resendurl('<?php echo HTTPS_SECURE.'/registration/resendconfirmation/passcode/'.$_SESSION['USER']['userDetails']['0']['vcode']; ?>')" href="javascript:void(0)" class="link" title="Resend confirmation">Resend confirmation </a></div>
+            <div class="bullet">&nbsp;</div>
+            <div class="floatLeft"><a href="" class="link" title="Update email address">Update email address</a></div>
+      	</div>
+        <div class="lh10">&nbsp;</div>
+    </div>
+</div>
+<?php } ?>
+<div class="clearBoth" id="adminheaderid">
+<input type="hidden" name="serverurl" id="serverurl" value="<?php echo HTTP_SERVER; ?>" />
+<div id="loadingdiv" style=" font-size:12px; color:#000000; background-color:#FFF1A8; width:74px; text-align:center; margin:auto; padding:3px 0px 3px 0px; font-weight:bold; z-index:9999; position:fixed; left:630px; display:none; top: 0;">Loading...</div>
+<div class="ref" id="update_msg" style="display:none;">
+	<div class="update_msg_bg">
+	<div class="container">
+		<div class="message_text">You have new updates</div> 
+        <div class="floatLeft"><a id="refdi" href="javascript:void(0)" class="refresh_icon" title="Refresh" alt="Refresh"></a></div>   
+    
+    </div>
+	</div>
+</div>
+
+<div class="header_main">
+		<div style="margin:auto; width:1000px; clear:both;" class="o2otopgap">
+        	<div style=" height:19px; clear:both; margin:auto; width:1000px; top:100px; background:transparent; position:absolute;"></div>
+        </div>
+	    <div class="MContainer">
+        <!-- Top header Start From here-->
+
+
+        <div class="THContainer">
+            <div class="TContainer">
+                <div class="SManagement">
+                    <div class="SManagementText">                        
+                            <div class="changeclass1 ChangeClass <?php echo $managementClass; ?>"><a href="<?php echo $storemanagementlink;?>" title="<?php echo $getMallsById[0]['title'];  ?>"><span>&nbsp;</span><div><?php echo $createstorelink;  ?></div></a></div>
+                    </div>                    
+                </div> 
+                <div class="THLink">
+                	<?php if ($controllerName == 'home') { ?>
+                       <!-- <div class="floatLeft selected" title="<?php echo HEADER_HOME;?>"><?php echo HEADER_HOME;  ?></div>-->
+                    <?php } else { ?>
+                        <!-- <div class="floatLeft"><a href="javascript:void(0)" title="<?php echo HEADER_HOME;  ?>" ><?php echo HEADER_HOME;  ?></a></div>-->
+                    <?php } ?>
+                    <?php if ($controllerName == 'profile') { ?>
+                        <!-- <div class="floatLeft selected" title="<?php echo HEADER_PROFILE;  ?>"><?php echo HEADER_PROFILE;  ?></div>  -->
+                    <?php } else { ?>
+                        <!-- <div class="floatLeft"><a href="javascript:void(0)" title="<?php echo HEADER_PROFILE;  ?>" ><?php echo HEADER_PROFILE;  ?></a></div> -->
+                    <?php } ?>
+                    <?php if ($controllerName == 'inbox') { ?>
+                        <div class="floatLeft selected LRgap" title="<?php echo HEADER_INBOX;  ?>"><div class="floatLeft"><?php echo HEADER_INBOX;  ?></div> <div class="inboxNotificationTops floatLeft">&nbsp;<?php if($totalmessage>0){echo '('.$totalmessage.')';}?></div></div>
+                    <?php } else { ?>
+                        <div class="floatLeft LRgap"><a href="/inbox/#list" title="<?php echo HEADER_INBOX;  ?>" ><div class="floatLeft"><?php echo HEADER_INBOX;  ?></div> <div class="inboxNotificationTops floatLeft"><?php if($totalmessage>0){echo '('.$totalmessage.')';}?></div></a></div>
+                    <?php } ?>
+                    <?php if ($moduleName == 'myaccount') { ?>
+                        <div class="accclass floatLeft selected LRgap"><a title="<?php echo HEADER_ACCOUNT;  ?>" ><?php echo HEADER_ACCOUNT;  ?></a></div>
+                    <?php } else { ?>
+                        <div class="accclass floatLeft LRgap"><a href="<?php echo HTTP_SERVER; ?>/myaccount" title="<?php echo HEADER_ACCOUNT;  ?>" ><?php echo HEADER_ACCOUNT;  ?></a></div>
+                    <?php	} ?>                          
+                </div>
+               
+            </div>
+        </div>
+        
+        <!-- Top header Ends here-->
+        <!-- Header Start From here-->
+        <div class="HMainContainer" style="height:117px;">
+            <div class="HContainer">
+                <div class="HTopGap">&nbsp;</div>
+                <div class="clearBoth">
+                	<div class="HeaderLogo"><a href="<?php echo HTTP_SERVER;?>" title="Goo2o.com"><img src="/images/admin/goo2oLogo.png" alt="goo2o" title="goo2o"/></a></div>
+                    <div class="HRLinkMain">
+                        <table cellpadding="0" cellspacing="0" border="0" align="right">
+                            <tr>
+                                <td valign="top" style="border-bottom:1px solid #474747; height:19px;" align="right">
+                                    <strong>Hi, <?php echo $originalUser->user['0']['user_full_name']; ?></strong>&nbsp;&nbsp;|&nbsp;
+                                    <a href="<?php echo HTTP_SERVER;?>/cart/#list" title="<?php echo  (($carttotal>0)?'('.$carttotal.')':'')?>">My Cart <?php echo  (($carttotal>0)?'('.$carttotal.')':'')?></a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="<?php echo HTTPS_SECURE;?>/accountsetting" title="Settings">Settings</a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="http://support.goo2o.com" title="Help" target="_blank">Help</a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="/admin/create/logout" title="<?php echo USER_LOGOUT ; ?>"><?php echo USER_LOGOUT ; ?></a>
+                                </td>
+                            </tr>
+							<?php if (($controllerName == 'inbox') || ($moduleName == 'myaccount')){ //echo nothing]
+							} else {
+							?>
+                            <tr>
+                                <td valign="baseline" style="height:20px; line-height:20px;" align="right">
+                                    <a href="http://goingo2o.com/goo2o-blog/" title="Blog" target="_blank">Blog</a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="http://wiki.goingo2o.com/" title="How-to wiki" target="_blank">How-to wiki</a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="http://knowledgebase.goingo2o.com/" title="Knowledge base" target="_blank">Knowledge base</a>&nbsp;&nbsp;|&nbsp;
+                                    <a href="http://forum.goingo2o.com/" title="Forum" target="_blank">Forum</a>&nbsp;&nbsp;|
+                                    <a href="#" title="Ask a question" target="_blank">Ask a question</a>
+                                </td>
+                            </tr>
+							<?php } ?>
+                        </table>
+                    </div>
+                </div>
+                <div class="headerGapLogo">&nbsp;</div>
+                <div class="HTabBlock clearBoth">
+                    <div class="BrowseTab"></div>
+                    <div class="SearchBg">
+                        <div class="SearchInnerBg">
+                            <div class="SearchInput"><input type="text" value="Find exactly what you want" onfocus="if(this.value == this.defaultValue) this.value = '';" onblur="if(this.value == '') this.value = this.defaultValue;" /></div>
+                            <div class="SearchBGSep"></div>
+                        </div>
+                        <div class="SearchGoBG"><a href="javascript:void(0)" title="Go"></a></div>
+                    </div>
+                    <div class="WishListTab"></div>
+                    <div class="MyCartTab"></div>
+                </div>
+				<?php if($loginrole!=NULL){ ?>
+                <div <?php  echo $menu;  ?> class="HTabBlock2 clearBoth">
+                <?php //    echo displayMenu($CLASS);
+					echo $genObj->displayMenuNew($userName->stores['0']['mallurl']);
+				?>	<!-- Header Store Front Single Menu-->
+                <div class="floatRight" style="background-color:#515151;min-height:31px;">
+               		<?php 
+					if(!empty($getMallsById)) { echo '<select style="min-width:234px;min-height:19px; margin:6px; outline:none;" class="o2ojsmallname">';
+						foreach($getMallsById as $mall_key => $mall_value){
+						if($mall_value['store_apikey']==$userName->stores['0']['store_apikey']) 
+							$selected=' selected';
+						else
+							$selected='';
+						?>
+                            <option <?php echo $selected;?> value="<?php echo HTTP_SERVER ?>/admin/index/change-profile/a/<?php echo $mall_value['apikey']?>/u/<?php echo $mall_value['user_id']?>"><?php echo $mall_value['title'];?></option>
+                        <?php } 
+						echo '</select>';
+						}
+						?>
+                </div>
+                <!-- Header Store Front Single Menu-->			
+                </div>
+                <?php }?>
+                
+            </div>
+        </div>
+        <!-- Header Ends here-->
+    </div>
+	<?php 
+	//print_r($_SERVER);
+	//echo 'htmlblocks/headers/'.$controllerName.'.php';exit;
+	if(file_exists($_SERVER['DOCUMENT_ROOT'].'/languages/htmlblocks/headers/'.$controllerName.'.php')){
+	//include_once('htmlblocks/headers/'.$controllerName.".php");
+	 }  ?>
+    <!-------------------header for Variation (End)-------------------->
+    <div class="clearBoth new_dropDown">
+        <div class="newdropDownLeft"></div>
+        <div class="floatLeft">
+            <ul>
+                <li><a href="javascript:void(0)">Create a product</a></li>
+                <li><a href="javascript:void(0)">Create category</a></li>
+                <li><a href="javascript:void(0)" class="selected">Create variation group</a></li>
+                <li><a href="javascript:void(0)">Create feature group</a></li>
+                <li><a href="javascript:void(0)">Create customers</a></li>
+            </ul>
+        </div>
+        <div class="newdropDownBottom"></div>
+    </div>
+    <div class="welldone_message_container" style="display:<?php echo $this->displaytype; ?>; top:0px; right:0px;  position:fixed; z-index:6565;" id="showhide">
+		<div class="welldone_content" id="msgheader"><?php echo $this->data; ?></div>
+	</div>
+    <!------------------------------Yes no popup----->
+    <div id="closeboxcategory" style="display:none;">
+        <table cellpadding="0" cellspacing="0" border="0" width="500" class="popup_border" >
+            <tr>
+                <td valign="top">
+                    <div class="popup_width">
+                        <div class="popup_topbar">
+                            <div class="floatLeft topbar_heading" id="popup_heading">Are you sure!</div>
+                            <div class="floatRight closepadding" style="cursor:pointer;"><a class="cancel_link"><img src="/images/admin/popup_close.gif" alt="Close" title="Close" /></a></div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" height="20">&nbsp;</td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <div class="wid445_popup">
+                        <div class="floatLeft popup_text" id="popup_details_text">Any unsaved data will be lost.  Do you still want to quit the process?</div>
+                        <div class="lh20">&nbsp;</div>
+                        <div class="popup_underline"></div>
+                        <div class="lh7">&nbsp;</div>
+                        <div class="floatRight">
+                            <div class="floatLeft curspointer"><input type="image" src="/images/addbrand/yes_btn.jpg" alt="Yes" title="Yes" id="saveandquit" class="saveandquit"/></div>
+                            <div class="wid15">&nbsp;</div>
+                            <div class="floatLeft curspointer"><input type="image" src="/images/addbrand/no_btn.jpg" alt="No" title="No" class="cancel_link"/></div>
+                        </div>
+                        <div class="lh20">&nbsp;</div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" height="25">&nbsp;</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>
+<div id="lightbox" style="display:none;">&nbsp;</div>

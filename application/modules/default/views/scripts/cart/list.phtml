@@ -1,0 +1,327 @@
+<?php 
+//echo "<pre>";print_r($_SESSION);exit;
+$total_items = count($this->sessiondata);
+$flag = $this->status;
+$wishlist = $this->wishlist;
+//echo "<pre>";
+//print_r($wishlist);exit;
+$count_wishlist = count($wishlist);
+?>
+<link rel="stylesheet" href="/css/default/list.css" type="text/css" />
+<script src="/jscript/default/cart.js" language="javascript"></script>
+<script language="javascript">
+function totalprice(price,id){
+newprice=price * $('#divMrp_'+id).text();
+newprice=newprice.toFixed(2);
+jQuery('#divTotal_'+id).text(newprice);
+}
+</script>
+<div class="cart_maincontainer">
+	<div class="clearBoth">
+		<?php 
+		
+            $genObj =  new General();
+			$flag = 0;
+            $genObj->getpathheaderblock();
+        ?>
+        <div class="mainBodyHeadingContainer">
+            <div class="clearBoth">
+                <div class="mainBodyHeadingLeft">My Shopping Cart</div> 
+                <div class="floatRight">
+                    <div class="placeholdertxt"><a title="Back to myaccount" href="/myaccount"><span class="backArrow"></span>Back to my account</a></div>
+                    
+                </div>
+            </div>
+            <div class="headingBotBorder">&nbsp;</div>
+        </div>            
+    </div>
+    <div class="gapHeight30">&nbsp;</div>
+<?php
+if(!empty($this->errormaeesge)){
+?>
+<div class="wid1000">
+	<div class="cart_msg">
+    	<div class="cart_msg_container">
+        	<div class="cartmsg_icon"></div>
+            <div class="floatLeft" style="width:890px;">
+            	<div class="important_msg">Important messages</div>
+                <?php foreach($this->errormaeesge as $key=>$val){?>
+                <div class="lh12"></div>
+                <div class="plz_note"><?=$val?></div>
+                <?php } ?>
+            </div>
+   		</div>
+    </div>
+</div>
+<div class="lh40">&nbsp;</div>
+<?php } ?>
+<form name="list" id="list" action="/cart/list">
+<div class="wid1000">
+	<div class="cart_wid650">
+		<?php 
+		if(!empty($this->sessiondata)){
+			$flag = 1;
+		?>
+		<div class="listing_heading">
+            <div class="cart_item">Cart items</div>
+            <div class="listing_itemSRP">Item SRP</div>
+            <div class="quantity">Quantity</div>
+        </div>
+		<?php
+		$r=1;
+		foreach($this->sessiondata as $key=>$productdetail){ //echo "<pre>";print_r($productdetail);exit;
+		
+		       
+		 ?>
+        <div class="listing_content" id="content_<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">
+            <div class="cart_item_listing">
+                <div class="cartimage_main">
+                <div class="cartimage_container"><a href="<?=$productdetail->product_url;?>" target="_blank"><img src="<?=$productdetail->productImageSrc;?>" alt="<?=$productdetail->product_name;?>" title="<?=$productdetail->product_name;?>"  /></a></div>
+                <div class="lh10">&nbsp;</div><span id='updated_qty' style="display:none;">afasfdas</span>
+                <?php if($flag == 1) { ?>
+            <div class="floatLeft"><a href="/cart/wishlist/val/<?php echo $productdetail->store_api_key[0]['apikey']; ?>_<?=$productdetail->product_id;?>/vcode/<?=$productdetail->variationcode;?>" class="jSave cartremovelink" title="Save for later" rel="<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">Save for later</a></div>
+			<?php } ?>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft"><a href="/cart/deletelist/id/<?=$productdetail->product_id;?>/key/<?php echo $productdetail->store_api_key[0]['apikey']?>/vcode/<?=$productdetail->variationcode;?>" class="jRemovelist cartremovelink" title="Remove" rel="<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">Remove</a></div>
+            </div>
+                <div class="cartimage_detail">
+                    <?php
+					
+                                        $productname=$productdetail->product_name;
+                                        if(strlen($productdetail->variations[$productdetail->product_id]['allvariation']) > 0)
+                                        $productname=$productname.' - '.$productdetail->variations[$productdetail->product_id]['allvariation'];
+                                        //echo $productname
+                                        if(strlen($productname)>130)
+                                        $productname=substr($productname,0,130).'...';
+									
+										
+                                        ?>
+                <div class="cartpname"><?=$productname?>	</div>
+				
+                <div class="lh5">&nbsp;</div>
+					<?php if($productdetail->customizeddata!='' ) {
+					
+					$custodetail=explode("-~^-",$productdetail->customizeddata);
+					?>
+					 <div class="floatLeft instock_container_customization"><a href="javascript:void(0)" class="cDetail "  title="Customized Detail" rel="<?php echo stripslashes( stripslashes($custodetail[0]));?>" id="<?=$productname?>" >View Customization Details</a></div>
+					   <div class="lh5">&nbsp;</div>
+					<?php } 
+					
+					?>
+                <div class="cart_addedfrom">Added from <a href="<?= $productdetail->store_api_key[0]['mallurl']; ?>" title="<?= $productdetail->store_api_key[0]['title']; ?>" target="_blank"><?php echo $productdetail->store_api_key[0]['title']; ?> </a> on <?php echo date('M d,Y',$productdetail->addedtime);?></div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="floatLeft">
+                        <div class="condition_heading">Condition:</div>
+                        <div class="condition_txt"><?php echo $productdetail->variations[$productdetail->product_id][condition]; ?></div>
+                    </div>
+                </div>
+                <div class="lh12">&nbsp;</div>
+                <div class="instock_maincontainer">
+                    <div class="instock_container">
+                        <div class="floatLeft"><?php if($productdetail->product_maxqty<=5){echo '<span style="color:#ff0000;">Only '.$productdetail->product_maxqty.' quantity  left. Order soon.</span>';}else{'In stock';}?></div>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="floatLeft instock_containerWid"><?php echo $productdetail->shippingbox['text']; if($productdetail->shippingbox['exlu']!=''){?>(<a href="javascript:void(0)" class="citipop"  title="View excluded destinations" rel="<?php echo $productdetail->shippingbox['exlu'];?>">View excluded destinations</a>)<?php } ?></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="SRP_content">Rs.<?php echo number_format($productdetail->variations[$productdetail->product_id]['srp'],2,'.','');  ?></div>
+            <div class="quantity"><select class="qtybox" id="qty~<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']?>_<?php echo $productdetail->variationcode?>" rel="<?php echo $productdetail->variations[$productdetail->product_id]['srp']; ?>" >
+			<?php
+			 
+			 for($i=1;$i<=$productdetail->product_maxqty;$i++){
+			 if($i==101)
+			 break;
+			 ?> 
+			<option value="<?php echo $i;?>" <?php if($i==$productdetail->product_qty){echo 'selected';}?>><?php echo $i;?></option>
+			<?php } ?>
+		</select></div>
+         </div>
+		<?php  if($r!=count($this->sessiondata)  ){?>
+	<div class="cartlisting_bottomline" id="line_<?=$productdetail->product_id;?>_<?php echo $productdetail->store_api_key[0]['apikey']; ?>">&nbsp;</div>
+	<?php } ?>
+	<?php 
+	$r++;} ?>
+        <div class="carttotal_bar">
+            <div class="floatRight">
+                <div class="total_merchandise">Total merchandise price :</div>
+                <div class="total_merchandise_price">Rs.<?= number_format($this->totalprice,2,'.',''); ?></div>
+            </div>
+        </div>
+	<?php } else {?>
+	<div class="nocontent_box">
+	<div class="floatLeft">
+    <div class="nocontent_icon"><img src="/images/default/myaccount_my_cart.png"></div>
+        <div class="floatLeft">
+            <div class="floatLeft nocontent_content">Shopping cart helps you to view accumulated list of your products at one place. Further it allows you to remove and purchase your products or continue shopping for more. </div>
+            <div class="lh20">&nbsp;</div><div class="floatLeft nocontent_content2">Click "Add to cart" on any product from any of our stores to view here.</div>
+        </div>
+    </div>
+</div>
+	<?php } ?>	
+	<?php 
+	if($count_wishlist > 0) {
+		$flag = 1;
+		?>
+     <div class="lh70">&nbsp;</div>
+        <div class="cart_wid650">
+            <div class="shoppingcart_savelaterheading">Saved items : To buy later</div>
+            <div class="shoppingcart_savelaterunderline"></div>
+        <?php 
+		$r=1;
+		foreach($wishlist as $key=>$productdetail){ $prod_id = $productdetail['product_id']; //echo "<pre>";print_r($productdetail);exit;  ?>        
+        <div class="listing_content" id="wishlistcontent_<?=$productdetail['product_id'];?>_<?php echo $productdetail['store_api_key']; ?>">
+            <div class="cart_item_listing">
+                <div class="cartimage_main">
+                <div class="cartimage_container"><a href="<?=$productdetail['product_url'];?>" target="_blank"><img src="<?=$productdetail['productImageSrc'];?>" alt="<?=$productdetail['product_name'];?>" title="<?=$productdetail['product_name'];?>" /></a></div>
+                <div class="lh10">&nbsp;</div>
+                <?php if($flag == 1) { ?>
+            <div class="floatLeft"><a href="/cart/movetocart/id/<?php echo $productdetail['product_id']; ?>/key/<?=$productdetail['store_api_key'][0]['apikey'];?>/vcode/<?=$productdetail['variationcode'];?>" class="jSavewishlist cartremovelink" title="Move to cart" rel="<?=$productdetail['product_id'];?>_<?php echo $productdetail['store_api_key'][0]['apikey']; ?>">Move to cart</a></div>
+			<?php } ?>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft"><a href="/cart/deletewishlist/id/<?=$productdetail['product_id'];?>/key/<?php echo $productdetail['store_api_key'][0]['apikey']?>/vcode/<?=$productdetail['variationcode'];?>" class="jRemovewishlist cartremovelink" title="Remove" rel="<?=$productdetail['product_id'];?>_<?php echo $productdetail['store_api_key'][0]['apikey']; ?>">Remove</a></div>
+            </div>
+                <div class="cartimage_detail">
+                     <?php
+					 if($productdetail['product_id']==19021)
+					 {
+					// echo "<pre>";
+					// print_r($productdetail);
+					 }
+                                        $productname=$productdetail['product_name'];
+                                        if(strlen($productdetail['variations'][$productdetail['product_id']]['allvariation']) > 0)
+                                        $productname=$productname.' - '.$productdetail['variations'][$productdetail['product_id']]['allvariation'];
+                                        //echo $productname
+                                        if(strlen($productname)>130)
+                                        $productname=substr($productname,0,130).'...';
+                                        ?>
+                <div class="cartpname"><?=$productname?>	</div>
+				<?php if($productdetail['customizefields']!='') 
+				{
+				$custodetailwish=explode("-~^-",$productdetail['customizefields']);
+				?>
+				  <div class="lh5">&nbsp;</div>
+					 <div class="floatLeft instock_container_customization"><a href="javascript:void(0)" class="cDetail "  title="Customized Detail" rel="<?php echo stripslashes( stripslashes($custodetailwish[0]));?>" id="<?=$productname?>" >View Customization Details</a></div>
+					   <div class="lh5">&nbsp;</div>
+					<?php } ?>
+                <div class="lh5">&nbsp;</div>
+                <div class="cart_addedfrom">Added from <a href="<?= $productdetail['store_api_key'][0]['mallurl']; ?>" title="<?= $productdetail['store_api_key'][0]['mallurl']; ?>" target="_blank"><?php echo $productdetail['store_api_key'][0]['title']; ?> </a> on <?php echo date('M d,Y',$productdetail['product_dateadded']);?></div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="floatLeft">
+                        <div class="condition_heading">Condition:</div>
+                        <div class="condition_txt"><?php echo $productdetail['variations'][$prod_id]['condition']; ?></div>
+                    </div>
+                </div>
+                <div class="lh12">&nbsp;</div>
+                <div class="instock_maincontainer">
+                    <div class="instock_container">
+                        <div class="floatLeft"><?php if($productdetail['product_maxqty']<=5){echo '<span style="color:#ff0000;">Only '.$productdetail['product_maxqty'].' quantity  left. Order soon.</span>';}else{'In stock';}?></div>
+                        <div class="lh5">&nbsp;</div>
+                        <div class="floatLeft instock_containerWid"><?php echo $productdetail['shippingbox']['text']; if($productdetail['shippingbox']['exlu']!=''){?>(<a href="javascript:void(0)" class="citipop"  title="View excluded destinations" rel="<?php echo $productdetail['shippingbox']['exlu'];?>">View excluded destinations</a>)<?php } ?></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="SRP_content">Rs.<?php echo number_format($productdetail['variations'][$prod_id]['srp'],2,'.',''); ?></div>
+            <div class="quantity"><select class="qtyboxwishlist" id="wishlistqty~<?=$productdetail['product_id'];?>_<?php echo $productdetail['store_api_key']?>" rel="<?php echo $productdetail['product_id']; ?>_<?php echo $productdetail['variationcode']; ?>_<?php echo $productdetail['storeApiKey']; ?>" >
+			<?php
+			 for($i=1;$i<=$productdetail['product_maxqty'];$i++){?> 
+			<option value="<?php echo $i;?>" <?php if($i==$productdetail['product_qty']){echo 'selected';}?>><?php echo $i;?></option>
+			<?php } ?>
+		</select></div>
+         </div>
+	<div class="cartlisting_bottomline" id="wishlistline_<?=$productdetail['product_id'];?>_<?php echo $productdetail['store_api_key']; ?>">&nbsp;</div>
+	<?php // $total += $productdetail->variations[$productdetail->product_id]['srp'] * $productdetail->product_qty;
+	$r++;} ?>
+          
+        </div>
+	<?php } ?>	
+     </div>
+	 <?php
+	 if(!empty($this->sessiondata))
+	 {
+	 ?>
+     
+     <div class="cart_wid40">&nbsp;</div>
+     <div class="cart_wid310">
+    	 <div class="cart_righttopbar">Cart Summary</div>
+         <div class="cart_rightcontentbar">
+         	<div class="lh18">&nbsp;</div>
+         	<div class="cart_right_innercontent">
+            	<div class="floatLeft cart_right_innerheading"><?php echo $total_items; ?><span class="cart_right_innertext">Item(s) in cart</span></div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft cart_right_innertext">Total merchandise price</div>
+                <div class="floatLeft cart_right_pricetext total_merchandise_price_tatal">Rs.<?= number_format($this->totalprice,2,'.',''); ?></div>
+                <div class="lh18">&nbsp;</div>
+                <div align="center"><img src="/images/default/pto_checkout_btn.png" title="Proceed to checkout" alt="Proceed to checkout" name="list" id="list" onclick="window.location='http://secure.goo2ostore.com/login?tab=1'" style="cursor:pointer;" /></div>
+            </div>
+        </div>
+     </div>
+	 <?php } ?>
+    <?php if($flag == 1){?>
+    	 <div class="lh70">&nbsp;</div>
+    	<div class="tGreenBox">
+        <div class="floatLeft">
+            <div class="floatLeft exist_heading">About shopping cart</div>
+             <div class="lh5">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">Items in your Shopping Cart always reflect the most recent price displayed on the products</div>
+            	</div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content"> Placing an available item in your shopping cart does not reserve that item. Available inventory is only assigned to your order when you will complete the payment process successfully</div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">Shipping price (if any) is not included in ‘Total merchandise price’. Final order price will be calculated during the checkout process</div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content"> If you have a gift certificate or discount coupon code, you can redeem them when you will proceed to checkout</div>
+                </div>
+        </div>
+    </div>
+        <div class="lh20">&nbsp;</div>
+        <div class="floatLeft">
+            <div class="floatLeft exist_heading">Using shopping cart</div>
+             <div class="lh5">&nbsp;</div>
+            <div class="floatLeft">
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">If you wish to buy all products in the Shopping cart, click on "Proceed to checkout"</div>
+            	</div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content"> If you like to buy any product on a later date, click on "Save for later"</div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">To buy your saved items, click on “Move to cart” and complete the checkout process</div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">You can buy more than one quantity by changing the quantity from the given drop down</div>
+                </div>
+                <div class="lh5">&nbsp;</div>
+                <div class="floatLeft">
+                    <div class="greenbox_bullet">&nbsp;</div>
+                    <div class="greenbox_content">Click on “Remove” to delete any item from your cart</div>
+                </div>
+        </div>
+    </div>
+  </div>
+  	<?php }?>
+</div>
+</form>
+<div class="lh40">&nbsp;</div>
+</div>
