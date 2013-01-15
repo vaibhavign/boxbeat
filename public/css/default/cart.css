@@ -1,0 +1,127 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{ border:0px none;}
+.floatLeft{float:left;}
+.floatRight{ float:right;}
+.clearBoth{clear:both;}
+
+/* Cart Page Css Start From here*/
+.cart_maincontainer{ width:1000px; margin:auto; clear:both;}
+.wid1000{ width:1000px; margin:auto;}
+.lh40{ height:40px; line-height:40px; clear:both;}
+.lh30{ height:30px; line-height:30px; clear:both;}
+.lh12{ height:12px; line-height:12px; clear:both; font-size:0px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.shoppingcart_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; float:left; height:25px;}
+.heading_bottomline{ border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px;}
+.cart_msg{ width:851px; height:71px; border:1px solid #fcd970; margin:auto; background-color:#fff7bf;}
+.cart_msg_container{margin:13px; float:left;}
+.cartmsg_icon{ background-image:url('/images/default/cart_msgicon.png'); width:34px; height:30px; display:block; float:left; margin-right:14px;}
+.important_msg{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#393939; float:left;}
+.plz_note{font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#393939; float:left;}
+.plz_note a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:underline;}
+.plz_note a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:none;}
+.listing_heading{ background-color:#989898; border-bottom:1px solid #696969; float:left; height:26px; line-height:26px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; font-weight:bold;}
+.cart_item{ width:630px; float:left;  margin:0px 10px 0px 10px;}
+.cart_item_listing{width:640px; float:left;  margin:0px 10px 0px 0px;}
+.listing_itemSRP{width:100px; float:left;  margin:0px 10px 0px 10px;}
+.quantity{width:90px; float:left;  margin:0px 10px 0px 10px;}
+.netprice{width:110px; float:left;  margin:0px 10px 0px 0px;}
+.listing_content{ width:1000px; float:left; margin:17px 0px 17px 0px;}
+.cartlisting_bottomline{ border-bottom:1px dashed #bababa; height:1px; line-height:1px; clear:both; font-size:0px;}
+.cartimage_main{ width:125px; float:left;}
+.cartimage_container{ width:65px; height:65px; float:left;}
+.cartimage_detail{ width:505px; float:left;}
+.cartremovelink{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:underline;}
+.cartremovelink:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:none;}
+.cartpname{ color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; float:left;}
+.cart_addedfrom{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:left;}
+.cart_addedfrom a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:none;}
+.cart_addedfrom a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:underline;}
+.condition_heading{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; width:73px;}
+.condition_txt{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left;}
+.instock_maincontainer{ background-color:#f4f4f4; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+.instock_container{ margin:10px; float:left;}
+.instock_container a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline;}
+.instock_container a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:none;}
+.instock_container_customization a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline;}
+.instock_container_customization a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:none;}
+.SRP_content{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; width:100px; float:left;  margin:0px 10px 0px 10px;}
+.quantity select{ width:46px; height:24px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; margin:0px 0px 0px 0px;}
+.netprice_content{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; width:110px; float:left;  margin:0px 10px 0px 0px;}
+.cart_alert{color:#f00000; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+.carttotal_bar{ width:998px; clear:both; background-color:#d8ecf4; border:1px solid #93cbe2; height:33px;}
+.total_merchandise{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#000000; margin-right:17px; float:left; line-height:33px;}
+.total_merchandise_price{width:110px; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#000000; margin-right:33px; float:right; font-weight:bold; line-height:33px;}
+.tGreenBox {
+    background-color: #E6F3D9;
+    border: 1px solid #C5DEAB;
+    float: left;
+    padding: 25px 25px 25px 23px;
+}
+.greenbox_bullet {
+    background-color: #393939;
+    float: left;
+    height: 3px;
+    margin-right: 22px;
+    margin-top: 10px;
+    width: 3px;
+}
+.greenbox_content {
+    color: #393939;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+	word-wrap:break-word;
+	width:925px;
+	float:left;
+}
+
+.exist_heading {
+    color: #393939;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.tGreenBox a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:underline;}
+.tGreenBox a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:none;}
+/* Cart Page Css Ends here*/
+#loadContent{ float:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; }
+.wid90{ width:90px; float:left;}
+.heightGap30{ height:30px; line-height:30px; clear:both; font-size:0px; }
+.heightGap6{ height:6px; line-height:6px; clear:both; font-size:0px; }
+.bgLine1{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.manageOrder{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; }
+.placeholdertxt { float:right; }
+.placeholdertxt a { 
+	color: #00538A;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+	float:right;
+	padding-top:4px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.placeholdertxt a:hover { 
+	color: #00538A;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+	float:right;
+	padding-top:4px;
+}
+.backArrow { background-image:url(/images/admin/back_button.png); width:12px; height:11px; float:left; margin-top:4px; background-position:left; background-repeat:no-repeat; }
+.arrowgap { float:right; width:30px; }
+.wid1000mAuto{ width:1000px; margin:auto; clear:both;}
+.innerDiv{ width:440px;  margin:auto;}
+.contentText16{ font:normal 16px Arial, Helvetica, sans-serif; color:#393939;}
+.detailsFilledCont{ margin:auto; width:405px; border:1px solid #9e9e9e; border-top:0px none; }
+.detailsFilledCont .detHeading{ height:27px; padding:0 0 0 8px; background:#acacac; font:normal 14px Arial, Helvetica, sans-serif; color:#ffffff; line-height:27px;}
+.detailsFilledCont .detInnerCont{ padding:18px 0 0 13px;height:123px; overflow-y:auto;}
+.detailsFilledCont .detInnerCont label.leftContent{ width:150px; float:left;font:bold 12px Arial, Helvetica, sans-serif; color:#393939;  word-wrap:break-word;}
+.detailsFilledCont .detInnerCont label.colon{ width:15px; float:left;font:normal 12px Arial, Helvetica, sans-serif; color:#393939; text-align:center;}
+.detailsFilledCont .detInnerCont label.rightContent{ width:175px; float:left;font:normal 12px Arial, Helvetica, sans-serif; color:#393939; word-wrap:break-word;}
+/*---------------My Cart Emnpty Css Ends here-------------------*/
+.instock_containerWid { width:295px; word-wrap:break-word; }

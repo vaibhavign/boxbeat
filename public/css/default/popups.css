@@ -1,0 +1,36 @@
+#reportusermain { font-family:Arial, Helvetica, sans-serif; color:#393939; font-size:12px; border:6px solid #9f9f9f; width:500px; display:none;}
+.reportusermainCont  { border:1px solid #393939; }
+.popHeading { clear:both; height:31px; line-height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; padding:0 10px 0 18px; }
+.popSubHeading { padding-bottom:5px; }
+.popupseparator { background-color:#d9d9d9; height:1px; line-height:1px; font-size:1px; margin-top:18px; }
+.popupseparator1 { background-color:#d9d9d9; height:1px; line-height:1px; font-size:1px; margin-top:31px; }
+.popgap { clear:both; padding:20px 20px 14px 20px; }
+.popgap1 { clear:both; padding:36px 20px 14px 20px; background-color:#FFFFFF; }
+.popButtPosition1 { clear:both; padding-top:8px; height:26px; }
+#reportBlockUser ul { margin:0px; padding:0px; }
+#reportBlockUser ul li { margin:0px; padding:0px; list-style:none; line-height:25px; }
+#reportBlockUser ul li select { width:258px; margin-left:30px; }
+a.popfooter { text-decoration:underline; color:#767676; font-size:11px;}
+a:hover.popfooter { text-decoration:none; color:#767676;}
+input[type=radio]{ padding-left:0px; margin-left:0px; }
+input[type=checkbox]{ padding-left:0px; margin-left:0px; }
+.clearBoth { clear:both; }
+.popthankdesc { clear:both; padding-top:21px; }
+.floatLeft { float:left; }
+.floatRight { float:right; }
+a.popclose { color:#e3e3e3; text-decoration:none; font-size:13px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; }
+a.popclose { color:#e3e3e3; text-decoration:none; font-size:13px; font-family:Verdana, Geneva, sans-serif; font-weight:bold; }
+.popSubHeading1 { font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; }
+a.cancel_btn { text-decoration:underline; color:#333333;}
+a:hover.cancel_btn { text-decoration:none; color:#333333;}
+.cancelBtn { padding:0px 18px 0 0; font-size:14px; line-height:24px; }
+.padRight18 { padding-right:18px; }
+.wid68{ width:68px; float:left; }
+.from{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#767676; }
+.name{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#393939; }
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.popUpInput{width:390px; height:21px; border:1px solid #d9d9d9; color:#999999; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-left:5px; padding-right:5px;}
+.useComma{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; font-weight:normal; }
+.popUptextArea{width:390px; height:65px; border:1px solid #d9d9d9; color:#999999; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-left:5px; }
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+.popupText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#999999; }

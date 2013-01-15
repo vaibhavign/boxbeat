@@ -1,0 +1,275 @@
+/*All Common Css Start From here*/
+ body{ margin:0px; padding:0px; background-color:#53aee3;}
+ html{overflow-y:scroll;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.fso{ font-size:0px;}
+img{border:0px none;}
+a:focus{border:0px none; outline:none;}
+.fwBold{ font-weight:bold;}
+/*All Common Css Start From here*/
+.wid100per{ width:100%; float:left;}
+.wid1000{ width:1000px; margin:auto; clear:both;}
+.wid1000_body{ width:1000px; float:left; height:600px;}
+.body_margin{ margin-top:65px;}
+
+
+/*leftBlock css Start From here*/
+.wid500_left{ width:498px; border:1px solid #6d6d6d; background-color:#ffffff; border-bottom:0px none; border-top:0px none; float:left;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.marginBoth{margin:0px 9px 0px 9px;}
+.search_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#767676; font-weight:bold;  margin-right:16px; line-height:13px;}
+.search_input_bg{width:478px; float:left; height:27px; border:1px solid #d9d9d9;}
+.input_wid465{ width:465px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#767676; padding-left:8px; margin-top:4px; *margin-top:2px; outline:none; background-color:transparent; border:0px none; word-wrap:break-word;}
+.search_input_arrow{ background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:13px; height:8px; background-position:-37px 0px; margin:-8px 0px 0px 30px; position:absolute; *margin:-8px 0px 0px -446px;}
+.wid480{ width:480px; float:left;}
+.lh8{height:8px; line-height:8px; clear:both; font-size:0px;}
+.lh30{ height:30px; line-height:30px; clear:both; font-size:0px;}
+.find_people_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#393939;}
+.lh40{height:40px; line-height:40px; clear:both; font-size:0px;}
+.find_people_underline{border:1px solid #eaeaea; font-size:0px; border-left:0px none;  border-right:0px none; border-top:0px none; clear:both;}
+.widd46{ width:46px; float:left;}
+.wid498{ width:498px; float:left; height:70px;}
+.import_contacticon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:30px; height:32px; background-position:-2px -84px; float:left; margin-right:24px; margin-top:3px;}
+.facebook_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:33px; height:33px; background-position:-36px -84px; float:left; margin-right:21px;}
+.manage_inviteicon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:41px; height:32px; background-position:-75px -84px; float:left; margin-right:13px;}
+.wid46{ width:46px; float:left;}
+.wid48{ width:48px; float:left;}
+.wid390{width:390px; float:left; word-wrap:break-word;}
+.wid10{width:10px; float:left;}
+.wid398{ width:398px; float:left; word-wrap:break-word;}
+.import_heading{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#767676; font-weight:bold;}
+.import_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#767676; font-weight:normal;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.hover_bg{ background-color:#f5f5f5; cursor:pointer;}
+.import_heading_select{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#393939; font-weight:bold;}
+.facebookhover_arrow{background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; display:block; position:absolute; margin:18px 0px 0px 483px;}
+.facebookhover_arrow{display:none;}
+.importhover_arrow{background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; display:block; position:absolute; margin:18px 0px 0px 483px;}
+.invites_arrow{background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; display:block; position:absolute; margin:18px 0px 0px 483px;}
+
+.importhover_arrow{display:none;}
+.invites_arrow{display:none;}
+.import_Second{display:none;}
+.import_Third{ display:none;}
+/*leftBlock css Ends here*/
+
+/*Left Menu Start From here*/
+.leftmenu_bg{ background-image:url(/images/default/left_menubg.gif); background-repeat:no-repeat; width:500px; height:85px;}
+.tabmenu ul{ margin:0px; padding:0px; margin-left:20px;}
+.tabmenu ul li{ margin:0px; padding:0px; list-style-type:none; display:inline;}
+.tabmenu ul li a:focus{outline:none; border:0px none;}
+.tabmenu ul li a{ font-family:Verdana, Arial, Helvetica, sans-serif; color:#dfdfdf; font-size:12px; text-decoration:none; text-transform:uppercase; float:left; cursor:pointer; margin-right:5px;}
+.tabmenu ul li a:hover{ font-family:Verdana, Arial, Helvetica, sans-serif; color:#ffffff; font-size:12px; text-decoration:none; text-transform:uppercase; float:left; cursor:pointer;}
+.tabmenu ul li a:hover.current{ font-family:Verdana, Arial, Helvetica, sans-serif; color:#dfdfdf; font-size:12px; text-decoration:none; text-transform:uppercase; float:left; cursor:pointer;}
+.tabmenu li a.current,.tabmenu ul li a:hover{background:url(/images/default/newsfeed_menu.gif) no-repeat top right; color:#ffffff;}
+.tabmenu li a.current span,.tabmenu ul li a:hover span{background:url(/images/default/newsfeed_menu.gif) no-repeat top left; color:#ffffff;}
+.tabmenu ul li a span{ padding:9px 0px 10px 17px; margin:0px 16px 0px 0px; position:relative; float:left;}
+/*Left Menu Ends here*/
+
+/*RightBlock css Start From here*/
+.FixedinvitesBlock{display:none;}
+.import_first{display:none;}
+.facebook_first{display:none; min-height:500px;}
+.wid480_right{ width:480px; float:right;}
+.wid500_right{ float:left; width:499px; background-color:#dff2fd; border-right:1px solid #1c76ad;}
+/*RightBlock css Start From here*/
+.wid500_fixed{ float:left; width:499px; background-color:#FFFFFF; border-right:1px solid #6d6d6d; border-bottom:1px solid #6d6d6d; }
+a.view_detail_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:underline; cursor:pointer;}
+a:hover.view_detail_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:none;}
+a.view_detail_link span{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:underline; cursor:pointer;}
+a:hover.view_detail_link span{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:none;}
+
+
+.wid18{ width:18px; float:left;}
+.height24_link{ height:24px; line-height:24px;  background-color:#eeeeee; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh2{ height:2px; line-height:2px; clear:both; font-size:0px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.close_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-56px -17px; width:7px; height:6px; display:block; float:left; margin:10px 15px 0px 3px;}
+.import{ width:104px; float:left; }
+.send_invite{ width:132px; float:left; }
+.stepOne{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:19px; height:20px; background-position:-84px -45px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#9b9b9b; padding-left:6px; line-height:20px; }
+.wid27{ width:27px; float:left; }
+.wid61{ width:61px; float:left; }
+.stepNormal{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#999999;}
+.stepArrowNorm{ float:left; background-image:url(/images/default/newsfeed_icon.gif); width:6px; height:9px; background-position:-116px -18px; margin-top:5px; }
+.wid480_Auto{ width:469px; float:left; margin-left:20px;}
+.wid445{ width:445px; float:left;}
+.wid89{ width:89px; float:left; }
+.wid16{ width:16px; float:left; }
+.textCurrent{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#393939;}
+.stepBgCurrent{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:19px; height:20px; background-position:-109px -45px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#fff; padding-left:6px; line-height:20px;}
+.arrowCurrent{float:left; background-image:url(/images/default/newsfeed_icon.gif); width:6px; height:9px; background-position:-116px -29px; margin-top:5px;}
+.marLeft10{margin-left:10px;}
+.bgN{clear:both; background-color:#d5d5d5; height:1px; line-height:1px; font-size:0px;}
+.bgT{clear:both; background-color:#eeeeee; height:3px; line-height:3px; font-size:0px;}
+.padTop3{padding-top:3px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px; } 
+.addPeopleDetail{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#767676; }
+.userDetail{ width:103px; float:left; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; line-height:24px; }
+.bgone{height:1px; line-height:1px; background-color:#eaeaea; }
+.wid11{ width:11px; float:left; }
+.userInput{width:195px; height:22px; border:1px solid #848484; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; line-height:24px; padding-left:5px; padding-right:5px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.wid322{ width:322px; margin:auto;}
+.dotted{background-image:url(/images/default/dotted.gif); height:1px; background-repeat:repeat-x;}
+.services{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; }
+.wid74{ width:74px; float:left; }
+.wid38{ width:38px; float:left; }
+.wid44{ width:44px; float:left; }
+.wid42{ width:42px; float:left; }
+a.gmail{ background-image:url(/images/default/newsfeed_icon.gif); width:20px; height:15px; background-position:0px -121px; display:block; text-decoration:none; margin-top:2px; }
+a.yahoo{ background-image:url(/images/default/newsfeed_icon.gif); width:28px; height:15px; background-position:-22px -121px; display:block; text-decoration:none; margin-top:2px; }
+a.msn{ background-image:url(/images/default/newsfeed_icon.gif); width:27px; height:19px; background-position:-52px -119px; display:block; text-decoration:none; margin-top:2px; }
+a.rediff{ background-image:url(/images/default/newsfeed_icon.gif); width:31px; height:9px; background-position:-82px -124px; display:block; text-decoration:none; margin-top:6px; }
+a.email{ background-image:url(/images/default/newsfeed_icon.gif); width:27px; height:23px; background-position:0px -138px; display:block; text-decoration:none; margin-top:-4px; }
+.service_detail{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676; }
+.wid107{ width:107px; float:left; }
+.lh92{ line-height:92px; height:92px; clear:both;}
+/*RightBlock css Ends here*/
+
+
+.search_popup{display:none; margin-left:9px;}
+.search_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-41px -16px; width:13px; height:7px; display:block; display:block; margin:-7px 0px 0px 31px; *margin:-7px 0px 0px 31px;}
+.search_main{ height:75px; width:480px; float:left; background-color:#e8e8e8;}
+.wid460_popup{width:460px; margin:auto; clear:both;}
+.popup_heading{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:13px;}
+.search_inputbg{ clear:both;  width:456px; height:27px; border:1px solid #848484; background-color:#ffffff;}
+.wid460_input{  width:430px; color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; padding-left:5px; overflow:hidden; outline:none; border:0px none; margin-top:3px;}
+.search_icon{ margin:5px 0px 0px 0px;}
+
+.addPeopleDetail{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#767676; }
+.checkbox_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; line-height:13px;}
+.invitation_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939;}
+.checkbox_textTwo{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#393939; line-height:22px;}
+.checkbox_textwid216{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; font-weight:normal;}
+.checkbox_textwid138{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; font-weight:normal;}
+.checkbox_textwid142{ width:142px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#999999; font-weight:normal;}
+.sortBy{ margin-right:5px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#393939; }
+.sortByOption{width:89px; height:18px; margin-top:3px; *margin-top:0px; border:1px solid #848484; font-family:Trebuchet MS, Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#393939; outline:none;}
+.marTop3{margin-top:3px;}
+a.send_them{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#4c74a2; text-decoration:underline; cursor:pointer; }
+a:hover.send_them{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#4c74a2; text-decoration:none;cursor:pointer; }
+input.checkbox{margin-top:0px;}
+.labelcheckbox{ background-image:url(/images/default/checkbox.gif); background-repeat:no-repeat; width:13px; height:13px; display:block; margin:0px 0px 0px 0px;}
+.labelcheckbox.select{ background-image:url(/images/default/checkbox_active.gif); background-repeat:no-repeat; width:13px; height:13px;}
+.labelcheckboxTwo{ background-image:url(/images/default/checkbox.gif); background-repeat:no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:5px 0px 0px 0px;}
+.labelcheckboxFour{ background-image:url(/images/default/checkbox.gif); background-repeat:no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:0px 0px 0px 10px;}
+.labelcheckboxThree{ background-image:url(/images/default/checkbox.gif); background-repeat:no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:5px 0px 0px 10px;}
+.labelcheckboxThree.select{ background-image:url(/images/default/checkbox_active.gif); background-repeat:no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:5px 0px 0px 10px;}
+
+.selection{ background-color:#fff; height:22px; line-height:22px; }
+.reminder{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#999999; }
+.proDetail{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal; }
+.proDetails{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; font-style:italic; color:#767676; }
+.proName{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal;}
+.wid8{ width:8px; float:left; }
+.wid449{ width:449px; margin:auto; }
+.wid430{ width:430px; float:left; }
+.invitationSent{ background-color:#e4e4e4; height:23px; line-height:23px; }
+.selectAll{ background-color:#f1f1f1; height:23px; line-height:23px; }
+a.invitation_link{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4c74a2; text-decoration:underline; }
+a:hover.invitation_link{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#4c74a2; text-decoration:none;}
+.checkbox_textwid327{ width:320px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; font-weight:normal;}
+
+
+
+.right_top_menu{float:left; width:195px;}
+.right_top_menu ul{ margin:0px; padding:0px;}
+.right_top_menu ul li{ margin:0px; padding:0px; list-style-type:none; height:26px; *height:auto; line-height:26px;  font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; border-bottom:1px solid #9ccbe7;}
+.right_top_menu ul li:last-child{ margin:0px; padding:0px; list-style-type:none; height:26px; *height:auto; line-height:26px;  font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; border-bottom:0px none;}
+.right_top_menu .itemcart_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:13px; height:11px; background-position:-72px 0px; display:block;  margin-right:9px; float:left; margin-top:7px;}
+.right_top_menu ul li .wid76{ width:76px; float:right; text-align:right;}
+.right_top_menu ul li a{ margin:0px; padding:0px; list-style-type:none; font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:pointer;}
+.right_top_menu ul li a.current{ margin:0px; padding:0px; list-style-type:none; font-size:12px; color:#333333; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:default; font-weight:bold;}
+.right_top_menu .notification_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:13px; height:11px; background-position:-87px 0px; display:block;  margin-right:9px; float:left; margin-top:7px;}
+.right_top_menu .message_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:14px; height:11px; background-position:-102px 0px; display:block;  margin-right:8px; float:left; margin-top:7px;}
+.wid48{ width:48px; float:left;}
+.right_top_menu .dashboard_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:14px; height:11px; background-position:0px -15px; display:block;  margin-right:8px; float:left; margin-top:7px;}
+.right_top_menu .setting_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:9px; height:11px; background-position:-18px -15px; display:block;  margin-right:10px; margin-left:3px; float:left; margin-top:7px;}
+.right_top_menu .logout_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:9px; height:11px; background-position:-30px -15px; display:block;  margin-right:10px; float:left; margin-top:7px; margin-left:3px;}
+.lh40{height:40px; line-height:40px; clear:both; font-size:0px;}
+.network_stats{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; font-weight:bold;}
+.network_stats_underline{ height:1px; line-height:1px; clear:both; font-size:0px; background-color:#bfdff1;}
+.connection_heading{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#393939;}
+.connection_text{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939;}
+.marginright5{margin-right:5px;}
+#rightPopupBox { width:459px; }
+#rightPopupBox .rightBoxTop{ clear:both; background-image:url(/images/default/right_popup_box_top.png); width:459px; height:8px; }
+#rightPopupBox .rightBoxBottom{ clear:both; background-image:url(/images/default/right_popup_box_bottom.png); width:459px; height:8px; }
+#rightPopupBox .clearBoth{ clear:both; }
+#rightPopupBox .boxBg{ clear:both; background-color:#bfdff1;}
+#rightPopupBox .wid440{ width:440px; margin:auto; padding:10px 0px; }
+#rightPopupBox .bgLine{ clear:both; margin-top:3px; background-color:#dff2fd; height:1px; line-height:1px; font-size:0px;}
+#rightPopupBox .popupHeading{ font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#4c74a2; }
+#rightPopupBox .floatLeft{ float:left; }
+#rightPopupBox .formLeft{ font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:bold; }
+#rightPopupBox .formLeftOne{ font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; }
+#rightPopupBox a.formLeft{ font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:bold; text-decoration:none; }
+#rightPopupBox a:hover.formLeft{ font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:bold; text-decoration:underline; }
+#rightPopupBox .inputDetail{width:366px; height:20px; border:1px solid #b6b6b6; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#393939; outline:none;}
+#rightPopupBox .textareaDetail{width:366px; height:62px; border:1px solid #b6b6b6; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#393939; outline:none; overflow:hidden;}
+#rightPopupBox .padTop{padding-top:10px;}
+#rightPopupBox .optional{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:10px; color:#393939;}
+#rightPopupBox .invite_btn{ background-image:url(/images/default/send_invite_btn.gif); width:93px; height:24px; border:0px none; cursor:pointer;  }
+#rightPopupBox a.see{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#2b588c; text-decoration:underline;}
+#rightPopupBox a:hover.see{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#2b588c; text-decoration:none;}
+#rightPopupBox .textInside{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11px; color:#628294;}
+a.clear_link{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#2b588c; text-decoration:underline; margin-right:21px;}
+ a:hover.clear_link{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#2b588c; text-decoration:none;}
+ .recently_username{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#393939; font-weight:bold;}
+ .wid150{width:150px; float:left;}
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.people_bullet{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-119px 0px; width:3px; height:3px; display:block; float:left; margin:7px 7px 0px 9px;}
+.orderlist ol{margin:0px; padding:0px; margin-left:55px;}
+.orderlist ol li{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; font-weight:normal;}
+.search_city_text{color:#999999; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.ctn_count_bgleft{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-93px -13px; width:12px; height:31px; float:left; display:block;}
+.ctn_count_bgmiddle{ background-color:#767676; float:left; height:31px; line-height:31px; font-family:"Trebuchet MS", Arial, helvetica; font-size:20px; font-weight:bold;color:#ffffff; padding:0px 5px 0px 5px;}
+.ctn_count_bgright{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-106px -13px; width:6px; height:31px; float:left; display:block; margin-right:17px;}
+
+/*Tool tip Css Start From here*/
+.tooltip_main{ display:none; position:absolute; margin:-30px 0px 0px -5px;}
+.tooltip_left{width:4px; float:left;}
+.tooltip_arrow{clear:both; width:12px; height:7px; margin-left:12px;}
+.tooltip_middle{float:left; background-color:#515151; height:24px; color:#FFF; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight:bold; font-size:11px; line-height:24px; padding:0px 4px 0px 4px;}
+/*Tool tip Css Ends here*/
+
+.wid489{width:501px; float:left; *float:none; border:1px solid #393939; margin:6px; height:auto; background-color:#ffffff;}
+.popup_top_bg{height:31px; line-height:31px; background-color:#767676; width:501px;}
+.inputWidth{border:1px solid #d9d9d9; width:371px; height:21px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#999999; padding-left:5px;}
+.comma {font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11px; color:#767676; font-weight:normal;}
+.popDetail {font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+.textAreaWidth{border:1px solid #d9d9d9; width:370px; height:64px; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#999999; padding-left:5px; overflow:hidden;}
+.wid70{ width:70px; float:left; }
+.wid365{ width:365px; float:left; }
+a.sendThem_link{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11px; color:#393939; font-weight:normal; text-decoration:underline; cursor:pointer;}
+a:hover.sendThem_link{font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:11px; color:#393939; font-weight:normal; text-decoration:none; cursor:pointer;}
+.share_profile_heading{ font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; font-weight:bold; color:#ffffff;}
+.paddtop11{padding-top:11px;}
+.wid438{width:438px;  float:left; margin-left:21px;}
+.from{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#767676; font-weight:bold; }
+.to{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#393939; font-weight:normal; }
+.wid59{ width:59px; float:left; }
+.lh25{height:25px; line-height:25px; clear:both; font-size:0px;}
+.lh28{height:28px; line-height:28px; clear:both; font-size:0px;}
+
+/*custome checkbox Css Start From here*/
+.has-js .label_check,
+.has-js .label_radio    { padding-left:10px; color:#010101; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal;  }
+.has-js .label_check    { background: url(/images/default/checkbox.gif) no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:5px 0px 0px 10px; }
+.has-js label.c_on      { background: url(/images/default/checkbox_active.gif) no-repeat; background-repeat:no-repeat; width:13px; height:13px; line-height:13px; display:block; margin:5px 0px 0px 10px;}
+.has-js .label_check input,
+.has-js .label_radio input  { position: absolute; left: -9999px; }
+.wid265{width:250px; float:left;}
+/*custome checkbox Css Ends here*/
+.invite_popup{display:none; position:absolute; margin:80px 0px 0px 200px;}
+.msg,.msgPopup{display:none; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#FF0000; text-align:center; vertical-align:middle;}
+.visible{display:block;}
+.hide{ display:none;}
+.cursor_pointer{cursor:pointer;}
+a.followDiff{ background-image:url(/images/default/following_btn.gif); width:77px; height:18px; display:block; text-decoration:none; }
+a:hover.followDiff{ background-image:url(/images/default/unfollow.gif); width:77px; height:18px; display:block; text-decoration:none; }

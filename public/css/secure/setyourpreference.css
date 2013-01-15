@@ -1,0 +1,43 @@
+body{ padding:0px; margin:0px; }
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.subscribe_heading{ color:#000000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:20px; }
+.fs0{ font-size:0px; }
+.wid32{ width:32px; float:left; }
+.wid189{ width:189px; float:left; }
+.set_prefer{ color:#4c74a2; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; text-decoration:none; }
+.dotted{ clear:both; border-bottom:dotted 1px #b0afaf; height:5px; }
+.shopping1{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:0px -2px; text-decoration:none; display:block; margin-top:4px; }
+.subscribe_btn{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:67px; height:20px; background-position:-18px -19px; text-decoration:none; display:block; }
+.next_step{ background-image:url(/images/secure/after_signup.gif); background-repeat:no-repeat; width:231px; height:22px; background-position:-327px -266px; text-decoration:none; display:block; cursor:pointer; float:left; }
+.lh29{ height:29px; line-height:29px; clear:both; font-size:0px; }
+
+.food6{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:-24px -2px; text-decoration:none; display:block; margin-top:4px; }
+.nightlife3{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:-48px -2px; text-decoration:none; display:block; margin-top:4px; }
+.fitness5{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:-73px -2px; text-decoration:none; display:block; margin-top:4px; }
+.entertainment4{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:-96px -2px; text-decoration:none; display:block; margin-top:4px; }
+.travel2{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:15px; height:15px; background-position:-120px 0px; text-decoration:none; display:block; margin-top:4px; }
+.health7{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:16px; height:13px; background-position:0px -19px; text-decoration:none; display:block; margin-top:4px; }
+.note{ color:#767676; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; }
+
+.wid340{ width:267px; float:left; }
+a.skip{ color:#000000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; text-decoration:underline; font-weight:normal;}
+a:hover.skip{ color:#000000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; text-decoration:none; font-weight:normal;}
+.btn_wid82{opacity:0; width:82px; filter: alpha(opacity=0); }
+.btn_wid67{opacity:0; width:67px; filter: alpha(opacity=0);}
+.step_bg{ background-image:url(/images/secure/after_signup.gif); width:760px; height:31px; background-repeat:no-repeat; background-position:0px 0px; }
+.header_txt{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:22px; color:#136fb0; font-weight:normal; }
+.wid92{ width:92px; float:left; }
+*:focus { outline: none; }
+.unsubscribe_btn{ background-image:url(/images/secure/set_preference_icons.gif); background-repeat:no-repeat; width:12px; height:8px; background-position:-86px -21px; text-decoration:none; display:block; margin-top:10px; }
+.wid16{ width:16px; float:left; }
+.wid75{ width:75px; float:left; }
+.unsubscribe{ color:#4a970c; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; }
+.cross{background-image:url(/images/secure/after_signup.gif); background-repeat:no-repeat; width:105px; height:20px; background-position:0px -329px; text-decoration:none; display:block; cursor:pointer;}
+.cross:hover{background-image:url(/images/secure/after_signup.gif); background-repeat:no-repeat; width:105px; height:20px; background-position:0px -349px; text-decoration:none; display:block; cursor:pointer;}
+.lh2{ height:5px; line-height:5px; clear:both; font-size:0px; }
+.skip_step{background-image:url(/images/secure/after_signup.gif); background-repeat:no-repeat; width:206px; height:22px; background-position:-113px -335px; text-decoration:none; display:block; cursor:pointer; float:left; text-decoration:none; }
+.wid9{ width:9px; float:left; }
+.wid446{width:446px;  margin:auto;}
+a.skip_link{ text-decoration:none;}
+a:hover.skip_link{ text-decoration:none;}

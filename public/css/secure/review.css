@@ -1,0 +1,91 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{ border:0px none;}
+input:focus{outline:none;}
+input[type="radio"]{ padding:0px; margin:0px; *padding:0px; *margin:-3px 0px 0px 0px;  }
+select{outline:none;}
+/*-----------------Common Css Start from here-------------------------*/
+.floatLeft, .checkout_header .logo{float:left;}
+.floatRight, .checkout_header .progressbar{float:right;}
+.clearBoth{clear:both;}
+/*-----------------Common Css Ends here-------------------------*/
+
+
+
+
+
+/*-----------------Body Css Start from here-------------------------*/
+.lh35{ height:35px; line-height:35px; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.lh23{ height:23px; line-height:23px; clear:both;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh70{ height:70px; line-height:70px; clear:both;}
+.lh110{ height:110px; line-height:110px; clear:both;}
+.checkout_mainwidth{ width:1000px; margin:auto; clear:both;}
+.checkout_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; float:left;}
+.checkout_already_inuse_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.checkout_already_inuse_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+/*-----------------AllReady in Use Page Css Ends here-------------------------*/
+
+/*-----------------Edit Shiiping Address Css Start from here-------------------------*/
+
+
+/*-----------------Registration Page Css Start from here-------------------------*/
+.checkout_registration_width{ width:1000px; float:left;}
+/*-----------------Registration Page Css Ends here-------------------------*/
+
+
+/*-----------------Review Place Order Page Css Start from here-------------------------*/
+.review_heading_bgcolor{ background-color:#989898; height:27px; line-height:27px;}
+.review_content_heading_width{word-wrap:break-word; width:340px;}
+.review_content_shipping_width{word-wrap:break-word; width:170px;}
+.review_content_srp_width{word-wrap:break-word; width:145px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_srp_price{word-wrap:break-word; width:95px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_heading{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#ffffff;}
+.review_content{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_variation{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+.review_content_pricing_underline{ border-bottom:1px solid #bababa; clear:both; height:5px; margin-bottom:5px;}
+.review_content_wid240{width:240px; float:left;}
+.review_content_wid270{width:270px; float:left;}
+.review_content_wid345{width:345px; float:left;}
+.review_billingaddress{ width:328px; float:left; background-color:#f1f1f1; min-height:184px;}
+.review_billingaddress_heading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; height:34px; line-height:34px; padding-left:17px;  border-bottom:1px solid #cdcdcd; width:311px; background-color:#e5e5e5;}
+.review_billing_content{ width:328px; float:left; margin-left:17px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; line-height:20px;}
+.review_billingaddressGap{ width:65px; float:left;}
+.review_payment_content{width:250px; border:1px dashed #999999; min-height:75px; background-color:#f9f9f9; margin-left:20px; float:left;}
+.review_payment_innerblock{ width:225px; margin:auto; clear:both;}
+.paddleft17{ padding-left:17px;}
+.review_standardcontent{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_standardcontentRight{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-align:right; padding-right:10px; }
+.review_standardcontent2{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_itemadded{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+.review_content_underline{ border-bottom:1px dotted #999999;}
+.review_content_solidunderline{ border-bottom:1px solid #999999;}
+.review_price{color:#373d3f; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; text-align:right; padding-right:10px; }
+.total_title{color:#373d3f; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; text-align:right; margin-right:20px;}
+.price_container{ border-top:1px solid #000000; border-bottom:1px solid #000000; width:126px; height:30px; float:right; padding-left:60px; line-height:30px; color:#373d3f; font-size:14px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;} 
+.paynow_btn{ margin-right:10px; float:right;} 
+.congratulations_container{float:left; width:1000px;}
+.easyshop_text{color:#393939;}
+.congratulations_message{ float:left; color:#39a100; font-family:Arial, Helvetica, sans-serif; font-size:18px; width:826px; word-wrap:break-word;}
+.alert_message{color:#ff0000; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.total_container{width:440px; float:right;}
+.review_tableborder{border:1px solid #999999;}
+.faq_container{ background-color:#f1f1f1; float:left; line-height:287px; width:100%; height:287px; text-align:center; color:#000000; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;}
+/*-----------------Review Place Order Page Css Ends here-------------------------*/
+
+/*-----------------Checkout Payment Page Css Start from here-------------------------*/
+
+.welldone_underline{border-bottom:1px solid #cdcdcd; clear:both;  height:1px; *height:auto;}
+.contentText12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.wid20{ width:20px; float:left;}
+.hyperLinkBlue12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#00538a; text-decoration:underline;}
+.hyperLinkBlue12:hover{ text-decoration:none;}
+.contentTextGrey12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold;}
+.bottomText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:normal;}
+.checkoutBar{ background-image:url(/images/secure/process_steps.gif); width:587px; height:23px; background-position:0px -66px; }
+
+
+/*-----------------Body Css Ends from here-------------------------*/

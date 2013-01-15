@@ -1,0 +1,55 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+input[type="image"]{ cursor:pointer;}
+
+/*=============== LEFT PANEL START FROM HERE========================*/
+.add_a_bank_accountLeftPanel{ width:260px; float:left; }
+.add_a_bank_accountLeftPanel ul{  margin:0px; padding:0px;}
+.add_a_bank_accountLeftPanel ul li{  margin:0px; padding:0px 0 0 19px; height:30px; list-style-type:none; line-height:30px; }
+.add_a_bank_accountLeftPanel ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:none; line-height:30px;}
+.add_a_bank_accountLeftPanel ul li.selected{ background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;}
+.lh25{ height:25px; clear:both; font-size:0px;}
+
+/*=============== LEFT PANEL ENDS HERE========================*/
+
+/*===================RIGHT PANEL STARTS FROM HERE====================*/
+.borderDotted{background: url("/images/secure/boder_dotted.png") repeat-x scroll 0 0 transparent; clear: both; height: 1px;}
+.add_a_bank_accountRightPanel{ width:715px; padding:0px 0px 0 24px; border-left: #cdcdcd 1px solid; float:left;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.navArrow{ background:url(/images/secure/nav_arrow.png); width:8px; height:13px; float:left; margin:6px 12px 0 12px;}
+.content_text15Lh25{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939; line-height:25px; }
+a.hyperLinkBlue13{ font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue13{ text-decoration:none;}
+.backArrow{ background:url(/images/secure/left_arrow_icon.png); width:6px; height:11px; float:left; margin:3px 10px 0 0px;}
+.lh40{ height:40px; clear:both; font-size:0px; }
+.wid160{ width:160px; float:left;}
+a.hyperLinkBlue12Lh25{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal; line-height:25px;}
+a:hover.hyperLinkBlue12Lh25{ text-decoration:none;}
+.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px; }
+.greyText12Lh20{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676; line-height:20px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px; }
+.lh20{ height:20px; clear:both; font-size:0px; line-height:20px; }
+.lh5{ height:5px; clear:both; font-size:0px; line-height:5px;}
+.content_text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; }
+.lh15{ height:15px; clear:both; font-size:0px; line-height:15px;}
+.wid160{ width:160px; float:left;}
+.inputWid204{ width:197px; height:21px; padding:0 0 0 5px; float:left; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.greyText11{font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#767676;}
+.lh3{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.inputWid117{ width:110px; height:21px; padding:0 0 0 5px; float:left; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.wid138{ width:138px; float:left;}
+.alert{ color:#F00;}
+.solidBorder {
+    border-bottom: 1px solid #CDCDCD;
+    clear: both;
+    font-size: 0;
+    overflow: hidden;
+    width: 713px;
+}
+.content_text16 {color: #393939; font-family: Arial,Helvetica,sans-serif; font-size: 16px; font-weight:bold; line-height: 25px;}
+/*===================RIGHT PANEL ENDS HERE====================*/

@@ -1,0 +1,97 @@
+  .ac_results {
+    padding: 0;
+   border: 1px solid #333;
+   background-color: #fff;
+   overflow: hidden;
+   z-index: 99999;
+   text-align: left;
+   }
+    .ac_results ul {
+   width: 100%;
+  list-style-position: outside;
+   list-style: none;
+  padding: 0;
+  margin: 0;
+   }
+   .ac_results li {
+   margin: 0;
+   padding: 2px 5px;
+   cursor: default;
+   display: block;
+   font: menu;
+   font-size: 10px;
+   height:27px;
+   line-height: 27px;
+   overflow: hidden;
+   font-family:"Trebuchet MS", Verdana, Arial;
+   font-size:11px;
+   font-weight:bold;
+   color:#767676;
+   cursor:pointer;
+   }
+   .ac_results {
+   background-color: #fff;
+   cursor:pointer;
+  }
+   .ac_over {
+   background-color: #5e5e5e;
+   color: #ffffff;
+   font-family:"Trebuchet MS", Verdana, Arial;
+   font-size:11px;
+   font-weight:bold;
+   }
+#tiwtter_tweets,#facebook_connect,#facebook_post,#email,#inbox,#url{display:none;}
+.fs0{ font-size:0px;}
+.fwBold{ font-weight:bold;}
+img{ border:0px none;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.wid489{width:489px; float:left; *float:none; border:1px solid #393939; margin:6px; height:auto; background-color:#ffffff;}
+.wid18{ width:18px; float:left;}
+.share_profile_heading{ font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; font-weight:bold; color:#ffffff;}
+.paddtop11{padding-top:11px;}
+.lh25{height:25px; line-height:25px; clear:both; font-size:0px;}
+.wid445{width:445px;  float:left; margin-left:21px;}
+.popup_top_bg{height:31px; line-height:31px; background-color:#767676; width:489px;}
+.twitter_icon{ background-image:url(/images/default/popup_icon.gif); width:16px; height:16px; background-repeat:no-repeat; display:block; background-position:0px 0px; float:left; margin:6px 7px 0px 10px;}
+.facebook_icon{ background-image:url(/images/default/popup_icon.gif); width:16px; height:16px; background-repeat:no-repeat; display:block; background-position:-18px 0px; float:left; margin:6px 7px 0px 10px;}
+.igb_icon{ background-image:url(/images/default/popup_icon.gif); width:16px; height:16px; background-repeat:no-repeat; display:block; background-position:-36px 0px; float:left; margin:6px 7px 0px 10px;}
+.email_icon{ background-image:url(/images/default/popup_icon.gif); width:16px; height:16px; background-repeat:no-repeat; display:block; background-position:-54px 0px; float:left; margin:6px 7px 0px 10px;}
+.url_icon{ background-image:url(/images/default/popup_icon.gif); width:16px; height:16px; background-repeat:no-repeat; display:block; background-position:-72px 0px; float:left; margin:6px 7px 0px 10px;}
+.popup_menu{margin-left:9px;}
+.popup_menu ul{margin:0px; padding:0px;}
+.popup_menu ul li{margin:0px; padding:0px; list-style-type:none; display:inline; float:left; margin-right:8px;}
+.popup_menu ul li a{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:bold; color:#4e75a0; text-decoration:none; padding-right:10px; line-height:28px;}
+.popup_menu ul li a:hover{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:bold; color:#4e75a0; text-decoration:underline;}
+.popup_menu ul li a.selected{background-color:#dcebfb; cursor:default; float:left; line-height:28px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:bold; cursor:default; text-decoration:none;}
+.popup_underline{background-color:#afc8e4; height:1px; line-height:1px; clear:both; font-size:0px;}
+.connect_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#767676;}
+.lh8{height:8px; line-height:8px; clear:both; font-size:0px;}
+.lh18{height:18px; line-height:18px; clear:both; font-size:0px;}
+a.cancel_link{ font-family:"Trebuchet MS", Arial, helvetica; font-size:14px; color:#333333; text-decoration:underline;}
+a:hover.cancel_link{ font-family:"Trebuchet MS", Arial, helvetica; font-size:14px; color:#333333; text-decoration:none;}
+.lh28{height:28px; line-height:28px; clear:both; font-size:0px;}
+.lh15{height:15px; line-height:15px; clear:both; font-size:0px;}
+.wid21{ width:21px; float:left;}
+.wid237_input{ width:230px; height:26px; line-height:26px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; padding-left:7px; color:#393939; border:1px solid #d9d9d9; outline:none;}
+.paddtop5{padding-top:5px;}
+.paddtop2{padding-top:2px;}
+.lh7{height:7px; line-height:7px; clear:both; font-size:0px;}
+.wid436_input{ width:436px; height:17px; line-height:17px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; padding-left:7px; color:#393939; border:1px solid #d9d9d9; outline:none;}
+.wid443_select{width:443px; height:46px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; border:1px solid #d9d9d9; overflow:hidden; outline:none;}
+.wid443_email_select{width:443px; height:64px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; border:1px solid #d9d9d9; overflow:hidden; outline:none;}
+.wid237_url_input{width:230px; height:19px; line-height:19px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; padding-left:7px; color:#393939; border:1px solid #d9d9d9; outline:none;}
+.twitter_name{color:#4e74a1; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+.popup_arrow{ background-image:url(/images/default/popup_arrow.gif); width:19px; height:10px; display:block; position:absolute; margin:-10px 0px 0px 455px; }
+#lightbox{background-color:#000000; opacity:0.4;filter:alpha(opacity=40);}
+.cursor_pointer{cursor:pointer;}
+.alert{color:#FF0000; font:Arial, Helvetica, sans-serif; font-size:12px; text-align:center; }
+.wid12{ width:12px; float:left; }
+a.closeBtn{ background-image:url(/images/default/newsfeed_icon.gif); width:9px; height:9px; background-position:-122px -124px; display:block; text-decoration:none; margin-top:7px; }
+a:hover.closeBtn{ background-image:url(/images/default/newsfeed_icon.gif); width:9px; height:9px; background-position:-136px -124px; display:block; text-decoration:none; margin-top:7px; }
+.wid32{ width:32px; float:left; }
+.sendTo{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+#tweets{background-image:url(/images/default/tweet_btn.gif); width:61px; height:24px; border:0px none;}
+#post{background-image:url(/images/default/post_btn.gif); width:46px; height:23px; border:0px none;}
+#send_message{background-image:url(/images/default/send_message_btn.gif); width:108px; height:24px; border:0px none;}
+#send_email{background-image:url(/images/default/send_email_btn.gif); width:90px; height:24px; border:0px none;}

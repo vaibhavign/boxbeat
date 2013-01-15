@@ -1,0 +1,66 @@
+/* common css starts from here*/
+body{ margin:0px; padding:0px;}
+html{ overflow-y:scroll; }
+.floatLeft{ float:left; }
+.floatRight{ float:right; }
+.clearBoth{ clear:both; }
+:focus{ outline:none; border:0px;}
+/* common css ends from here*/
+
+/*main body css starts from here*/
+#request_listing_mainContainer{ width:1000px; margin:auto;}
+.contentBlueHeading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; text-decoration:none;}
+.lh42{ height:42px; line-height:42px; clear:both; font-size:0px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+
+
+
+.rightSearchBoxBorder{ width:241px; height:20px; border:#b3b3b3 solid 1px; border-right:0px none;}
+.rightSearchBoxInputText{width:220px; height:18px; padding:0 5px 0 5px; border:0px none;}
+.dividerLine{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+/*Left panel starts from here*/
+.left_panel{ width:738px; float:left; }
+.wid30{ width:30px; float:left;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.imgContainer{ width:36px; height:36px; margin:0 22px 0 10px; float:left;}
+a.user_link{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:bold; line-height:14px; text-decoration:none;}
+a:hover.user_link{ text-decoration:underline;}
+.content-text12Lh22{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:22px;}
+.contentItalicsText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; font-style:italic;}
+.requestOpenedText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh28{ height:28px; line-height:28px; clear:both; font-size:0px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px;}
+/*bottom navigation starts*/
+.assign_product_table_bottom_button{height:21px; border:#d4d4d4 1px solid; padding:0 7px 0 7px;  background-color:#f1f1f1; float:left;}
+.assign_product_table_bottom_buttonSelected{height:21px; border:#b1d1e6 1px solid; padding:0 7px 0 7px;  background-color:#e9f2f7; float:left;}
+a.assign_product_table_bottomLink{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:bold; line-height:21px; text-decoration:none;}
+a.assign_product_table_bottomLinkSelected{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:bold; line-height:21px; text-decoration:none; float:left;}
+.assign_product_dotText{ color:#767676;font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; width:20px; text-align:center;}
+.wid5{ width:5px; float:left;}
+.wid7{ width:7px; float:left;}
+.wid10{ width:10px; float:left;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+.lh28{ height:28px; line-height:28px; clear:both; font-size:0px;}
+.wid25{ width:25px; float:left;}
+/*bottom navigation ends*/
+/*Left panel ends here*/
+
+/*right panel starts from here*/
+.right_panel{ width:261px; float:left;}
+.wid20{ width:25px; float:left;}
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.right_panel ul{ margin:0px; padding:0px;}
+.right_panel_links { clear:both; }
+.right_panel_links ul li{ margin:0px; list-style-type:none; padding:0 0 0 20px; height:30px; line-height:30px;}
+.right_panel_links ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none; }
+.selected { background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:13px;}
+.right_panel_links ul li a:hover{ text-decoration:underline;}
+
+/*right panel ends here*/
+/*main body css ends from here*/
+
+
+.borderBottom{  border-bottom: 1px solid #E1E1E1;   display: block;   font-size: 0;   height: 1px; clear:both;   line-height: 1px;}

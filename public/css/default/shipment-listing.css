@@ -1,0 +1,124 @@
+.floatLeft{ float:left; }
+.floatRight{ float:right; }
+.clearBoth{ clear:both; }
+.from{ width:39px; float:left; }
+.containerOrderListing{ width:1000px; margin:auto; }
+a.createNewOrderBtn{ background-image:url(/images/default/buyer/create_new_order.gif); width:262px; height:53px; display:block; text-decoration:none; }
+.ordersHeading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; color:#393939; font-weight:bold; }
+.orderDetails{ width:415px; clear:both; font-size:14px; color:#767676; word-wrap:break-word; font-family:Arial, Helvetica, sans-serif; line-height:20px; }
+a.viewAllNoti{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:underline; }
+a:hover.viewAllNoti{ text-decoration:none; }
+.heightGap{ height:3px; line-height:3px; clear:both; font-size:0px; }
+.heightGap20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+.searchtext{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676; padding-top:4px; padding-right:5px; }
+.manageOrder{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; }
+.orderIdList{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; width:144px; height:25px; padding-top:2px; padding-bottom:2px; border:1px solid #cdcdcd; margin-right:7px; }
+.searchInput{ width:243px; padding-left:5px; padding-right:5px; height:21px; line-height:21px; border:1px solid #cdcdcd; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.goRight{ padding-top:0px; *padding-top:1px; }
+.bgLine1{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.heightGap6{ height:6px; line-height:6px; clear:both; font-size:0px; }
+.gapHeight36{ height:36px; line-height:36px; clear:both; font-size:0px; }
+.notificationBox{ clear:both; width:650px; height:240px; background-color:#f2f2f2; border:1px solid #eaeaea; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; padding-left:30px; padding-top:20px;}
+.heightGap20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+.heightGap10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.heightGap30{ height:30px; line-height:30px; clear:both; font-size:0px; }
+.heightGap13{ height:13px; line-height:13px; clear:both; font-size:0px; }
+.viewNote{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#00538a; text-decoration:none; }
+a:hover.viewNote{ text-decoration:underline; }
+.dotted{ border-top:1px dotted #999999; height:1px; line-height:1px; font-size:0px; }
+a.clearAll{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#00538a; text-decoration:underline; }
+a:hover.clearAll{ text-decoration:none; }
+.padAdjustment{ padding-left:20px; padding-top:5px; }
+.showme{ width:79px; float:left; font-weight:bold; }
+.with{ width:35px; float:left; font-weight:bold; }
+.showmeHyfun{ width:19px; float:left; text-align:center; color:#8c8c8c; font-family:Arial, Helvetica, sans-serif }
+.shipments{ padding-top:2px; float:left; }
+/**.with{ float:left; padding-left:10px; padding-top:2px; padding-right:10px;}*/
+.returns{ float:left; }
+.orderAll{ width:118px; float:left; }.orderAll select{ width:109px; height:23px; border:1px solid #b3b3b3; }
+.statusFrom{ width:85px; float:left; padding-top:2px; }
+.statusFromInput{ width:99px; float:left; }.statusFromInput{ width:71px; height:18px; line-height:18px; padding-left:5px; padding-right:5px; line-height:19px; border:1px solid #b3b3b3;  }
+.to{ width:18px; float:left; padding-top:2px; }
+.tillDate{ width:103px; float:left; }
+.ShowMeStrip{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939;}
+.fwBold{ font-weight:bold; }
+a.return{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; text-decoration:underline; }
+a:hover.return{ text-decoration:none; }
+.cal{ float:left; background-image:url(/images/default/buyer/cal.gif); width:22px; height:23px; margin-top:0px; *margin-top:1px; }
+.calInput{width:80px; padding-left:5px; padding-right:5px; height:19px; border-bottom:1px solid #b3b3b3; border-left:1px solid #b3b3b3; border-top:1px solid #b3b3b3; border-right:0px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676;}
+.canWid{ width:119px; float:left; }
+
+.orderHeadings{ background-color:#989898; height:27px; line-height:27px; clear:both; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#FFF; }
+.orderID{ width:144px; float:left; padding-left:10px; }
+.proDetail{ width:300px; float:left; }
+.contactByer{ width:150px; float:left; }
+.fulfilment{ width:175px; float:left; }
+.orderIdDetail{ width:130px; border-right:1px dashed #989898; padding-top:10px; margin-top:4px; height:80px; }
+a.orderIdNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-decoration:none; }
+a:hover.orderIdNav{ text-decoration:underline; }
+.dateNtime{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#393939; }
+.gapHeight15{ height:15px; line-height:15px; clear:both; font-size:0px; }
+.productDetails{ width:285px; border-right:1px dashed #989898; padding-top:10px; margin-top:4px; height:80px;  }
+.qty{ width:66px; float:left; }
+.price{ width:98px; float:left; }
+.sku{ width:135px; float:left; }
+.contactBuyers{ width:135px; border-right:1px dashed #989898; padding-top:10px; margin-top:4px; height:80px;  }
+.fulfil{ width:160px; border-right:1px dashed #989898; padding-top:10px; margin-top:4px; height:80px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;  }
+a.conBuyerNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:none; }
+a:hover.conBuyerNav{text-decoration:underline; }
+.open{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.opens{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-top:15px; }
+.buttonsNmessageArea{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.buttonsGap{ width:24px; float:left; }
+.buttonsMargin{ margin-right:22px; }
+.heightGap13{ height:13px; line-height:13px; clear:both; font-size:0px; }
+.heightGap17{ height:17px; line-height:17px; clear:both; font-size:0px; }
+.dashed{ border-bottom:dashed 1px #989898; clear:both; }
+.pendingShip{ width:61px; word-wrap:break-word; padding-top:10px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.bgLine2{ background-color:#989898; height:2px; line-height:2px; clear:both; font-size:0px; }
+.heightGap26{ height:26px; line-height:26px; clear:both; font-size:0px; }
+
+.prev{ float:left; width:41px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px; }
+.singleNum{ float:left; width:21px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px; }
+.singleActive{ float:left; width:21px; height:18px; background-color:#e9f2f7; border:1px solid #b1d1e6; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-align:center; padding-top:5px; margin-right:7px; }
+
+.doubleNum{ float:left; width:25px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px;  }
+.doubleActive{ float:left; width:25px; height:18px; background-color:#e9f2f7; border:1px solid #b1d1e6; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-align:center; padding-top:5px; margin-left:7px; }
+.next{ float:left; width:41px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+.proccessingDot{ float:left; width:32px; height:18px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+.dottedtLeft{ float:left; width:21px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+a.pageinationNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold; text-decoration:none; }
+
+.heightGap86{ height:86px; line-height:86px; clear:both; font-size:0px; }
+.proDesc{ float:left; width:948px; background-color:#e6f3d9; border: 1px solid #c5deab; padding:22px 25px; color:#393939; font-family:Arial, Helvetica, sans-serif; }
+.proDescLeft{ width:510px; float:left; }
+.proDescheading{ clear:both; font-weight:bold; font-size:14px; }
+.proDescrypt{ clear:both; font-weight:normal; font-size:13px; }
+.prodeskText{width:430px; word-wrap:break-word; padding-left:26px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; line-height:18px;}
+.prodeskTextRight{width:410px; word-wrap:break-word; padding-left:26px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; line-height:18px;}
+
+.heightGap37{ height:37px; line-height:37px; clear:both; font-size:0px; }
+.heightGap42{ height:42px; line-height:42px; clear:both; font-size:0px; }
+a.support{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-style:italic; color:#00538a; text-decoration:none; }
+a:hover.support{ text-decoration:underline; }
+a.email{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; text-decoration:none; }
+a:hover.email{ text-decoration:underline; }
+.learn{ width:30px; float:left; }
+a.deskNav{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none; }
+a:hover.deskNav{ text-decoration: underline; }
+.navDevider{ width:21px; float:left; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#bababa; }
+a.footerNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:none; }
+a:hover.footerNav{ text-decoration: underline; }
+.dropDownPro{ clear:both; position:absolute; margin-left:846px; margin-top:24px; }
+.dropBg{ background-color:#daebf4; border:1px solid #9fc6da; border-top:0px none; width:160px; }
+.dropDownPro ul{padding:0px; margin:0px;}
+.dropDownPro ul li{ list-style:none; padding-left:10px; padding-bottom:5px; }
+.dropDownPro ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:none;}
+.dropDownPro ul li a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:underline;}
+.trackingDetails{ width:150px; float:left; }
+.status{ width:135px; border-right:1px dashed #989898; padding-top:10px; margin-top:4px; height:80px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.goo2osmall_logo{ background-image:url(/images/default/buyer/goo2osmall_logo.png); width:50px; height:18px; font-size:0px; display:block; float:left; margin-left:5px; }
+.wid87{ padding-top:15px; width:60px; word-wrap:break-word; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+input[type="image"]{ cursor:pointer; outline:none;}
+a:focus{ outline:none;}
+.displaynone{display:none;}

@@ -1,0 +1,27 @@
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+.clearBoth{clear:both;}
+.floatLeft, .contentBlueHeading, .search_bg{float:left;}
+.floatRight{float:right;}
+#open_a_dispute_container{ width:1000px; margin:auto;}
+.lh42{ height:42px; line-height:42px; clear:both; font-size:0px; }
+.main-top-heading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; color:#393939; font-weight:bold; }
+.lh80{ height:80px; line-height:80px; clear:both; font-size:0px; }
+.borderBottom{  border-bottom: 1px solid #E1E1E1;   display: block;   font-size: 0;   height: 1px; clear:both;   line-height: 1px;}
+.content-text14Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; font-weight:normal; line-height:20px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh23{ height:23px; line-height:23px; clear:both; font-size:0px; }
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.order_item_container{ width:722px; margin:auto; background-color:#f5f5f5; height:102px;}
+.wid85{ width:85px; float:left;}
+.content-text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:20px;}
+.wid117{ float:left; width:117px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px;}
+.wid10{ width:10px; float:left;}
+.inputField171{ width:164px; border:#848484 1px solid; height:22px; padding:0 0 0 5px; margin:0 20px 0 0;}
+a.hyperLink12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:normal; text-decoration:underline; line-height:20px;}
+a:hover.hyperLink12Lh20{ text-decoration:none; }
+.errorMsgText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#ff0000; font-weight:normal; margin:5px 0 0 0; float:left;}
+.lh60{ height:60px; clear:both; font-size:0px; }
+.continue_cancel_btn{ width:165px; margin:auto;}

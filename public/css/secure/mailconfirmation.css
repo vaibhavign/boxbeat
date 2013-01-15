@@ -1,0 +1,23 @@
+html{overflow-y:scroll;}
+body{
+margin:0px;
+padding:0px;
+}
+
+.fs0{font-size:0px;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.confirmation_text{color:#393939; font-size:16px; font-family:"Trebuchet MS", Arial, helvetica;  font-weight:bold;}
+.smiley{color:#393939; font-size:28px; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold;}
+.wid690{width:690px;}
+.green_text{color:#4a970c; font-size:20px; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold;}
+.paddtop7{padding-top:7px;}
+.wid20{width:20px; float:left;}
+.lh25{height:25px; line-height:25px; clear:both; font-size:0px;}
+.confirmation_desc{font-family:"Trebuchet MS", Arial, helvetica; font-size:14px; color:#767676;}
+.wid65{width:65px; float:left;}
+.wid7{width:7px; float:left;}
+.paddtop4{padding-top:4px;}
+.lh5{height:5px; line-height:5px; clear:both; font-size:0px;}
+.tick{ background-image:url(../images/blue_tick.gif); background-repeat:no-repeat; width:11px; height:11px; display:block; }

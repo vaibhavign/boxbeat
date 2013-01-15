@@ -1,0 +1,49 @@
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{ clear:both;}
+body{ margin:0px; padding:8px;}
+.outerBorder{width:489px; height:359px; border:6px solid #9f9f9f;}
+.blackBorder{width:487px; height:358px; border:1px solid #393939;}
+.middleText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:none;}
+.bottomText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; text-decoration:none;}
+a.hyperLinkText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; text-decoration:none;}
+a:hover.hyperLinkText{ text-decoration:underline;}
+.lh10{ height:10px; line-height:10px; font-size:0px; clear:both;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.lh18{ height:18px; line-height:18px; font-size:0px; clear:both;}
+.lh20{ height:20px; line-height:20px; font-size:0px; clear:both;}
+.lh24{ height:24px; line-height:24px; font-size:0px; clear:both;}
+.wid17{ width:17px; float:left;}
+.wid18{ width:18px; float:left;}
+
+.wid12{ width:12px; float:left;}
+.wid24{ width:24px; float:left; height:1px;}
+.wid25{ width:25px; float:left;}
+.wid15{ width:15px; float:left;}
+.div370{ width:370px; float:left;}
+.bgLine{ width:447px; height:1px; background-color:#d9d9d9; clear:both;}
+a.cancelText{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; text-decoration:underline; line-height:24px;}
+a:hover.cancelText{ text-decoration:none;}
+input[type="image"]{ cursor:pointer; outline:none;}
+a:hover{ outline:none;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh4{ height:4px; line-height:4px; font-size:0px; clear:both;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.lh8{ height:8px; line-height:8px; font-size:0px; clear:both;}
+.addChangeReq{ width:487px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.marginTop{ margin-top:7px;}
+
+.innerDiv{ width:440px; height:445px; margin:auto;}
+.leftPanel{ width:145px; line-height:24px; float:left;}
+.textAreaBox{ width:284px; height:72px; border:1px solid #848484; padding-left:5px; padding-top:5px;}
+.inputBox{ width:104px; height:20px; border:1px solid #848484; padding-left:5px; line-height:20px;}
+.numberText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676;  font-weight:bold;}
+.lheight12{ line-height:20px;}
+.star{ color:#ff0404; font-size:15px;}
+.div436{ width:436px; float:left;}
+.textAreaDiv{border: 1px solid #848484;
+    height: 72px;
+    padding-left: 5px;
+    padding-top: 5px;
+    width: 284px;}

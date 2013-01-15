@@ -1,0 +1,15 @@
+*{ margin:0px; padding:0px;}
+body{ margin:0px; padding:0px;}
+a img{ border:none;}
+p{ margin:0px;font:normal 14px Arial, Helvetica, sans-serif ; color:#3a3a3a; line-height:20px; }
+.clear{ clear:both; font-size:0px; }
+.mainCont690{ width:690px; margin:30px auto 0 auto;}
+.mainCont690 .logo{ float:left; margin:0 0px 30px 0;}
+.mainCont690 h5{ font:bold 30px Arial, Helvetica, sans-serif ; color:#3a3a3a; margin:0 0 22px 0;}
+.mainCont690 p.text{font:normal 14px Arial, Helvetica, sans-serif ; color:#3a3a3a; line-height:20px; margin:0 0 20px 0;}
+.mainCont690 .listPoints{  clear:both; margin:0 0 25px 0; width:530px; float:left;}
+.mainCont690 .listPoints ul{ padding:0 0 0 40px; margin:7px 0 20px 0;}
+.mainCont690 .listPoints ul li{font:normal 13px Arial, Helvetica, sans-serif ; color:#3a3a3a; list-style-type:square; padding:0 0 3px 0 ; }
+.mainCont690 a.continueLink{font:normal 13px Arial, Helvetica, sans-serif ; color:#3c5995;  margin:0 0 20px 0;}
+.mainCont690 a:hover.continueLink{ text-decoration:none;}
+.mainCont690 .jsErrImg{ float:right;}

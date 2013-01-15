@@ -1,0 +1,50 @@
+html { overflow-y:scroll; }
+body { margin:0px; padding:0px; background-color:#f1f1f1; font-family:Tahoma, Geneva, sans-serif; }
+.mainHeader { width:652px; margin:auto; margin-top:100px; }
+.clearBoth { clear:both; }
+.floatLeft { float:left; }
+.floatRight { float:right; }
+.topBorder { clear:both; background-image:url(/images/secure/elogin/signupBorder.png); background-repeat:no-repeat; width:652px; height:32px; background-position:0 0; }
+.botBorder { clear:both; background-image:url(/images/secure/elogin/signupBorder.png); background-repeat:no-repeat; width:652px; height:32px; background-position:0 -32px; }
+.loginBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; float:right; }
+.loginBGHover { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; float:right; }
+.passwordBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; margin:0 0 0 0; float:right; }
+.passwordBGHover { background-image:url(/images/secure/elogin/ignupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; margin:0 0 0 0; float:right; }
+input[type=text].loginInput { color:#a8a8a8; font-family:Tahoma, Geneva, sans-serif; font-size:15px; font-weight:bold; margin:13px 0 0 22px; *margin:2px 0 0 22px; width:245px; border:0px none; background-color:transparent; outline:0px none; text-align:left; }
+input[type=password].loginInput { color:#a8a8a8; font-family:Tahoma, Geneva, sans-serif; font-size:15px; font-weight:bold; margin:13px 0 0 22px; *margin:2px 0 0 22px; width:245px; border:0px none; background-color:transparent; outline:0px none; text-align:left; }
+#password1, #newpass1 { display:none; }
+.forgotpass { float:left; line-height:32px; }
+.forgotpass a{ text-decoration:none; color:#8c7e7e; font-size:12px; }
+.forgotpass a:hover{ text-decoration:underline; color:#e00034; }
+.loginBTN { width:448px; margin:auto; clear:both; }
+.botGap { clear:both; height:40px; }
+.errorMSG { position:relative; color:#fe0000; font-size:11px; margin:-33px 0 0 304px; *margin:-42px 0 0 304px; left:0; width:425px;}
+.errorMSGurl { position:relative; color:#fe0000; font-size:11px; margin:-33px 0 0 473px; *margin:-42px 0 0 473px; width:425px;}
+.errorMSGCaptcha { color:#fe0000; font-size:11px; margin:15px 0 0 450px; *margin:15px 0 0 -39px; width:425px; *width:200px; float:left; position:absolute;}
+.signuptxt { font-size:28px; color:#4e4d4b; }
+.ururlBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; margin:0 0 0px 0; float:left; }
+.ururlBGHover { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; float:left; }
+.urnameBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; margin:0 0 0px 0; float:right; }
+.urnameBGHover { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; float:right; }
+.uremailBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; margin:0 0 0px 0; float:right; }
+.uremailBGHover { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; float:right; }
+.urcontactBG { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 -47px; margin:0 0 0px 0; float:right; }
+.urcontactBGHover { background-image:url(/images/secure/elogin/signupLoginBG.png); background-repeat:no-repeat; width:279px; height:47px; background-position:0 0; float:right; }
+a img { border:0px none; }
+img { border:0px none; }
+.txtfieldBG { background-image:url(/images/secure/elogin/txtboxBG.png); background-repeat:no-repeat; width:448px; height:47px; line-height:43px; text-align:left; }
+.txtfieldBG1 { background-image:url(/images/secure/elogin/txtboxBG.png); background-repeat:no-repeat; width:448px; height:47px; text-align:left; line-height:18px; }
+.txtfieldBG2 { background-image:url(/images/secure/elogin/txtboxBG.png); background-repeat:no-repeat; width:448px; height:47px; text-align:left; line-height:18px; float:left; margin-left:102px; }
+.inputtxt { font-weight:bold; font-size:15px; color:#393939; float:left; margin:0 0 0 2px; }
+.inputtxt1 { font-weight:bold; font-size:15px; color:#393939; float:left; margin:0 0 0 20px; }
+.signupBelowTxt { color:#767676; font-size:11px; margin:5px 0 15px 0; width:448px; text-align:left; line-height:18px; }
+.lh20 { clear:both; height:20px; }
+.lh30 { clear:both; height:30px; }
+.captchaTxt { font-size:11px; color:#393939; margin-left:8px; width:260px; float:left; margin-top:15px; }
+.captchaTxt span { color:#e00034; }
+.captchaimg { float:right; width:180px; margin-top:2px; }
+.captchaimg ul { margin:0; padding:0; *margin:3px 0 0 0; }
+.captchaimg ul li { margin:2px 0 1px 2px; list-style:none; *margin:-1px 0 0 2px; *line-height:20px; float:left; font-size:10px; color:#393939; background-color:#bcbcbc; padding:0 6px; -moz-border-radius: 10px 10px; border-radius: 10px 10px / 10px 10px; font-family:Arial, Helvetica, sans-serif; cursor:pointer; }
+.captchaimg ul li:hover { margin:2px 0 1px 2px; list-style:none; *margin:-1px 0 0 2px; *line-height:20px; float:left; font-size:10px; color:#FFF; background-color:#e00034; padding:0 6px; -moz-border-radius: 10px 10px; border-radius: 10px 10px / 10px 10px; font-family:Arial, Helvetica, sans-serif; cursor:pointer; }
+input[type=image] { cursor:pointer; }
+.caphoverc { margin:2px 0 1px 2px; list-style:none;  float:left; font-size:10px; color:#FFF; background-color:#e00034; padding:0 6px; -moz-border-radius: 10px 10px; border-radius: 10px 10px / 10px 10px; font-family:Arial, Helvetica, sans-serif; cursor:pointer; }

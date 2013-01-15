@@ -1,0 +1,32 @@
+body{ margin:0px; padding:0px;}
+
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+input[type="image"]{ cursor:pointer;}
+.wid1000Auto{ width:1000px; margin:auto;}
+.headingBlue{ font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#00538a; text-align:center;}
+.contentText12{ font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#393939;}
+.hyperLinkBlue12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline; font-weight:normal; color:#00538a;}
+.hyperLinkBlue12:hover{ text-decoration:none;}
+.questMark{ background:url(/images/secure/quesmark_img.png); width:15px; height:16px; float:left; margin:0 0 0 8px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.contentTextGrey12Lh18{ font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; font-weight:normal; color:#767676;}
+.tableTopBar{ height:27px; line-height:27px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#fff; padding:0 0 0 20px; width:980px; background-color:#989898;}
+.wid390{ width:370px; float:left; word-wrap:break-word;}
+.wid108{ width:108px; float:left;}
+.wid108 select{ width:46px; float:left; height:24px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676;}
+.wid480{ width:500px; float:left;}
+.wid480 select{ width:500px; float:left; height:24px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676;}
+.wid20{ width:20px; float:left;}
+.wid15{ width:15px; float:left;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.contentTextGrey11Lh18{ font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:20px; font-weight:normal; color:#767676;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.wid430{ width:430px; float:left;}
+.wid88{ width:88px; float:left;}
+.wid550{ width:550px; float:left;}
+.errorMsg{font-family:Arial, Helvetica, sans-serif; font-size:12px;font-weight:normal; color:#ff0220; padding-left:20px;}
+.borderDashed{ border-bottom:1px dotted #999999; clear:both; font-size:0px; overflow:hidden;}
+.lh85{ height:85px; clear:both; font-size:0px;}
+.buttonsContainer{ width:222px; margin:auto;}

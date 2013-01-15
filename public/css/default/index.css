@@ -1,0 +1,46 @@
+html { overflow-y:scroll; }
+body { font-family:Verdana, Geneva, sans-serif; font-size:11px; padding:0px; margin:0px;}
+.clearBoth { clear:both; }
+.floatLeft { float:left; }
+.floarRight { float:right}
+a.headerlink { font-family:Tahoma, Geneva, sans-serif; color:#1f79b8; text-decoration:none; }
+a:hover.headerlink { font-family:Tahoma, Geneva, sans-serif; color:#1f79b8; text-decoration:underline; }
+.logoBlock { float:left; width:123px; }
+.loginlink { float:left; width:837px; text-align:right; color:#8e8e8e; font-size:12px; }
+.headergap { height:60px; clear:both; }
+.bodyLeftBlock { border-bottom:1px solid #9c9c9c; width:228px; float:left; height:45px; line-height:45px; }
+.bodyMidBlock { border-bottom:1px solid #9c9c9c; width:311px; float:left; background-color:#f6f6f6; color:#1f79b8; padding-left:55px; font-size:18px; height:45px; line-height:45px; }
+.bodyRightBlock { border-bottom:1px solid #9c9c9c; width:311px; float:left; color:#1f79b8; padding-left:55px; font-size:18px; height:45px; line-height:45px; }
+
+.bodyLeftBlock1 { border-bottom:1px solid #d1d1d1; width:228px; float:left; height:90px; line-height:45px; }
+.bodyMidBlock1 { border-bottom:1px solid #d1d1d1; width:366px; float:left; background-color:#f6f6f6; color:#1f79b8; font-size:18px; height:70px; line-height:22px; color:#000; font-size:14px; padding-top:20px; }
+.bodyRightBlock1 { border-bottom:1px solid #d1d1d1; width:366px; float:left; color:#1f79b8; font-size:18px; height:70px; line-height:22px; color:#000; font-size:14px; padding-top:20px; }
+
+.bodyLeftBlock2 { width:228px; float:left; height:90px; line-height:45px; }
+.bodyMidBlock2 { width:366px; float:left; background-color:#f6f6f6; color:#1f79b8; font-size:18px; height:70px; line-height:22px; color:#000; font-size:14px; padding-top:20px; }
+.bodyRightBlock2 { width:366px; float:left; color:#1f79b8; font-size:18px; height:70px; line-height:22px; color:#000; font-size:14px; padding-top:20px; }
+
+.tickimages { background-image:url(/images/default/tick.png); background-repeat:no-repeat; height:90px; width:35px; float:left; margin:8px 0 0 20px; }
+.bodyMidBlock1 a { color:#000; text-decoration:underline; }
+.bodyMidBlock1 a:hover { color:#000; text-decoration:none; }
+.bodyRightBlock1 a { color:#000; text-decoration:underline; }
+.bodyRightBlock1 a:hover { color:#000; text-decoration:none; }
+.cartImage { background-image:url(/images/default/index_sprite.png); background-repeat:no-repeat; width:93px; margin-top:9px; margin-left:60px; height:70px; background-position:0px 0px; }
+.safeImage { background-image:url(/images/default/index_sprite.png); background-repeat:no-repeat; width:93px; margin-top:8px; margin-left:75px; height:75px; background-position:0px -139px; }
+.realTimeImage { background-image:url(/images/default/index_sprite.png); background-repeat:no-repeat; width:93px; margin-top:7px; margin-left:64px; height:67px; background-position:0px -71px; }
+.lh80 { height:80px; clear:both; }
+a.goo2oidBtn { background-image:url(/images/default/goo2oid_btn.png); background-repeat:no-repeat; height:66px; width:332px; display:block; background-position:0 -66px; }
+a:hover.goo2oidBtn { background-image:url(/images/default/goo2oid_btn.png); background-repeat:no-repeat; height:66px; width:332px; display:block; background-position:0px 0px; }
+.goo2oidBtncontent { font-size:11px; color:#616161; float:right; width:600px; line-height:20px; margin-top:13px; }
+.footerGap { height:154px; clear:both; }
+.footerBlock { padding-top:20px; clear:both; }
+.footerleftBlock { width:140px; float:left; }
+.footerleftBlock ul { margin:0px; padding:0px;}
+.footerleftBlock ul li { margin:0px; padding:0px; list-style:none; line-height:20px;}
+.footerleftBlock ul li.heading { font-weight:bold; color:#545454; padding-bottom:10px; }
+.footerleftBlock ul li a { color:#545454; text-decoration:none; }
+.footerleftBlock ul li a:hover { color:#545454; text-decoration:underline; }
+.footerRightBlock { float:right; width:400px; text-align:right; color:#787878; }
+.rightreserved { clear:both; padding-top:10px; }
+.trademark { clear:both; padding-top:50px; line-height:18px; }
+.lh35 { clear:both; height:35px; }

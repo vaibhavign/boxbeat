@@ -1,0 +1,145 @@
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+a:focus{border:0px none;}
+input{outline:none;}
+textarea{outline:none;}
+.clearBoth{clear:both;}
+.floatLeft, .contentBlueHeading, .search_bg{float:left;}
+.floatRight{float:right;}
+
+/*---------------------Body Css Start From here--------------------------*/
+.main-top-heading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; color:#393939;}
+.desc-text{font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#767676;}
+
+
+
+/*line-heights begins*/
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh3{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.lh45{ height:45px; line-height:45px; clear:both; font-size:0px;}
+.lh40{ height:40px; clear:both; font-size:0px;}
+/*line-heights ends*/
+
+.contentBlueHeading{ font-size:18px; color:#00538a;}
+.backtoarrow{ background-image:url(/images/default/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+a.hyperLink13{color:#00538a; font-size:13px; text-decoration:underline; line-height:22px;}
+a:hover.hyperLink13{color:#00538a; font-size:13px; text-decoration:none;}
+.bottomline{border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; font-size:0px; display:block;}
+.actionbuttonlick{ background-image:url(/images/default/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -125px; display:block; float:left; position:relative; z-index:6565;}
+.actionbuttondefault{background-image:url(/images/default/action_button.png); width:101px; height:25px; background-repeat:no-repeat; display:block; float:left; position:relative:z-index:6565; }
+.actionbuttonlick:focus{ outline:none; border:0px none;}
+.table_heading{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+
+
+/*----------------------------LeftBock Start from here---------------------------*/
+#main-block-details{clear:both;}
+
+#main-block-details ul{ margin:0px; padding:0px;}
+#main-block-details ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#main-block-details ul li.selected{background-color:#f5f5f5;}
+.dotted_border{ background:url(/images/default/dotted_border.png) repeat-x; clear:both;}
+.dotted_border1{ background:url(/images/default/dotted_border.png) repeat-x; height:1px; clear:both; font-size:0px;}
+
+.italics{ font-style:italic;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+
+
+.user_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.user_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.date_text{color:#999999; font-size:11px; float:left;}
+.dategap{ width:12px; float:left;}
+
+.downloadText{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+.bottomLinks{ clear:both;}
+.bottomLinks ul{ margin:0px; padding:0px;}
+.bottomLinks ul li{ margin:0px 0 0 28px; padding:0px; list-style-type:none; line-height:20px;}
+.bottomLinks ul li a{ font-size:12px; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+.bottomLinks ul li a:hover{ text-decoration:none;}
+/*----------------------------LeftBock Ends here---------------------------*/
+
+
+/*----------------------------Message Box Start from here---------------------------*/
+#msgbox{ float:left; margin:0 0 0 10px;}
+.imagecontainer{width:36px; height:36px; float:left; margin-right:8px;}
+.msgboxbg{ width:944px;  float:left; border:1px solid #cdcdcd; height:34px;}
+.msgboxbg textarea{ width:925px; height:25px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+.reply_btn{ float:right; margin-top:7px; cursor:pointer;}
+/*----------------------------Message Box Ends here---------------------------*/
+
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:194px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:24px 0px 0px 770px; z-index:6564; display:none; }
+#actiondropdown ul{ margin:0px; padding:0px; margin-top:5px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:8px;  height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+
+/*---------------------Body Css Ends here--------------------------*/
+/* wids begins here*/
+.wid10{ float:left; width:10px;}
+.wid145{ float:left; width:145px;}
+.wid288{ width:288px; float:left;}
+.wid182{ width:182px; float:left;}
+.wid815{ width:815px; float:left; word-wrap:break-word;}
+.wid900{ width:900px; float:left; word-wrap:break-word;}
+.wid900Auto{ width:900px; margin:auto;}
+.wid920{ width:920px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:20px; word-wrap:break-word;}
+/* wids ends here*/
+.table-top-bar{ height:27px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; line-height:27px; color:#ffffff; background:#989898;}
+.orderDetails{ float:left; width:115px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.reason_itemDetails{ width:261px; float:left; padding:12px 15px 0 10px; word-wrap:break-word;}
+.disputeRaised{ float:left; width:155px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.Status{ float:left; width:85px; padding:12px 0px 0 10px; word-wrap:break-word;}
+.borderRight{ width:1px; border-right:1px dashed #989898; height:107px; float:left;}
+.content-text12Lh18{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:18px;}
+.borderBottom{  border-bottom: 1px solid #E1E1E1;   display: block;   font-size: 0;   height: 1px; clear:both;   line-height: 1px;}
+.conversation_liContainer{ width:990px; padding:0 0 0 10px; margin:12px 0 0 0;}
+.content_block{ float:left; margin-left:8px;  font-size:12px; color:#393939; padding-bottom:17px;}
+a.back_link{color: #00538A; font-size: 13px;  line-height: 22px;  text-decoration: underline;}
+a:hover.back_link{ text-decoration:none;}
+#Cmsgbox{margin-left: 10px; width: 984px; float:left;}
+#Cmsgbox .imagecontainer { float: left;  height: 36px;  margin-right: 8px;  width: 36px;}
+#Cmsgbox .msgboxbg { border: 1px solid #CDCDCD;  float: left;   height: 34px; width:938px;}
+#Cmsgbox .msgboxbg textarea { border: 0 none; color: #767676;  font-family: Verdana,Geneva,sans-serif;  font-size: 11px;  height: 24px;  margin: 4px 0 0 4px;  overflow: hidden;  width:910px;}
+
+a.me_link{color:#00538A; font-family: Arial,Helvetica,sans-serif;  font-size: 12px; font-weight: bold; line-height: 14px; text-decoration: none;}
+a:hover.me_link{ text-decoration:none;}
+.cdispute_container{float: left; margin-top: 12px; padding: 0 0 0 10px;  width: 990px;}
+.cdispute_container .innerblock {margin: auto; padding-top: 0px; width:970px;}
+/*----------------popup css---------------*/
+body{ margin:0px; padding:0px;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{ clear:both;}
+input[type="image"]{ cursor:pointer; outline:none;}
+
+.outerBorder{width:488px; border:6px solid #9f9f9f; border-right:7px solid #9f9f9f;}
+.blackBorder{width:487px; border:1px solid #393939;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.lh20{ height:20px; line-height:20px; font-size:0px; clear:both;}
+.wid17{ width:17px; float:left;}
+.wid12{ width:12px; float:left;}
+.bgLine{ width:458px; height:1px; background-color:#d9d9d9; clear:both; margin:auto;}
+a:hover{ outline:none;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.addChangeReq{ width:487px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.marginTop{ margin-top:7px;}
+.contentText{ color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; line-height:20px;}
+.btn_container{ float:right; width:120px; margin:0 32px 0 0;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.wid22{ width:22px; float:left;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+a.cancelHyperlink{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#333333; line-height:24px;}
+a:hover.cancelHyperlink{ text-decoration:none;}
+.wid449{ width:449px; float:left;}
+.textArea443{ width:435px; border:1px solid #848484; height:60px; padding:0 0 0 5px;}
+.wid250{ width:250px; float:left;}
+.inputField112 {border: 1px solid #848484; height: 20px; line-height: 20px; padding-left: 5px; width: 104px;}
+.curpointer{cursor:pointer;}
+.errorMsg{ color:#C70303; font-family:Arial,Helvetica,sans-serif; font-size:12px; font-weight:normal;}

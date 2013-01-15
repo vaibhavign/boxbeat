@@ -1,0 +1,239 @@
+/*customer dispute details css starts here*/
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+a:focus{border:0px none;}
+input{outline:none;}
+textarea{outline:none;}
+.clearBoth{clear:both;}
+.floatLeft, .contentBlueHeading, .search_bg{float:left;}
+.floatRight{float:right;}
+
+/*---------------------Body Css Start From here--------------------------*/
+.main-top-heading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; color:#393939;}
+.desc-text{font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#767676;}
+/*line-heights begins*/
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh3{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.lh45{ height:45px; line-height:45px; clear:both; font-size:0px;}
+.lh40{ height:40px; clear:both; font-size:0px;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px; }
+.lh85{ height:85px; line-height:85px; clear:both; font-size:0px; }
+.lh42{ height:42px; line-height:42px; clear:both; font-size:0px; }
+.lh30{ height:30px; line-height:30px; clear:both; font-size:0px; }
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh60{ height:60px; line-height:60px; clear:both; font-size:0px; }
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh28{ height:28px; line-height:28px; clear:both; font-size:0px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px;}
+.lh23{ height:23px; line-height:23px; clear:both; font-size:0px; }
+.lh80{ height:80px; line-height:80px; clear:both; font-size:0px; }
+/*line-heights ends*/
+
+/* wids begins here*/
+.wid10{ float:left; width:10px;}
+.wid145{ float:left; width:145px;}
+.wid288{ width:288px; float:left;}
+.wid182{ width:182px; float:left;}
+.wid815{ width:815px; float:left;}
+.wid920{ width:920px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:20px; word-wrap:break-word;}
+.wid5{ width:5px; float:left;}
+.wid7{ width:7px; float:left;}
+.wid25{ width:25px; float:left;}
+.wid108{ width:108px; float:left;}
+.wid16{ width:16px; float:left;}
+.wid12{ width:12px; float:left;}
+.wid30{ width:30px; float:left;}
+.wid20{ width:20px; float:left;}
+/* wids ends here*/
+
+.backtoarrow{ background-image:url(/images/default/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+a.hyperLink13{color:#00538a; font-size:13px; text-decoration:underline; line-height:22px;}
+a:hover.hyperLink13{color:#00538a; font-size:13px; text-decoration:none;}
+.bottomline{border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; font-size:0px; display:block;}
+.actionbuttonlick{ background-image:url(/images/default/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -125px; display:block; float:left;}
+.actionbuttondefault{ background-image:url(/images/default/respond_btn.png); width:101px; height:25px; background-repeat:no-repeat; display:block; float:left;}
+.actionbuttonlick:focus{ outline:none; border:0px none;}
+.table_heading{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+/*----------------------------LeftBock Start from here---------------------------*/
+#main-block-details{clear:both;}
+#main-block-details ul{ margin:0px; padding:0px;}
+#main-block-details ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#main-block-details ul li.selected{background-color:#f5f5f5;}
+.dotted_border{ background:url(/images/default/dotted_border.png) repeat-x; clear:both;}
+.dotted_border1{ background:url(/images/default/dotted_border.png) repeat-x; height:1px; clear:both; font-size:0px;}
+.italics{ font-style:italic;}
+.conversation-container{ width:1000px; margin-top:12px; }
+.user_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.user_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.date_text{color:#999999; font-size:11px; float:left;}
+.dategap{ width:12px; float:left;}
+.downloadText{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+.bottomLinks{ clear:both;}
+.bottomLinks ul{ margin:0px; padding:0px;}
+.bottomLinks ul li{ margin:0px 0 0 28px; padding:0px; list-style-type:none; line-height:20px;}
+.bottomLinks ul li a{ font-size:12px; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+.bottomLinks ul li a:hover{ text-decoration:none;}
+/*----------------------------LeftBock Ends here---------------------------*/
+
+
+/*----------------------------Message Box Start from here---------------------------*/
+#msgbox{ float:left; margin:0 0 0 10px;}
+.imagecontainer{width:36px; height:36px; float:left; margin-right:8px;}
+.msgboxbg{ width:944px;  float:left; border:1px solid #cdcdcd; height:34px;}
+.msgboxbg textarea{ width:925px; height:25px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+.reply_btn{ float:right; margin-top:7px; cursor:pointer;}
+/*----------------------------Message Box Ends here---------------------------*/
+
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:150px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:24px 0px 0px 740px; z-index:9997; display:none;}
+#actiondropdown ul{ margin:0px; padding:0px; margin-top:5px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:8px;  *height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+
+/*---------------------Body Css Ends here--------------------------*/
+.table-top-bar{ height:27px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; line-height:27px; color:#ffffff; background:#989898;}
+.orderDetails{ float:left; width:115px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.reason_itemDetails{ width:261px; float:left; padding:12px 15px 0 10px; word-wrap:break-word;}
+.disputeRaised{ float:left; width:155px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.Status{ float:left; width:85px; padding:12px 0px 0 10px; word-wrap:break-word;}
+.borderRight{ width:1px; border-right:1px dashed #989898; height:107px; float:left;}
+.content-text12Lh18{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:18px;}
+.conversation_liContainer{ width:990px; padding:0 0 0 10px; margin:12px 0 0 0;}
+.content_block{ float:left; margin-left:8px;  font-size:12px; color:#393939; padding-bottom:17px;}
+/*customer dispute details css ends here*/
+
+
+/*customer dispute listing starts from here*/
+/*main body css starts from here*/
+#request_listing_mainContainer{ width:1000px; margin:auto;}
+.contentBlueHeading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; text-decoration:none;}
+.rightSearchBoxBorder{ width:241px; height:20px; border:#b3b3b3 solid 1px; border-right:0px none;}
+.rightSearchBoxInputText{width:220px; height:18px; padding:0 5px 0 5px; border:0px none;}
+.dividerLine{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+/*Left panel starts from here*/
+.left_panel{ width:738px; float:left; }
+.listingImgContainer{ width:36px; height:36px; margin:0 22px 0 10px; float:left;}
+a.user_link{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:bold; line-height:14px; text-decoration:none;}
+a:hover.user_link{ text-decoration:underline;}
+.content-text12Lh22{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:22px;}
+.contentItalicsText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; font-style:italic;}
+.requestOpenedText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal;}
+
+
+/*bottom navigation starts*/
+.assign_product_table_bottom_button{height:21px; border:#d4d4d4 1px solid; padding:0 7px 0 7px;  background-color:#f1f1f1; float:left;}
+.assign_product_table_bottom_buttonSelected{height:21px; border:#b1d1e6 1px solid; padding:0 7px 0 7px;  background-color:#e9f2f7; float:left;}
+a.assign_product_table_bottomLink{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:bold; line-height:21px; text-decoration:none;}
+a.assign_product_table_bottomLinkSelected{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:bold; line-height:21px; text-decoration:none; float:left;}
+.assign_product_dotText{ color:#767676;font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; width:20px; text-align:center;}
+
+/*bottom navigation ends*/
+/*Left panel ends here*/
+
+/*right panel starts from here*/
+.right_panel{ width:261px; float:left;}
+.wid20{ width:25px; float:left;}
+.right_panel ul{ margin:0px; padding:0px;}
+.right_panel_links { clear:both; }
+.right_panel_links ul li{ margin:0px; list-style-type:none; padding:0 0 0 20px; height:30px; line-height:30px;}
+.right_panel_links ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none; }
+.selected { background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:13px;}
+.right_panel_links ul li a:hover{ text-decoration:underline;}
+/*right panel ends here*/
+/*main body css ends from here*/
+.borderBottom{  border-bottom: 1px solid #E1E1E1;   display: block;   font-size: 0;   height: 1px; clear:both;   line-height: 1px;}
+/*========================================customer dispute listing ends here==============================================*/
+
+/*======================================== customer opens a dispute css starts here================================*/
+
+
+/*main css starts from here*/
+#request_for_return_center{ width:1000px; margin:auto; }
+.main-top-heading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; color:#393939; font-weight:bold; }
+.desc-text{ clear:both; font-size:14px; color:#767676; word-wrap:break-word; font-family:Arial, Helvetica, sans-serif; line-height:20px; }
+.bgLine1{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.imgContainer{ width:46px; height:45px; border:#e1e1e1 1px solid; float:left;}
+
+.content-text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.contentSubHeading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; font-weight:bold; line-height:25px;}
+.exampleText{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; line-height:20px;}
+.wid37{ width:37px; float:left; padding:0 0 0 14px; }
+.textEditor{ width:601px; float:left; height:147px; border:1px #848484 solid; margin:22px 0 3px 0; overflow:hidden;}
+.buttons{ width:382px; margin:auto;}
+/* main css starts from here*/
+.cursor{ cursor:pointer;}
+a.blueHyperLink{ color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline; line-height:20px;}
+a:hover.blueHyperLink{ text-decoration:none;}
+.exampleAdjustment{ width:25px; float:left;}
+.descriptionText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; width:824px; word-wrap:break-word; line-height:18px;}
+.input_checkbox{ margin-left:-9999px;}
+.checkbox_off{ background:url(/images/default/check_off.png); width:13px; height:13px; float:left;}
+label{ margin:0px; padding:0px;}
+.attactment_img{ background:url(/images/default/attachment_img.png); width:12px; height:12px; display:block; margin:5px 0 0 20px; float:left;}
+.topGreyBox{ background:#f1f1f1; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; padding:18px 0 18px 20px; float:left; width:980px;}
+.file_kbText{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; line-height:20px;}
+/* customer opens a dispute css ends here*/
+
+/*open a dispute css starts */
+.order_item_container{ width:722px; margin:auto; background-color:#f5f5f5; height:102px;}
+.checkbox_on{ background:url(/images/default/attachment_img.png); width:13px; height:13px; float:left;}
+.order_item_container{ width:722px; margin:auto; background-color:#f5f5f5; height:102px;}
+.wid85{ width:85px; float:left;}
+.content-text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:20px;}
+.wid117{ float:left; width:117px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px;}
+.wid10{ width:10px; float:left;}
+.inputField171{ width:164px; border:#848484 1px solid; height:22px; padding:0 0 0 5px; margin:0 20px 0 0;}
+a.hyperLink12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:normal; text-decoration:underline; line-height:20px;}
+a:hover.hyperLink12Lh20{ text-decoration:none; }
+.errorMsgText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#ff0000; font-weight:normal;}
+.lh60{ height:60px; clear:both; font-size:0px; }
+.continue_cancel_btn{ width:165px; margin:auto;}
+#open_a_dispute_container{ width:1000px; margin:auto;}
+
+.content-text14Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; font-weight:normal; line-height:20px;}
+/*open a dispute css ends */
+.listing_selectedBg{ background:#F5F5F5;}
+
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{ clear:both;}
+
+body{ margin:0px; padding:0px;}
+.outerBorder{width:488px; border:6px solid #9f9f9f; border-right:7px solid #9f9f9f;}
+.blackBorder{width:487px; border:1px solid #393939;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.lh20{ height:20px; line-height:20px; font-size:0px; clear:both;}
+.wid17{ width:17px; float:left;}
+.wid12{ width:12px; float:left;}
+.bgLine{ width:458px; height:1px; background-color:#d9d9d9; clear:both; margin:auto;}
+
+input[type="image"]{ cursor:pointer; outline:none;}
+a:hover{ outline:none;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.addChangeReq{ width:487px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.marginTop{ margin-top:7px;}
+.innerDiv{ width:440px; margin:auto;}
+.contentText{ color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; line-height:25px;}
+.validationText{ color:#ff0000; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; line-height:25px;}
+.inputField300{ width:295px; height:22px; border:#848484 solid 1px; float:left; margin:0 5px 0 0; padding:0 0 0 5px;}
+.wid90{ width:90px; float:left;}
+.btn_container{ float:right; width:128px; margin:0 32px 0 0;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.inputField241{ width:234px; height:22px; border:#848484 solid 1px; float:left; padding:0 0 0 5px;}
+.exampleText{ color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; line-height:25px;}
+.wid96{ width:96px; float:left;}
+.wid15{ width:15px; float:left;}
+.wid25{ width:25px; float:left;}
+.inputField185{ width:178px; height:22px; border:#848484 solid 1px; float:left; padding:0 0 0 5px; margin:0 3px 0 0; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; line-height:22px;}
+.wid5{ float:left; width:5px;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+a.cancelHyperlink{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#333333; line-height:24px;}
+a:hover.cancelHyperlink{ text-decoration:none;}

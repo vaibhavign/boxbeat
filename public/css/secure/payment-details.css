@@ -1,0 +1,67 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+:focus{ outline:none;}
+input[type="radio"]{ margin:2px 0 0 1px; *margin:0px 0 0 5px; }
+input[type="image"]{ cursor:pointer;}
+
+#wid1000Auto{ width:1000px; margin:auto;}
+.logo_punchline{ font-family:Verdana, Geneva, sans-serif; font-size:18px; font-weight:normal; color:#0083cb; }
+.lh35{ height:35px; line-height:35px; font-size:0px; clear:both;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.grey_text12Lh20{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+.wid640{ width:640px; float:left;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.content_text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; }
+.lh12{ height:12px; line-height:12px; clear:both; font-size:0px;}
+.wid136AlignR{ width:136px; float:left; text-align:right; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.wid22padd8{ width:14px; float:left; padding:0 0 0 8px;}
+.input_textField230{ width:223px; border:#848484 1px solid; padding:0 0 0 5px; height:22px;}
+.input_textField100{ width:93px; border:#848484 1px solid; padding:0 0 0 5px; height:22px;}
+.grey_text11Lh17{font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:17px;}
+.wid325{ width:325px; float:left;}
+.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.wid228{ width:228px; float:left;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.wid178{ width:178px; float:left;}
+.lh10{ height:10px; line-height:10px; font-size:0px; clear:both;}
+.wid158{ width:158px; float:left;}
+.wid17{ width:17px; float:left;}
+.lh45{ height:45px; clear:both; font-size:0px;}
+.wid650{ width:650px; float:left;}
+.right_block{ width:297px; float:left; margin:0 0 0 25px; background:#f1f1f1; padding:20px 14px 20px 14px;}
+.right_block ul{ margin:0px; padding:0px;}
+.right_block ul li{ margin:0px; padding:0px; list-style-type:none;}
+.lh25{ height:25px; line-height:25px; font-size:0px; clear:both;}
+.radioContainer{ width:32px; padding:0 0 0 6px; float:left;}
+.dottedBorder{ background:url(/images/secure/merchantenrollment/dotted_border.png) repeat-x; width:353px; height:1px; font-size:0px; clear:both;}
+.wid159{ width:159px; float:left;}
+.input_textField130{ width:123px; border:#848484 1px solid; padding:0 0 0 5px; height:22px;}
+.btnContainer{ width:211px; margin:auto;}
+.lh60{ height:60px; font-size:0px; clear:both;}
+.wid20{ width:20px; float:left;}
+.wid470{ width:470px; float:left;}
+.wid360{ width:360px; float:left; word-wrap:break-word;}
+.lh2{ height:2px; line-height:2px; clear:both; font-size:0px;}
+.wid30{ width:30px; float:left;}
+.blueTotalBar{ width:628px; background:#d8ecf4; border:1px solid #93CBE2; height:33px; line-height:32px; font-family:Arial, Helvetica, sans-serif ; font-size:15px; font-weight:normal; color:#393939;}
+.wid452AlignR{ width:452px; float:left; text-align:right;}
+.wid155Pad{ width:140px; padding:0 0 0 19px; float:left; }
+.checkBox{ width:13px; height:13px; margin:2px 10px 0 0; float:left;}
+.checkbox_off{ background:url(/images/secure/merchantenrollment/check_off.png); width:13px; height:13px; float:left;}
+.input_checkbox{ margin-left:-9999px;}
+.checkbox_on{ background:url(/images/secure/merchantenrollment/check_on.png); width:13px; height:13px; float:left;}
+
+.wid30 input[type="radio"]{ *margin:-2px 0 0 5px; }
+.suggestive-container{ float:left; margin:0 0px 0 13px; display:none;}
+.suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#ff0000; line-height:22px; border-top:#ed9a57 1px solid; border-bottom:#ed9a57 1px solid; float:left; height:22px; background:#fce7d6; padding:0 10px 0 10px;}
+.back_btn{ background:url(/images/secure/merchantenrollment/back_btn.png) no-repeat; width:84px; height:33px; font-size:0px; border:0px none; outline:none; display:block;}
+input[type="submit"].continue_btn{ background:url(/images/secure/merchantenrollment/continue_btn.png) no-repeat; width:110px; height:33px; font-size:0px; border:0px none; outline:none;}
+.hyperLinkBlue12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:normal; text-decoration:none;}
+.hyperLinkBlue12:hover{ text-decoration:underline; }

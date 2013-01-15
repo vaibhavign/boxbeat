@@ -1,0 +1,229 @@
+body{ margin:0px; padding:0px;}
+.clear{ font-size:0px; clear:both; height:0px;	}
+.floatL{ float:left;}
+.floatR{ float:right;}
+img{ border:0px;}
+.headerMainCont{ background:#070707; height:114px; width:100%; }
+.headerMainCont .mainWrapper{ width:1000px; margin:auto;}
+.headerMainCont .logo{ float:left; margin:10px 0 0 0; }
+.headerMainCont .rightContent{ float:right; padding:10px 0 0 0; width:255px; }
+.headerMainCont .rightContent .firstrow{ margin:0px; padding:0px; font:normal 11px Verdana, Arial, Helvetica, sans-serif; color:#848484; float:right;}
+.headerMainCont .rightContent .firstrow div{ list-style-type:none; float:left;} 
+.headerMainCont .rightContent .firstrow div a{ font:inherit; color:#848484; text-decoration:none;}
+.headerMainCont .rightContent .firstrow div a:focus { color:#fff;}
+.headerMainCont .rightContent .firstrow div a:hover{ color:#fff;}
+.headerMainCont .rightContent .firstrow div .focus { color:#fff;}
+.headerMainCont .rightContent .borderBot{ width:255px; border-bottom:1px solid #474747; height:1px; float:left; margin:8px 0 8px 0; overflow:hidden;}
+.lh25{ clear:both; font-size:0px; height:25px;}
+.headerMainCont .storeBox{ border:#515151 5px solid; height:20px; width:200px; overflow:hidden; margin:3px 0 0 0 ;}
+.headerMainCont .storeBox select{ width:200px; height:20px; line-height:20px; }
+.headerMidBlockContainer { clear:both; background-color:#070707; height:81px; width:100%; min-width:1000px; }
+.headerMidBlock { width:1000px; clear:both; margin:auto; }
+.logoBlockHeader { clear:both; height:81px; }
+.logoBlockHeader .leftBlock{ float:left; margin-top:21px; width:111px; }
+.logoBlockHeader .rightBlock{ width:889px; float:left; }
+.logoBlockHeader .rightBlock table { color:#848484; font-size:11px; margin-top:14px; }
+.logoBlockHeader .rightBlock a { color:#848484; text-decoration:none; }
+.logoBlockHeader .rightBlock a:hover { color:#FFFFFF; text-decoration:none; }
+.logoBlockHeader .rightBlock a.selectheaderrighttab { color:#ffffff; text-decoration:none; }
+.logoBlockHeader .rightBlock table tr td.topNav { border-bottom:1px solid #474747; text-align:right; line-height:24px; }
+.logoBlockHeader .rightBlock table tr td.botNav { text-align:right; padding-top:8px; }
+.headerBotBlockContainer { clear:both; background-color:#070707; height:33px; width:100%; min-width:1000px; }
+.headerBotBlock { width:1000px; clear:both; margin:auto; }
+.headerTopMSGBlockContainer { clear:both; background-color:#ffeebd; height:55px; width:100%; min-width:1000px; }
+.headerTopMSGBlock { width:1000px; clear:both; margin:auto; }
+.headerTopMSGBlock .msgTxt { clear:both; color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:20px; padding-top:6px; }
+.headerTopMSGBlock .msgTxt a { color:#00538a; text-decoration:none; }
+.headerTopMSGBlock .msgTxt a:hover { color:#00538a; text-decoration:underline; }
+.headerTopMSGBlock .mstTxtBelow { clear:both; }
+.headerTopWelcomeMSGBlockContainer { clear:both; background-color:#ffeebd; height:55px; width:100%; min-width:1000px; }
+.headerTopWelcomeMSGBlock { width:1000px; clear:both; margin:auto; }
+.headerTopWelcomeMSGBlock .msgTxt { float:left; line-height:55px; color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; }
+.headerTopWelcomeMSGBlock .msgTxt a { color:#00538a; text-decoration:none; }
+.headerTopWelcomeMSGBlock .msgTxt a:hover { color:#00538a; text-decoration:underline; }
+.headerTopWelcomeMSGBlock .mstTxtBelow { color:#00538a; line-height:55px; width:50px; float:right; }
+
+.headerBotBlock .headerBotBlockLeftBlock { float:left; width:790px; height:33px;}
+.headerBotBlock .headerBotBlockRightBlock { padding-top:5px; }
+.headerBotBlock .headerBotBlockRightBlock .innerDivStore { border:5px solid #515151; width:200px; height:18px; overflow:auto; }
+.headerTopWelcomeMSGBlock .mstTxtBelow .closeIcon {
+    background: url(/images/admin/newheadercion.png) repeat scroll -121px 0 transparent;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 10px;
+    margin: 23px 0 0 8px;
+    width: 10px;
+}
+.headerTopWelcomeMSGBlock .mstTxtBelow a {
+    font-family:Arial, Helvetica, sans-serif; color:#00538a; text-decoration:none;
+}
+.headerTopWelcomeMSGBlock .mstTxtBelow a:hover{
+    color:#00538A; text-decoration:underline;
+}
+.inpSelect {
+    background: none repeat scroll 0 0 #FFFFAA;
+    color: black;
+    height: 22px;
+    margin-left: -2px;
+    position: absolute;
+    margin-top: -2px;
+    width: 204px;
+	background-color:#FFF;
+}
+.container {
+    border: 0 none;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+	float:right;
+}
+.subheaderContainer { clear:both; min-height:127px; width:1000px; margin:auto; }
+.subheaderContainer .subheaderheadingGap { clear:both; height:30px; }
+.subheaderContainer .subheaderheading { font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; }
+.subheaderContainer .subheadersubHeading { font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:20px; width: 650px; word-wrap: break-word; }
+.subheaderContainer .subheadersubHeadingFullwidth { font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:20px; width: 1000px; }
+.mainBodyHeadingContainer { clear:both; width:1000px; margin:auto; }
+.mainBodyHeadingLeft {
+	float:left;
+    color: #00538A;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+.headingBotBorder { border-bottom:1px solid #e1e1e1; font-size:1px; height:6px; line-height:6px; clear:both; width:1000px; margin:auto; }
+.headingBotBorderBtn { border-bottom:1px solid #e1e1e1; font-size:1px; height:3px; line-height:3px; clear:both; width:1000px; margin:auto; }
+.headingBotBorderAbsolute { border-bottom:1px solid #e1e1e1; font-size:1px; height:1px; line-height:1px; clear:both; width:1000px; margin:auto; }
+
+.manageTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.manageTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.manageTabmenu a.aclass div:hover { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.manageTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.manageTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px; z-index:6566; position:absolute;}
+.manageTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.manageTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.createTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.createTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.createTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.createTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;  z-index:6566; position:absolute; }
+.createTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.createTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.designTabmenu { clear:both; display:none; margin-top:33px; width:160px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.designTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.designTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:160px; display:block; }
+.designTabActivemenu { clear:both; display:none; margin-top:33px; width:160px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;   z-index:6566; position:absolute;}
+.designTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.designTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:160px; display:block; }
+
+.promoteTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.promoteTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.promoteTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.promoteTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;  z-index:6566; position:absolute; }
+.promoteTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.promoteTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.OverviewTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:85px; height:33px; background-position:0px -59px; float:left; cursor:pointer;}
+.OverviewTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:85px; height:33px; background-position:0px -95px; float:left;}
+
+.ManageTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:72px; height:33px; background-position:-89px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.ManageTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-161px -59px; float:left;}
+.ManageTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:72px; height:33px; background-position:-89px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.ManageTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-161px -95px; float:left;}
+
+.CreateTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:64px; height:33px; background-position:-197px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.CreateTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -59px; float:left;}
+.CreateTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:64px; height:33px; background-position:-197px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.CreateTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.DesignTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:65px; height:33px; background-position:-297px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.DesignTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:31px; height:33px; background-position:-362px -59px; float:left;}
+.DesignTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:65px; height:33px; background-position:-297px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.DesignTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.PromoteTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:75px; height:33px; background-position:-398px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.PromoteTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-472px -59px; float:left;}
+.PromoteTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:75px; height:33px; background-position:-398px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.PromoteTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.ViewstoreTab{ background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:46px; height:33px; display:block; float:left; background-position:-527px 0px; margin:0px 0px 0px 4px; cursor:pointer; }
+
+.bullet{ width:2px; height:2px; background-color:#000; float:left; margin:11px 14px 0 17px;}
+
+.subheader_rightblock, .subheader_rightcontent, .subheader_activerightcontent {
+    float: right;
+}
+.subheader_rightblock .subheader_container {
+    clear: both;
+    padding: 0 10px 0 15px;
+}
+.subheader_rightblock ul {
+    margin: 11px 0 0;
+    padding: 0;
+}
+.subheader_rightblock ul li {
+    clear: both;
+    float: left;
+    line-height: 30px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 260px;
+}
+.subheader_rightblock .subheader_rightcontent {
+    color: #767676;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+.subheader_rightblock .subheader_leftcontent {
+    color: #999999;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+.subheader_rightblock .bottomline {
+    background-color: #B5B5B5;
+    clear: both;
+    display: block;
+    font-size: 1px;
+    height: 1px;
+    line-height: 1px;
+}
+.subheader_rightblock .subheader_activecontent {
+    color: #000000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+.subheader_rightblock .subheader_activerightcontent {
+    color: #000000;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+.subheader_rightblock .modify_link {
+    color: #00538A;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    text-decoration: none;
+}
+.subheader_rightblock .modify_link:hover {
+    color: #00538A;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    text-decoration: underline;
+}
+.subheader_rightblock .edit_icon {
+    background-image: url("/images/admin/product_icon.gif");
+    background-position: 0 -13px;
+    background-repeat: no-repeat;
+    display: block;
+    float: left;
+    height: 10px;
+    margin: 10px 7px 0 0;
+    width: 10px;
+}
+.bottomborder { border-bottom: 1px solid #B5B5B5;}

@@ -1,0 +1,87 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+
+/*---------------------Common Css Start From here------------------------*/
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{ clear:both;}
+/*---------------------Common Css Ends here------------------------*/
+
+/*-------------GC Header Start Form here---------------------*/
+.gcheader{ width:1000px; margin:auto;clear:both; font-family:Arial, Helvetica, sans-serif; font-size:30px; color:#393939; height:153px; line-height:153px;}
+.gcsubheader{width:1000px; margin:auto;clear:both; height:124px;}
+.gcsubheader .mainheading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; float:left;}
+.gcsubheader .gcsubheader_content{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#767676; float:left; line-height:18px; width:650px; word-wrap:break-word;}
+/*-------------GC Header Ends here---------------------*/
+
+/*-----------------GC Header2 Css Start from here-------------------------*/
+.checkout_header{ width:1000px; margin:auto; clear:both; margin-top:18px; height:57px; border-bottom:1px solid #d8d8d8;}
+.checkout_header .progressbar_step1{ background-image:url(/images/secure/checkout_progressbar.png); background-position:0px 0px; background-repeat:no-repeat; width:587px; height:23px; display:block; margin-top:8px; float:right;}
+.logo{float:left;}
+.progressbar_step4{background-image:url(/images/secure/gift-purchased/checkout_progressbar.png); background-position:0px -72px; background-repeat:no-repeat; width:587px; height:23px; display:block; margin-top:8px; float:right;}
+/*-----------------GC Header2 Css Ends here-------------------------*/
+
+
+/*-------------------Body Css Start From here----------------------*/
+.lh30{ height:30px; line-height:30px; clear:both;}
+.lh35{ height:35px; line-height:35px; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.lh50{ height:50px; line-height:50px; clear:both;}
+.lh60{ height:60px; line-height:60px; clear:both;}
+.lh110{ height:110px; line-height:110px; clear:both;}
+.lh90{ height:90px; line-height:90px; clear:both;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh2{ height:2px; line-height:2px; clear:both; font-size:0px;}
+.lh3{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.gc_body_width{ width:1000px; margin:auto; clear:both;}
+.gc_body_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; height:25px;}
+.gc_wid195{ width:195px; float:left;}
+.gc_wid16{ width:16px; float:left;}
+.gc_wid390{ width:390px; float:left;}
+.gc_wid181{ float:left; width:181px;}
+.gc_ammountheading{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939;}
+.gc_astrick{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#c70303; float:left;}
+.payment_billing_wid652{ width:652px; clear:both; height:50px; }
+.payment_pay_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; margin-left:18px; }
+.payment_pay_example{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; margin-left:18px; }
+.payment_billing_underline{ border-bottom:1px dotted #999999; clear:both;  height:1px; *height:auto; }
+.gc_manage_default_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:22px;}
+.gc_checkbox_default{ background-image:url(/images/secure/gc_icon.png); background-repeat:no-repeat; width:13px; height:13px; background-position:-36px 0px; float:left; display:block; cursor:pointer; margin-right:12px; margin-top:1px;}
+.checkbox{ margin-left:-99999px;}
+.gc_manage_setprice_link{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:underline;}
+.gc_manage_setprice_link:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:none;}
+.gc_sender_input{ width:265px; border:#848484 1px solid; padding:0 0 0 5px; height:22px; margin:0 15px 0px 0; font-size:12px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; color:#999999;}
+.gc_message_textarea{ width:383px; border:#848484 1px solid; padding:5px 0 0 5px; height:67px; float:left; font-size:12px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; color:#393939; overflow:hidden;}
+.gc_amountBlueBar{ border:1px solid #93cbe2; background:#d8ecf4; padding:8px 0 0 10px; width:990px; height:28px;}
+.gc_configure_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; }
+.checkout_signin_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:24px; }
+.edit_saddress_leftblock{ width:650px; float:left;}
+.edit_saddress_rightblock{width:325px; float:left;}
+.edit_saddress_middleblock{width:25px; float:left;}
+.edit_saddress_example{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left;}
+.select_saddress_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939;}
+.welldone_thanksbg{ width:440px; background-color:#f1f1f1; float:left; margin-top:63px; font-family:"Helvetica LT CondensedBlack", Arial, Verdana, "Microsoft Sans Serif"; font-size:28px; color:#393939; padding-left:7px; margin-right:23px; height:110px;}
+.welldone_thanksbg .goo2o{ font-family:"Helvetica LT CondensedBlack", Arial, Verdana, "Microsoft Sans Serif"; font-size:28px; color:#00538a;}
+.welldone_orderno{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#767676;}
+.welldone_bullet{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:4px; height:7px; float:left; background-position:-246px -114px; margin:9px 13px 0px 0px;}
+.track_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+.track_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.welldone_btnGap{ width:18px; float:left;}
+.welldone_underline{border-bottom:1px solid #cdcdcd; clear:both;  height:1px; *height:auto;}
+.welldone_wid155{width:155px; float:left; word-wrap:break-word;}
+.welldone_emailicon{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:41px; height:37px; float:left; background-position:-258px -102px;}
+.welldone_ringicon{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:41px; height:37px; float:left; background-position:-302px -102px;}
+.welldone_noteicon{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:41px; height:37px; float:left; background-position:-343px -102px;}
+.welldone_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:18px;}
+.welldone_supportcontent{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; }
+.welldone_examplecontent{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; line-height:18px;}
+.welldone_supportGap{ width:80px; float:left;}
+.welldone_rightblock{width:325px; background-color:#f1f1f1; float:left;}
+.welldone_rightblock_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; font-weight:bold; margin-left:15px; margin-top:15px; margin-bottom:4px;}
+.welldone_imageblock{ width:260px; margin:auto; clear:both;}
+.welldone_image{border:1px solid #cdcdcd; margin:auto; width:150px; height:150px;}
+
+/*-------------------Body Css Ends here----------------------*/

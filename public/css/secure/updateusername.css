@@ -1,0 +1,64 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+input[type="image"]{ cursor:pointer;}
+
+/*=============== RIGHT PANEL START FROM HERE========================*/
+.editUserNameRightPanel{ width:260px; float:left; }
+.editUserNameRightPanel ul{  margin:0px; padding:0px;}
+.editUserNameRightPanel ul li{  margin:0px; padding:0px 0 0 19px; height:30px; list-style-type:none; line-height:30px; }
+.editUserNameRightPanel ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:none; line-height:30px;}
+.editUserNameRightPanel ul li.selected{ background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;}
+.lh25{ height:25px; clear:both; font-size:0px;}
+
+/*=============== RIGHT PANEL ENDS HERE========================*/
+
+/*===================LEFT PANEL STARTS FROM HERE====================*/
+.editUserNameLeftPanel{ width:715px; padding:0px 0px 0 24px; border-left: #cdcdcd 1px solid; float:left;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.content_text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh10{height:10px; clear:both; font-size:0px; line-height:10px}
+a.hyperLinkBlue12{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue12{ text-decoration:none;}
+.wid180{ width:180px; float:left;}
+.navArrow{ background:url('/images/secure/accountsetting/nav_arrow.png'); width:8px; height:13px; float:left; margin:6px 12px 0 12px;}
+.content_text15Lh25{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939; line-height:25px; }
+a.hyperLinkBlue13{ font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue13{ text-decoration:none;}
+.backArrow{ background:url('/images/secure/accountsetting/left_arrow_icon.png'); width:6px; height:11px; float:left; margin:3px 10px 0 0px;}
+.wid139{ width:139px; float:left;}
+a.hyperLinkBlue11{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue11{ text-decoration:none;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px; }
+.lh40{ height:40px; clear:both; font-size:0px; }
+.wid160{ width:160px; float:left;}
+a.hyperLinkBlue12Lh25{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal; line-height:25px;}
+a:hover.hyperLinkBlue12Lh25{ text-decoration:none;}
+/*dfssad*/
+.grey_text12{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal;}
+.lh50{ height:50px; clear:both; font-size:0px; }
+.wid252{ width:252px; float:left;}
+.wid25{ width:25px; float:left;}
+a.hyperLinkBlue12None{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal; text-decoration:none;}
+a:hover.hyperLinkBlue12None{ text-decoration:underline;}
+.inputWid153{ width:147px; height:22px; padding:0 0 0 5px; float:left; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.borderSeprator{ width:348px; border-bottom:1px solid #dedede; clear:both; font-size:0px;	}
+.wid68{ width:68px; float:left;}
+.grey_text12Lh20{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.lh55{ height:55px; clear:both; font-size:0px;}
+/*2039230498*/
+/*===================LEFT PANEL ENDS HERE====================*/
+.sign-up-suggestive-container{ float:left; margin:0 0px 0 13px;}
+.sign-up-suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:22px; border-top:#e5e5e5 1px solid; border-bottom:#e5e5e5 1px solid; float:left; height:22px; background:#f1f1f1; padding:0 10px 0 10px;}
+.adjustmentMar{ float:left; margin:0 0 0 13px; }
+.grey-text11Lh20{font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+.suggestive-container{ float:left; margin:0 0px 0 13px;}
+.suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#ff0000; line-height:20px; border-top:#ed9a57 1px solid; border-bottom:#ed9a57 1px solid; float:left; height:22px; background:#fce7d6; padding:0 10px 0 10px;}
+#sign_up_show_hide{ display:none;}
+.errorMsg{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#ff0000; font-weight: normal;}

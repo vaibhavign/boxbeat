@@ -1,0 +1,87 @@
+.not_account_message {
+    color: #393939;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 16px;
+}
+.green_mail {
+    color: #4A970C;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 20px;
+    font-weight: bold;
+}
+input[type="submit"] {
+    background-image: url(/images/secure/signup_this_account.gif);
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 22px;
+    width: 225px;
+}
+.wid27 {
+    float: left;
+    width: 27px;
+}
+a.never_mind_link {
+    color: #010101;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+a.never_mind_link:hover {
+    color: #010101;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.wid440_btn {
+    margin: auto;
+    width: 440px;
+}
+.lh38 {
+    clear: both;
+    font-size: 0;
+    height: 38px;
+    line-height: 38px;
+}
+.email_associated_text {
+    color: #393939;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 12px;
+}
+.email_associated_text2 {
+    color: #999999;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 12px;
+}
+
+.input_bg {
+    background-image: url(/images/secure/input_bg.jpg);
+    background-repeat: no-repeat;
+    height: 31px;
+    width: 255px;
+	float:left;
+}
+.input_wid240 {
+    border: 0 none;
+    color: #393939;
+    font-family: "Trebuchet MS",Arial,helvetica;
+    font-size: 15px;
+    height: 18px;
+    line-height: 18px;
+    margin-left: 5px;
+    outline: medium none;
+    width: 240px;
+	margin-top:6px;
+}
+input[type="button"] {
+    background-image: url(/images/secure/continue.gif);
+    background-repeat: no-repeat;
+    border: 0 none;
+    cursor: pointer;
+    height: 31px;
+    width: 118px;
+}
+.colorbox { width:575px; margin:auto; border:1px solid #d6d6d6; background-color:#eeeeee; color:#767676; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; padding:20px; }

@@ -1,0 +1,340 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{ border:0px none;}
+.floatLeft{float:left;}
+.floatRight{ float:right;}
+.clearBoth{clear:both;}
+
+/* Cart Page Css Start From here*/
+.cart_maincontainer{ width:1000px; margin:auto; clear:both;}
+.wid1000{ width:1000px; float:left;}
+.cart_wid650{ width:650px; float:left;}
+.cart_wid310{ width:310px; float:left;}
+.cart_wid40{ width:40px; float:left;}
+.cart_righttopbar{ width:295px; float:left; background-color:#989898; height:27px; line-height:27px; font-family:
+Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff;  padding-left:15px; font-weight:bold;}
+.cart_rightcontentbar{border:1px solid #989898; background-color:#f4f4f4; width:308px; height:225px; clear:both;}
+.cart_right_innercontent{ width:275px; margin:auto; clear:both;}
+.cart_right_innerheading{font-size:40px; color:#515251; font-family:Arial, Helvetica, sans-serif;}
+.cart_right_pricetext{font-size:46px; color:#515251; font-family:Arial, Helvetica, sans-serif;}
+.cart_right_innertext{font-size:13px; color:#515251; font-family:Arial, Helvetica, sans-serif;}
+
+.lh40{ height:40px; line-height:40px; clear:both;}
+.lh30{ height:30px; line-height:30px; clear:both;}
+.lh12{ height:12px; line-height:12px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.lh18{ height:18px; line-height:18px; clear:both;}
+.lh25{ height:25px; line-height:25px; clear:both;}
+.lh70{ height:70px; line-height:70px; clear:both;}
+.shoppingcart_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; float:left; height:25px;}
+.shoppingcart_savelaterheading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#393939; float:left; height:25px;}
+.shoppingcart_savelaterunderline{border-bottom:1px solid #696969; height:1px; line-height:1px; clear:both; font-size:0px; *height:auto;}
+.heading_bottomline{ border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px;}
+.cart_msg{ width:998px; height:auto; border:1px solid #fcd970; margin:auto; background-color:#fff7bf; float:left; }
+.cart_msg_container{margin:13px; float:left;}
+.cartmsg_icon{ background-image:url("/images/default/cart_msgicon.png"); width:34px; height:30px; display:block; float:left; margin-right:14px;}
+.important_msg{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:bold; color:#393939; float:left;}
+.plz_note{font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#393939; float:left;}
+.plz_note a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:underline;}
+.plz_note a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:none;}
+.listing_heading{ background-color:#989898; border-bottom:1px solid #696969; float:left; height:26px; line-height:26px; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; font-weight:bold;}
+.cart_item{ width:430px; float:left;  margin:0px 10px 0px 10px;}
+.cart_item_listing{width:440px; float:left;  margin:0px 10px 0px 0px;}
+.listing_itemSRP{width:110px; float:left;  margin:0px 10px 0px 10px;}
+.quantity{width:50px; float:left;  margin:0px 10px 0px 10px;}
+.netprice{width:110px; float:left;  margin:0px 10px 0px 0px;}
+.listing_content{ width:1000px; float:left; margin:17px 0px 17px 0px;}
+.cartlisting_bottomline{ border-bottom:1px dashed #bababa; height:1px; line-height:1px; clear:both; font-size:0px;}
+.cartimage_main{ width:125px; float:left;}
+.cartimage_container{ width:100px; height:100px; float:left;}
+.cartimage_detail{ width:315px; float:left;}
+.cartremovelink{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:underline;}
+.cartremovelink:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; text-decoration:none;}
+.cartpname{ color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; float:left; line-height:20px;}
+.cart_addedfrom{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left;}
+.cart_addedfrom a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:none;}
+.cart_addedfrom a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline;}
+.condition_heading{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; width:73px;}
+.condition_txt{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left;}
+.instock_maincontainer{ background-color:#f4f4f4; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; width:314px;}
+.instock_container{ margin:10px; float:left;}
+.instock_container a{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline;}
+.instock_container a:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:none;}
+.SRP_content{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; width:110px; float:left;  margin:0px 10px 0px 10px;}
+.quantity select{ width:46px; height:24px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; margin:0px 0px 0px 0px;}
+.netprice_content{color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; width:110px; float:left;  margin:0px 10px 0px 0px;}
+.cart_alert{color:#f00000; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+.carttotal_bar{ width:648px; clear:both; background-color:#d8ecf4; border:1px solid #93cbe2; height:33px;}
+.total_merchandise{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#000000; margin-right:17px; float:left; line-height:33px;}
+.total_merchandise_price{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#000000; margin-right:33px; float:right; font-weight:bold; line-height:33px;}
+.total_merchandise_price_total{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#000000; margin-right:33px; float:right; font-weight:bold; line-height:16px;}
+.tGreenBox {
+    background-color: #E6F3D9;
+    border: 1px solid #C5DEAB;
+    float: left;
+    padding: 25px 25px 25px 23px;
+}
+.greenbox_bullet {
+    background-color: #393939;
+    float: left;
+    height: 3px;
+    margin-right: 22px;
+    margin-top: 10px;
+    width: 3px;
+}
+.greenbox_content {
+    color: #393939;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+	word-wrap:break-word;
+	width:925px;
+	float:left;
+}
+
+.exist_heading {
+    color: #393939;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.back_accountlink{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline; width: 117px;}
+.back_accountlink:hover{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none;}
+.backarrow{ background-image:url(/images/default/backto_arrow.png); background-repeat:no-repeat; width:6px; height:11px; display:block; margin-right:6px; float:left; margin-top:3px;}
+.cart_empty{ background-color:#f4f4f4; border:1px solid #cacaca; float:left; width:998px;}
+.cart_empty .innerblock{ width:943px; margin:auto; clear:both; margin-top:26px;}
+.cart_empty .contentblock{ width:753px; float:left;}
+.empty_carticon{ background-image:url(/images/default/emptycart_icon.png); background-repeat:no-repeat;  width:134px; height:123px; float:left; margin-right:47px; margin-top:0px;}
+.cartempty_heading{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939; float:left;}
+.cartempty_content {
+    color: #767676;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 22px;
+	word-wrap:break-word;
+	width:725px;
+	float:left;
+}
+
+/* Cart Page Css Ends here*/
+
+
+/*----------------My Cart Page Css Start From here-------------------*/
+#bar_wrapper{width:100%;}
+
+/*----------------Chat bar Css Start From here------------------------------------*/
+#chatbar{ height:50px; background-color:#000000; bottom:0px; min-height:50px; display:block; width:100%; /*-moz-opacity:.9; opacity:0.9; filter: alpha(opacity=90); */z-index:9999;} 
+#chatbar .menu ul{margin:0px; padding:0px;}
+#chatbar .menu ul li{margin:0px; padding:0px; list-style-type:none; display:inline; float:left; font-size:13px; border-left:5px solid #000000; color:#FFF; text-transform:uppercase; line-height:49px; }
+#chatbar .menu ul li a{float:left; font-size:13px; color:#FFF; text-transform:uppercase; text-decoration:none; padding:0px 11px 0px 11px; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .menu ul li a:hover{text-decoration:none; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .menu ul li.selected{ background-color:#ffffff; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .menu ul li.selected a{ color:#000000; cursor:default; border-top:1px solid #d7d7d7; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .menu ul li.selected .livechaticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:16px; height:12px; display:block; background-position:-1px -15px; float:left; margin:19px 6px 0px 0px;}
+#chatbar .menu ul li.selected .carticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:12px; height:12px; display:block; background-position:-49px -15px; float:left; margin:18px 6px 0px 0px;}
+#chatbar .menu ul li.selected .wishlisticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:12px; display:block; background-position:-64px -15px; float:left; margin:18px 6px 0px 0px;}
+
+#chatbar .menu ul li a .livechaticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:16px; height:12px; display:block; background-position:-1px -1px; float:left; margin:19px 6px 0px 0px;}
+#chatbar .menu ul li a .myaccounticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:10px; height:12px; display:block; background-position:-20px -1px; float:left; margin:18px 6px 0px 0px;}
+#chatbar .menu ul li a .shareicon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:12px; height:12px; display:block; background-position:-34px -1px; float:left; margin:18px 6px 0px 0px;}
+#chatbar .menu ul li a .carticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:12px; height:12px; display:block; background-position:-49px -1px; float:left; margin:18px 6px 0px 0px;}
+#chatbar .menu ul li a .wishlisticon{ background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:12px; display:block; background-position:-64px -1px; float:left; margin:18px 6px 0px 0px;}
+
+#chatbar .chatrightblock{float:right;}
+#chatbar .loggedascontainer{float:left;}
+#chatbar .loggedastext{color:#6a6663; font-size:11px; margin-top:11px; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .username_link{ text-decoration:none; font-size:11px; color:#ffffff; font-family:Arial, Helvetica, sans-serif;}
+#chatbar .username_link:hover{ text-decoration:none; font-size:11px; color:#ffffff; text-decoration:underline;}
+#chatbar .logged_seperator{color:#6a6663; font-size:11px; margin:16px 16px 0px 16px; float:left;}
+#chatbar .bar_logo{ margin:5px 10px 0px 16px; float:left;}
+/*----------------Chat bar Css Ends here------------------------------------*/
+
+/*----------------live Chat window  Top Bar  Css Start from here------------------------------------*/
+#live_popuptopbar{ width:324px; height:31px; border:5px solid #1a1a19; border-bottom:0px none; position:fixed; overflow:hidden; bottom:315px; display:none; -moz-opacity:.9; opacity:0.9; filter: alpha(opacity=90); z-index:9999; background-color:#b3c3c2; clear:both;}
+#live_popuptopbar .topbar{ height:30px; line-height:30px; border-bottom:1px solid #a09e9f; clear:both;}
+#live_popuptopbar .topbar_text{color:#000000; font-size:14px; font-weight:bold; padding-left:11px; float:left; font-family:Arial, Helvetica, sans-serif;}
+#live_popuptopbar  .right_icon{float:right;}
+#live_popuptopbar .minimize_icon{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-80px -1px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .minimize_icon:hover{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:0px -41px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .popout_icon{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-96px -1px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .popout_icon:hover{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-16px -41px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .maximize_icon{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-62px -41px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .maximize_icon:hover{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-77px -41px; float:left; margin:10px 6px 0px 0px;}
+#live_popuptopbar .close_icon{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-48px -41px; float:left; margin:10px 11px 0px 0px;}
+#live_popuptopbar .close_icon:hover{  background-image:url(/images/default/icons.png); background-repeat:no-repeat; width:14px; height:14px; display:block; background-position:-32px -41px; float:left; margin:10px 11px 0px 0px;}
+/*----------------live Chat window  Top Bar  Css Ends here------------------------------------*/
+
+
+/*----------------Visitor Sign In Css Start from here------------------------------------*/
+#signin_container{ width:324px; height:265px; border:5px solid #1a1a19; display:none; position:fixed; overflow:hidden; bottom:50px; background-color:#ffffff; border-top:0px none; border-bottom:0px none; float:left;}
+#signin_container .content_container{ width:300px; height:210px; margin:auto; font-size:12px; color:#888888; margin:11px; line-height:17px; overflow-y:auto; font-family:Arial, Helvetica, sans-serif;}
+#signin_container .input_block { border:1px solid #a09e9f; border-bottom:0px none; width:324px; height:30px; border-left:0px none; border-right:0px none;}
+#signin_container .input_block textarea { width:310px; height:25px; margin:8px 0px 0px 11px; border:0px none; color:#a3a2a2; font-size:12px; font-family:Arial, Helvetica, sans-serif; overflow:hidden;}
+/*----------------Visitor Sign In Css Ends here------------------------------------*/
+
+/*---------------- New Visitor Css Start from here------------------------------------*/
+#newvisitor_container{ width:324px; height:265px; border:5px solid #1a1a19; display:none; position:fixed; overflow:hidden; bottom:50px; background-color:#ffffff; border-top:0px none; border-bottom:0px none; float:left;}
+#newvisitor_container .content_container{ width:300px; height:210px; margin:auto; font-size:12px; color:#888888; margin:11px; line-height:17px; font-family:Arial, Helvetica, sans-serif;}
+#newvisitor_container  .nameinput{width:288px; height:20px; border:1px solid #888888; background-color:#f8f7f6; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:5px 0px 0px 0px; *margin:4px 0px 0px 0px;}
+#newvisitor_container  .emailinput{width:288px; height:20px; border:1px solid #888888; background-color:#f8f7f6; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:9px 0px 0px 0px; *margin:7px 0px 0px 0px;}
+#newvisitor_container .msgbox{width:288px; height:50px; border:1px solid #888888; background-color:#f8f7f6; margin:9px 0px 0px 0px; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:5px; *margin:7px 0px 0px 0px;}
+#newvisitor_container .send_button{margin-top:9px; float:right;}
+#newvisitor_container .signin_link{color:#277dc1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration:none; line-height:29px;}
+#newvisitor_container .signin_link:hover{color:#277dc1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration:underline;}
+#newvisitor_container .thanks_link{color:#277dc1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration:none; line-height:39px;}
+#newvisitor_container .thanks_link:hover{color:#277dc1; font-size:12px; font-family:Arial, Helvetica, sans-serif; text-decoration:underline;}
+/*---------------- New Visitor Css Ends here------------------------------------*/
+
+
+/*---------------- Session off Css Start from here------------------------------------*/
+#sessionoff_container{ width:324px; height:265px; border:5px solid #1a1a19; display:none; background-color:#ffffff; position:fixed; overflow:hidden; bottom:50px; border-top:0px none; border-bottom:0px none; float:left;}
+#sessionoff_container .content_container{ width:300px; height:210px; margin:auto; font-size:12px; color:#888888; margin:11px; line-height:17px; font-family:Arial, Helvetica, sans-serif;}
+#sessionoff_container .checkout_margin{ margin-top:6px;}
+#sessionoff_container  .nameinput{width:288px; height:20px; border:1px solid #ed2024; background-color:#f8f7f6; padding-left:5px; padding-right:5px; color:#000000; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:5px 0px 0px 0px; *margin:4px 0px 0px 0px;}
+#sessionoff_container  .emailinput{width:288px; height:20px; border:1px solid #888888; background-color:#f8f7f6; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; margin:9px 0px 0px 0px; *margin:7px 0px 0px 0px;}
+#sessionoff_container .msgbox{width:288px; height:50px; border:1px solid #888888; background-color:#f8f7f6; margin:9px 0px 0px 0px; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:5px; *margin:7px 0px 0px 0px;}
+#sessionoff_container .send_button{margin-top:9px; float:right;}
+/*---------------- Session Off Css Ends here------------------------------------*/
+
+
+/*---------------- Session off Css Start from here------------------------------------*/
+#sessionon_container{ width:324px; height:265px; border:5px solid #1a1a19; display:none; position:fixed; overflow:hidden; bottom:50px; background-color:#ffffff; border-top:0px none; border-bottom:0px none; float:left;}
+#sessionon_container .content_container{ width:300px; height:210px; margin:auto; font-size:12px; color:#888888; margin:11px; line-height:17px; font-family:Arial, Helvetica, sans-serif;}
+#sessionon_container .checkout_margin{ margin-top:6px;}
+#sessionon_container .textarea_margin{ margin-top:62px;}
+#sessionon_container .msgbox{width:288px; height:50px; border:1px solid #888888; background-color:#f8f7f6; margin:9px 0px 0px 0px; padding-left:5px; padding-right:5px; color:#a3a2a2; font-family:Arial, Helvetica, sans-serif; font-size:12px; padding-top:5px; *margin:7px 0px 0px 0px;}
+#sessionon_container .send_button{margin-top:9px; float:right;}
+/*---------------- Session Off Css Ends here------------------------------------*/
+
+
+/*---------------- While Chatting Css Start from here------------------------------------*/
+#whilechatting_container{ width:324px; height:265px; border:5px solid #1a1a19; display:none; background-color:#ffffff; border-top:0px none; border-bottom:0px none; float:left}
+#whilechatting_container .content_container{ width:300px; height:210px; margin:auto; font-size:12px; color:#888888; margin:11px; line-height:17px;}
+#whilechatting_container .input_block { border:1px solid #a09e9f; border-bottom:0px none; width:324px; height:30px; border-left:0px none; border-right:0px none;}
+#whilechatting_container .input_block textarea { width:310px; height:25px; margin:8px 0px 0px 11px; border:0px none; color:#a3a2a2; font-size:12px; font-family:Arial, Helvetica, sans-serif; overflow:hidden;}
+#whilechatting_container .me_text{ font-size:12px; color:#000000; line-height:24px;}
+#whilechatting_container .time_text{color:#888888; font-size:13px;}
+#whilechatting_container .typing_text{color:#a3a2a2; font-size:12px; margin-top:27px;}
+/*---------------- While Chatting Css Ends here------------------------------------*/
+
+
+
+
+
+/*--------------------------Mycart Css Start From here---------------*/
+#bottomblock{ max-height: 355px; min-height: 50px; height:50px; overflow: hidden; position: fixed; bottom:0px; width: 100%;}
+#mycart{ width:100%; height:300px; clear:both; background-color:#ffffff; display:none;}
+#mycart .lh18{ height:18px; line-height:18px; clear:both;}
+#mycart .lh15{ height:15px; line-height:15px; clear:both;}
+#mycart .lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+#mycart .summaryblock{ width:273px; float:left}
+#mycart .cart_heading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; border-bottom:1px solid #a09e9f; padding-left:10px; height:20px;}
+#mycart .cartitemblock{ padding-left:10px; float:left;}
+#mycart .cartitem{ font-family:Arial, Helvetica, sans-serif; font-size:70px; color:#515251;}
+#mycart .item_text{color:#515251; font-size:13px; font-family:Arial, Helvetica, sans-serif; padding-top:48px;}
+#mycart .merchandise_price{color:#515251; font-size:13px; font-family:Arial, Helvetica, sans-serif;}
+#mycart .totalprice{ font-family:Arial, Helvetica, sans-serif; font-size:40px; color:#515251;}
+#mycart .shipping_text{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#515251; word-wrap:break-word; width:250px; float:left; margin-left:3px;}
+#mycart .star_icon{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#000000; float:left;}
+#mycart .product_block{float:left; width:971px; margin-left:15px;}
+#mycart .close_icon{ background-image:url(/images/default/mycart_close_icon.png); background-repeat:no-repeat; width:10px; height:10px; margin:3px 7px 0px 0px; float:left; display:block;}
+#mycart .close_link{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:none; margin-right:10px;}
+#mycart .close_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:underline;}
+#mycart .view_edit_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; margin-right:25px;}
+#mycart .view_edit_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none;}
+#mycart .item_detail_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; padding-left:10px; height:20px;}
+#mycart .item_detail_underline{ border-bottom:1px solid #a09e9f; clear:both; height:20px; font-size:0px; width:100%; position:relative;}
+#mycart .product_detail{float:left; margin-top:10px; width:100%;}
+#mycart .product_detail ul{ margin:0px; padding:0px; margin-left:34px;}
+#mycart .product_detail ul li{ margin:0px; padding:0px; margin-right:11px; list-style-type:none; display:inline; width:205px; height:244px; border:2px solid #ffffff; float:left;}
+#mycart .product_detail_image{ height:100px;}
+#mycart .product_detail ul li a{color:#277dc1; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none; font-weight:normal;}
+#mycart .product_detail ul li a:hover{color:#277dc1; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+#mycart .product_detail ul li:hover{ background-color:#e3e2e2; cursor:pointer; border:2px solid #a09e9f;}
+#mycart .product_detail ul li:hover a{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939; text-decoration:none;}
+#mycart .product_detail ul li.selected{ background-color:#e3e2e2; cursor:pointer; border:2px solid #a09e9f;}
+#mycart .product_detail ul li.selected a{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939; text-decoration:none;}
+#mycart .product_detail ul li:hover a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-decoration:underline;}
+#mycart .product_detail ul li.selected a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-decoration:underline;}
+
+#mycart .qty_price{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#212121;  text-decoration:none;}
+#mycart .product_detail .leftarrow{ background-image:url(/images/default/mycart_leftarrow.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-right:11px;}
+#mycart .wid38{ width:38px; float:left;}
+#mycart .product_detail .leftarrow:hover{ background-image:url(/images/default/mycart_leftarrowhover.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-right:11px;}
+#mycart .product_detail .rightarrow{ background-image:url(/images/default/mycart_rightarrow.png); width:38px; height:248px; display:block; background-repeat:no-repeat;}
+#mycart .product_detail .rightarrow:hover{ background-image:url(/images/default/mycart_rightarrowhover.png); width:38px; height:248px; display:block; background-repeat:no-repeat;}
+#mycart .success_msg{ height:24px; background-color:#fff7bf; border:1px solid #fcd970; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000000; text-align:center; line-height:24px; float:left; position:absolute; margin:-9px 0px 0px 230px; padding:0px 18px 0px 18px; left:0px;}
+/*--------------------------Mycart Css Ends here---------------*/
+
+
+/*---------------My Cart Emnpty Css Start Form here-------------------*/
+#mycartempty {width:100%; height:300px; clear:both; background-color:#ffffff; display:none;}
+#mycartempty .lh18{ height:18px; line-height:18px; clear:both;}
+#mycartempty .product_block{float:left; width:100%;}
+#mycartempty .close_icon{ background-image:url(/images/default/mycart_close_icon.png); background-repeat:no-repeat; width:10px; height:10px; margin:3px 7px 0px 0px; float:left; display:block;}
+#mycartempty .close_link{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:none; margin-right:10px;}
+#mycartempty .close_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:underline;}
+#mycartempty .view_edit_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; margin-right:25px;}
+#mycartempty .view_edit_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none;}
+#mycartempty .item_detail_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; padding-left:10px; height:20px;}
+#mycartempty .item_detail_underline{ border-bottom:1px solid #a09e9f; clear:both; height:20px; font-size:0px; width:100%; position:relative;}
+#mycartempty .empty_msg{ height:52px; background-color:#f5f4f3; border:1px solid #bbb8b8; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#777677; line-height:52px;  width:525px; margin:auto; margin-top:94px;}
+/*---------------My Cart Emnpty Css Ends here-------------------*/
+
+
+/*---------------Wish List Emnpty Css Start Form here-------------------*/
+
+#wishlist {width:100%; height:300px; clear:both; background-color:#ffffff; display:none;}
+#wishlist .lh18{ height:18px; line-height:18px; clear:both;}
+#wishlist .product_block{float:left; width:990px;}
+#wishlist .close_icon{ background-image:url(/images/default/mycart_close_icon.png); background-repeat:no-repeat; width:10px; height:10px; margin:3px 7px 0px 0px; float:left; display:block;}
+#wishlist .close_link{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:none; margin-right:10px;}
+#wishlist .close_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:underline;}
+#wishlist .view_edit_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; margin-right:25px;}
+#wishlist .view_edit_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none;}
+#wishlist .item_detail_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; padding-left:10px; height:20px;}
+#wishlist .item_detail_underline{ border-bottom:1px solid #a09e9f; clear:both; height:20px; font-size:0px; width:100%; position:relative;}
+#wishlist .product_detail{float:left; margin-top:10px; width:990px;}
+#wishlist .product_detail ul{ margin:0px; padding:0px;}
+#wishlist .product_detail ul li{ margin:0px; padding:0px; margin-right:11px; list-style-type:none; display:inline; width:205px; height:244px; border:2px solid #ffffff; float:left;}
+#wishlist .product_detail_image{ height:100px;}
+#wishlist .product_detail ul li a{color:#277dc1; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none; font-weight:normal;}
+#wishlist .product_detail ul li a:hover{color:#277dc1; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+#wishlist .product_detail ul li:hover{ background-color:#e3e2e2; cursor:pointer; border:2px solid #a09e9f;}
+#wishlist .product_detail ul li:hover a{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939; text-decoration:none;}
+#wishlist .product_detail ul li:hover a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; text-decoration:underline;}
+#wishlist .qty_price{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#212121;  text-decoration:none;}
+#wishlist .product_detail .leftarrow{ background-image:url(/images/default/mycart_leftarrow.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-right:11px; margin-left:11px;}
+#wishlist .product_detail .leftarrow:hover{ background-image:url(/images/default/mycart_leftarrowhover.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-right:11px; margin-left:11px;}
+#wishlist .product_detail .rightarrow{ background-image:url(/images/default/mycart_rightarrow.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-left:11px;}
+#wishlist .product_detail .rightarrow:hover{ background-image:url(/images/default/mycart_rightarrowhover.png); width:38px; height:248px; display:block; background-repeat:no-repeat; margin-left:11px;}
+#wishlist .success_msg{ height:24px; background-color:#fff7bf; border:1px solid #fcd970; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#000000; text-align:center; line-height:24px; float:left; position:absolute; margin:-9px 0px 0px 320px; padding:0px 18px 0px 18px; left:0px;}
+/*---------------Wish List Emnpty Css Ends  here-------------------*/
+
+
+/*---------------My Cart Emnpty Css Start Form here-------------------*/
+#mywishlistempty {width:100%; height:300px; clear:both; background-color:#ffffff; display:none;}
+#mywishlistempty .lh18{ height:18px; line-height:18px; clear:both;}
+#mywishlistempty .product_block{float:left; width:100%;}
+#mywishlistempty .close_icon{ background-image:url(/images/default/mycart_close_icon.png); background-repeat:no-repeat; width:10px; height:10px; margin:3px 7px 0px 0px; float:left; display:block;}
+#mywishlistempty .close_link{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:none; margin-right:10px;}
+#mywishlistempty .close_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; text-decoration:underline;}
+#mywishlistempty .view_edit_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; margin-right:25px;}
+#mywishlistempty .view_edit_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none;}
+#mywishlistempty .item_detail_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; padding-left:10px; height:20px;}
+#mywishlistempty .item_detail_underline{ border-bottom:1px solid #a09e9f; clear:both; height:20px; font-size:0px; width:100%; position:relative;}
+#mywishlistempty .empty_msg{ height:52px; background-color:#f5f4f3; border:1px solid #bbb8b8; font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#777677; line-height:52px;  width:525px; margin:auto; margin-top:94px;}
+.wid1000mAuto{ width:1000px; margin:auto; clear:both;}
+.innerDiv{ width:440px;  margin:auto;}
+.contentText16{ font:normal 16px Arial, Helvetica, sans-serif; color:#393939;}
+.detailsFilledCont{ margin:auto; width:405px; border:1px solid #9e9e9e; border-top:0px none; }
+.detailsFilledCont .detHeading{ height:27px; padding:0 0 0 8px; background:#acacac; font:normal 14px Arial, Helvetica, sans-serif; color:#ffffff; line-height:27px;}
+.detailsFilledCont .detInnerCont{ padding:18px 0 0 13px;height:123px; overflow-y:auto;}
+.detailsFilledCont .detInnerCont label.leftContent{ width:150px; float:left;font:bold 12px Arial, Helvetica, sans-serif; color:#393939;  word-wrap:break-word;}
+.detailsFilledCont .detInnerCont label.colon{ width:15px; float:left;font:normal 12px Arial, Helvetica, sans-serif; color:#393939; text-align:center;}
+.detailsFilledCont .detInnerCont label.rightContent{ width:175px; float:left;font:normal 12px Arial, Helvetica, sans-serif; color:#393939; word-wrap:break-word;}
+/*---------------My Cart Emnpty Css Ends here-------------------*/

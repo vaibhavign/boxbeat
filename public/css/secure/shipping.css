@@ -1,0 +1,64 @@
+.fs0{ font-size:0px; }
+.register_border{border-bottom:solid 1px #e3e3e3;}
+.wid21{ width:21px; float:left; }
+.register_user{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#393939; }
+.login_chekout{ color:#999999; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; }
+.quick_chekout1{ color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; }
+.lh38{ height:38px; line-height:38px; clear:both; font-size:0px; }
+.wid32{ width:32px; float:left; }
+.email{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; color:#393939; }
+.wid91{ width:91px; float:left; }
+.wid8{ width:8px; float:left; }
+.input_border{ border-bottom:solid 1px #acacac; border-top:solid 1px #dadada; border-left:solid 1px #dadada; border-right:solid 1px #dadada; }
+.wid203{ width:203px; float:left; }
+.wid143{ width:143px; float:left; }
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both; }
+.wid131{ width:131px; float:left; }
+a.forgot_pwd{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; }
+a:hover.forgot_pwd{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none; }
+.lh36{ height:36px; line-height:36px; font-size:0px; clear:both; }
+.lh34{ height:34px; line-height:34px; font-size:0px; clear:both; }
+.wid163{ width:163px; float:left; }
+.wid146{ width:146px; float:left; }
+.shipping_billing_detail{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:18px; color:#000000; }
+.heading_border{ background-color:#d3d3d3; height:1px; line-height:1px; font-size:0px; }
+.lh2{ height:2px; line-height:2px; font-size:0px; }
+.enter_billing_details{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold; }
+.alert{ font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; color:#e20000; }
+.title{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#393939; }
+.field_border{ border:solid 1px #acacac; }
+.inner_field{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; color:#393939; }
+.wid58{ width:58px; }
+.wid205{ width:205px; }
+.wid296{ width:296px; }
+.wid143{ width:143px; }
+.select_wid180{ width:180px; }
+.country_bg{ background-color:#f1f1f1; }
+.wid140{ width:140px; }
+.country{ color:#999999; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; }
+.wid30{ width:30px; float:left; }
+.wid12{ width:12px; float:left; }
+.signin{ float:left; width:114px; background-color:#181818; height:35px; line-height:35px; color:#393939; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold;   border-right:1px solid #000000; border-left:1px solid #000000; }
+.wid336{ width:336px; float:left; }
+.shipping{ float:left; width:202px; background-color:#181818; height:35px; line-height:35px; color:#77c043; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; }
+.sign_in_bg_img{ float:left; background-image:url(/images/secure/signin_arrow.jpg); background-repeat:no-repeat; height:35px; width:19px; }
+
+.wid158{ width:158px; float:left; }
+.width:8px;{ float:left; width:8px; }
+.review{ width:104px; float:left; font-family: Verdana, Geneva, sans-serif; font-size:14px; color:#999999; border-right:solid 1px #999999; height:35px; line-height:35px; }
+.confirm{ width:118px; float:left; font-family: Verdana, Geneva, sans-serif; font-size:14px; color:#999999; border-right:solid 1px #999999; height:35px; line-height:35px; }
+.wid122{ width:122px; float:left; }
+
+a.back{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:underline; font-weight:bold; }
+a:hover.back{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:11px; color:#000000; text-decoration:none;  font-weight:bold;} 
+.padtop5{padding-top:5px;}
+.sign_in{ color:#77c043; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; }
+.bg_1st{background-color:#181818; float:left; width:335px; height:35px; line-height:35px;}
+.wid28{ width:28px; float:left; }
+
+.steps{ background-image:url(/images/secure/checkout_header_new_steps.gif); background-repeat:no-repeat; width:900px; height:42px; background-position:0px -51px; }
+.drop_down_default1_hover{ background-image:url(/images/secure/new_header_ddown_bg.gif); width:70px; height:43px; background-repeat:no-repeat; background-position:0px -201px; cursor:pointer;}
+.drop_down_default1{ background-image:url(/images/secure/new_header_ddown_bg.gif); width:70px; height:43px; background-repeat:no-repeat; background-position:0px -201px; cursor:pointer;}
+.drop_down_default2{ background-image:url(/images/secure/new_header_ddown_bg.gif); width:70px; height:43px; background-repeat:no-repeat; background-position:-101px -204px; cursor:pointer;}
+.drop_down_bg{ background-image:url(/images/secure/new_header_ddown_bg.gif); width:168px; height:145px; background-repeat:no-repeat; position:absolute; margin:0px 0px 0px -97px; background-position:0px -254px; z-index:10000;}
+.border_red{border:1px solid #FF0000;}

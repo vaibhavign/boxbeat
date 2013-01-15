@@ -1,0 +1,15 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+
+
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+
+/* Trail Header Css Start From here*/
+.trailheader_container{ width:1000px; margin:auto; clear:both; height:75px; border-bottom:1px solid #d8d8d8;}
+.trailheader_container .lh18{ height:18px; line-height:18px; clear:both; font-size:0px;}
+.trailheader_container .slogentext{color:#0083cb; font-family:Verdana, Arial, Helvetica, sans-serif; float:left; font-weight:bold; padding-left:16px; line-height:25px;}
+/* Trail Header Css Ends here*/

@@ -1,0 +1,24 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+input[type="image"]{ cursor:pointer;}
+:focus{ outline:none;}
+
+/*===================RIGHT PANEL STARTS FROM HERE====================*/
+.bank_account_listingRightPanel{ width:715px; padding:0px 0px 0 24px; border-left: #cdcdcd 1px solid; float:left;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.lh40{ height:40px; clear:both; font-size:0px; }
+.greyText12Lh20{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676; line-height:20px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px; }
+.lh20{ height:20px; clear:both; font-size:0px; line-height:20px; }
+.content_text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; }
+.squareBullet{ background:url(/images/secure/square_bullet.png); width:3px; height:3px; margin:6px 15px 0 13px; float:left;}
+.lh35{ height:35px; clear:both; font-size:0px;}
+.content_text12Lh25{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:25px;}
+.wid136{ width:136px; float:left;}
+.content_text11Lh12{ font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#393939; line-height:12px; }
+/*===================RIGHT PANEL ENDS HERE====================*/

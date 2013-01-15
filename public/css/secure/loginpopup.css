@@ -1,0 +1,50 @@
+body{ margin:0px; padding:0px;}
+html{overflow:auto;}
+img{border:0px none;}
+input[type="checkbox"]{ margin:0px; padding:0px;}
+
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{clear:both;}
+
+
+/*Goo2o Login popup*/
+.goo2ologinlogo{ margin-left:38px; margin-right:9px; float:left; margin-top:3px;}
+.goo2ologin_heading{font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#fff; float:left;}
+.goo2ologin_underline{ border-bottom:1px solid #c4c4c4; height:1px; line-height:1px; font-size:0px;}
+.goo2ologin_seperator{ background-image:url(/images/secure/goo2ologin/goo2ologin_seperator.png); height:6px; width:100%; background-repeat:repeat; float:left; display:block; margin-top:1px;}
+.goo2ologin_container{ width:355px; margin:auto; clear:both;}
+.goo2ologin_content{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939;}
+.goo2ologin_link{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none;}
+.goo2ologin_link:hover{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline;}
+.goo2ologin_termslink{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline;}
+.goo2ologin_termslink:hover{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none;}
+.lh30{ height:30px; line-height:30px; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.lh10{ height:10px; line-height:10px; clear:both;font-size:0px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh60{ height:60px; line-height:60px; clear:both; font-size:0px;}
+.lh158{ height:158px; line-height:158px; clear:both; font-size:0px;}
+.wid142{ width:142px; float:left; text-align:right;}
+.goo2ologin_semicolon{ width:22px; float:left; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold; line-height:22px;}
+.wid299{ width:299px; float:left;}
+.goo2ologin_emailheading{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold; line-height:22px;}
+.goo2ologin_emailinput{ width:179px; height:22px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; padding:0px 5px 0px 5px;}
+.forgot_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; text-decoration:none;}
+.forgot_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; text-decoration:underline;}
+.goo2ologin_checkbox{ margin-right:10px; *margin:-4px 10px 0px 0px;}
+.goo2ologin_keeplogintext{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.wid399{ min-width:399px; margin:auto; clear:both; width:100%;}
+.goo2obuttongap{ width:6px; float:left;}
+.creategoo2o_link{color:#00538a;  font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; text-decoration:none; line-height:49px;}
+.creategoo2o_link:hover{color:#00538a;  font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:bold; text-decoration:underline;}
+.goo2orequest_user_pic{ margin-right:12px;}
+.goo2orequest_content{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; line-height:18px; word-wrap:break-word; width:299px;}
+.goo2orequest_access_icon{ background-image:url(/images/secure/goo2ologin/goo2ologin_icon.png); width:34px; height:27px; background-repeat:no-repeat; margin:0px 12px 0px 6px; background-position:-1px -29px; float:left; display:block;}
+.goo2orequest_msg_icon{ background-image:url(/images/secure/goo2ologin/goo2ologin_icon.png); width:34px; height:27px; background-repeat:no-repeat; margin:0px 12px 0px 6px; background-position:0px 0px; float:left; display:block;}
+.goo2oreq_agreetext{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676;}
+.sign_in_errorMsgBox{ border:#ed9a57 1px solid; width:150px; height:40px; float:left; background: url('/images/secure/goo2ologin/error_msg_img.gif') no-repeat #fce7d6; padding:8px 0 0 48px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ff0000; line-height:15px;}
+/*Goo2o Login popup*/
+.padLR10 { padding:0 0 0 10px; }
+.wid10 { width:10px; float:left; }
+.paddLeft35 { padding-left:35px; }

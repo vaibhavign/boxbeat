@@ -1,0 +1,12 @@
+/*=============================header starts from here=========================================*/
+#mainContainer { clear:both; width:100%; }
+#enrollment-header{ width:1000px; margin:auto;}
+#header-wrapper{ height:75px; border-bottom: solid #d8d8d8 1px; clear:both; margin:0 0 38px 0;}
+.header-rightText{ float:right; font-size:22px; font-weight:normal; color:#000000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; margin:26px 0 0 0;}
+#logo{ float:left; margin:18px 0 0 0;}
+#logo span{margin:0 0 0 14px;}
+.congratulationNavImg{ width:567px; height:23px; background:url(/images/secure/merchantenrollment/enrollment_header_sprite.png); background-position:0 -82px;}
+.bussinessDetailsNavImg{ width:567px; height:23px; background:url(/images/secure/merchantenrollment/enrollment_header_sprite.png); background-position:0 0;}
+.paymentDetailsNavImg{ width:567px; height:23px; background:url(/images/secure/merchantenrollment/enrollment_header_sprite.png); background-position:0 -28px;}
+.reviewConfirmDetailsNavImg{ width:567px; height:23px; background:url(/images/secure/merchantenrollment/enrollment_header_sprite.png); background-position:0 -56px;}
+/*=============================header ends from here=========================================*/

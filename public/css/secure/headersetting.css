@@ -1,0 +1,294 @@
+html{overflow-y:scroll;}
+body { margin:0px; padding:0px; }
+.floatLeft { float:left; }
+.HeaderContainer { width:100%; color:#848484; font-size:12px; font-family:Verdana, Geneva, sans-serif; font-size:11px; }
+.headerTopBlockContainer { clear:both; background-color:#242424; height:36px; line-height:36px; width:100%; min-width:1000px; }
+.headerTopBlock { width:1000px; clear:both; margin:auto; }
+.storMGTBlock { float:left; font-weight:bold; }
+.storMGTBlock a { color:#848484; text-decoration:none; display:block; float:left; padding:0 15px; cursor:pointer; }
+.storMGTBlock a:hover { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; padding:0 15px;  cursor:pointer; }
+.storMGTBlock a span { background-image:url(/images/admin/newheadercion.png); width:14px; height:14px; background-position:0px 0px; display:block; background-repeat:no-repeat; margin:11px 8px 0px 0px; float:left; }
+.storMGTBlock a:hover span { background-image:url(/images/admin/newheadercion.png); width:14px; height:14px; background-position:-30px 0px; display:block; background-repeat:no-repeat; margin:11px 8px 0px 0px; color:#FFFFFF;}
+.inAccBlock { float:right; }
+.inAccBlockTxt { float:left; font-weight:bold; }
+.inAccBlockTxt a { color:#848484; text-decoration:none; display:block; float:left; padding:0 15px; }
+.inAccBlockTxt a:hover { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; padding:0 15px; }
+
+.inboxAccBlockTxt { float:left; font-weight:bold; }
+.inboxAccBlockTxt a { color:#848484; text-decoration:none; display:block; float:left; padding:0 15px; }
+.inboxAccBlockTxt a:hover { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; padding:0 15px; }
+
+
+.headerMidBlockContainer { clear:both; background-color:#070707; height:81px; width:100%; min-width:1000px; }
+.headerMidBlock { width:1000px; clear:both; margin:auto; }
+.logoBlockHeader { clear:both; height:81px; }
+.logoBlockHeader .leftBlock{ float:left; margin-top:21px; width:234px; }
+.logoBlockHeader .rightBlock{ width:766px; float:left; }
+.logoBlockHeader .rightBlock table { color:#848484; font-size:11px; margin-top:14px; }
+.logoBlockHeader .rightBlock a { color:#848484; text-decoration:none; }
+.logoBlockHeader .rightBlock a:hover { color:#FFFFFF; text-decoration:none; }
+.logoBlockHeader .rightBlock a.selectheaderrighttab { color:#ffffff; text-decoration:none; }
+.logoBlockHeader .rightBlock table tr td.topNav { border-bottom:1px solid #474747; text-align:right; line-height:24px; }
+.logoBlockHeader .rightBlock table tr td.botNav { text-align:right; padding-top:8px; }
+.headerBotBlockContainer { clear:both; background-color:#070707; height:33px; width:100%; min-width:1000px; }
+.headerBotBlock { width:1000px; clear:both; margin:auto; }
+.headerTopMSGBlockContainer { clear:both; background-color:#ffeebd; height:55px; width:100%; min-width:1000px; }
+.headerTopMSGBlock { width:1000px; clear:both; margin:auto; }
+.headerTopMSGBlock .msgTxt { clear:both; color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:20px; padding-top:6px; }
+.headerTopMSGBlock .msgTxt a { color:#00538a; text-decoration:none; }
+.headerTopMSGBlock .msgTxt a:hover { color:#00538a; text-decoration:underline; }
+.headerTopMSGBlock .mstTxtBelow { clear:both; }
+.headerTopWelcomeMSGBlockContainer { clear:both; background-color:#ffeebd; height:55px; width:100%; min-width:1000px; }
+.headerTopWelcomeMSGBlock { width:1000px; clear:both; margin:auto; }
+.headerTopWelcomeMSGBlock .msgTxt { float:left; line-height:55px; color:#000; font-size:12px; font-family:Arial, Helvetica, sans-serif; }
+.headerTopWelcomeMSGBlock .msgTxt a { color:#00538a; text-decoration:none; }
+.headerTopWelcomeMSGBlock .msgTxt a:hover { color:#00538a; text-decoration:underline; }
+.headerTopWelcomeMSGBlock .mstTxtBelow { color:#00538a; line-height:55px; width:50px; float:right; }
+
+.headerBotBlock .headerBotBlockLeftBlock { float:left; width:790px; height:33px;}
+.headerBotBlock .headerBotBlockRightBlock { padding-top:5px; }
+.headerBotBlock .headerBotBlockRightBlock .innerDivStore { border:5px solid #515151; width:200px; height:18px; overflow:auto; }
+.headerTopWelcomeMSGBlock .mstTxtBelow .closeIcon {
+    background: url(/images/admin/newheadercion.png) repeat scroll -121px 0 transparent;
+    cursor: pointer;
+    display: block;
+    float: right;
+    height: 10px;
+    margin: 23px 0 0 8px;
+    width: 10px;
+}
+.headerTopWelcomeMSGBlock .mstTxtBelow a {
+    font-family:Arial, Helvetica, sans-serif; color:#00538a; text-decoration:none;
+}
+.headerTopWelcomeMSGBlock .mstTxtBelow a:hover{
+    color:#00538A; text-decoration:underline;
+}
+
+
+
+
+.inpSelect {
+    background: none repeat scroll 0 0 #FFFFAA;
+    color: black;
+    height: 22px;
+    margin-left: -2px;
+    position: absolute;
+    margin-top: -2px;
+    width: 204px;
+	background-color:#FFF;
+}
+.container {
+    border: 0 none;
+    height: 18px;
+    overflow: hidden;
+    position: relative;
+    width: 200px;
+	float:right;
+}
+.subheaderContainer { clear:both; min-height:127px; width:1000px; margin:auto; }
+.subheaderContainer .subheaderheadingGap { clear:both; height:30px; }
+.subheaderContainer .subheaderheading { font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; }
+.subheaderContainer .subheadersubHeading { font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:20px; width: 650px; word-wrap: break-word; }
+.subheaderContainer .subheadersubHeadingFullwidth { font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:20px; width: 1000px; }
+.mainBodyHeadingContainer { clear:both; width:1000px; margin:auto; }
+.mainBodyHeadingLeft {
+	float:left;
+    color: #00538A;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+}
+.headingBotBorder { border-bottom:1px solid #e1e1e1; font-size:1px; height:6px; line-height:6px; clear:both; width:1000px; margin:auto; }
+.headingBotBorderBtn { border-bottom:1px solid #e1e1e1; font-size:1px; height:3px; line-height:3px; clear:both; width:1000px; margin:auto; }
+.headingBotBorderAbsolute { border-bottom:1px solid #e1e1e1; font-size:1px; height:1px; line-height:1px; clear:both; width:1000px; margin:auto; }
+
+.manageTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.manageTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.manageTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.manageTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px; z-index:6566; position:absolute;}
+.manageTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.manageTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.createTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.createTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.createTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.createTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;  z-index:6566; position:absolute; }
+.createTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.createTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.designTabmenu { clear:both; display:none; margin-top:33px; width:160px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.designTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.designTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:160px; display:block; }
+.designTabActivemenu { clear:both; display:none; margin-top:33px; width:160px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;   z-index:6566; position:absolute;}
+.designTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.designTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:160px; display:block; }
+
+.promoteTabmenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; position:absolute; z-index:6566; }
+.promoteTabmenu a.aclass div { color:#FFF; line-height:22px; text-decoration:none; cursor:pointer; }
+.promoteTabmenu a:hover.aclass div { color:#FFF; line-height:22px; text-decoration:underline; width:150px; display:block; }
+.promoteTabActivemenu { clear:both; display:none; margin-top:33px; width:150px; padding:11px 15px 17px 15px; background-color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:12px;  z-index:6566; position:absolute; }
+.promoteTabActivemenu a.aclass div { color:#00538a; line-height:22px; text-decoration:none; }
+.promoteTabActivemenu a:hover.aclass div { color:#00538a; line-height:22px; text-decoration:underline; width:150px; display:block; }
+
+.OverviewTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:85px; height:33px; background-position:0px -59px; float:left;}
+.OverviewTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:85px; height:33px; background-position:0px -95px; float:left;}
+
+.ManageTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:72px; height:33px; background-position:-89px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.ManageTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-161px -59px; float:left;}
+.ManageTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:72px; height:33px; background-position:-89px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.ManageTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-161px -95px; float:left;}
+
+.CreateTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:64px; height:33px; background-position:-197px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.CreateTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -59px; float:left;}
+.CreateTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:64px; height:33px; background-position:-197px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.CreateTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.DesignTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:65px; height:33px; background-position:-297px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.DesignTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-362px -59px; float:left;}
+.DesignTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:65px; height:33px; background-position:-297px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.DesignTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.PromoteTab{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:75px; height:33px; background-position:-397px -59px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.PromoteTabArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-472px -59px; float:left;}
+.PromoteTabActive{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:75px; height:33px; background-position:-397px -95px; float:left; margin:0px 0px 0px 4px; cursor:pointer;}
+.PromoteTabActiveArrow{background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:32px; height:33px; background-position:-261px -95px; float:left;}
+
+.ViewstoreTab{ background-image:url(/images/admin/newheadercion.png); background-repeat:no-repeat; width:46px; height:33px; display:block; float:left; background-position:-524px 0px;}
+
+.bullet{ width:2px; height:2px; background-color:#000; float:left; margin:11px 14px 0 17px;}
+
+/*Start Classes for footer*/
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.logged_heading{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#787878;}
+.termstext{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#545454;}
+.termslink{font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#545454; text-decoration:underline;}
+.termslink:hover{font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#545454; text-decoration:none;}
+.footer_wid350{ width:350px; float:left; word-wrap:break-word;}
+.tar{ text-align:right;}
+.footer_border{border-top:1px solid #b0b0b0; min-width:100%;}
+.footer_bullet{background-color:#9f9f9f; width:2px; height:2px; float:left; margin:8px 6px 0px 6px;}
+/*End Classes for footer*/
+
+/*Alert Msg Start Form here*/
+.inboxNotificationMSG { position:fixed; top:490px; left:10px; }
+#alert_msg { width:232px; height:57px;}
+#alert_msg .alertmsgleft{  background-image:url(/images/admin/alert_msgicon.png); background-repeat:no-repeat; width:7px; height:57px; background-position:0px 0px; float:left;}
+#alert_msg .alertmsgright{  background-image:url(/images/admin//alert_msgicon.png); background-repeat:no-repeat; width:7px; height:57px; background-position:-8px 0px; float:left;}
+#alert_msg .alertmsgmiddle{ float:left; width:218px; float:left; background-color:#cfe6f4; height:55px; border-top:1px solid #84b0ca; border-bottom:1px solid #84b0ca;}
+#alert_msg .crossicon{background-image:url(/images/admin//alert_msgicon.png); background-repeat:no-repeat; width:6px; height:5px; background-position:-44px 0px; float:right; margin:8px 0px 0px 0px;}
+#alert_msg .alert_msgcontainer{ width:212px; margin:auto; clear:both;}
+#alert_msg .aler_msgicon{ background-image:url(/images/admin//alert_msgicon.png); background-repeat:no-repeat; width:25px; height:18px; float:left;  background-position:-18px 0px; margin-right:9px; margin-top:3px;}
+#alert_msg .alert_msg{ width:178px; float:left; word-wrap:break-word; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#393939; line-height:16px;}
+
+/*Alert Msg Ends  here*/
+
+/*No Content Page Css Start from here*/
+.nocontent_box { width:700px;  clear:both; overflow:hidden;}
+.nocontent_box .lh20{  height:20px; line-height:20px; clear:both;}
+.nocontent_box .nocontent_icon{float:left;  margin:0px 40px 0px 0px;}
+.nocontent_box .nocontent_content{ font-family:Arial, Helvetica, sans-serif; text-align: left; font-size:18px; color:#393939; word-wrap:break-word; width:419px; line-height:23px;}
+.nocontent_box .nocontent_content2{ font-family:Arial, Helvetica, sans-serif; text-align: left; font-size:12px; color:#393939; word-wrap:break-word; width:419px; line-height:20px;}
+.nocontent_box .nocontent_continue_btn{ background-image:url(/images/admin/nocontent_continue_btn.png); background-repeat:no-repeat; width:99px; height:27px; display:block;}
+/*No Content Page Css Ends  here*/
+
+.gapHeight30 {
+	clear: both;
+    font-size: 0;
+    height: 30px;
+    line-height: 30px;
+}
+.gapHeight22 {
+	clear: both;
+    font-size: 0;
+    height: 22px;
+    line-height: 22px;
+}
+.absHeaderGap { height:27px; clear:both; }
+.subheader_leftcontent, .subheader_activecontent{float:left;}
+.subheader_rightblock, .subheader_rightcontent, .subheader_activerightcontent{float:right;}
+.subheader_rightblock .subheader_container{clear:both; padding:0px 10px 0px 15px;}
+.subheader_rightblock ul{ margin:0px; padding:0px; margin-top:11px;}
+.subheader_rightblock ul li{ margin:0px; padding:0px; list-style-type:none; width:260px; float:left; line-height:30px;}
+.subheader_rightblock .subheader_rightcontent{color:#767676; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:normal; }
+.subheader_rightblock .subheader_leftcontent{color:#999999; font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:normal;}
+.subheader_rightblock .bottomline{background-color:#b5b5b5; height:1px; line-height:1px; clear:both; font-size:0px; display:block;}
+.subheader_rightblock .subheader_activecontent{color:#000000; font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:bold;}
+.subheader_rightblock .subheader_activerightcontent{color:#000000; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif; font-weight:normal;}
+.subheader_rightblock .modify_link{color:#00538a; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none;}
+.subheader_rightblock .modify_link:hover{color:#00538a; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; text-decoration:underline;}
+.subheader_rightblock .edit_icon{ background-image:url(/images/admin/product_icon.gif); background-repeat:no-repeat; background-position:0 -13px; width:10px; height:10px; display:block; margin:10px 7px 0px 0px; float:left;}
+
+/*Landing Page Css Start From here*/
+.landing_main_header{width:1000px;  margin: 30px auto auto;}
+.landingpage_heading {  color: #393939;  font-family: Arial,Helvetica,sans-serif;  font-size: 28px;  font-weight: bold;}
+.landingpage_desc { color:#767676;  font-family:Arial,Helvetica,sans-serif;  font-size:14px;  font-weight:normal;  width:998px;   word-wrap:break-word;}
+.lh67 { clear: both; height 67px;  line-height:67px;}
+.wid312 {float: left; width:312px; word-wrap:break-word;}
+.wid32 { float: left; width:32px;}
+.landing_topborder {border-bottom:1px dotted #9A9A9A; clear: both;  font-size:0px;}
+.landingpage_link { color:#00538A;  font-family:Arial,Helvetica,sans-serif;  font-size:16px;  font-weight normal;  text-decoration:none;  text-transform:uppercase;}
+.landingpage_link:hover { color:#00538A;  font-family:Arial,Helvetica,sans-serif;  font-size:16px;  font-weight:normal;  text-decoration:underline;  text-transform:uppercase;}
+.landingpage_link:active { color:#00538A;  font-family:Arial,Helvetica,sans-serif;  font-size:16px;  font-weight:normal;  text-decoration:none;  text-transform:uppercase;}
+.landingpage_link:visited { color:#00538A;  font-family:Arial,Helvetica,sans-serif;  font-size:16px;  font-weight:normal;  text-decoration:none;  text-transform:uppercase;}
+.landingpage_link:focus{ color:#00538A;  font-family:Arial,Helvetica,sans-serif;  font-size:16px;  font-weight:normal;  text-decoration:none;  text-transform:uppercase;}
+.lh12{ height:12px; line-height:12px; clear:both; font-size:0px;}
+.img_textDescription {color: #767676;  font-family: Arial,Helvetica,sans-serif;  font-size:12px;  font-weight:normal; line-height:20px;}
+.lh38 { clear: both; height:38px;  line-height:38px;}
+/*Landing Page Css Ends here*/
+
+.welldone_message_container {
+    background-color: #D7EFF8;
+    border: 4px solid #93BECE;
+    float: left;
+}
+.welldone_content{ background-color:#d7eff8; font-weight:bold; font-size:13px; color:#218000; font-family:Arial, Helvetica, sans-serif; padding:13px 30px 10px 30px; text-align:right; }
+
+/*Right FAQ Css Start Form here*/        
+.rightFaq_container{ padding:17px 10px 15px 15px; background-color:#f4f4f4; float:left; word-wrap:break-word;}
+.rightFaq_container .faqHeading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; color:#393939; line-height:20px;  margin:0 0 5px 0;clear:both; overflow:hidden;}
+.rightFaq_container .faqContentText{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:20px; float:left; margin:0 0 17px 0; }
+.rightFaq_container .faqSubHeading{font-family:Arial, Helvetica, sans-serif; font-size:12px;  font-weight:bold; color:#393939; line-height:20px; clear:both; overflow:hidden; margin:0 0 0px 0;}
+.rightFaq_container .subFaqContainer{  float:left; margin:5px 0 0 14px; word-wrap:break-word;}
+.rightFaq_container .faqSubContentText{font-family:Arial, Helvetica, sans-serif; color:#767676; font-size:12px; font-weight:normal; line-height:20px; float:left; margin:0 0 10px 0; }
+/*Right FAQ Css Ends here*/
+
+a.allShipment{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline; margin-right:8px;}
+a:hover.allShipment{ text-decoration:none;}
+
+.storMGTBlock .selected a { color: #FFFFFF; cursor:pointer; }
+.storMGTBlock .selected a span { background-image:url(/images/admin/newheadercion.png); width:14px; height:14px; background-position:-30px 0px; display:block; background-repeat:no-repeat; margin:11px 8px 0px 0px; float:left; cursor:pointer; }
+.storMGTBlock .selected a { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; padding:0 15px; cursor:pointer; }
+.inAccBlockTxt .selected a { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; padding:0 15px; }
+/*.inboxAccBlockTxt .selectedheader a div.headertabs { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; }
+.inboxAccBlockTxt .selectedheader a:hover div.headertabs { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; }*/
+
+.inboxAccBlockTxt .selectedheader a { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; }
+.inboxAccBlockTxt .selectedheader a:hover { color:#FFFFFF; text-decoration:none; background-color:#3d3d3d; }
+
+.upgradeBtn { float:left; padding:4px 0 0 7px; }
+.upgradeBtn a { text-decoration:none; }
+.upgradeBtn a:hover { text-decoration:none; }
+.upgradeBtn a span { background-image:url(/images/admin/upgrade_btn.png); width:98px; height:27px; display:block; }
+.upgradeBtn a:hover span { background-image:url(/images/admin/upgrade_btn.png); width:98px; height:27px; display:block; background-position:0px -27px; }
+
+.businessDetailsLinks { width:260px; }
+.businessDetailsLinks .mainMenu a { font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:none; line-height:30px; height:30px; padding:0px 0 0 20px;  }
+.businessDetailsLinks .mainMenuselected { background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; height:30px; line-height:30px; padding:0px 0 0 20px; }
+
+.businessDetailsLinks .subMenu { height:25px; line-height:25px; clear:both; margin-left:30px; }
+.businessDetailsLinks .subMenu a { color: #00538A; font-family: Arial,Helvetica,sans-serif; font-size: 12px; font-weight: normal; text-decoration: none; line-height:25px; }
+.businessDetailsLinks .subMenu a:hover { text-decoration:underline; }
+.businessDetailsLinks .subMenuselected { font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939; cursor:default; height:25px; line-height:25px; margin-left:30px; }
+
+.SettingText {
+    color: #CBCBCB;
+    float: left;
+    font-family: calibri;
+    font-size: 36px;
+    font-weight: normal;
+    margin-left: 13px;
+    margin-top: 7px;
+}
+.lh25 { height:25px; clear:both; line-height:25px; }

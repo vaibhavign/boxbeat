@@ -1,0 +1,137 @@
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{ clear:both;}
+.shipmentContainer{ width:1000px; margin:auto; clear:both;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.lh8{ height:8px; line-height:8px; font-size:0px; clear:both;}
+.lh25{ height:25px; line-height:25px; font-size:0px; clear:both;}
+.lh34{ height:34px; line-height:34px; font-size:0px; clear:both;}
+.lh31{ height:31px; line-height:31px; font-size:0px; clear:both;}
+.lh42{ height:42px; line-height:42px; font-size:0px; clear:both;}
+.lh51{ height:51px; line-height:51px; font-size:0px; clear:both;}
+.lh68{ height:68px; line-height:68px; font-size:0px; clear:both;}
+.wid13{ width:13px; float:left; }
+.wid16{ width:16px; float:left; }
+.wid20{ width:20px; float:left; }
+.wid26{ width:26px; float:left; }
+.wid431{ width:431px; float:left; }
+.shipmentDeatail{ font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; color:#393939;text-decoration:none;}
+.viewCompletement{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#767676; text-decoration:none;}
+.shipmentId{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; text-decoration:none;}
+a.allShipment{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline; }
+a:hover.allShipment{ text-decoration:none;}
+.linhigh25{ line-height:25px;}
+.dividerLine{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.shipmentSummery{ font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#000000; font-weight:bold; text-decoration:none;}
+.shipingAddress{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939; width:108px; float:left;}
+.jackGarden{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-decoration:none;}
+.div391{ width:391px; float:left;}
+.div145{ width:145px; float:left;}
+.address{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:none;}
+.carrierDetailLeftContainer{ width:183px; float:left; text-align:right;}
+.carrierDetailMidContainer{ width:24px; float:left; text-align:center;}
+.inputDiv{ width:182px; height:20px; border:1px solid #848484; padding-left:5px; padding-right:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.shipDateInputDiv{ width:73px; height:20px; border-left:1px solid #848484; border-bottom:1px solid #848484; border-right:0px; border-top:1px solid #848484; padding-left:5px; padding-right:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.shipDateInputDivIcon{ float:left; background-image:url(/images/default/buyer/cals.gif); width:22px; height:24px; margin-top:0px; *margin-top:1px; }
+.shipmentSummry{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#393939;}
+.remarksInputDiv{ width:369px; height:66px; border:1px solid #848484; padding-left:5px; padding-top:5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+
+/*order shipment jacks container ends here*/
+.orderDetailsContainer{ width:1000px; margin:auto;}
+.orderItems{ font-size:16px; font-family:Arial, Helvetica, sans-serif; color:#000000; font-weight:bold; text-align:left;}
+/*top heading starts*/
+.topHeading{  height:27px; background-color:#989898; line-height:25px;}
+.wid52{width:52px; float:left;}
+.lh11{ clear:both; font-size:0px; line-height:11px; height:11px; }
+.topHeadingFont{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#ffffff;}
+.itemDetails{width:432px; float:left; text-align:left;}
+.shippingAdd{width:166px; float:left; text-align:left;}
+.status{width:96px; float:left; text-align:left;}
+.pricing{width:254px; float:left; text-align:left; }
+/*top heading ends*/
+/*main body jack's garden starts here*/
+.mainContent{ clear:both; width:1000px;}
+/*main jacks container starts here*/
+.jacksContainer{float:left; width:439px; margin-left:15px; margin-right:15px;}
+a.heading{ color:#00538a; font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; text-decoration:none;}
+a:hover.heading{ text-decoration:underline;}
+.lh5{ font-size:0px; height:5px; line-height:5px; clear:both;}
+.jackText{width:109px; color:#393939; font-weight:normal; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; text-align:left;}
+.Text{ color:#393939; font-weight:normal; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; text-align:left; float:left;}
+/*main jacks container ends here*/
+/*Barry container starts here*/
+.barryContainer{ width:137px; margin-left:14px; margin-right:14px; float:left;}
+.barryText{color:#393939; font-weight:normal; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; text-align:left; float:left; line-height:20px;}
+/*Barry Container ends here*/
+/*open container starts here*/
+.openContainer{ width:64px; margin-left:13px; margin-right:13px; float:left;}
+/*open container ends here*/
+/*srpContainer container starts here*/
+.srpContainer{ width:273px; float:left;}
+.srpText{ width:144px; text-align:left; float:left;color:#393939; font-weight:normal; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; text-align:left;}
+.srpTextRight{color:#393939; font-weight:normal; font-size:12px; font-family:Arial, Helvetica, sans-serif; float:left; text-align:left; float:left;}
+.srpLine{ height:1px; background-color:#bababa; width:257px; margin-left:8px;clear:both;}
+.wid15{width:15px; float:left;}
+.lh3{ font-size:0px; height:3px; line-height:3px; clear:both;}
+.lh40{ font-size:0px; height:40px; line-height:40px; clear:both;}
+.buttons{ float:left; }
+.confirmButton{ margin-right:18px; float:left;}
+/*srpContainer container ends here*/
+.dottedBorder{ background-image:url(/images/default/buyer/dotted.gif); height:155px; width:1px; float:left;  }
+.dottedBorder1{ background-image:url(/images/default/buyer/dotted1.gif); height:1px; width:1000px; clear:both;  }
+/*main body jack's garden ends here*/
+a.hyperText{color:#00538a; text-decoration:underline; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal;}
+a.hyperText:hover{ text-decoration:none;} 
+.lh15{ font-size:0px; height:10px; line-height:10px; clear:both;}
+/* shipment starts here*/
+.wid20{width:20px; float:left;}
+/* shipment ends here*/
+/*order shipment jacks container starts here*/
+.orderShipjacksContainer{float:left; width:797px; margin-left:15px; margin-right:15px;}
+.wid16{width:16px; float:left;}
+.wid756{width:756px; float:left;}
+.dottedBorder2{ background-image:url(/images/default/buyer/dotted.gif); height:165px; width:1px; float:left;  }
+.shipingDateContainer{ height:32px;}
+.shipingText{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; font-weight:bold; float:left; line-height:31px;}
+.shiping{ width:142px; float:left;}
+.dottedBorderShiping{ background-image:url(/images/default/buyer/dotted.gif); height:32px; width:1px; float:left;  }
+.carrier{ width:286px; float:left;}
+.mayContainer{width:126px; float:left;}
+.dottedBorderMay{ background-image:url(/images/default/buyer/dotted.gif); height:83px; width:1px; float:left;  }
+/*order shipment jacks container ends here*/
+#show_hide{display:none;}
+#show_hide1{display:none;}
+#show_hide2{display:none;}
+#show_hide3{display:none;}
+#show_hide4{display:none;}
+input[type="image"]{ cursor:pointer; }
+a:focus{ outline:none; }
+input:focus{ outline:none; }
+select:focus{ outline:none; }
+.tooltipLeftbg{ float:left; background-image:url(/images/default/buyer/tooltip_left.gif); background-repeat:no-repeat; width:14px; height:24px; }
+.tooltipMidbg{ float:left; background-image:url(/images/default/buyer/tooltip_mid.gif); background-repeat:repeat-x; height:24px; }
+.tooltipRighttbg{ float:left; background-image:url(/images/default/buyer/tooltip_right.gif); width:5px; height:24px; }
+.wid14{ width:14px; float:left; }
+.toolTipText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; padding:5px; }
+.bgLine1{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.heightGap10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.navDevider{ width:21px; float:left; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#bababa; }
+a.footerNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:none; }
+a:hover.footerNav{ text-decoration: underline; }
+.heightGap26{ height:26px; line-height:26px; clear:both; font-size:0px; }
+.heightGap86{ height:86px; line-height:86px; clear:both; font-size:0px; }
+.allShipmentIcon{ background-image:url(/images/default/buyer/edit.gif); width:10px; height:10px; text-decoration:none; display:block; float:left; margin-top:2px; margin-right:5px; }
+.easyShopText{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#767676; text-decoration:none;} 
+
+.sellerPanel{ width:217px; float:left; }
+.deliveryDate{ width:200px; float:left;}
+.lineHight35{ line-height:35px;}
+.displaynone{display:none;}
+/*Dropdown starts here*/
+.dropDownPro{ clear:both; position:absolute; margin-left:92px; margin-top:24px; }
+.dropBg{ background-color:#daebf4; border:1px solid #9fc6da; border-top:0px none; width:160px; }
+.dropDownPro ul{padding:0px; margin:0px;}
+.dropDownPro ul li{ list-style:none; padding-left:10px; padding-bottom:5px; }
+.dropDownPro ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:none;}
+.dropDownPro ul li a:hover{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-decoration:underline;}
+/* Dropdown ends here*/

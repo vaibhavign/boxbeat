@@ -1,0 +1,67 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+/*Header Css*/
+a img{ border:0 none;outline:none;}
+.startHeaderCont{ width:1000px; margin:0 auto 35px auto; height:58px; padding:30px 0 0 0; border-bottom:1px solid #d8d8d8;}
+.startHeaderCont .logo{ float:left;}
+.startHeaderCont .processingImg{ float:right; width:347px; padding:8px 0 0 0;}
+.startHeaderCont .processingImg .createStore{ background:url(/images/secure/demo/processing_sprite.png) 0 0; width: 347px; height:23px;}
+/*End Here*/
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+
+
+/*congratulation Page Css Start From here*/
+.congratulation_container{ width:1000px; margin:auto; clear:both;}
+.congratulation_container .lh30{ height:30px; line-height:30px; clear:both;}
+.congratulation_container .lh35{ height:35px; line-height:35px; clear:both;}
+.congratulation_container .lh60{ height:60px; line-height:60px; clear:both;}
+.congratulation_container .lh55{ height:55px; line-height:55px; clear:both;}
+.congratulation_container .congratulation_text{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#39a100;}
+.congratulation_container .congratulation_desc{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-top:8px;}
+
+.congratulation_container .congratulation_innercontent{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#767676; text-align:center; padding-top:10px;}
+.borderbottom{border-bottom:1px dotted #242424; clear:both; height:1px; line-height:1px; font-size:0px;  }
+.congratulation_container .congratulation_content{ font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#393939; text-align:center;}
+.congratulation_container .phoneno{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold;  color:#767676; }
+.congratulation_container .support_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.congratulation_container .support_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+.congratulation_container .wid142{ width:142px; float:left;}
+.congratulation_container .wid24{ width:24px; float:left;}
+.congratulation_container .wid300{ width:300px; float:left;}
+.congratulation_container .contentText14{ font:normal 14px Arial, Helvetica, sans-serif; color:#393939;}
+.congratulation_container .hyperLinkB14{ font:normal 14px Arial, Helvetica, sans-serif; color:#00538a; text-decoration:none;}
+.congratulation_container .hyperLinkB14:hover{ text-decoration:underline;}
+.congratulation_container .lh7{ height:7px; line-height:7px; clear:both;}
+.congratulation_container .lh110{ height:110px; clear:both; font-size:0px;}
+.congratulation_container .lh160{ height:160px; clear:both; font-size:0px;}
+.congratulation_container .botFooterLine{ width:780px; margin:auto; font:bold 16px Arial, Helvetica, sans-serif; text-align:center; color:#393939; line-height:25px;}
+.congratulation_container .btnsCont{ width:235px; float:left; margin:0 105px 0 0; }
+.congratulation_container .botFooterLine .hyper_link14{font:normal 14px Arial, Helvetica, sans-serif !important; text-align:center; color:#00538a;}
+.congratulation_container .botFooterLine .hyper_link14:hover{ text-decoration:none;}
+/*
+.congratulation_container{ width:1000px; margin:auto; clear:both;}
+.congratulation_container .lh30{ height:30px; line-height:30px; clear:both;}
+.congratulation_container .lh35{ height:35px; line-height:35px; clear:both;}
+.congratulation_container .lh60{ height:60px; line-height:60px; clear:both;}
+.congratulation_container .lh55{ height:55px; line-height:55px; clear:both;}
+.congratulation_container .congratulation_text{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#39a100;}
+.congratulation_container .congratulation_desc{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-top:8px;}
+.congratulation_container .congratulation_innercontainer{ width:705px; margin:auto; clear:both;}
+.congratulation_container .congratulation_innercontent{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#767676; text-align:center; padding-top:10px;}
+.borderbottom{border-bottom:1px dotted #242424; clear:both; height:1px; line-height:1px; font-size:0px;  }
+.congratulation_container .congratulation_content{ font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#393939; text-align:center;}
+.congratulation_container .phoneno{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold;  color:#767676; }
+.congratulation_container .support_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.congratulation_container .support_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+.congratulation_container .wid142{ width:142px; float:left;}
+.congratulation_container .wid24{ width:24px; float:left;}
+.congratulation_container .wid300{ width:300px; float:left;}
+.congratulation_container .contentText14{ font:normal 14px Arial, Helvetica, sans-serif; color:#393939;}
+.congratulation_container .hyperLinkB14{ font:normal 14px Arial, Helvetica, sans-serif; color:#00538a; text-decoration:none;}
+.congratulation_container .hyperLinkB14:hover{ text-decoration:underline;}
+.congratulation_container .lh7{ height:7px; line-height:7px; clear:both;}*/
+
+/*congratulation Page Css Ends here*/

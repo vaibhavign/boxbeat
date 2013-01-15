@@ -1,0 +1,68 @@
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.clearBoth{ clear:both;}
+body{ margin:0px; padding:0px;}
+.outerBorder{width:501px; border:6px solid #9f9f9f; border-right:7px solid #9f9f9f; height:366px;}
+.blackBorder{width:500px; border:1px solid #393939;}
+.heading{ width:500px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:12px; font-weight:bold; color:#FFF; text-decoration:none;}
+.showMeText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; line-height:18px;}
+.bottomText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; text-decoration:none;}
+a.hyperLinkText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; text-decoration:none;}
+a:hover.hyperLinkText{ text-decoration:underline;}
+.lh10{ height:10px; line-height:10px; font-size:0px; clear:both;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh5{ height:5px; line-height:5px; font-size:0px; clear:both;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.lh18{ height:18px; line-height:18px; font-size:0px; clear:both;}
+.lh20{ height:20px; line-height:20px; font-size:0px; clear:both;}
+.lh24{ height:28px; line-height:28px; font-size:0px; clear:both;}
+.wid17{ width:17px; float:left;}
+.wid18{ width:18px; float:left;}
+
+.wid12{ width:12px; float:left;}
+.wid24{ width:24px; float:left; height:1px;}
+.wid25{ width:25px; float:left;}
+.wid15{ width:15px; float:left;}
+.div370{ width:370px; float:left;}
+.bgLine{ width:457px; height:1px; background-color:#d9d9d9; clear:both;}
+a.cancelText{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#333333; text-decoration:underline; line-height:24px;}
+a:hover.cancelText{ text-decoration:none;}
+input[type="image"]{ cursor:pointer; outline:none;}
+a:hover{ outline:none;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+.lh4{ height:4px; line-height:4px; font-size:0px; clear:both;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.lh8{ height:8px; line-height:8px; font-size:0px; clear:both;}
+.addChangeReq{ width:500px; height:71px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none; clear:both;}
+.subHeadingText{ float:left; font-family:Verdana, Geneva, sans-serif; font-size:12px; font-weight:normal; color:#ffffff; width:435px; word-break:break-word; line-height:18px;}
+.marginTop{ margin-top:7px;}
+
+.innerDiv{ width:457px; margin:auto;}
+.leftPanel{ width:175px; line-height:24px; float:left;}
+.selectInputBox{ width:111px; height:24px; border:1px solid #848484; padding-left:3px; padding-top:2px; padding-bottom:2px; }
+.selectInputBox1{ width:191px; height:24px; border:1px solid #848484; padding-left:3px; padding-top:2px; padding-bottom:2px;}
+.textAreaBox{ width:255px; height:44px; border:1px solid #848484; padding-left:5px; padding-top:5px;}
+.inputBox1{ width:104px; height:20px; border:1px solid #848484; padding-left:5px; line-height:20px;}
+.inputBox{ width:115px; height:21px; border:1px solid #848484; padding-left:5px; line-height:24px;}
+.lheight12{ line-height:20px;}
+.star{ color:#ff0404; font-size:15px;}
+
+.dropdown{ width:109px; height:24px; border:#848484 solid 1px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.inputField52{ width:50px; height:22px; border:#848484 solid 1px; margin:0 12px 0 0;}
+.dropDown132{ width:130px; height:24px; border:#848484 solid 1px;font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.inputField49{ width:43px; height:22px; border:#848484 solid 1px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#999999; font-weight:normal; padding:0 0 0 4px;}
+.wid18{ width:12px; float:left; margin:0 0 0 4px; line-height:24px; }
+.dropdown66{ width:66px; height:24px; border:#848484 solid 1px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+
+
+/*lasjdf*/
+.wid145{ width:145px; float:left;}
+.dropDowm214{ width:214px; height:22px; border:1px solid #848484; margin:0 0 0 5px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.wid144{ width:144px; float:left;}
+.wid30{ width:30px; float:left;}
+.wid22{ width:22px; float:left;}
+.wid255{ width:255px; float:left;}
+.tableHeading{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#ffffff; font-weight:normal; line-height:22px; font-weight:bold;}
+.headingBg{ float:left;	 background-color:#989898; height:22px; width:457px;}
+.tableContainer{ width:449px; height:154px; overflow-y:scroll; clear:both; border-left:#9f9f9f solid 1px; border-bottom:#9f9f9f solid 1px; padding:0 0 0 6px;}
+.lh12{ height:12px; line-height:12px; font-size:0px; clear:both;}

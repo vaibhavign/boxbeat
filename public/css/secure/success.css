@@ -1,0 +1,235 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{ border:0px none;}
+input:focus{outline:none;}
+input[type="radio"]{ padding:0px; margin:0px; *padding:0px; *margin:-3px 0px 0px 0px;  }
+select{outline:none;}
+/*-----------------Common Css Start from here-------------------------*/
+.floatLeft, .checkout_header .logo{float:left;}
+.floatRight, .checkout_header .progressbar{float:right;}
+.clearBoth{clear:both;}
+/*-----------------Common Css Ends here-------------------------*/
+
+
+
+/*-----------------Body Css Start from here-------------------------*/
+.lh35{ height:35px; line-height:35px; clear:both;}
+.lh30{ height:30px; line-height:30px; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.lh25{ height:25px; line-height:25px; clear:both;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh2{ height:2px; line-height:2px; clear:both; font-size:0px;}
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh50{ height:50px; line-height:50px; clear:both;}
+.lh60{ height:60px; line-height:60px; clear:both;}
+.lh70{ height:70px; line-height:70px; clear:both;}
+.lh40{ height:40px; line-height:40px; clear:both;}
+.lh90{ height:90px; line-height:90px; clear:both;}
+.lh110{ height:110px; line-height:110px; clear:both;}
+
+/*-----------------Checkout Sign In Page Css Start from here-------------------------*/
+.checkout_signin_block{ width:693px; float:left;}
+.checkout_signin_block_padding{ margin-left:12px;}
+.checkout_mainwidth{ width:1000px; margin:auto; clear:both;}
+.checkout_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; float:left;}
+.checkout_username{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; width:257px; float:left; text-align:right; line-height:24px;}
+.checkout_semicolon{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; width:23px; float:left; text-align:center; line-height:24px;}
+.checkout_username_input{ width:218px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; border:1px solid #848484; padding:0px 5px 0px 5px;}
+.checkout_newmember_text{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:bold; float:left;}
+.checkout_newmember_example{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#393939; float:left}
+.checkout_returning_input{ width:156px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; border:1px solid #848484; margin-right:14px;}
+.forgot_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:underline;}
+.forgot_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:11px; text-decoration:none;}
+
+.checkout_validation_left{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:13px; height:24px; float:left; background-position:0px -111px;}
+.checkout_validation_middle{ background-color:#fce7d6; border:1px solid #ed9a57; float:left; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#ff0000; height:22px; border-left:0px none; border-right:0px none; padding:0px 12px 0px 12px; line-height:20px;}
+.checkout_validation_right{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:6px; height:24px; float:left; background-position:-14px -111px;}
+.checkout_signin_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:24px; }
+.checkout_signin_validation_bg{ width:305px; height:70px; background-color:#fce7d6; border:1px solid #ed9a57; float:left;}
+.checkout_signin_validation_innerblock{ width:275px; margin:auto; clear:both; margin-top:12px;}
+.checkout_signin_validation_msg{color:#ff0000; font-family:Arial, Helvetica, sans-serif; font-size:14px; float:left; line-height:22px; word-wrap:break-word; width:238px;}
+.checkout_signin_validation_icon{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:25px; height:25px; float:left; background-position:-23px -111px;  margin-right:12px;}
+.checkbox{ margin-left:-99999px;}
+.checkout_signin_checkbox_default{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:25px; height:25px; float:left; background-position:-51px -111px;  margin-right:12px; width:13px; height:13px; margin-top:6px;}
+/*-----------------Checkout Sign In Page Css Ends here-------------------------*/
+
+/*-----------------AllReady In Use Page Css Start from here-------------------------*/
+.checkout_already_inuse_bg{ width:650px; height:70px; background-color:#efefef; border:1px solid #cccccc; float:left;}
+.checkout_already_inuse_innerblock{ width:615px; margin:auto; clear:both; margin-top:12px;}
+.checkout_already_inuse_msg{color:#010101; font-family:Arial, Helvetica, sans-serif; font-size:14px; float:left; line-height:22px; word-wrap:break-word; width:578px; font-weight:bold;}
+.checkout_already_inuse_msg_bottom{color:#010101; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left; line-height:22px; word-wrap:break-word; width:578px; font-weight:normal;}
+.checkout_already_inuse_icon{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:25px; height:25px; float:left; background-position:-67px -111px;  margin-right:12px;}
+.checkbox{ margin-left:-99999px;}
+.checkout_already_inuse_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.checkout_already_inuse_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+/*-----------------AllReady in Use Page Css Ends here-------------------------*/
+
+/*-----------------Edit Shiiping Address Css Start from here-------------------------*/
+.edit_saddress_leftblock{ width:650px; float:left;}
+.edit_saddress_rightblock{width:325px; float:left;}
+.edit_saddress_middleblock{width:25px; float:left;}
+.edit_saddress_example{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; float:left;}
+.edit_shiiping_fullname{ width:100px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:24px; text-align:right;}
+.edit_shiiping_semicolon{ width:20px; text-align:center; float:left;}
+.edit_shiiping_address_textarea{ width:218px; height:60px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; border:1px solid #848484; padding:0px 5px 0px 5px;}
+.edit_shipping_selectbg_select{width:230px; height:24px; line-height:24px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.edit_saddress_office_address{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:left; line-height:25px;}
+.edit_saddress_tipicon{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:15px; height:16px; float:left; background-position:-100px -112px;  margin:5px 0px 0px 22px;}
+.edit_saddress_phoneinput{ width:168px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; border:1px solid #848484; margin-right:14px; padding:0px 5px 0px 5px;}
+.edit_saddress_button{ width:202px; margin:auto; clear:both; margin-left:120px;}
+.wid12{ width:12px; float:left;}
+.edit_saddress_msgleft{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:13px; height:24px; float:left; background-position:-116px -111px; margin-left:14px;}
+.edit_saddress_msgmiddle{  font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; line-height:22px; border:1px solid #e5e5e5; background-color:#f1f1f1; float:left; padding:0px 12px 0px 12px; border-left:0px none; border-right:0px none;}
+.edit_saddress_msgright{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:7px; height:24px; float:left; background-position:-131px -111px;}
+.edit_saddress_bullet{ width:4px; height:4px; background-color:#393939; float:left; margin-right:12px; margin-top:7px;}
+.edit_saddress_righttext{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; float:left; word-wrap:break-word; width:305px; line-height:20px;}
+.edit_saddress_faqbg{ width:325px; height:287px; background-color:#f1f1f1; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#000000; font-weight:bold; text-align:center; line-height:280px;}
+/*-----------------Edit Shiiping Address Css Ends here-------------------------*/
+
+/*-----------------Select Shiiping Address Css Start from here-------------------------*/
+.select_saddress_heading{font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939;}
+.edit_saddressblock{ width:140px; float:left;}
+.edit_saddressblockGap{ width:193px; float:left;}
+.officeaddress_left{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:9px; height:17px; float:left; background-position:-141px -111px;}
+.officeaddress_middle{ background-color:#f1f1f1; height:17px; line-height:17px; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; float:left; padding:0px 5px 0px 5px;}
+.officeaddress_right{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:9px; height:17px; float:left; background-position:-151px -111px;}
+.officeaddress_content{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px; line-height:20px;}
+.officeaddress_example{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:left;}
+.select_saddress_shipblock{ width:325px; height:110px; background-color:#f7f7f7; border:1px solid #e4e4e4; float:left;}
+.select_saddress_shipblock .inner_block{ width:266px; margin:auto; clear:both; margin-top:25px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939;}
+/*-----------------Select Shiiping Address Css Ends here-------------------------*/
+
+/*-----------------Registration Page Css Start from here-------------------------*/
+.checkout_registration_width{ width:1000px; float:left;}
+.checkout_registration_optional{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:left; line-height:25px; margin-left:15px;}
+.checkout_registration_humantext{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; float:left;}
+/*-----------------Registration Page Css Ends here-------------------------*/
+
+
+/*-----------------Review Place Order Page Css Start from here-------------------------*/
+.review_heading_bgcolor{ background-color:#989898; height:27px; line-height:27px;}
+.review_total_bgcolor{ background-color:#f1f1f1; height:25px; line-height:25px;}
+.review_content_heading_width{word-wrap:break-word; width:340px;}
+.review_content_summary_width{word-wrap:break-word; width:413px;}
+.review_content_shipping_width{word-wrap:break-word; width:170px;}
+.review_content_srp_width{word-wrap:break-word; width:145px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_srp_price{word-wrap:break-word; width:95px; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_heading{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#ffffff;}
+.review_content{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.review_content_variation{color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+.review_content_pricing_underline{ border-bottom:1px solid #bababa; clear:both; height:5px; margin-bottom:5px;}
+.review_content_wid240{width:240px; float:left;}
+.review_content_wid270{width:270px; float:left;}
+.review_content_wid345{width:345px; float:left;}
+.review_content_underline{ border-bottom:1px dotted #bababa; height:1px; line-height:1px; font-size:0px; clear:both;}
+.review_summary_text{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939;}
+.review_gc_link{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:underline;}
+.review_gc_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none;}
+.review_total_heading{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#393939;}
+.review_total_left{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:10px; height:25px; float:left; background-position:-166px -111px;}
+.review_total_right{ background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:10px; height:25px; float:left; background-position:-177px -111px;}
+.review_billingaddress{ width:328px; float:left; background-color:#f1f1f1;}
+.review_billingaddress_heading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; height:34px; line-height:34px; padding-left:17px;  border-bottom:1px solid #cdcdcd; width:311px; background-color:#e5e5e5;}
+.review_billing_content{ width:328px; float:left; margin-left:17px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; line-height:20px;}
+.review_billingaddressGap{ width:65px; float:left;}
+.review_buttonGap{width:16px; float:left;}
+.review_buttonblock{ width:280px; float:left; margin-left:253px;}
+.review_payment_content{width:250px; border:1px dashed #999999; background-color:#f9f9f9; margin-left:20px; float:left;}
+.review_payment_innerblock{ width:225px; margin:auto; clear:both;}
+.paddleft17{ padding-left:17px;}
+/*-----------------Review Place Order Page Css Ends here-------------------------*/
+
+/*-----------------Checkout Payment Page Css Start from here-------------------------*/
+.payment_qtyselect{ width:48px; height:23px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold;}
+.payment_shippingselect{width:220px; height:23px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676;}
+.payment_content_wid455{width:455px; float:left;}
+.payment_content_wid110{width:110px; float:left; text-align:right;}
+.payment_content_wid134{width:134px; float:left;}
+.payment_content_wid760{width:760px; float:left;}
+.payment_content_wid1000{width:1000px; float:left;}
+.payment_content_wid125{width:125px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; word-wrap:break-word;}
+.payment_content_gcid{font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939;}
+.payment_content_semicolon{ width:26px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; text-align:center;}
+.payment_granstotal_bg{ background-color:#d8ecf4; height:35px; line-height:35px; font-family:Arial, Helvetica, sans-serif; font-size:15px; border:1px solid #93cbe2;}
+.discount_gc_bg{ width:785px;  height:270px; border:2px dashed #c3c3c3; margin:auto; clear:both; background-color:#f8f8f8; position:relative;}
+.discount_gc_bg .innerblock1{ width:630px; float:left; margin:40px 0px 0px 80px; }
+.checkout_signin_checkbox_select{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:25px; height:25px; float:left; background-position:-190px -112px;  margin-right:12px; width:13px; height:13px; margin-top:6px;}
+.discount_gc_bg .discount_block{ width:630px; float:left; background-color:#ebebeb; border-bottom:1px solid #cccccc;}
+.discount_gc_bg .discount_block .innerblock{ width:548px; margin:auto; clear:both; margin-top:25px;}
+.discount_blockbg{ background-color:#ffffff; border:1px solid #848484; float:left; width:165px; height:21px; margin-right:7px;}
+.discount_blockbg .inputbox{ width:155px; height:18px; margin:1px 0px 0px 5px; border:0px none;  background-color:transparent; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.discount_block_sep{ width:84px; float:left;}
+.discount_block_sep .border1{ border-left:1px solid #cccccc; border-right:1px solid #f8f8f8; height:68px; float:left; margin-left:41px;}
+.gc_message{color:#0174df; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;}
+.gc_invalidmessage{color:#ff0000; font-family:Arial, Helvetica, sans-serif; font-size:13px; text-align:center;}
+.payment_billing_address{ width:110px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:19px;}
+.payment_billing_wid13{width:13px; float:left;}
+.payment_billing_wid652{ width:652px; clear:both; height:50px; }
+.payment_pay_content{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; margin-left:18px; }
+.payment_pay_example{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; margin-left:18px; }
+.payment_billing_underline{ border-bottom:1px dotted #999999; clear:both;  height:1px; *height:auto; }
+.payment_cutter{background-image:url(/images/secure/checkout_progressbar.png); background-repeat:no-repeat; width:37px; height:16px; float:left; background-position:-208px -112px; position:absolute; margin:-10px 0px 0px 15px; left:0px;}
+/*-----------------Checkout Payment Page Css Ends here-------------------------*/
+
+
+/*-----------------Checkout WellDone Page Css Start from here-------------------------*/
+.welldone_content{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939;}
+.tableTopBar{ height:27px; line-height:27px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#fff; padding:0 20px 0 10px; width:970px; background-color:#989898;}
+.wid395{ width:395px; float:left; word-wrap:break-word;}
+.wid565{ width:565px; float:left;}
+.table_content{ width:970px; float:left; padding:0 20px 0 10px;}
+.easyshop_content{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#393939; font-weight:bold; text-decoration:none;}
+.easyshop_content:hover{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#393939; font-weight:bold; text-decoration:underline;}
+.easyshop_ordercontent{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:none;}
+.easyshop_ordercontent:hover{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.receipt_link{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:none; font-weight:normal; }
+.receipt_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; text-decoration:underline; font-weight:normal; }
+.welldone_standardtext{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939;}
+.shopped_item{width:575px; float:left;}
+.shopped_item ul{ margin:0px; padding:0px;}
+.shopped_item ul li{ margin:0px; padding:0px; list-style-type:none; float:left; margin-left:35px; min-height:160px;}
+.shopped_item ul li .wid92{ width:100px; height:100px; border:1px solid #cdcdcd; margin:auto;}
+.shopped_item ul li .shoppeditem_link{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; font-weight:bold; text-decoration:none;}
+.shopped_item ul li .shoppeditem_link:hover{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.wid106{ width:106px; float:left;}
+.welldone_underline{ border-bottom:1px solid #999999; font-size:0px; clear:both;}
+.welldone_arrow{ background-image:url(/images/secure/welldone_arrow.png); width:4px; height:7px; float:left; display:block; margin:4px 13px 0px 5px;}
+
+.wid78{ float:left; width:78px;}
+.wid900{ width:900px; float:left;}
+.top-footerHeading{ font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:normal; color:#393939;}
+.tableGreyText_footer{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; font-weight:normal; width:671px; word-wrap:break-word; margin:12px 0 0 0; line-height:17px;}
+.tableGreyText_footer a{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#498304; font-weight:normal;}
+.tableGreyText_footer a:hover{ text-decoration:none;}
+.borderSolid2{ border-bottom:1px solid #d4d4d4; clear:both; font-size:0px;}
+a.hyperlinkfont11_footer{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; font-weight:normal; text-decoration:none;}
+a:hover.hyperlinkfont11_footer{ text-decoration:underline;}
+.borderSolid1{ border-bottom:1px solid #a2a2a2; clear:both; font-size:0px;}
+.welldone_tableGreyText11{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; font-weight:normal;}
+/*-----------------Checkout WellDone Page Css Ends here-------------------------*/
+
+
+
+
+/*-----------------Body Css Ends from here-------------------------*/
+
+
+
+/*Processing Page*/
+.processing_container{ width:380px; margin:auto; clear:both;}
+.processing_content{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#646464; font-weight:normal; line-height:20px; border-top:1px solid #cfcfcf;}
+.logoBG { background-image:url(/images/secure/loadinggoo2oLogo.png); background-repeat:no-repeat; height:58px; width:164px; margin:auto;  margin-top:20px; margin-bottom:20px;}
+.lh60{ height:60px; line-height:60px; clear:both;}
+.lh20{ height:20px; line-height:20px; clear:both;}
+.loadingpos { padding:45px 0 0 37px; }
+.processing_left{ background-image:url(/images/secure/processing_bg.png); background-repeat:no-repeat; width:7px; height:75px; float:left; background-position:-3px -1px;}
+.processing_right{ background-image:url(/images/secure/processing_bg.png); background-repeat:no-repeat; width:7px; height:75px; float:left; background-position:-12px -1px;}
+.processing_middle{ height:52px; border:3px solid #efefef; background-color:#f7f7f7; float:left; width:366px; border-right:0px none; border-left:0px none; color:#636363; font-size:16px; font-family:Arial, Helvetica, sans-serif; padding-top:16px;}
+.processing_width230{ width:230px; margin:auto; clear:both;}
+
+
+
+
+.checkoutBar{background-image:url(/images/secure/process_steps.gif); width:587px; height:23px; background-position:0px -99px;}

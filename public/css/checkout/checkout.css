@@ -1,0 +1,102 @@
+body { margin:0px; padding:0px;}
+.makepurchase { width:960px; margin:auto; border:1px solid #808080; margin-top:40px; }
+.makepurchase .logostyle { font:25px "Times New Roman", Times, serif; }
+.makepurchase .userstyle { font:12px Arial, Helvetica, sans-serif; color:#000; text-align:right; margin:15px 35px 0 0; }
+.makepurchase .chechoutHeading { font:bold 12px "Times New Roman", Times, serif; color:#000; text-align:left; margin:15px 0 0 35px; font-size:18px; text-transform:uppercase; }
+.makepurchase .chechoutHeadingBorder { clear:both; height:5px; border-bottom:1px solid #808080; line-height:5px; }
+.makepurchase .chechoutBodyMain { margin:25px 35px; overflow:auto; }
+.checkoutNavShippingInfo { background-image:url(/images/checkout/checkoutnav.png); height:50px; width:418px; background-position:0 -50px; }
+.couponBlock { border:1px solid #808080; width:440px; margin-top:30px; padding:10px; overflow:auto; }
+
+.couponBlocknext { border:1px solid #808080; width:440px; padding:10px; overflow:auto; }
+.couponBlock1 { float:left; width:178px; border-right:1px solid #808080; font:14px black Arial, Helvetica, sans-serif; line-height:30px;}
+.couponBlock1 span{ font-size:20px;}
+.couponBlock2 { float:left; width:250px; margin-left:10px; }
+.couponBlock2 .label { font:12px black Arial, Helvetica, sans-serif; padding-top:5px; }
+.couponBlock2 .txtbox { float:left; margin-top:8px; }
+.couponBlock2 .inputBlock { float:left; margin:8px 0 0 6px; }
+.couponBlock2 .txtbox input[type="text"] {width:175px; height:21px; border:1px solid #b2b2b2; border-radius:3px; -moz-border-redius:3px; line-height:21px; padding:0 2px; }
+.leftBlock { float:left; width:515px; }
+.rightBlock { float:left; width:375px; }
+.cartsummBlock { border:1px solid #808080; margin-top:30px; }
+.cartsummBlock1 { border:1px solid #808080; margin-top:20px; }
+.shadowborder { background-image:url(/images/checkout/shadowLine.png); width:373px; height:7px; clear:both; }
+.rightBlock table { font-family:Arial, Helvetica, sans-serif; color:#000; font-size:12px; padding-top:10px; width:100%; }
+.rightBlock table th:first-child, .rightBlock table td:first-child { padding-left:10px; }
+.rightBlock table th { padding:0 0 5px 0; text-align:left; }
+.rightBlock table td { border-bottom:1px solid #dadada; text-align:left; padding:10px 0; }
+.rightBlock table tr:last-child td { border-bottom:0px none; }
+.leftalign { float:left; text-align:left;}
+.rightalign { float:right; text-align:right; margin-right:10px;}
+.clear { clear:both; }
+.lh10 { clear:both; height:10px; line-height:10px; }
+.cartsummBlock .heading {padding:7px 20px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase;}
+.cartsummBlock1 .heading {float:left; padding:7px 20px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase; }
+.cartsummBlock1 .chngadd {float:right; padding:7px 20px; font:11px black Arial, Helvetica, sans-serif; text-align:right; }
+.cartsummBlock1 .chngadd a { color:#000; text-decoration:none; }
+.cartsummBlock1 .chngadd a:hover { color:#000; text-decoration:underline; }
+.cartsummBlock1 .address, .couponBlocknext .address { font:12px black Arial, Helvetica, sans-serif; line-height:25px; padding:10px; }
+.cartsummBlock1 .address span, .couponBlocknext .address span{ margin-left:20px; }
+.payonline { float:left; background-image:url(/images/checkout/payonline.png); width:83px; height:31px; }
+.paycod { float:left; background-image:url(/images/checkout/paycod.png); width:61px; height:31px; margin-left:5px; }
+.paydirectbank { float:left; background-image:url(/images/checkout/paydirectbank.png); width:127px; height:31px; margin-left:5px; }
+.clearnexrow { margin-top:20px; clear:both;}
+.billinghead { font:bold 14px Arial, Helvetica, sans-serif black; padding:0 0 10px 10px; }
+.billinghead span { font-size:11px; font-weight:normal; }
+.billinghead span a { font-size:11px; text-decoration:none; color:#000; }
+.billinghead span a:hover { font-size:11px; text-decoration:underline; }
+.clearnexrowpaynow { margin-top:10px; clear:both; float:right; margin-right:53px;}
+
+
+.leftBlockweldone { float:left; width:543px; }
+.rightBlockweldone { float:left; width:300px; }
+.ordersummary { border:1px solid #808080; width:500px; margin-top:40px; padding:0 20px 0 20px; height:172px; }
+.thnxmsg { font:20px black Arial, Helvetica, sans-serif; }
+.thnxmsg span{ font:16px Arial, Helvetica, sans-serif; color:#767676; }
+.ordersummary .heading {padding:7px 0px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase;}
+.ordersummary .shadowborder { background-image:url(/images/checkout/shadowLine.png); width:225px; height:7px; clear:both; background-position:-20px 0; }
+.orderlabel { font:12px black Arial, Helvetica, sans-serif; float:left; width:120px; }
+.ordervalue { font:bold 12px black Arial, Helvetica, sans-serif; float:left; }
+.orderBlock { float:left; }
+.ShipmentBlock { float:left; margin-left:50px; width:225px; }
+.lh15 { clear:both; height:15px; line-height:15px; width:225px; }
+.ShipmentBlock .address { font:12px black Arial, Helvetica, sans-serif; line-height:25px; padding:10px 0; }
+.ShipmentBlock .address span{ margin-left:20px; }
+.needhelp { border:1px solid #808080; width:280px; margin:40px 0 0 25px; padding:0 20px 0 20px; height:172px; }
+.needhelp .shadowborder { background-image:url(/images/checkout/shadowLine.png); width:275px; height:7px; clear:both; background-position:-20px 0; }
+.needhelp .heading {padding:7px 0px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase;}
+.aknowledgement { font:14px Arial, Helvetica, sans-serif; color:#010101; padding-top:10px; clear:both; }
+.aknowledgement a { color:#010101; text-decoration:underline;}
+.aknowledgement a:hover { color:#010101; text-decoration:none;}
+.lh50 { clear:both; height:50px; }
+.checkoutNavShippingInfo1 { background-image:url(/images/checkout/checkoutnav.png); height:50px; width:418px; }
+
+
+.addressBlock { border:1px solid #808080; margin-top:30px; width:470px; padding:0; overflow:auto; }
+.addressBlock .heading {padding:15px 0 0 20px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase; float:left;}
+.addressBlock .chngadd {float:right; padding:15px 6px 15px 12px; font:11px black Arial, Helvetica, sans-serif; text-align:right;}
+.addressBlock .chngadd a { color:#000; text-decoration:none; background-image:url(/images/checkout/plussymbol.png); width:10px; height:10px; background-repeat:no-repeat; width:88px; padding:0 0 0 12px; margin-right:20px;  }
+.addressBlock .chngadd a:hover { color:#000; text-decoration:underline; }
+.addressBlock .address { font:12px black Arial, Helvetica, sans-serif; line-height:25px; padding:8px 10px; float:left; width:340px; }
+.addressBlock .address span{ margin-left:20px; }
+.addressblockborder { clear:both;border-bottom:1px solid #dadada; overflow:auto; padding:0 15px; }
+.addressBlock .shadowborder { background-image:url(/images/checkout/shadowLine.png); width:470px; height:7px; clear:both; background-position:-20px 0; }
+.radiobtn { width:30px; float:left; margin-top:10px; }
+.addressblockborder:last-child { border:0px none; }
+.clearnexrowcontinue { margin-top:10px; clear:both; float:right; margin-right:43px;}
+
+.newaddressBlock { border:1px solid #808080; margin-top:30px; width:470px; padding:0; overflow:auto; }
+.newaddressBlock .heading {padding:15px 0 0 20px; font:bold 14px black Arial, Helvetica, sans-serif; text-transform:uppercase; float:left;}
+.newaddressBlock .chngadd {float:right; padding:15px 6px 15px 12px; font:11px black Arial, Helvetica, sans-serif; text-align:right;}
+.newaddressBlock .chngadd a { color:#000; text-decoration:none; width:88px; padding:0 0 0 12px; margin-right:20px;  }
+.newaddressBlock .chngadd a:hover { color:#000; text-decoration:underline; }
+.newaddressBlock .address { font:12px black Arial, Helvetica, sans-serif; line-height:25px; padding:8px 10px; float:left; width:340px; }
+.newaddressBlock .address span{ margin-left:20px; }
+.newaddressBlock .shadowborder { background-image:url(/images/checkout/shadowLine.png); width:470px; height:7px; clear:both; background-position:-20px 0; }
+.nametxtbox input { border:1px solid #b2b2b2; height:31px; width:403px; margin:10px 20px 0 20px; border-radius:5px; padding:0 10px; font:14px Arial, Helvetica, sans-serif; color:#767676; }
+.nametxtbox textarea { border:1px solid #b2b2b2; height:70px; width:403px; margin:10px 20px 0 20px; border-radius:5px; padding:5px 10px 0 10px; font:14px Arial, Helvetica, sans-serif; color:#767676; resize:none; }
+.selectBox select { border:1px solid #b2b2b2; height:31px; width:198px; margin:10px 0 0 20px; border-radius:5px; padding:5px 5px; font:14px Arial, Helvetica, sans-serif; color:#767676;}
+.mobiletxtbox input { border:1px solid #b2b2b2; border-left:0px none; height:30px; width:357px; border-radius:0 5px 5px 0; margin-top:10px; padding:0 10px; font:14px Arial, Helvetica, sans-serif; color:#767676; }
+.mobiletxtbox .fixnum {padding:7px 10px; border-radius:5px 0 0 5px; float:left; border:1px solid #b2b2b2; background-color:#dadada; margin:10px 0 0 20px; font:14px Arial, Helvetica, sans-serif; color:#4d4b49; }
+.floatLeft { float:left; }
+.mobiletxtbox { padding-bottom:10px; }

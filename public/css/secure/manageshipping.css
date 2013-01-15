@@ -1,0 +1,84 @@
+body{ margin:0px; padding:0px;}
+html{ overflow-y:scroll;}
+/*common css*/
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+/*common css ends*/
+/*Header Css Start From here*/
+.headerMainContainer, THContainer ,HMainContainer{ width:100%;}
+.THContainer{background-color:#242424; height:36px;  line-height:36px;}
+.HMainContainer{background-color:#070707; height:80px;}
+.THContainer .TContainer, .HContainer{ width:1000px; margin:auto;}
+.SManagement, .SManagementText, .SManagementText span,  .SManagementTextGap, .SManagementDSep, .HRLink, .HLogoGap, .HRLinkMain, .HRLinkSep, .Howto, .HRServices, .HRServicesText, .HTabBlock, .SearchInput, .HTabBlock2{float:left;}
+.HeaderLogo{ float:left; margin-top:20px;}
+.HeaderLogo a img{ border:0px; text-decoration:none;}
+.SettingText{ font-family:calibri; font-weight:normal; font-size:36px; float:left; color:#cbcbcb; margin-left:13px; margin-top:7px; }
+.THLink{float:right;}
+.SManagementText{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#848484; font-weight:bold;  line-height:36px;}
+.SManagementText span{ background-image:url(/images/shipping/setting.png); width:14px; height:14px; display:block; background-repeat:no-repeat; margin:11px 8px 0px 12px;}
+.SManagementText span:hover, .SManagementText ul li a:hover span, .SManagementText ul li.selected a span{ background-image:url(/images/shipping/setting_hover.png); width:14px; height:14px; display:block; background-repeat:no-repeat; margin:11px 8px 0px 12px;}
+.SManagementTextGap{ width:30px;}
+.SManagementDSep{ background-image:url(images/newheadercion.png); width:1px; height:19px; background-position:-16px 0px; display:block; margin:10px 12px 0px 12px;}
+.SManagementText a, .THLink ul li a, .SManagementText ul li a{ text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#848484; font-weight:bold;}
+.SManagementText a:hover, .THLink ul li a:hover, SManagementText ul li a:hover{ text-decoration:none; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#ffffff; font-weight:bold;}
+.THLink ul, .SManagementText ul, .HRLink ul{margin:0px; padding:0px;}
+.THLink ul li{margin:0px; padding:0px; list-style-type:none; display:inline; margin-right:5px; float:left; padding:0px 10px 0px 10px;  }
+.THLink ul li.selected, .SManagementText ul li.selected, .SManagementText ul li.selected a, .SManagementText ul li.selected a:hover{ background-color:#3d3d3d; color:#ffffff; font-family:Verdana, Geneva, sans-serif; font-size:11px; font-weight:bold;}
+.HTopGap{height:20px; line-height:20px; clear:both;}
+.SManagementText ul li{margin:0px; padding:0px; list-style-type:none; display:inline; float:left; padding:0px 10px 0px 0px;  }
+
+/*Header Css Ends here*/
+
+
+#manage_shipping_mainContainer{ width:1000px; margin:auto;}
+/* header tab starts from here*/
+.headerTabContainer{ clear:both; margin-top:25px;}
+.headerTabContainer ul{ margin:0px; padding:0px; margin-left:10px; }
+.headerTabContainer ul li { margin:0px; padding:0px; height:26px; display:inline; margin-right:5px; border:1px solid #c3c3c3; border-bottom:none; float:left; line-height:27px;}
+.headerTabContainer ul li a{background:#e8e8e8; color:#393939; padding:0px 14px 0 14px; display:block; text-decoration:none;font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+.headerTabContainer ul li a.selected{font-family:Arial, Helvetica, sans-serif; font-size:14px; background:#f9f9f9; color:#393939; font-weight:bold;}
+.solidBorderLine{ border-bottom:#ededed 2px solid; float:left; width:1000px; height:2px; font-size:0px; margin-top:-1px; padding:0px;}
+/* header tab ends here*/
+/*---------------- left container starts here--------------*/
+.leftPanel{ width:713px; float:left; word-wrap:break-word;}
+.manage_your_shipping_heading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#000; margin-top:23px; margin-bottom:5px;}
+.dottedBorderLine{ border-bottom:#999999 1px dotted; clear:both; font-size:0px;}
+.manage_your_shipping_punchline{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; margin-top:11px; }
+/*===========table starts here================*/
+.tableTop{ height:27px; background-color:#989898; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#ffffff; line-height:26px;}
+.margin-left{ margin-left:10px;}
+.fistColumnWid{ width:216px; float:left;}
+.secondColumnWid{ width:144px; float:left;}
+.thirdColumnWid{ width:132px; float:left;}
+.fourthColumnWid{ width:211px; float:left;}
+.tableContentText{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#363636; line-height:27px;}
+.tableContent{}
+.tableContent:hover{ background-color:#f9f9f9; float:left; }
+.dashedtableBorder{ border-bottom:1px #989898 dashed; clear:both; font-size:0px;}
+/*===========table ends here================*/
+/* actions starts here*/
+.actionDropDownList{ width:146px; border:#e7e7e7 solid 1px; position:absolute; background-color:#ffffff; margin:22px 0 0 -74px; *margin:22px 0 0 -165px; display:none;}
+.actionDropDownList ul{ margin:0px; padding:0px; margin-bottom: 10px; float:left;}
+.actionDropDownList ul li{ margin:0px; padding:0px; list-style-type:none; text-align: right;  *height:auto;line-height:23px; direction:rtl;}
+.actionDropDownList ul li:hover{ background-color:#e9e9e9; cursor:pointer;float: left;}
+.actionDropDownList ul li a{font-family:Arial, Helvetica, sans-serif; padding-right: 10px; font-size:13px; font-weight:normal; width: 136PX; float: LEFT; color:#393939;  text-decoration: none;}
+/*.actionDropDownList ul li a:hover{background-color:#e9e9e9;}*/
+.actionDownArrow{ background:url(/images/shipping/action_down_arrow.gif) no-repeat right;   width:19px; font-size: 0px; cursor: pointer; float: left; height:5px; float:left;  margin-top:12px; position:relative;}
+.actionWid{ width:75px; float:Left;  display:none;}
+/* actions ends here*/
+
+.createNewCategory{ padding:15px 5px 0 0px; width:210px; height:42px; background-color:#f3f3f3; font-size:11px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; color:#767676; text-align:right; margin-top:20px;}
+a.createCategory_hyperText{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline; margin:4px 4px 0 4px;}
+a:hover.createCategory_hyperText{ text-decoration:none;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+/*----------------- left container ends here---------------*/
+
+/*====================right panel starts from here===================*/
+.rightPanel{ padding:20px 0 0 0; float:left;}
+.rightPanel ul{ margin:0px; padding:0px;}
+.rightPanel ul li{ margin:0px; padding:0px; list-style-type:none;  line-height:28px;}
+.rightPanel ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none; padding-left:18px; width:245px; }
+.rightPanel ul li a.selected{ background-color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#ffffff; font-weight:bold; display:block; cursor:default;}
+.rightSolidBorder{ border-right:1px #cdcdcd solid;}
+/*====================right panel ends from here===================*/

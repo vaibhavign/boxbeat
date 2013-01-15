@@ -1,0 +1,134 @@
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+a:focus{border:0px none;}
+input{outline:none;}
+textarea{outline:none;}
+.clearBoth{clear:both;}
+.floatLeft, .topbarheading, .search_bg{float:left;}
+.floatRight{float:right;}
+
+/*---------------------Body Css Start From here--------------------------*/
+#bodytopbar{width:1000px; margin:auto; z-index:9997;}
+#bodytopbar .topbarheading{ font-size:18px; color:#00538a;}
+#bodytopbar .backtoarrow{ background-image:url(/images/default/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+#bodytopbar .back_link{color:#00538a; font-size:13px; text-decoration:underline; line-height:22px;}
+#bodytopbar .back_link:hover{color:#00538a; font-size:13px; text-decoration:none;}
+.bottomline{border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; font-size:0px; display:block;}
+#bodytopbar .actionbuttonlick{ background-image:url(/images/default/respond_btn_click.png); width:101px; height:24px; background-repeat:no-repeat; display:block; float:left;}
+#bodytopbar .actionbuttondefault{ background-image:url(/images/default/respond_btn.png); width:101px; height:25px; background-repeat:no-repeat; display:block; float:left;}
+#bodytopbar .actionbuttonlick:focus{ outline:none; border:0px none;}
+
+
+/*----------------------------LeftBock Start from here---------------------------*/
+#leftBlock{ width:650px; float:left;}
+#leftBlock .email_text{ font-size:12px; color:#767676; float:left; margin-top:6px; }
+#leftBlock .email_heading{ font-size:12px; color:#767676; float:left; margin-left:6px; margin-top:6px; width:144px; font-weight:bold;}
+#leftBlock .email_seperator{ font-size:12px; color:#767676; float:left; font-weight:bold; width:16px; margin-top:6px;}
+#leftBlock ul{ margin:0px; padding:0px;}
+#leftBlock ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#leftBlock ul li.selected{background-color:#f5f5f5;}
+.dotted_border{border-bottom:1px dotted #999999; clear:both;}
+.main_container .content_block .wid440{ width:440px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:22px; word-wrap:break-word; } 
+.italics{ font-style:italic;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.main_container{ width:630px; float:left; margin-top:12px; padding:0 0 0 10px;}
+.lh32{ height:32px; line-height:32px; clear:both; font-size:0px;}
+.main_container .innerblock{ width:650px; margin:auto; padding-top:12px;}
+.imagecontainer{width:36px; height:36px; float:left; }
+.main_container .content_block{ width:580px; float:left; margin-left:6px;  font-size:12px; color:#393939; padding-bottom:17px;}
+.main_container .me_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.main_container .content_text{font-size:12px; color:#393939; width:745px; float:left; word-wrap:break-word;}
+.main_container .me_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.main_container .rightblock{width:121px; float:left;}
+.main_container .date_text{color:#999999; font-size:11px; float:left;}
+.main_container .dategap{ width:12px; float:left;}
+.dotted_border{ background:url(/images/default/dotted_border.png) repeat-x; clear:both;}
+.selected { background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:13px;}
+/*----------------------------LeftBock Ends here---------------------------*/
+
+
+/*----------------------------Message Box Start from here---------------------------*/
+#msgbox{width:640px; margin-left:10px;  float:left;}
+#msgbox .imagecontainer{width:36px; height:36px; float:left; margin-right:8px;}
+#msgbox .msgboxbg{ width:592;  float:left; border:1px solid #cdcdcd; height:34px;}
+#msgbox .msgboxbg textarea{ width:588px; height:20px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+#msgbox .reply_btn{ float:right; margin-top:7px; cursor:pointer;}
+/*----------------------------Message Box Ends here---------------------------*/
+
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:130px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:23px 0px 0px 0px; z-index:9997; display:none;}
+#actiondropdown ul{ margin:0px; padding:0px; margin-top:5px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:13px;  *height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+
+/*msg box starts from here*/
+#main-block-details{clear:both;}
+#main-block-details ul{ margin:0px; padding:0px;}
+#main-block-details ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#main-block-details ul li.selected{background-color:#f5f5f5;}
+.dotted_border{ background:url(/images/default/dotted_border.png) repeat-x; clear:both;}
+.dotted_border1{ background:url(/images/default/dotted_border.png) repeat-x; height:1px; clear:both; font-size:0px;}
+.italics{ font-style:italic;}
+.conversation-container{ width:650px; float:left; }
+.user_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.user_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.date_text{color:#999999; font-size:11px; float:left;}
+.dategap{ width:12px; float:left;}
+.downloadText{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+.conversation-container{ clear:both;}
+.conversation-container ul{ margin:0px; padding:0px;}
+.conversation-container ul li{ margin:0px 0 0 0px; padding:0px; list-style-type:none; line-height:20px;}
+.conversation-container ul li.selected{background-color:#f5f5f5; overflow: auto;}
+.conversation_liContainer{ width:640px; padding:12px 0 0 10px; overflow:hidden; clear:both;}
+.content_block{ float:left; margin-left:8px;  font-size:12px; color:#393939; padding-bottom:17px;}
+.conversation-container ul li a{ font-size:12px; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+.conversation-container ul li a:hover{ text-decoration:none;}
+.wid815{ width:465px; float:left;}
+.wid920{ width:580px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:20px; word-wrap:break-word;}
+.lh45{ height:45px; line-height:45px; clear:both; font-size:0px;}
+
+#Cmsgbox{margin-left: 10px; width: 640px; float:left;}
+#Cmsgbox .imagecontainer { float: left;  height: 36px;  margin-right: 8px;  width: 36px;}
+#Cmsgbox .msgboxbg { border: 1px solid #CDCDCD;  float: left;   height: 34px; width:594px;}
+#Cmsgbox .msgboxbg textarea { border: 0 none; color: #767676;  font-family: Verdana,Geneva,sans-serif;  font-size: 11px;  height: 24px;  margin: 4px 0 0 4px;  overflow: hidden;  width:580px;}
+.table_heading{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+.user_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.user_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.date_text{color:#999999; font-size:11px; float:left;}
+.dategap{ width:12px; float:left;}
+.reply_btn {  cursor: pointer;  float: right;  margin-top: 7px;}
+/*msg box ends here*/
+
+/*POP UP CSS*/
+/*body{ margin:0px; padding:8px;}*/
+.outerBorder{width:489px; border:6px solid #9f9f9f;}
+.blackBorder{width:487px; border:1px solid #393939;}
+.middleText{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#393939; text-decoration:none;}
+a.hyperLinkText{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none;}
+a:hover.hyperLinkText{ text-decoration:underline;}
+.lh20{ height:20px; line-height:20px; font-size:0px; clear:both;}
+.lh24{ height:24px; line-height:24px; font-size:0px; clear:both;}
+.wid17{ width:17px; float:left;}
+.wid12{ width:12px; float:left;}
+.wid15{ width:15px; float:left;}
+.bgLine{ width:440px; height:1px; background-color:#d9d9d9; clear:both;}
+input[type="image"]{ cursor:pointer; outline:none;}
+a:hover{ outline:none;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.addChangeReq{ width:487px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.marginTop{ margin-top:7px;}
+.innerDiv{ width:440px; margin:auto;}
+.lheight12{ line-height:20px;}
+/*-------------New Popup css----------------------*/
+#lightbox{background-color:black; opacity:0.7;filter:alpha(opacity=70);z-index:9999;}
+
+.selectPopup{width:511px; height:476px;}
+
+.wid325Padd{ width:240px; float:left; padding:0 70px 0 10px; word-wrap:break-word;}
+.wid215{ width:215px; float:left;}
+/*END OF POPUP CSS*/
+.requestCancelBox{ border:2px solid #999999; width:600px; padding:10px 28px 12px 23px; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; background:#fafafa; color:#393939; line-height:23px; word-wrap:break-word;}
+/*---------------------Body Css Ends here--------------------------*/

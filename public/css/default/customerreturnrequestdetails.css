@@ -1,0 +1,76 @@
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+a:focus{border:0px none;}
+input{outline:none;}
+textarea{outline:none;}
+.clearBoth{clear:both;}
+.floatLeft, .topbarheading, .search_bg{float:left;}
+.floatRight{float:right;}
+
+/*---------------------Body Css Start From here--------------------------*/
+#bodytopbar{width:1000px; margin:auto; z-index:9999; position:absolute;}
+#bodytopbar .topbarheading{ font-size:18px; color:#00538a;}
+#bodytopbar .backtoarrow{ background-image:url(../images/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+#bodytopbar .back_link{color:#00538a; font-size:13px; text-decoration:underline; line-height:22px;}
+#bodytopbar .back_link:hover{color:#00538a; font-size:13px; text-decoration:none;}
+.bottomline{border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; font-size:0px; display:block;}
+#bodytopbar .actionbuttonlick{ background-image:url(../images/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -125px; display:block; float:left;}
+#bodytopbar .actionbuttondefault{ background-image:url(../images/respond_btn.png); width:101px; height:25px; background-repeat:no-repeat; display:block; float:left;}
+#bodytopbar .actionbuttonlick:focus{ outline:none; border:0px none;}
+.actionbuttonlick{ background-image:url(/images/default/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -125px; display:block; float:left;}
+.actionbuttondefault{ background-image:url(/images/default/respond_btn.png); width:101px; height:25px; background-repeat:no-repeat; display:block; float:left;}
+
+
+/*----------------------------LeftBock Start from here---------------------------*/
+#leftBlock{ width:650px; float:left;}
+#leftBlock .email_text{ font-size:12px; color:#767676; float:left; margin-top:6px; }
+#leftBlock .email_heading{ font-size:12px; color:#767676; float:left; margin-left:6px; margin-top:6px; width:144px; font-weight:bold;}
+#leftBlock .email_seperator{ font-size:12px; color:#767676; float:left; font-weight:bold; width:16px; margin-top:6px;}
+#leftBlock ul{ margin:0px; padding:0px;}
+#leftBlock ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#leftBlock ul li.selected{background-color:#f5f5f5;}
+.dotted_border{border-bottom:1px dotted #999999; clear:both;}
+.main_container .content_block .wid440{ width:440px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:22px; word-wrap:break-word; } 
+.italics{ font-style:italic;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.main_container{ width:630px; float:left; margin-top:12px; padding:0 0 0 10px;}
+.lh32{ height:32px; line-height:32px; clear:both; font-size:0px;}
+.main_container .innerblock{ width:650px; margin:auto;}
+.imagecontainer{width:36px; height:36px; float:left; }
+.main_container .content_block{ width:573px; float:left; margin-left:8px;  font-size:12px; color:#393939; padding-bottom:17px;}
+.main_container .me_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.main_container .content_text{font-size:12px; color:#393939; width:745px; float:left; word-wrap:break-word;}
+.main_container .me_link:hover{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:underline;}
+.main_container .rightblock{width:121px; float:left;}
+.main_container .date_text{color:#999999; font-size:11px; float:left;}
+.main_container .dategap{ width:12px; float:left;}
+/*----------------------------LeftBock Ends here---------------------------*/
+
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:150px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:24px 0px 0px 740px; z-index:9997; display:none;}
+#actiondropdown ul{ margin:0px; padding:0px; margin-top:5px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:8px;  *height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+
+
+/*----------------------------Message Box Start from here---------------------------*/
+#msgbox{width:640px; margin-left:10px;  float:left;}
+#msgbox .imagecontainer{width:36px; height:36px; float:left; margin-right:8px;}
+#msgbox .msgboxbg{ width:592px;  float:left; border:1px solid #cdcdcd; height:34px;}
+#msgbox .msgboxbg textarea{ width:580px; height:20px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+#msgbox .reply_btn{ float:right; margin-top:7px; cursor:pointer;}
+/*----------------------------Message Box Ends here---------------------------*/
+
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:150px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:24px 0px 0px 740px; z-index:9997; display:none;}
+#actiondropdown ul{ margin:0px; padding:0px; margin-top:5px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:8px;  *height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+
+
+/*---------------------Body Css Ends here--------------------------*/

@@ -1,0 +1,49 @@
+html { overflow-y:scroll; }
+body { margin:0px; padding:0px; background-color:#f1f1f1; font-family:Tahoma, Geneva, sans-serif; }
+.mainHeader { width:525px; margin:auto; margin-top:85px; }
+.clearBoth { clear:both; }
+.floatLeft { float:left; }
+.floatRight { float:right; }
+.topBorder { clear:both; background-image:url(/images/secure/elogin/loginBorder.png); background-repeat:no-repeat; width:525px; height:32px; background-position:0 0; }
+.botBorder { clear:both; background-image:url(/images/secure/elogin/loginBorder.png); background-repeat:no-repeat; width:525px; height:32px; background-position:0 -32px; }
+.loginBG { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 -49px; }
+.loginBGHover { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 0; }
+.passwordBG { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 -49px; margin:7px 0 30px 0; }
+.passwordBGHover { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 0; margin:7px 0 30px 0; }
+input[type=text].loginInput { color:#a8a8a8; font-family:Tahoma, Geneva, sans-serif; font-size:15px; font-weight:bold; margin:14px 0 0 0; width:245px; border:0px none; background-color:transparent; outline:0px none; text-align:left; }
+input[type=password].loginInput { color:#a8a8a8; font-family:Tahoma, Geneva, sans-serif; font-size:15px; font-weight:bold; margin:14px 0 0 0; width:245px; border:0px none; background-color:transparent; outline:0px none; text-align:left; }
+#password1, #newpass1 { display:none; }
+.forgotpass { float:left; line-height:32px; }
+.forgotpass a{ text-decoration:none; color:#8c7e7e; font-size:12px; }
+.forgotpass a:hover{ text-decoration:underline; color:#e00034; }
+.backtologin { margin-top:30px; clear:both; }
+a.backLogin{ text-decoration:none; color:#8c7e7e; font-size:12px; }
+a.backLogin:hover{ text-decoration:underline; color:#e00034; }
+
+.loginBTN { width:280px; margin:auto; }
+.submitBTN { width:280px; margin:auto; }
+.botGap { clear:both; height:40px; }
+.freetrial { text-align:center; }
+.newHere { font-size:15px; }
+.newHere { font-size:15px; color:#4f4d4b; }
+.startFTrail { margin:5px 0 0 0; }
+.startFTrail a{ font-size:12px; color:#4f4d4b; text-decoration:underline; }
+.startFTrail a:hover{ text-decoration:underline; color:#e00034; }
+.errorMSG { position:absolute; margin-left:50px; color:#fe0000; font-size:11px; margin:-17px 0 0 327px; *margin:17px 0 0 50px; display:none;}
+.verifyErrorMSG { font-size:13px; font-weight:bold; color:#fe0000; margin-bottom:13px; display:none;}
+.submitBtnGap { height:25px; clear:both; }
+.submitBtnBotGap { height:100px; clear:both; }
+.successMSG { color:#4f4d4b; font-size:30px; width:380px; margin:auto; }
+.successMSG span { color:#4f4d4b; font-size:15px; line-height:30px; }
+.successMSG span a{ color:#4f4d4b; font-size:15px; text-decoration:underline; }
+.successMSG span a:hover{ color:#4f4d4b; font-size:15px; text-decoration:none; }
+
+
+.newpassBG { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 -49px; }
+.newpassBGHover { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 0; }
+.confpassBG { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 -49px; margin:7px 0 30px 0; }
+.confpassBGHover { clear:both; background-image:url(/images/secure/elogin/loginBG.png); background-repeat:no-repeat; width:291px; height:49px; background-position:0 0; margin:7px 0 30px 0; }
+.signuptxt { font-size:30px; color:#4e4d4b; }
+input[type=image] { cursor:pointer; }
+a img { border:0px none; }
+img { border:0px none; }

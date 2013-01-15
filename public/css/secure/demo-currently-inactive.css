@@ -1,0 +1,39 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+:focus{ outline:none;}
+/*Header Css*/
+a img{ border:0 none;outline:none;}
+.startHeaderCont{ width:1000px; margin:0 auto 35px auto; height:58px; padding:30px 0 0 0; border-bottom:1px solid #d8d8d8;}
+.startHeaderCont .logo{ float:left;}
+.startHeaderCont .processingImg{ float:right; width:347px; padding:8px 0 0 0;}
+/*End Here*
+
+/*Active Store Css Start Form here*/
+.blueMainHeadingContainer{ clear:both; overflow:auto;}
+#wid1000Auto{ width:1000px; margin:auto;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.content-text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.content-text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+a.hyperLinkBlue12{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue12{ text-decoration:none;}
+.content-text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; }
+.email_error_msgBox{ width:670px; border:#cccccc 1px solid; height:56px; background:#efefef; padding:13px 0 0 17px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh60{ height:60px; clear:both; font-size:0px; }
+.lh32{ height:32px; clear:both; font-size:0px;}
+.lh35{ height:35px; clear:both; font-size:0px;}
+.lh40{ height:40px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.wid72{ width:72px; float:left; word-wrap:break-word;}
+/*Active Store Css Ends  here*/
+.headerText{ font-family:"Trebuchet MS"; font-size:22px; color:#000; font-weight:normal;}
+.solidBorder{ clear:both; background:#d8d8d8; height:1px; font-size:0px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px;}

@@ -1,0 +1,326 @@
+/*All Common Css Start From here*/
+ body{ margin:0px; padding:0px; background-color:#f1f1f1;}
+ html{overflow-y:scroll;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.fso{ font-size:0px;}
+img{border:0px none;}
+.fwBold{ font-weight:bold;}
+/*All Common Css Start From here*/
+.wid100per{ width:100%; float:left;}
+.wid1000{ width:1000px; margin:auto; clear:both;}
+.wid1000_body{ width:1000px; float:left; height:600px;}
+.body_margin{ margin-top:65px;}
+
+/*leftBlock css Start From here*/
+.wid498{width:498px; float:left;}
+.wid500_left{ width:498px; border:1px solid #6d6d6d; background-color:#ffffff; border-bottom:0px none; border-top:0px none; float:left; height:100%;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.marginBoth{margin:0px 9px 0px 9px;}
+.share_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#767676; font-weight:bold;  margin-right:16px; line-height:13px;}
+.share_link a{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold; color:#4c74a2; text-decoration:underline; line-height:13px;}
+.share_link a:hover{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold; color:#4c74a2; text-decoration:none;}
+.share_link a.current{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold; color:#393939; text-decoration:none; cursor:default;}
+.share_link .need_icon{ background-image:url(/images/default/default/newsfeed_icon.gif);  background-repeat:no-repeat; height:13px; display:block; width:12px; float:left; margin:0px 4px 0px 0px;}
+.share_link .deal_icon{ background-image:url(images/default/newsfeed_icon.gif);  background-repeat:no-repeat; height:13px; display:block; width:12px; float:left; margin:1px 4px 0px 0px; background-position:-13px 0px;}
+.share_link .info_icon{ background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; height:13px; display:block; width:7px; float:left; margin:1px 4px 0px 0px; background-position:-29px 0px;}
+.wid16{ width:16px; float:left;}
+.wid22{ width:22px; float:left;}
+.wid24{ width:24px; float:left;}
+.need_input_bg{width:478px; float:left; height:27px; border:1px solid #d9d9d9;}
+.input_wid465{ width:465px; height:15px; line-height:15px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#767676; padding-left:8px; margin-top:5px; border:0px none; outline:none; background-color:transparent;}
+.need_input_arrow{ background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:13px; height:8px; background-position:-37px 0px; margin:-8px 0px 0px 74px; position:absolute; *margin:-8px 0px 0px -401px;}
+.deal_input_arrow{ background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:13px; height:8px; background-position:-37px 0px; margin:-8px 0px 0px 130px; position:absolute; *margin:-8px 0px 0px -345px;}
+.info_input_arrow{ background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:13px; height:8px; background-position:-37px 0px; margin:-8px 0px 0px 185px; position:absolute; *margin:-8px 0px 0px -290px;}
+
+.wid478{ width:478px; float:left;}
+.lh8{height:8px; line-height:8px; clear:both; font-size:0px;}
+.lh30{ height:30px; line-height:30px; clear:both; font-size:0px;}
+.wid48{ width:48px; float:left;}
+.wid10{ width:10px; float:left;}
+.newsfeed_carticon{background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:19px; height:12px; background-position:-51px 0px; float:left; margin-right:4px;}
+.newsfeed_travelicon{background-image:url(/images/default/newsfeed_icon.gif);  background-repeat:no-repeat; width:14px; height:15px; background-position:-17px -65px; float:left; margin-right:8px; display:block;}
+
+.user_posted_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#393939; line-height:12px; word-wrap: break-word; width:395px;}
+.user_posted_text_hover{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; color:#4c74a2; line-height:12px; word-wrap: break-word; width:395px;}
+.newsfeed_content{color:#767676; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; word-wrap: break-word; width:418px;}
+.ten_comment{color:#767676; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px;}
+.newsfeed_content_hover{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; word-wrap: break-word; width:418px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.wid420{width:420px; float:left;}
+.lh2{height:2px; line-height:2px; clear:both; font-size:0px;}
+.newsfeed_date{color:#999999; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.newsfeed_date_hover{color:#767676; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.newsfeed_counter{color:#767676; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.newsfeed_counter_hover{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.date_seperator{color:#bbbaba; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.newsfeed_underline{background-color:#eaeaea; height:1px; line-height:1px; *height:auto; clear:both; font-size:0px;}
+.conHolder:hover{background-color:#f5f5f5; cursor:pointer;}
+.hover_bg{ background-color:#f5f5f5; cursor:pointer;}
+.hover_arrow{ background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; position:absolute; margin:30px 0px 0px 484px;*margin:30px 0px 0px -12px;}
+.hover_arrow2{ background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; position:absolute; margin:30px 0px 0px 484px; *margin:30px 0px 0px -13px;}
+.hover_arrow3{ background-image:url(/images/default/hover_arrow.gif); background-repeat:no-repeat; width:16px; height:29px; position:absolute; margin:30px 0px 0px 484px; *margin:30px 0px 0px -13px;}
+
+.hover_arrow{display:none;}
+.hover_arrow2{display:none;}
+.hover_arrow3{display:none;}
+#caBlock{display:none;}
+.need_popup{display:none; position:absolute;}
+.info_popup{display:none; position:absolute;}
+.deal_default_box{display:none;}
+.info_default_box{display:none;}
+.need_default_box{disply:none;}
+/*leftBlock css Ends here*/
+
+/*Left Menu Start From here*/
+.leftmenu_bg{ background-image:url(/images/default/left_menubg.gif); background-repeat:no-repeat; width:500px; height:85px;}
+.tabmenu ul{ margin:0px; padding:0px; margin-left:20px;}
+.tabmenu ul li{ margin:0px; padding:0px; list-style-type:none; display:inline;}
+.tabmenu ul li a:focus{outline:none; border:0px none;}
+.tabmenu ul li a{ font-family:Verdana, Arial, Helvetica, sans-serif; color:#dfdfdf; font-size:12px; text-decoration:none; text-transform:uppercase; float:left; cursor:pointer; margin-right:5px;}
+.tabmenu li a.current,.tabmenu ul li a:hover{background:url(/images/default/newsfeed_menu.gif) no-repeat top right; color:#ffffff;}
+.tabmenu li a.current span,.tabmenu ul li a:hover span{background:url(/images/default/newsfeed_menu.gif) no-repeat top left; color:#ffffff;}
+.tabmenu ul li a span{ padding:9px 0px 10px 17px; margin:0px 16px 0px 0px; position:relative; float:left;}
+/*Left Menu Ends here*/
+
+/*RightBlock css Start From here*/
+.wid480_right{ width:480px; float:right;}
+.wid500_right{ float:left; width:499px; background-color:#dff2fd; border-right:1px solid #1c76ad; height:100%;}
+.wid20{ width:20px; float:left;}
+.yourpost_text{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:13px;}
+.right_underline{ height:1px; line-height:1px; clear:both; font-size:0px; background-color:#bfdff1;}
+.yourpost_desc{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:14px; word-wrap: break-word; width:387px;}
+.yourpost_time{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#767676;}
+.wid5{width:5px; float:left;}
+.right_top_menu{float:left; width:195px;}
+.right_top_menu ul{ margin:0px; padding:0px;}
+.right_top_menu ul li{ margin:0px; padding:0px; list-style-type:none; height:26px; line-height:26px; *height:auto; font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; border-bottom:1px solid #9ccbe7;}
+.right_top_menu ul li:last-child{ margin:0px; padding:0px; list-style-type:none; height:26px; line-height:26px; *height:auto;  font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; border-bottom:0px none;}
+.right_top_menu .itemcart_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:13px; height:11px; background-position:-72px 0px; display:block;  margin-right:9px; float:left; margin-top:7px;}
+.right_top_menu ul li .wid76{ width:76px; float:right; text-align:right;}
+.right_top_menu ul li a{ margin:0px; padding:0px; list-style-type:none; font-size:12px; color:#606060; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:pointer;}
+.right_top_menu ul li a.current{ margin:0px; padding:0px; list-style-type:none; font-size:12px; color:#333333; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:default; font-weight:bold;}
+.right_top_menu .notification_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:13px; height:11px; background-position:-87px 0px; display:block;  margin-right:9px; float:left; margin-top:7px;}
+.right_top_menu .message_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:14px; height:11px; background-position:-102px 0px; display:block;  margin-right:8px; float:left; margin-top:7px;}
+.wid48{ width:48px; float:left;}
+.right_top_menu .dashboard_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:14px; height:11px; background-position:0px -15px; display:block;  margin-right:8px; float:left; margin-top:7px;}
+.right_top_menu .setting_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:9px; height:11px; background-position:-18px -15px; display:block;  margin-right:10px; margin-left:3px; float:left; margin-top:7px;}
+.right_top_menu .logout_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:9px; height:11px; background-position:-30px -15px; display:block;  margin-right:10px; float:left; margin-top:7px; margin-left:3px;}
+/*RightBlock css Ends here*/
+
+/*News feed pop up Css Start From here*/
+.popup_main{ height:119px; width:480px; float:left; background-color:#e8e8e8; opacity:0.9; filter:alpha(opacity=90);}
+.popup_mainInfo{ height:119px; width:480px; float:left; background-color:#e8e8e8; opacity:0.9; filter:alpha(opacity=90);}
+.wid460_popup{width:460px; margin:auto; clear:both;}
+.popup_heading{color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:13px;}
+.popup_char{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:bold; color:#393939;}
+.wid460_textarea{ width:452px; height:45px; border:1px solid #848484; color:#393939; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; padding-left:5px; overflow:hidden; outline:none; background-color:#ffffff;}
+.popup_in{ font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; margin-right:7px; line-height:23px;}
+.select_category_bg{ width:157px; height:23px; border:1px solid #848484; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; margin-right:7px; background-color:#f2f2f2;}
+.select_category_bg_select{ width:157px; height:29px; border:1px solid #848484; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; margin-right:7px; background-color:#f2f2f2; border-bottom:0px none;}
+.select_location_bg_select{ width:157px; height:29px; border:1px solid #848484; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; margin-right:7px; background-color:#f2f2f2; border-bottom:0px none;}
+.select_location_bg{ width:157px; height:23px; border:1px solid #848484; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; margin-right:7px; background-color:#f2f2f2;}
+.wid125_select_category{ width:125px; height:14px; line-height:14px; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; font-weight:normal; color:#393939; background-color:transparent; border:0px none; margin-left:10px; margin-top:4px; outline:none;}
+.popup_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-41px -16px; width:13px; height:7px; display:block; display:block; margin:-7px 0px 0px 75px; *margin:-7px 0px 0px -404px; position:absolute;}
+.selectbox_arrow{  background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:8px; height:6px; background-position:-85px -15px; display:block; margin-top:10px;}
+.default_selectBox{position:relative; z-index:4441;}
+.infopopup_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-41px -16px; width:13px; height:7px; display:block; margin:-7px 0px 0px 188px; *margin:-7px 0px 0px -292px; position:absolute;}
+.infodefault_selectBox{position:relative; z-index:4441;}
+
+/*Department Icon */
+#infoSelectBoxdropDown ul li .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-49px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-10px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-60px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-27px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:0px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+#infoSelectBoxdropDown ul li:hover .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-139px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li:hover .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-100px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li:hover .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-150px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li:hover .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-117px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li:hover .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-90px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+
+#infoSelectBoxdropDown ul li.current .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-139px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li.current .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-100px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li.current .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-150px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li.current .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-117px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li.current .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-90px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+/*Info Block Select box Start From here*/
+#infoSelectBoxdropDown ul li .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-49px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-10px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-60px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-27px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:0px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+#infoSelectBoxdropDown ul li:hover .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-139px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li:hover .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-100px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li:hover .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-150px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li:hover .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-117px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li:hover .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-90px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+#infoSelectBoxdropDown ul li.current .tip_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-139px -164px; width:10px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li.current .campaign_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-100px -164px; width:16px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li.current .recommendation_icon2{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-150px -164px; width:12px; height:14px; display:block; float:left; margin:5px 10px 0px 5px;}
+#infoSelectBoxdropDown ul li.current .update_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-117px -164px; width:9px; height:12px; display:block; float:left; margin:5px 10px 0px 7px;}
+#infoSelectBoxdropDown ul li.current .announcement_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-90px -164px; width:9px; height:14px; display:block; float:left; margin:5px 10px 0px 7px;}
+
+.custom_icon{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-37px -164px; width:11px; height:14px; display:block; float:left; margin:5px 10px 0px 15px;}
+.custom_input{ width:100px; height:22px; line-height:22px; float:left; background-color:transparent; border:0px none; border-bottom:1px solid #7c7c7c; font-style:italic; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#767676; outline:none; }
+/*Department Icon */
+
+/*Fixed Block Css Start From here*/
+.wid90_image{ width:90px; height:90px; text-align:center; float:left;}
+.wid500_fixed{ float:left; width:499px; background-color:#FFFFFF; border-right:1px solid #6d6d6d; border-bottom:1px solid #6d6d6d; position:fixed;}
+.height24_link{ height:24px; line-height:24px;  background-color:#eeeeee; clear:both;}
+a.view_detail_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:underline; cursor:pointer;}
+a:hover.view_detail_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:none;}
+a.view_detail_link span{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:underline; cursor:pointer;}
+a:hover.view_detail_link span{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:normal; color:#767676; text-decoration:none;}
+.wid18{ width:18px; float:left;}
+.close_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; background-position:-56px -17px; width:7px; height:6px; display:block; float:left; margin:10px 15px 0px 3px;}
+.wid469_fixed{ width:469px; float:left; padding-left:20px;}
+a.user_link{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; font-weight:bold; color:#4c74a2; text-decoration:none; line-height:15px;}
+a:hover.user_link{ font-family:"Trebuchet MS", Arial, helvetica; font-size:13px; font-weight:bold; color:#4c74a2; text-decoration:underline;}
+.city_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#999999;}
+.following_counter{ font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; font-weight:bold; margin-right:5px;}
+.following_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#767676; margin-right:5px; padding-top:5px;}
+.wid75{ width:75px; text-align:right; border-right:1px solid #cacaca; line-height:13px; float:left;}
+.product_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:14px; color:#393939; font-weight:bold; word-wrap: break-word; width:445px; }
+.time_text{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; color:#767676;}
+.cart_text{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; color:#767676; line-height:12px;}
+.dept_icon_text{ font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; color:#767676; line-height:15px;}
+.like_box{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#393939; width:23px; height:15px; border:1px solid #8b8b8b; background-color:#eeeeee; text-align:center;}
+.like_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:5px; height:7px;  background-position:-64px -16px; position:absolute; margin:5px 0px 0px 27px; *margin:5px 0px 0px -108px;}
+.share_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:5px; height:7px; background-position:-64px -16px; position:absolute; margin:5px 0px 0px 106px; *margin:5px 0px 0px -29px;}
+.bookmark_arrow{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:5px; height:7px;  background-position:-64px -16px; position:absolute; margin:5px 0px 0px 55px; *margin:5px 0px 0px -29px;}
+.share_arrow2{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:5px; height:7px;  background-position:-64px -16px; position:absolute; margin:5px 0px 0px 134px; *margin:5px 0px 0px -108px;}
+
+.wid365{width:340px; float:left; word-wrap: break-word;}
+.wid15{ width:15px; float:left;}
+.height245{height:245px;  width:470px; clear:both;}
+.wid445{width:445px; float:left;}
+.comment_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:11px; height:10px;  background-position:-72px -15px; margin-right:10px; margin-top:5px;}
+a.viewall_link{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; text-decoration:underline;}
+a:hover.viewall_link{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; text-decoration:none;}
+.conversation_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#393939;}
+.wid414{ width:414px; float:left; word-wrap: break-word;}
+.minute_ago{ font-family:"Trebuchet MS", Arial, helvetica; font-size:10px; color:#999999;}
+.dotted_line{ border-bottom:1px dotted #999999; height:1px; line-height:1px; clear:both; font-size:0px; *height:auto;}
+.reply_box{ height:80px; width:469px; float:left;  margin-left:20px; background-color:#e8e8e8;}
+.reply_thumb_margin{ margin:1px;}
+.wid434_input{ width:400px; height:20px; line-height:20px; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#767676; border:0px none; margin-top:3px;outline:none; word-wrap: break-word;}
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.wid458{ width:446px; margin:auto; border:1px solid #848484; float:left; margin:10px 0px 0px 10px; background-color:#ffffff;}
+.wid458_reply{ width:450px; margin:auto;}
+input.checkbox{margin-left:-9999px;}
+.labelcheckbox{ background-image:url(/images/default/checkbox.gif); background-repeat:no-repeat; width:13px; height:13px; display:block; margin:1px 0px 0px 0px;}
+.labelcheckbox.select{ background-image:url(/images/default/checkbox_active.gif); background-repeat:no-repeat; width:13px; height:13px;}
+.wid6{ width:6px; float:left;}
+.lock_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:8px; height:10px; background-position:-116px -6px; margin:4px 0px 0px 10px;}
+.char_text{color:#333333; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; line-height:23px; margin-right:10px;}
+.paddtop4{padding-top:4px;}
+/*Fixed Css Ends here*/
+
+
+/*Custom Select Box Css Start From here*/
+.category_dropdown{width:396px; height:203px; border:solid 1px #848484; background-color:#f2f2f2; opacity:0.9; filter:alpha(opacity=90);}
+.location_dropdown{width:430px; height:203px; border:solid 1px #848484; background-color:#f2f2f2; opacity:0.9; filter:alpha(opacity=90);}
+.select_category_ddown{position:absolute; clear:both;  margin:29px 0px 0px 27px; *margin:-1px 0px 0px 27px; z-index:4440; }
+.select_location_ddown{position:absolute; clear:both;  margin:29px 0px 0px 10px; *margin:-1px 0px 0px 10px; z-index:4440; }
+.select_category_ddown{display:none;}
+.select_location_ddown{display:none;}
+.openDown{display:none;}
+.wid215{width:215px; float:left;}
+.wid186{ width:186px; float:left; }
+.wid195{ width:195px; float:left; }
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.dropDownSeparator{ float:left; background-image:url(/images/default/dropdown_separator.gif); width:1px; height:auto; background-repeat:repeat-y; height:190px; margin-left:13px; }
+.adjustDropDown{ clear:both; padding-left:9px;font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#393939; line-height:15px;}
+#SelectBoxdropDown{ clear:both; }
+#SelectBoxdropDown ul{ padding:0px 0px; margin:0px; }
+#SelectBoxdropDown ul li{ cursor:pointer; padding-left:9px; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:normal; height:25px; line-height:25px; }
+#SelectBoxdropDown ul li:hover{ cursor:pointer; background-color:#5e5e5e; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#fff; font-weight:normal; height:25px; line-height:25px; }
+#SelectBoxdropDown ul li.current{ background-color:#5e5e5e; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#fff; font-weight:normal; height:25px; line-height:25px; }
+
+#infoSelectBoxdropDown{ clear:both; }
+#infoSelectBoxdropDown ul{ padding:0px 0px; margin:0px; }
+#infoSelectBoxdropDown ul li{ cursor:pointer; padding-left:9px; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#4b4b4b; font-weight:normal; height:25px; line-height:25px; }
+#infoSelectBoxdropDown ul li:hover{ cursor:pointer; background-color:#5e5e5e; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#fff; font-weight:normal; height:25px; line-height:25px; }
+#infoSelectBoxdropDown ul li.current{ background-color:#5e5e5e; list-style:none; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#fff; font-weight:normal; height:25px; line-height:25px; }
+
+.wid50{ width:20px; float:left; }
+a:focus{ outline:none; }
+a.tellmore_link{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; text-decoration:underline;}
+a:hover.tellmore_link{color:#4c74a2; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; text-decoration:none;}
+.location_ddown_text{color:#767676; font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; line-height:15px;}
+#replyHolder{ overflow:auto;}
+#fixedNeed_block{display:none;}
+#fixedInfo_block{display:none;}
+/*Custom Select Box Css Start From here*/
+/*News feed pop up Css Start From here*/
+
+
+/*BOF Create Deal Now Popup*/
+#createNowPopup{display:none; position:absolute;}
+.popupAttachment{ clear:both; background-image:url(/images/default/newsfeed_icon.gif); width:13px; height:7px; background-position:-41px -16px; margin-left:130px; margin-top:-7px; display:block; position:absolute; }
+.popupAttachment2{ clear:both; background-image:url(/images/default/newsfeed_icon.gif); width:13px; height:7px; background-position:-41px -16px; margin-left:130px; margin-top:-7px; position:absolute; display:block; *margin:-7px 0px 0px -350px;}
+.createNowPopup_bg{ clear:both; width:480px; height:180px; background-color:#e8e8e8; color:#767676; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13PX; font-weight:bold;  opacity:0.9; filter:alpha(opacity=90);}
+#createNowPopup .clearBoth{ clear:both; }
+#createNowPopup .floatLeft{ float:left; }
+#createNowPopup .clearHeight10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+#createNowPopup .wid449{ clear:both; width:449px; margin:auto; }
+#createNowPopup .wid161{ float:left; width:161px;}
+#createNowPopup .wid147{ float:left; width:127px;}
+#createNowPopup .dealCreateOption{ float:left; width:132px; background-image:url(/images/default/create_icons.png); width:131px; height:21px; background-position:0px 0px;}
+#createNowPopup .wid22{ float:left; width:22px; padding-top:1px;}
+#createNowPopup .padleft6{ padding-left:6px; padding-top:1px; }
+#createNowPopup .wid157{ float:left; width:157px;}
+#createNowPopup .dealCreateicon{ float:left; background-image:url(/images/default/create_icons.png); width:30px; height:30px; background-position:-133px 0px; margin-left:43px; }
+#createNowPopup .dealEarn{ float:left; background-image:url(/images/default/create_icons.png); width:44px; height:30px; background-position:0px -33px; margin-left:43px; }
+#createNowPopup .dealShare{ float:left; background-image:url(/images/default/create_icons.png); width:29px; height:30px; background-position:-169px 0px; margin-left:43px; }
+#createNowPopup .instantPublish{ width:132px; clear:both; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; }
+#createNowPopup .clearHeight14{ height:14px; line-height:14px; clear:both; font-size:0px; }
+#createNowPopup .dealDash{ background-image:url(/images/default/deal_dash.gif); background-repeat:repeat-x; height:1px; clear:both; }
+#createNowPopup .createBtn{background-image:url(/images/default/create_icons.png); width:119px; height:23px; border:0px none; background-repeat:no-repeat; cursor:pointer; background-position:-47px -33px;}
+#createNowPopup .wid119{width:119px; margin:auto;}
+#createNowPopup .clearHeightN{ height:10px; line-height:10px; clear:both; font-size:0px;}
+/*EOF Create Deal Now Popup*/
+.activityHolder{overflow-y:scroll; position:relative;}
+.additional_bullet{background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:5px; height:5px; background-position:-120px -67px; display:block; float:left; margin-right:10px; margin-top:5px;}
+.wid440{width:430px; float:left;:}
+.days_ago_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:10px; color:#999999; text-align:right;}
+.recommendation_icon{ background-image:url(/images/default/newsfeed_icon.gif); background-repeat:no-repeat; width:12px; height:15px; background-position:-114px -73px; margin-right:5px; float:left; }
+
+.nodeal_first{display:none; clear:both;}
+.nodeal_second{display:none; clear:both;}
+#createNowPopupSelect{display:none; position:absolute;}
+.createNowPopupSelect{ clear:both; width:480px; float:left; height:auto; background-color:#e8e8e8; color:#767676; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:13px; opacity:0.9; filter: alpha(opacity=90); }
+#createNowPopupSelect .wid460{ width:460px; height:175px; margin:auto; }
+#createNowPopupSelect .wid460_first{ width:460px; height:120px; margin:auto; }
+#createNowPopupSelect .dealCreateOptionBg{ float:left; width:460px;  background-image:url(/images/default/create_popup_2_select.gif); background-repeat:no-repeat; height:23px; color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; }
+#createNowPopupSelect .dealCreateOptionBg2{ float:left; width:460px;  background-image:url(/images/default/create_popup_2.gif); background-repeat:no-repeat; height:23px; color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; }
+#createNowPopupSelect .dealCreateOptionBg2 span{ padding-left:10px; height:23px; line-height:23px; }
+#createNowPopupSelect .dealCreateOptionBg span{ padding-left:10px; height:23px; line-height:23px; }
+.onSelect{ width:458px; clear:both;  border-bottom:solid 1px #848484; border-right:solid 1px #848484; border-left:solid 1px #848484; height:auto; padding-top:10px;  background-color:#f2f2f2; }
+.onSelect ul{ list-style:none; padding:0px; margin:0px;  }
+.onSelect ul li{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; height:21px; padding-left:10px; width:400px; }
+.onSelect ul li:hover{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#ffffff; height:21px; background-color:#5e5e5e; padding-left:10px; cursor:pointer;  }
+.onSelect ul li a{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; height:21px; margin-left:10px; }
+.lh17{ height:17px; line-height:17px; clear:both; font-size:0px; }
+#createNowPopupSelect .createBtn{background-image:url(/images/default/create_icons.png); width:119px; height:23px; border:0px none; background-repeat:no-repeat; cursor:pointer; background-position:-47px -33px;}
+#createNowPopupSelect .dealDash{ background-image:url(/images/default/deal_dash.gif); background-repeat:repeat-x; height:1px; clear:both; width:460px; margin:auto; }
+.popup_char_red{ font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; font-weight:bold; color:#FF0000;}
+.inputWid251{width:251px; height:28px; line-height:28px; padding:0px 5px; border:1px solid #848484; font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; font-size:12px; color:#999999;}
+.cursor_none
+	{
+	 cursor:default;
+	}
+	.cursor_Pointer
+	{
+	cursor:pointer;
+	}

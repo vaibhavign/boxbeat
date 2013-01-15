@@ -1,0 +1,50 @@
+.email{width:258px; height:20px; line-height:20px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#999999; padding-left:5px; padding-right:5px;}
+.lh29{ height:29px; line-height:29px; clear:both; font-size:0px; }
+.bgLine{height:1px; line-height:1px; background-color:#cdcdcd; font-size:0px; clear:both; }
+a.unfollow{ font-size:11px; color:#00538a; text-decoration:underline; }
+a:hover.unfollow{ font-size:11px; color:#00538a; text-decoration:none; }
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+.lh13{ height:13px; line-height:13px; clear:both; font-size:0px; }
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px; }
+.fs0{ font-size:0px; }
+.wid141{ width:141px; float:left; }
+.wid326{ width:326px; float:left; }
+.settings_input_wid{width:258px; height:20px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-left:5px; padding-right:5px; *height:17px; *padding-top:3px; }
+.wid33{ width:33px; float:left; }
+.settingsName{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; padding-top:5px; }
+.useOptional{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; }
+.marBot5{margin-bottom:5px;}
+.padTop5{ padding-top:5px; }
+.lh36{ height:36px; line-height:36px; clear:both; font-size:0px; }
+.lh41{ height:41px; line-height:41px; clear:both; font-size:0px; }
+.settings_input_cur{width:168px; height:20px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-left:5px; padding-right:5px; *padding-top:3px; *height:17px; }
+.lh9{ height:9px; line-height:9px; clear:both; font-size:0px; }
+.rightBlockText{ width:302px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; text-align:left; word-wrap:break-word; }
+.leftArrow{ float:left; background-image:url(/images/default/header_sprite.png); width:4px; height:7px; background-position:-102px -128px; margin-top:5px; }
+.wid19{ width:19px; float:left; }
+a.twitter{ background-image:url(/images/default/header_sprite.png); width:16px; height:16px; display:block; background-position:-139px -43px; text-decoration:none; margin-right:5px; }
+a.facebook{ background-image:url(/images/default/header_sprite.png); width:16px; height:16px; display:block; background-position:-117px -43px; text-decoration:none; margin-right:5px; }
+a.twitterNav{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#767676; text-decoration:none; font-weight:bold; padding-right:5px; }
+a:hover.twitterNav{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#767676; text-decoration:underline; padding-right:5px; }
+a.naming{ font-weight:normal; color:#00538a; text-decoration:underline; font-size:11px; }
+a:hover.naming{ font-weight:normal; color:#00538a; text-decoration:none; font-size:11px; }
+.exploreText{ font-family:Verdana, Geneva, sans-serif; font-size:20px; font-weight:normal; color:#000000; }
+.checkBoxActive{ float:left; background-image:url(/images/default/header_sprite.png); width:12px; height:12px; background-position:-94px -14px;  }
+.padTopFour{ padding-top:4px; }
+a.news{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676; text-decoration:underline; padding-left:4px; }
+a:hover.news{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676; text-decoration:none; padding-left:4px; }
+.checkBoxInactive{ float:left; background-image:url(/images/default/header_sprite.png); width:12px; height:12px; background-position:-94px 0px;  }
+.padLeft15{ padding-left:15px; }
+.selection{ font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676; font-weight:bold; padding-left:4px; }
+.lh48{ height:48px; line-height:48px; clear:both; }
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px; }
+.lh17{ height:17px; line-height:17px; clear:both; font-size:0px; }
+.peopleListLeftPan{ width:675px; float:left; }
+.peopleListRightPan{ width:325px; float:left; }
+.inputMsg { float:left; padding-top:3px; }
+.note_text{font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; color:#999999;}
+a.change_image{color:#010101; font-family:"Trebuchet MS", Arial, helvetica; font-size:11px; text-decoration:underline;}
+.cursor_pointer{cursor:pointer}
+.alert{color:#F00; font-size:12px;}
+

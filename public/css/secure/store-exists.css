@@ -1,0 +1,29 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+
+/* Trail Header Css Start From here*/
+.trailheader_container{ width:1000px; margin:auto; clear:both; height:75px; border-bottom:1px solid #d8d8d8;}
+.trailheader_container .lh18{ height:18px; line-height:18px; clear:both; font-size:0px;}
+.trailheader_container .slogentext{color:#0083cb; font-family:Verdana, Arial, Helvetica, sans-serif; float:left; font-weight:bold; padding-left:16px; line-height:25px;}
+/* Trail Header Css Ends here*/
+
+/*Active Store Css Start Form here*/
+.activedemostore_container {width:1000px; margin:auto; clear:both;}
+.activedemostore_container .lh30{ height:30px; clear:both; font-size:0px;}
+.activedemostore_container .blueHeading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#00538a;}
+.activedemostore_container .lh15{ line-height:15px; height:15; clear:both; font-size:0px;}
+.activedemostore_container .headlinetext{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939;}
+.activedemostore_container .lh12{ line-height:12px; height:12; clear:both; font-size:0px;}
+.activedemostore_container .lh50{ line-height:50px; height:50; clear:both; font-size:0px;}
+.activedemostore_container .activedemostore_content{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.activedemostore_container .clicklink{ color:#00538a;}
+.activedemostore_container .clicklink:hover{ text-decoration:none;}
+/*Active Store Css Ends  here*/
+.headerText{ font-family:"Trebuchet MS"; font-size:22px; color:#000; font-weight:normal;}
+.solidBorder{ clear:both; background:#d8d8d8; height:1px; font-size:0px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px;}

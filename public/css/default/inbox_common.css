@@ -1,0 +1,326 @@
+/*customer dispute details css starts here*/
+body{ margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+a:focus{border:0px none;}
+input{outline:none;}
+textarea{outline:none;}
+.clearBoth{clear:both;}
+.floatLeft, .contentBlueHeading, .topbarheading, .search_bg { float:left; }
+.floatRight{float:right;}
+/*---------------------Body Css Start From here--------------------------*/
+.main-top-heading{ font-family:Arial, Helvetica, sans-serif; font-size:28px; font-weight:bold; color:#393939;}
+.desc-text{font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#767676;}
+/*line-heights begins*/
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh35{ height:35px; line-height:35px; clear:both; font-size:0px;}
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh3{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.lh2{ height:3px; line-height:3px; clear:both; font-size:0px;}
+.lh45{ height:45px; line-height:45px; clear:both; font-size:0px;}
+.lh40{ height:40px; clear:both; font-size:0px;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px; }
+.lh85{ height:85px; line-height:85px; clear:both; font-size:0px; }
+.lh42{ height:42px; line-height:42px; clear:both; font-size:0px; }
+.lh30{ height:30px; line-height:30px; clear:both; font-size:0px; }
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh60{ height:60px; line-height:60px; clear:both; font-size:0px; }
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh28{ height:28px; line-height:28px; clear:both; font-size:0px;}
+.lh37{ height:37px; line-height:37px; clear:both; font-size:0px;}
+.lh23{ height:23px; line-height:23px; clear:both; font-size:0px; }
+.lh80{ height:80px; line-height:80px; clear:both; font-size:0px; }
+/*line-heights ends*/
+/* wids begins here*/
+.wid10{ float:left; width:10px;}
+.wid145{ float:left; width:145px;}
+.wid288{ width:288px; float:left;}
+.wid182{ width:182px; float:left;}
+.wid815{ width:815px; float:left;}
+.wid920{ width:920px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; height:20px; line-height:20px; word-wrap:break-word;}
+.wid5{ width:5px; float:left;}
+.wid7{ width:7px; float:left;}
+.wid25{ width:25px; float:left;}
+.wid108{ width:108px; float:left;}
+.wid16{ width:16px; float:left;}
+.wid12{ width:12px; float:left;}
+.wid30{ width:30px; float:left;}
+.wid20{ width:20px; float:left;}
+/* wids ends here*/
+.backtoarrow{ background-image:url(/images/default/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+a.hyperLink13{color:#00538a; font-size:13px; text-decoration:underline; height:22px; line-height:22px;}
+a:hover.hyperLink13{color:#00538a; font-size:13px; text-decoration:none;}
+.bottomline{border-bottom:1px solid #e1e1e1; height:1px; line-height:1px; font-size:0px; display:block;}
+.table_heading{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+/*----------------------------LeftBock Start from here---------------------------*/
+#main-block-details{clear:both;}
+#main-block-details ul{ margin:0px; padding:0px;}
+#main-block-details ul li{ margin:0px; padding:0px; list-style-type:none; float:left;}
+#main-block-details ul li.selected{background-color:#f5f5f5; }
+.dotted_border{ background:url(/images/default/dotted_border.png) repeat-x; clear:both;}
+.dotted_border1{ background:url(/images/default/dotted_border.png) repeat-x; height:1px; clear:both; font-size:0px;}
+.italics{ font-style:italic;}
+.conversation-container{ width:1000px; margin-top:12px; }
+.user_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.user_link:hover{ font-size:12px; color:#00538a; font-weight:bold; }
+.date_text{color:#999999; font-size:11px; float:left;}
+.dategap{ width:12px; float:left;}
+.downloadText{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#393939; font-weight:bold;}
+.bottomLinks{ clear:both;}
+.bottomLinks ul{ margin:0px; padding:0px;}
+.bottomLinks ul li{ margin:0px 0 0 28px; padding:0px; list-style-type:none; height:20px; line-height:20px;}
+.bottomLinks ul li a{ font-size:12px; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal;}
+.bottomLinks ul li a:hover{ text-decoration:none;}
+/*----------------------------LeftBock Ends here---------------------------*/
+/*----------------------------Message Box Start from here---------------------------*/
+/*.msgboxbg{ width:944px;  float:left; border:1px solid #cdcdcd; height:34px;}
+.msgboxbg textarea{ width:925px; height:25px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+.reply_btn{ float:right; margin-top:7px; }*/
+/*----------------------------Message Box Ends here---------------------------*/
+/*----------------------------Action Drop Down Start Form here--------------------*/
+#actiondropdown{ width:154px; border:1px solid #9fc6da; background-color:#daeaf4; position:absolute; margin:24px 0px 0px 740px; left:0px; z-index:9997; display:none;}
+#actiondropdown ul{ margin:0px; padding:0px;}
+#actiondropdown ul li{ margin:0px; padding:0px; list-style-type:none; padding-left:8px;  *height:auto; height:20px; margin-bottom:5px;}
+#actiondropdown ul li a{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:none}
+#actiondropdown ul li.first{padding-top:10px;}
+#actiondropdown ul li a:hover{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#393939; text-decoration:underline}
+/*----------------------------Action Drop Down Ends here--------------------*/
+/*---------------------Body Css Ends here--------------------------*/
+.table-top-bar{ height:27px; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; height:27px; line-height:27px; color:#ffffff; background:#989898;}
+.orderDetails{ float:left; width:115px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.reason_itemDetails{ width:261px; float:left; padding:12px 15px 0 10px; word-wrap:break-word;}
+.disputeRaised{ float:left; width:155px; padding:12px 15px 0 10px; word-wrap:break-word;}
+.Status{ float:left; width:85px; padding:12px 0px 0 10px; word-wrap:break-word;}
+.borderRight{ width:1px; border-right:1px dashed #989898; height:107px; float:left;}
+.content-text12Lh18{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; height:18px; line-height:18px;}
+.conversation_liContainer{ width:990px; padding:0 0 0 10px; margin:12px 0 0 0;}
+.content_block{ float:left; margin-left:8px;  font-size:12px; color:#393939; padding-bottom:17px;}
+/*customer dispute details css ends here*/
+/*customer dispute listing starts from here*/
+/*main body css starts from here*/
+#request_listing_mainContainer{ width:1000px; margin:auto;}
+.contentBlueHeading{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#00538a; text-decoration:none;}
+.rightSearchBoxBorder{ width:241px; height:20px; border:#b3b3b3 solid 1px; border-right:0px none;}
+.rightSearchBoxInputText{width:220px; height:18px; padding:0 5px 0 5px; border:0px none;}
+.dividerLine{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+/*Left panel starts from here*/
+.left_panel{ width:738px; float:left; }
+.listingImgContainer{ width:36px; height:36px; margin:0 22px 0 10px; float:left;}
+a.user_link{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:bold; height:14px; line-height:14px; text-decoration:none;}
+a:hover.user_link{ }
+.content-text12Lh22{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; height:22px; line-height:22px;}
+.contentItalicsText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; font-style:italic;}
+.requestOpenedText{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#999999; font-weight:normal;}
+/*bottom navigation starts*/
+.assign_product_table_bottom_button{height:21px; border:#d4d4d4 1px solid; padding:0 7px 0 7px;  background-color:#f1f1f1; float:left;}
+.assign_product_table_bottom_buttonSelected{height:21px; border:#b1d1e6 1px solid; padding:0 7px 0 7px;  background-color:#e9f2f7; float:left;}
+a.assign_product_table_bottomLink{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:bold;height:21px; line-height:21px; text-decoration:none;}
+a.assign_product_table_bottomLinkSelected{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:bold;height:21px; line-height:21px; text-decoration:none; float:left;}
+.assign_product_dotText{ color:#767676;font-size:12px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; width:20px; text-align:center;}
+/*bottom navigation ends*/
+/*Left panel ends here*/
+/*right panel starts from here*/
+.right_panel{ width:261px; float:left;}
+.right_panel ul{ margin:0px; padding:0px;}
+.right_panel_links { clear:both; }
+.right_panel_links ul li{ margin:0px; list-style-type:none; padding:0 0 0 20px; height:30px; line-height:30px;}
+.right_panel_links ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#00538a; text-decoration:none; }
+.selected { background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-size:13px;}
+.right_panel_links ul li a:hover{ text-decoration:underline;}
+/*right panel ends here*/
+/*main body css ends from here*/
+.borderBottom{  border-bottom: 1px solid #E1E1E1;   display: block;   font-size: 0;   height: 1px; clear:both;   line-height: 1px;}
+/*========================================customer dispute listing ends here==============================================*/
+/*======================================== customer opens a dispute css starts here================================*/
+/*main css starts from here*/
+#request_for_return_center{ width:1000px; margin:auto; }
+.bgLine1{ background-color:#e1e1e1; height:1px; line-height:1px; clear:both; font-size:0px; }
+.imgContainer{ width:46px; height:45px; border:#e1e1e1 1px solid; float:left;}
+.content-text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;}
+.contentSubHeading{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#393939; font-weight:bold;height:25px; line-height:25px;}
+.wid37{ width:37px; float:left; padding:0 0 0 14px; }
+.textEditor{ width:601px; float:left; height:147px; border:1px #848484 solid; margin:22px 0 3px 0; overflow:hidden;}
+.buttons{ width:382px; margin:auto;}
+/* main css starts from here*/
+.cursor{ cursor:pointer;}
+a.blueHyperLink{ color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; text-decoration:underline;height:20px; line-height:20px;}
+a:hover.blueHyperLink{ text-decoration:none;}
+.exampleAdjustment{ width:25px; float:left;}
+.descriptionText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal; width:824px; word-wrap:break-word; height:18px; line-height:18px;}
+.input_checkbox{ margin-left:-9999px;}
+.checkbox_off{ background:url(/images/default/check_off.png); width:13px; height:13px; float:left;}
+label{ margin:0px; padding:0px;}
+.attactment_img{ background:url(/images/default/attachment_img.png); width:12px; height:12px; display:block; margin:5px 0 0 20px; float:left;}
+.topGreyBox{ background:#f1f1f1; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; padding:18px 0 18px 20px; float:left; width:980px;}
+.file_kbText{font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676;height:20px; line-height:20px;}
+/* customer opens a dispute css ends here*/
+/*open a dispute css starts */
+.order_item_container{ width:722px; margin:auto; background-color:#f5f5f5; height:102px;}
+.checkbox_on{ background:url(/images/default/attachment_img.png); width:13px; height:13px; float:left;}
+.wid85{ width:85px; float:left;}
+.content-text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; font-weight:normal;height:20px; line-height:20px;}
+.wid117{ float:left; width:117px;}
+.inputField171{ width:164px; border:#848484 1px solid; height:22px; padding:0 0 0 5px; margin:0 20px 0 0;}
+a.hyperLink12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:normal; text-decoration:underline; height:20px; line-height:20px;}
+a:hover.hyperLink12Lh20{ text-decoration:none; }
+.errorMsgText{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#ff0000; font-weight:normal;}
+.continue_cancel_btn{ width:165px; margin:auto;}
+#open_a_dispute_container{ width:1000px; margin:auto;}
+/*open a dispute css ends */
+.listing_selectedBg{ background:#F5F5F5;}
+.bgLine{ width:458px; height:1px; background-color:#d9d9d9; clear:both; margin:auto;}
+input[type="image"]{ cursor:pointer; outline:none;}
+a:hover{ outline:none;}
+.lh6{ height:6px; line-height:6px; font-size:0px; clear:both;}
+.addChangeReq{ width:487px; height:31px; background-color:#767676; font-family:Verdana, Geneva, sans-serif; font-size:14px; font-weight:bold; color:#FFF; text-decoration:none;}
+.marginTop{ margin-top:7px;}
+.innerDiv{ width:440px; margin:auto;}
+.contentText{ color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left; height:25px; line-height:25px;}
+.validationText{ color:#ff0000; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; float:left;height:25px; line-height:25px;}
+.inputField300{ width:295px; height:22px; border:#848484 solid 1px; float:left; margin:0 5px 0 0; padding:0 0 0 5px;}
+.wid90{ width:90px; float:left;}
+.btn_container{ float:right; width:128px; margin:0 32px 0 0;}
+.inputField241{ width:234px; height:22px; border:#848484 solid 1px; float:left; padding:0 0 0 5px;}
+.exampleText{ color:#767676; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; height:25px; line-height:25px;}
+.wid96{ width:96px; float:left;}
+.wid15{ width:15px; float:left;}
+.inputField185{ width:178px; height:22px; border:#848484 solid 1px; float:left; padding:0 0 0 5px; margin:0 3px 0 0; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; height:22px; line-height:22px;}
+a.cancelHyperlink{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#333333; height:24px; line-height:24px;}
+a:hover.cancelHyperlink{ text-decoration:none;}
+#lightbox{background-color:#fff; opacity:0.9;filter:alpha(opacity=90);}
+.selectPopups{width:500px; height:366px; border:6px solid #9f9f9f;}
+/*Respond to request*/
+/*-------------POPUP CSS*/
+.outerBorder{width:488px; border:6px solid #9f9f9f; border-right:7px solid #9f9f9f;}
+.blackBorder{width:487px; border:1px solid #393939;}
+.wid17{ width:17px; float:left;}
+.wid22{ width:22px; float:left;}
+.wid449{ width:449px; float:left;}
+.textArea443{ width:435px; border:1px solid #848484; height:60px; padding:0 0 0 5px;}
+.wid250{ width:250px; float:left;}
+.inputField112 {border: 1px solid #848484; height: 20px; line-height: 20px; padding-left: 5px; width: 104px;}
+/*-----------------------SHIPPING ADDRESS CHANGE CSS----------------------------*/
+/*---------------------Body Css Start From here--------------------------*/
+#bodytopbar{width:1000px; margin:auto; z-index:0; position:absolute;}
+#bodytopbar .topbarheading{ font-size:18px; color:#00538a;}
+#bodytopbar .backtoarrow{ background-image:url(/images/default/icons.png); width:6px; height:11px; background-repeat:no-repeat; background-position:-62px -56px; display:block; float:left; margin:6px 7px 0px 18px;}
+#bodytopbar .back_link{color:#00538a; font-size:13px; text-decoration:underline; line-height:22px;}
+#bodytopbar .back_link:hover{color:#00538a; font-size:13px; text-decoration:none;}
+#bodytopbar .actionbuttonlick{  background-image:url(/images/default/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -125px; display:block; float:left; position:relative; z-index:9999;}
+#bodytopbar .actionbuttondefault{background-image:url(/images/default/icons.png); width:101px; height:25px; background-repeat:no-repeat; background-position:0px -98px; display:block; float:left; position:relative; z-index:9996;}
+#bodytopbar .actionbuttonlick:focus{ outline:none; border:0px none;}
+/*----------------------------LeftBock Start from here---------------------------*/
+#leftBlock{ width:738px; float:left;}
+#leftBlock .email_text{ font-size:12px; color:#767676; float:left; margin-top:6px; }
+#leftBlock .email_heading{ font-size:12px; color:#767676; float:left; margin-left:6px; margin-top:6px; width:144px; font-weight:bold;}
+#leftBlock .email_seperator{ font-size:12px; color:#767676; float:left; font-weight:bold; width:16px; margin-top:6px;}
+#leftBlock ul{ margin:0px; padding:0px;}
+#leftBlock ul li{ margin:0px; padding:0px; list-style-type:none; float:left; margin-top:0px;}
+#leftBlock ul li.selected{background-color:#f5f5f5;}
+#leftBlock ul li.selected:hover .unread_link{  cursor:pointer;}
+#leftBlock ul li:hover .unread_link{  cursor:pointer;}
+#leftBlock ul li:hover .me_link{  }
+.main_container .content_block .wid440{ width:440px; float:left; color:#393939; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; line-height:18px; word-wrap:break-word; } 
+.main_container{ width:718px; float:left; margin-top:12px; padding:0 0 0 0px;}
+.lh32{ height:32px; line-height:32px; clear:both; font-size:0px;}
+.main_container .innerblock{ width:695px; margin:auto; padding-top:12px;}
+.main_container .content_block{ width:630px; float:left; margin-left:20px;  font-size:12px; color:#393939; padding-bottom:17px;}
+.main_container .me_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.main_container .content_text{font-size:12px; color:#393939; width:745px; float:left; word-wrap:break-word;}
+.main_container .content_text_alert{font-size:12px; color:#393939; width:745px; float:left; word-wrap:break-word;}
+.content_textpop{width:470px; float:left; word-wrap:break-word;}
+.main_container .me_link:hover{ font-size:12px; color:#00538a; font-weight:bold; }
+.main_container .rightblock{width:121px; float:left;}
+.main_container .date_text{color:#999999; font-size:11px; float:left;}
+.main_container .dategap{ width:12px; float:left;}
+/*----------------------------LeftBock Ends here---------------------------*/
+/*----------------------------Message Box Start from here---------------------------*/
+#msgbox{width:729px; /*margin-left:21px;*/  float:left;}
+#msgbox .imagecontainer{width:36px; height:36px; float:left; margin-right:8px;}
+#msgbox .msgboxbg{ width:673px;  float:left; border:1px solid #cdcdcd; min-height:34px;}
+#msgbox .msgboxbg textarea{ width:660px; height:26px; margin:4px 0px 0px 4px; border:0px none;  overflow:hidden; font-family:Verdana, Geneva, sans-serif; font-size:11px; color:#767676;}
+#msgbox .reply_btn{ float:right; margin:7px 10px 0 0; }
+/*----------------------------Message Box Ends here---------------------------*/
+/*---------------------Body Css Ends here--------------------------*/
+.curpointer{cursor:pointer;}
+
+
+/*----------------------------LeftBlock Start here inbox.css---------------------------*/
+.dotted_borders{border-bottom:1px dotted #999999; clear:both;}
+.listing_main_container{ /*width:738px;*/ float:left;}
+.listing_main_container .innerblock{ width:716px; margin:auto; padding-top:12px; padding-left:21px;}
+.imagecontainer{width:36px; height:36px; float:left; }
+.listing_main_container .content_block{ width:637px; float:left; margin-left:22px;  font-size:12px; color:#393939; padding-bottom:17px; padding-right:21px;}
+.listing_main_container .unread_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.listing_main_container .content_text{font-size:12px; color:#393939; width:637px; float:left; word-wrap:break-word; font-weight:normal; line-height:18px;}
+
+.listing_main_container .content_text_alert{font-size:12px; color:#393939; width:637px; float:left; word-wrap:break-word; font-weight:normal; line-height:18px;}
+.listing_main_container .unread_link:hover{ font-size:12px; color:#00538a; font-weight:bold; }
+.listing_main_container .selected .unread_link{ font-size:12px; color:#000000; font-weight:bold; text-decoration:none;}
+.listing_main_container .selected .unread_link:hover{ font-size:12px; color:#000000; font-weight:bold; }
+.listing_main_container .unread_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;}
+.listing_main_container .unread_link:hover{ font-size:12px; color:#00538a; font-weight:bold; }
+.listing_main_container .date_text{color:#999999; font-size:11px; float:left;}
+.listing_main_container .fewsecondtext{ font-size:11px; color:#393939; float:left; font-weight: normal; }
+.listing_main_container .read_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-81px -67px; float:left; cursor:pointer; margin:1px 7px 0px 16px;}
+.listing_main_container .read_icon:hover{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-94px -67px; float:left;}
+.listing_main_container .unread_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-94px -54px; float:left; margin:1px 7px 0px 16px; cursor:pointer;}
+.listing_main_container .unread_icon:hover{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-94px -67px; float:left;}
+.listing_main_container .delete_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-69px -55px; float:left; cursor:pointer; margin:1px 0px 0px 0px;}
+.listing_main_container .delete_icon:hover{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:12px; height:12px; background-position:-69px -68px; float:left; cursor:pointer; margin:1px 0px 0px 0px;}
+.listing_main_container .reply_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:9px; height:8px; background-position:-57px -69px; float:left; cursor:pointer; margin:5px 7px 0px 0px;}
+.listing_main_container .bookmark_icon:hover{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:17px; height:16px; background-position:-47px -81px; float:left; cursor:pointer; margin:0px 0px 0px 0px;}
+.listing_main_container .bookmark_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:17px; height:16px; background-position:-30px -81px; float:left; cursor:pointer; margin:0px 0px 0px 0px;}
+.listing_main_container .unbookmark_icon:hover{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:17px; height:16px; background-position:-30px -81px; float:left; cursor:pointer; margin:0px 0px 0px 0px;}
+.listing_main_container .unbookmark_icon{ background-image:url(/images/admin/chat_icon.png); background-repeat:no-repeat; width:17px; height:16px; background-position:-47px -81px; float:left; cursor:pointer; margin:0px 0px 0px 0px;}
+.listing_main_container .me_link{ font-size:12px; color:#00538a; font-weight:bold; text-decoration:none;border:1px solid #ff0000;}
+.listing_main_container .me_link:hover{ font-size:12px; color:#00538a; font-weight:bold; }
+.listing_main_container .rightblock{width:121px; float:left;}
+.listing_main_container .dategap{ width:12px; float:left;}
+/*----------------------------LeftBlock End here inbox.css---------------------------*/
+
+/*----------------------------RightBlock Start here inbox.css---------------------------*/
+.left_border{ border-left:1px solid #cdcdcd;}
+#rightblock{ width:261px; float:left;}
+#rightblock .inboxContainer{ float:left; margin-top:13px;}
+#rightblock .start_btn{ margin-left:19px; float:left; margin-bottom:9px;}
+#rightblock .dispute_btn{ margin-left:19px; clear:both; }
+#rightblock .rightmenu{ clear:both; margin-top:13px; width:261px;}
+#rightblock .rightmenu ul{ margin:0px; padding:0px;}
+#rightblock .rightmenu ul li{ margin:0px; padding:0px; list-style-type:none; font-size:13px; color:#00538a; height:30px; line-height:30px; padding-left:21px; cursor:pointer;}
+#rightblock .rightmenu ul li a{ font-size:13px; color:#00538a; height:30px; line-height:30px; cursor:pointer; font-family:Arial, Helvetica, sans-serif; text-decoration:none}
+#rightblock .rightmenu ul li:hover a{ font-size:13px; color:#00538a; height:30px; line-height:30px; cursor:pointer; font-family:Arial, Helvetica, sans-serif; text-decoration:underline;}
+#rightblock .rightmenu ul li a:hover{ font-size:13px; color:#00538a; height:30px; line-height:30px; cursor:pointer; font-family:Arial, Helvetica, sans-serif; text-decoration:underline;}
+#rightblock .rightmenu ul li.selected{ font-size:13px; color:#ffffff; height:30px; line-height:30px; padding-left:21px; background-color:#393939; font-weight:bold; cursor:default;}
+#rightblock .rightmenu ul li.selected a{ font-size:13px; color:#ffffff; height:30px; line-height:30px; background-color:#393939; font-weight:bold; cursor:default; text-decoration:none;}
+/*----------------------------RightBlock End here inbox.css---------------------------*/
+
+/*----------------------------Paging Css Start From here--------------------*/
+#pagination{float:right; margin-right:26px;}
+#pagination .prev{ float:left; width:41px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px; }
+#pagination .singleNum{ float:left; width:21px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px; }
+#pagination .singleActive{ float:left; width:21px; height:18px; background-color:#e9f2f7; border:1px solid #b1d1e6; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-align:center; padding-top:5px; margin-right:7px; }
+#pagination .doubleNum{ float:left; width:25px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; margin-right:7px;  }
+#pagination .doubleActive{ float:left; width:25px; height:18px; background-color:#e9f2f7; border:1px solid #b1d1e6; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#00538a; text-align:center; padding-top:5px; margin-left:7px; }
+#pagination .next{ float:left; width:41px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+#pagination a.pageinationNav{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676; font-weight:bold; text-decoration:none; }
+#pagination .dottedtLeft{ float:left; width:21px; height:18px; background-color:#f1f1f1; border:1px solid #d4d4d4; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+#pagination .proccessingDot{ float:left; width:32px; height:18px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#767676; text-align:center; padding-top:5px; }
+/*----------------------------Paging Css Ends here--------------------*/
+#rightblock .rightmenu .bookmark_icon {
+    background-image: url(/images/admin/chat_icon.png);
+    background-position: -47px -81px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    float: left;
+    height: 16px;
+    margin: 6px 0 0 8px;
+    width: 17px;
+}
+.selected-detail{background-color:#f5f5f5; }
+.curspointer { cursor:pointer; }
+.messageslist div.maintxt { width:520px; word-wrap:break-word; float:left; padding-bottom:15px; }
+.dispute  a{ margin-left:20px; font-size:12px; color:#00538a; cursor:pointer; font-family:Arial, Helvetica, sans-serif; text-decoration:underline;}
+.dispute  a:hover {margin-left:20px;  font-size:12px; color:#00538a;  cursor:pointer; font-family:Arial, Helvetica, sans-serif; text-decoration:none;}
+.paginationGap { cursor:pointer; }

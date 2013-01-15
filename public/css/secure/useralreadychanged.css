@@ -1,0 +1,43 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+input[type="image"]{ cursor:pointer;}
+
+/*=============== LEFT PANEL START FROM HERE========================*/
+.editBasicInfoRightPanel{ width:260px; float:left; }
+.editBasicInfoRightPanel ul{  margin:0px; padding:0px;}
+.editBasicInfoRightPanel ul li{  margin:0px; padding:0px 0 0 19px; height:30px; list-style-type:none; line-height:30px; }
+.editBasicInfoRightPanel ul li a{ font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#00538a; font-weight:bold; text-decoration:none; line-height:30px;}
+.editBasicInfoRightPanel ul li.selected{ background:#393939; color:#ffffff; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold;}
+.lh25{ height:25px; clear:both; font-size:0px;}
+
+/*=============== LEFT PANEL ENDS HERE========================*/
+
+/*===================RIGHT PANEL STARTS FROM HERE====================*/
+.editBasicInfoLeftPanel{ width:715px; padding:0px 0px 0 24px; border-left: #cdcdcd 1px solid; float:left;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.content_text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.lh10{height:10px; clear:both; font-size:0px; line-height:10px}
+.navArrow{ background:url('/images/secure/accountsetting/nav_arrow.png'); width:8px; height:13px; float:left; margin:6px 12px 0 12px;}
+.content_text15Lh25{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939; line-height:25px; }
+a.hyperLinkBlue13{ font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue13{ text-decoration:none;}
+.backArrow{ background:url(/images/secure/accountsetting/left_arrow_icon.png); width:6px; height:11px; float:left; margin:3px 10px 0 0px;}
+.wid139{ width:139px; float:left;}
+.lh40{ height:40px; clear:both; font-size:0px; }
+.wid160{ width:160px; float:left;}
+a.hyperLinkBlue12Lh25{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal; line-height:25px;}
+a:hover.hyperLinkBlue12Lh25{ text-decoration:none;}
+.inputWid153{ width:146px; height:21px; padding:0 0 0 5px; float:left; border:#848484 1px solid; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.borderSeprator{ width:348px; border-bottom:1px solid #dedede; float:left; font-size:0px;	}
+.wid114{ width:114px; float:left;}
+.grey_text12Lh20{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+.wid145{ width:145px; float:left;}
+.grey_text14{font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal;}
+.lh15{ height:15px; line-height:15px; font-size:0px; clear:both;}
+/*===================RIGHT PANEL ENDS HERE====================*/

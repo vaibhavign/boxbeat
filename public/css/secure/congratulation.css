@@ -1,0 +1,37 @@
+body{ margin:0px; padding:0px;}
+html{overflow-y:scroll;}
+img{border:0px none;}
+
+
+
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+
+/* Trail Header Css Start From here*/
+.trailheader_container{ width:1000px; margin:auto; clear:both; height:75px; border-bottom:1px solid #d8d8d8;}
+.trailheader_container .lh18{ height:18px; line-height:18px; clear:both; font-size:0px;}
+.trailheader_container .slogentext{color:#0083cb; font-family:Verdana, Arial, Helvetica, sans-serif; float:left; font-weight:bold; padding-left:16px; line-height:25px;}
+/* Trail Header Css Ends here*/
+
+/*congratulation Page Css Start From here*/
+.congratulation_container{ width:1000px; margin:auto; clear:both;}
+.congratulation_container .lh30{ height:30px; line-height:30px; clear:both;}
+.congratulation_container .lh35{ height:35px; line-height:35px; clear:both;}
+.congratulation_container .lh60{ height:60px; line-height:60px; clear:both;}
+.congratulation_container .lh55{ height:55px; line-height:55px; clear:both;}
+.congratulation_container .congratulation_text{ font-family:Arial, Helvetica, sans-serif; font-size:18px; color:#39a100;}
+.congratulation_container .congratulation_desc{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#393939; padding-top:8px;}
+.congratulation_container .congratulation_innercontainer{ width:705px; margin:auto; clear:both;}
+.congratulation_container .congratulation_innercontent{ font-family:Arial, Helvetica, sans-serif; font-size:15px; color:#767676; text-align:center; padding-top:10px;}
+.borderbottom{border-bottom:1px dotted #242424; clear:both; height:1px; line-height:1px; font-size:0px;  }
+.congratulation_container .congratulation_content{ font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#393939; text-align:center;}
+.congratulation_container .phoneno{ font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold;  color:#767676; }
+.congratulation_container .support_link{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:underline;}
+.congratulation_container .support_link:hover{color:#00538a; font-family:Arial, Helvetica, sans-serif; font-size:12px; text-decoration:none;}
+/*congratulation Page Css Ends here*/
+.headerText{ font-family:"Trebuchet MS"; font-size:22px; color:#000; font-weight:normal;}
+.solidBorder{ clear:both; background:#d8d8d8; height:1px; font-size:0px;}
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px;}
+.manageyourstore{ background:url(/images/secure/demo/manage_yourstore_btn.png) no-repeat; width:218px; height:33px; font-size:0px; border:0px none; outline:none; display:block;}
+.viewyourstore{ background:url(/images/secure/demo/view_yourstore_btn.png) no-repeat; width:190px; height:33px; font-size:0px; border:0px none; outline:none; display:block;}

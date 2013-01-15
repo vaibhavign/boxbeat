@@ -1,0 +1,52 @@
+html { overflow-y:scroll; }
+body {
+	margin:0px;
+	padding:0px;
+	font-size:12px;
+	height:100%;
+}
+#headerContainer { font-family:Verdana, Geneva, sans-serif; width:1000px; margin:auto; }
+.mainContainer { font-family:Arial, Helvetica, sans-serif; width:1000px; margin:auto; }
+.floatLeft { float:left; }
+.floatRight { float:right; }
+.clearBoth { clear:both; }
+a.headerNav { color:#00538a; text-decoration:none; display:block; }
+a:hover.headerNav { color:#00538a; text-decoration:underline; display:block; }
+a.headerNavBlack { color:#323232; text-decoration:none; display:block; }
+a:hover.headerNavBlack { color:#323232; text-decoration:underline; display:block; }
+a.headerNavChild { color:#00538a; text-decoration:none; display:block; padding-left:10px; }
+a:hover.headerNavChild { color:#00538a; text-decoration:underline; display:block; }
+
+a.logo_header{ background-image:url(/images/default/logo.png); background-repeat:no-repeat; width:120px; height:42px; border:0px none; text-decoration:none; display:block; }
+a:hover.logo_header{ background-image:url(/images/default/logo.png); background-repeat:no-repeat; width:120px; height:42px; border:0px none; text-decoration:none; display:block; background-position:0px -42px; }
+.logoPosition { float:left; width:152px; padding-top:28px; }
+.headerTop { border-bottom:1px solid #d8d8d8; height:39px; clear:both; }
+.headerTopGap { height:14px; }
+.navExplorer { background:url(/images/default/header_sprite.png) no-repeat; background-position:0 0; display:block; float:left; width:21px; height:13px; font-size:12px; }
+.navProfile { background:url(/images/default/header_sprite.png) no-repeat; background-position:-21px 0; display:block; float:left; width:18px; height:13px; font-size:12px; }
+.navInbox { background:url(/images/default/header_sprite.png) no-repeat; background-position:-39px 0; display:block; float:left; width:23px; height:13px; font-size:12px; }
+.navManage { background:url(/images/default/header_sprite.png) no-repeat; background-position:-62px 0; display:block; float:left; width:22px; height:13px; font-size:12px; }
+.headerNavGap { float:left; width:30px; }
+.headerRightNav { float:right; color:#a0a0a0; font-size:11px; }
+.headerRightBlock { float:left; width:848px; }
+.headerBot { clear:both; height:38px; }
+.browseDept { float:left; width:653px; height:38px; line-height:38px; }
+.browDeptTxt { padding-right:20px; float:left; }
+.headerBotSep { background-image:url(/images/default/nav_separator.png); width:1px; height:38px; line-height:38px; float:left; }
+.searchContainer { width:436px; padding:0 20px; float:left; }
+.headerSearchBox { width:351px; height:23px; border:1px solid #CCC; padding-left:10px; font-size:11px; color:#767676; line-height:11px; float:left; }
+.searchBtn { margin-left:2px; float:left; }
+.myaccTop { height:12px; clear:both; }
+.myacctxt { padding:0px 18px; float:left; }
+.navMyCart { background:url(/images/default/header_sprite.png) no-repeat; background-position:0 -13px; display:block; float:left; width:21px; height:15px; }
+.inputSearchBox { border:0px none; width:335px; float:left; margin-top:3px; font-size:11px; color:#767676; font-family:Verdana, Geneva, sans-serif; }
+.searchTopGap { height:7px; line-height:7px; font-size:7px; }
+.headerBotBorder { clear:both; background:url(/images/default/border_bot_gr.gif) repeat-x; width:850px; height:2px; line-height:2px; font-size:2px; }
+img{border:0px none;}
+.headerGapBot { height:35px; clear:both; }
+.curspointer { cursor:pointer; }
+a:focus { outline:0px none; }
+input:focus { outline:0px none; }
+.fwNormal{ font-weight:normal; }
+.fwBold{ font-weight:bold; }
+.bgLine{height:1px; line-height:1px; background-color:#cdcdcd; font-size:0px; clear:both; }

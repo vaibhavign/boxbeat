@@ -1,0 +1,41 @@
+body{ margin:0px; padding:0px;}
+/*Header Css*/
+a img{ border:0 none;outline:none;}
+.startHeaderCont{ width:1000px; margin:0 auto 35px auto; height:58px; padding:30px 0 0 0; border-bottom:1px solid #d8d8d8;}
+.startHeaderCont .logo{ float:left;}
+.startHeaderCont .processingImg{ float:right; width:347px; padding:8px 0 0 0;}
+.startHeaderCont .processingImg .congratulations{ background:url(/images/secure/demo/processing_sprite.png) 0 0; width: 347px; height:23px;}
+.startHeaderCont .processingImg .signIn{ background:url(/images/secure/demo/processing_sprite.png) 0 -24px; width: 347px; height:23px;}
+.startHeaderCont .processingImg .createStore{ background:url(/images/secure/demo/processing_sprite.png) 0 -48px; width: 347px; height:23px;}
+/*End Here*/
+input[type="image"]{ cursor:pointer;}
+.newStoreMainCont{ width:1000px; margin:auto;}
+.newStoreMainCont .heading{ font:bold 24px Arial, Helvetica, sans-serif; color:#00538a;}
+.newStoreMainCont .headingList{ font:normal 14px Arial, Helvetica, sans-serif; color:#393939;}
+.newStoreMainCont .headingList .bullet{ width:3px; height:3px; float:left; background:#868585; margin:7px 10px 0 10px;}
+.newStoreMainCont .headingList .floatLeft{ float:left;}
+.lh80{ height:80px; clear:both; font-size:0px;}
+.newStoreMainCont .feildBox{ clear:both;}
+.newStoreMainCont .feildBox .topCurve{ background:url(/images/secure/demo/top_curve_bg.png); width:1000px; height:8px; clear:both;}
+.newStoreMainCont .feildBox .botCurve{ background:url(/images/secure/demo/bot_curve_bg.png); width:1000px; height:8px; clear:both;}
+.newStoreMainCont .feildBox .feildBoxContent{ background:#ececec; border-right:1px solid #dfdfdf; border-left:1px solid #dfdfdf; width:988px; padding:9px 0px 4px 10px; float:left; overflow:hidden; }
+.newStoreMainCont .feildBox .feildBoxContent .wid312{ width:312px; float:left;}
+.newStoreMainCont .feildBox .feildBoxContent .wid312 .storeUrlInputBg{width:289px; height:28px;border:1px solid #848484; background:#fff; padding:8px 10px 0 10px; }
+.newStoreMainCont .feildBox .feildBoxContent .wid312 .storeUrlInputBg .left{ width:80px; font:normal 17px Arial, Helvetica, sans-serif; color:#bfbfbf; float:left;}
+.newStoreMainCont .feildBox .feildBoxContent .wid312 .storeUrlInputBg .right{ width:103px; font:normal 17px Arial, Helvetica, sans-serif; color:#bfbfbf; float:left; }
+.newStoreMainCont .feildBox .feildBoxContent .wid312 .storeUrlInputBg input[type="text"]{ width:104px; height:20px; border:none 0px; outline:none; float:left;font:normal 17px Arial, Helvetica, sans-serif; color:#000000;}
+.newStoreMainCont .feildBox .feildBoxContent .wid312 .storeUrlInputBg input[type="text"].inputFeild{width:278px; height:20px; border:none 0px; outline:none; float:left;font:normal 17px Arial, Helvetica, sans-serif; color:#000000;}
+.newStoreMainCont .feildBox .feildBoxContent .wid20{ float:left; width:20px;}
+.newStoreMainCont .feildBox .feildBoxContent .astrick{font:bold 16px Arial, Helvetica, sans-serif; color:#ff0000; margin:0px; padding:0px;}
+.newStoreMainCont .feildBox .feildBoxContent .errorMsg{font:normal 12px Arial, Helvetica, sans-serif; color:#ff0000; margin:0px; padding:0px;}
+.newStoreMainCont .feildBox .feildBoxContent .inputText{font:bold 14px Arial, Helvetica, sans-serif; color:#393939;}
+.newStoreMainCont input[type="image"]{ cursor:pointer; float:left;}
+.newStoreMainCont .bottomText{font:normal 12px Arial, Helvetica, sans-serif; color:#767676;}
+.newStoreMainCont .bottomText a{ font:normal 12px Arial, Helvetica, sans-serif; color:#00538a; text-decoration:none;}
+.newStoreMainCont .bottomText a:hover{ text-decoration:underline;}
+.lh10{ clear:both; height:10px; line-height:10px; font-size:0px;}
+.lh5{ clear:both; height:5px; line-height:5px; font-size:0px;}
+.lh55{ clear:both; height:55px; font-size:0px;}
+#error_contact{ display:none;}
+#error_store_name{ display:none;}
+#error_store_url {display:none;}

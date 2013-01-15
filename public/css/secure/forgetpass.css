@@ -1,0 +1,87 @@
+html{overflow-y:scroll;}
+body{
+padding:0px;
+margin:0px;
+font-family:"Trebuchet MS", Arial, helvetica;
+font-size:12px;
+color:#393939;
+}
+/*Header Css Start From here*/
+.header_bg{background-image:url(/images/secure/header_bg.gif); background-repeat:repeat-x; height:135px; width:100%;}
+.tar{text-align:right;}
+.right_text{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939;}
+a.signin_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; text-decoration:underline;}
+a:hover.signin_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; text-decoration:none;}
+.showcase_text{color:#136fb0; font-size:22px; font-family:"Trebuchet MS", Arial, helvetica; }
+.fs0{font-size:0px;}
+.signin_text{font-size:12px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFFFFF; font-weight:bold;}
+.header_arrow{position:absolute; padding:5px 0px 0px 30px;}
+.paddtop2{padding-top:2px;}
+/*Header Css Ends here*/
+
+/*Body Block Css Start From here*/
+.input_bg{background-image:url(/images/secure/input_bg.jpg); background-repeat:no-repeat; width:255px; height:31px;}
+.input_wid240{width:240px; height:18px; margin-left:5px; font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; border:0px none; outline:none; line-height:18px;}
+.devider{ background-image:url(/images/secure/devider.gif); background-repeat:repeat-y; width:12px; height:auto;}
+.primry_email_text{ color:#999999; font-size:13px;}
+.back{ color:#000000; font-size:13px;}
+
+.email_text{ font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; color:#393939; text-align:right; font-weight:bold;}
+img{border:0px none;}
+
+input[type="submit"]{
+ border:none 0px;
+ background-image:url(/images/secure/send_ins_btn.gif); background-repeat:no-repeat; width:132px; height:22px; cursor:pointer;
+}
+/*input[type="submit"]:hover{
+  border:none 0px;
+   background-image:url(../images/buttons.gif); background-repeat:no-repeat; background-position:-2px -241px; width:98px; height:31px; cursor:pointer;
+}*/
+
+
+
+/*Body Block Css Ends here*/
+
+.you_dont_find{color:#393939; font-size:14px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+.check_ur_mail{color:#393939; font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+.iglobul_pwd{color:#010101; font-size:16px; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+.mail{ color:#4a970c; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:20px; text-decoration:none; }
+a.contact{ color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; text-decoration:underline; }
+a:hover.contact{ color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; text-decoration:none; }
+a.back{ color:#000000; font-size:13px; text-decoration:underline; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold; }
+a:hover.back{ color:#000000; font-size:13px; text-decoration:none; font-family:"Trebuchet MS", Arial, helvetica; font-weight:bold;}
+
+
+#mainPopDel { display:none; position:absolute; height:140px; background-color:#000000; opacity:.90; top:0px; width:100%; }
+.popcontent { width:760px; margin:auto; }
+.closeButton { clear:both; height:35px; }
+.tar { text-align:right; }
+.delMsg { clear:both; font-size:20px; font-family:"Trebuchet MS", Arial, helvetica; color:#ffffff; margin:auto; text-align:center; }
+.openPopDiv { cursor:pointer; }
+.closeButt{cursor:pointer; }
+.lh27{ height:27px; line-height:27px; clear:both; font-size:0px; }
+/*Show Information on top Header*/
+
+/*Confirmation Msg Box css*/
+.wid485{width:485px; float:left; height:36px; background-color:#f1f1f1; line-height:36px; vertical-align:middle; }
+.wid438{ width:400px; float:left; font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; color:#000000; font-weight:bold; vertical-align:middle;}
+.paddtop10{padding-top:8px;}
+.loggedout_underline{height:1px; line-height:1px; font-size:0px; background-color:#d1d1d1;}
+.wid453{width:453px; margin:auto;}
+.message_text{color:#393939; font-size:12px; font-family:"Trebuchet MS", Arial, helvetica; height:50px;}
+.lh35{height:35px; line-height:35px; clear:both; font-size:0px;}
+.message_underline{height:2px; line-height:2px; font-size:0px; background-color:#d1d1d1;}
+#cboxClose{ background:url(../images/cross_close.gif); background-repeat:no-repeat; width:13px; height:16px; position:absolute; display:block;}
+#cboxClose:hover{ background:url(../images/cross_close.gif); background-repeat:no-repeat; width:13px; height:16px; position:absolute; display:block;}
+.wid177{width:177px; margin:auto;}
+.wid117{width:117px; margin:auto;}
+.wid70{width:70px; margin:auto;}
+.lh19{height:19px; line-height:19px; clear:both; font-size:0px;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.wid17{ width:17px; float:left; }
+.lh8{ height:8px; line-height:8px; clear:both; font-size:0px; }
+/*End Confirmation CSS*/
+.confirm{background-image:url(/images/secure/close_btn.gif); width:53px; height:22px; background-repeat:no-repeat; display:block; cursor:pointer;}
+.new_pwd{ font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:16px; color:#393939; }

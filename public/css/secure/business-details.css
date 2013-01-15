@@ -1,0 +1,52 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+:focus{ outline:none;}
+
+
+#wid1000Auto{ width:1000px; margin:auto;}
+.logo_punchline{ font-family:Verdana, Geneva, sans-serif; font-size:18px; font-weight:normal; color:#0083cb; }
+.lh35{ height:35px; line-height:35px; font-size:0px; clear:both;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif;}
+.grey_text12Lh20{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+.wid640{ width:640px; float:left;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.content_text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; }
+.lh12{ height:12px; line-height:12px; clear:both; font-size:0px;}
+.wid136AlignR{ width:136px; float:left; text-align:right; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.wid22padd8{ width:14px; float:left; padding:0 0 0 8px;}
+.input_textField230{ width:223px; border:#848484 1px solid; padding:0 0 0 5px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.input_textField178{ width:163px; border:#848484 1px solid; padding:0 0 0 65px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.textArea230{  width:223px; border:#848484 1px solid; padding:0 0 0 5px; height:74px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.input_textField100{ width:93px; border:#848484 1px solid; padding:0 0 0 5px; height:22px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.grey_text11Lh17{font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:17px;}
+.wid325{ width:325px; float:left;}
+.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.wid228{ width:228px; float:left;}
+.lh30{ height:30px; line-height:30px; font-size:0px; clear:both;}
+.wid178{ width:178px; float:left;}
+.lh10{ height:10px; line-height:10px; font-size:0px; clear:both;}
+.wid158{ width:158px; float:left;}
+.wid17{ width:17px; float:left;}
+.lh45{ height:45px; clear:both; font-size:0px;}
+.wid650{ width:650px; float:left;}
+.right_block{ width:297px; float:left; margin:0 0 0 25px; background:#f1f1f1; padding:20px 14px 20px 14px;}
+.right_block ul{ margin:0px; padding:0px;}
+.right_block ul li{ margin:0px; padding:0px; list-style-type:none;}
+.lh25{ height:25px; line-height:25px; font-size:0px; clear:both;}
+.suggestive-container{ float:left; margin:0 0px 0 13px; display:none;}
+.suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#ff0000; line-height:22px; border-top:#ed9a57 1px solid; border-bottom:#ed9a57 1px solid; float:left; height:22px; background:#fce7d6; padding:0 10px 0 10px;}
+.available-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2e8d00; line-height:20px; border-top:#98d073 1px solid; border-bottom:#98d073 1px solid; float:left; height:22px; background:#d1eca6; padding:0 10px 0 10px;}
+.available_tick{ background:url('/images/secure/registration/available_tick.png'); width:10px; height:8px; float:left; background-repeat:no-repeat; margin:7px 5px 0px 0px;}
+.dropDown230{font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px; width:178px; float:left;}
+.cancel_btn{ background:url(/images/secure/merchantenrollment/cancel_btn.png) no-repeat; width:95px; height:33px; font-size:0px; border:0px none; outline:none;display:block;}
+input[type="submit"].continue_btn{ background:url(/images/secure/merchantenrollment/continue_btn.png) no-repeat; width:110px; height:33px; font-size:0px; border:0px none; outline:none;}
+label.content_text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#767676; line-height:20px; position:absolute; margin:2px 0 0 5px;}
+.hyperLinkBlue12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#00538a; font-weight:normal; text-decoration:none;}
+.hyperLinkBlue12:hover{ text-decoration:underline; }

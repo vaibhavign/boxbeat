@@ -1,0 +1,85 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0 none; outline:none;}
+.clearBoth{ clear:both; overflow:hidden;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+
+.wid1000Auto{ width:1000px; margin:auto;}
+.mainTopHeading{ color: #393939; font-family: Arial,Helvetica,sans-serif; font-size: 28px;font-weight: bold;}
+.lh42{ clear: both; font-size: 0; height: 42px; visibility:hidden; overflow:hidden;}
+.mainTopSubHeading {clear: both;color: #767676;font-family: Arial,Helvetica,sans-serif; font-size: 14px; line-height: 20px; width: 415px; word-wrap: break-word;}
+.lh3{ clear: both; font-size: 0; height: 3px; line-height: 3px;}
+.mainPageBlueHeading {color: #00538A; font-family: Arial,Helvetica,sans-serif; font-size: 18px; font-weight:normal;}
+.solidMainBorder{ background-color:#e1e1e1; height:1px; clear:both; overflow:hidden; font-size:0px;}
+.lh5{ clear: both; font-size: 0; height: 5px; line-height: 5px;}
+.lh25{ clear: both; font-size: 0; height: 25px; visibility:hidden; overflow:hidden; }
+.wid494{ width:494px; float:left; word-wrap:break-word;}
+.wid144{ width:144px; float:left; word-wrap:break-word;}
+.content_text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.lh10{ clear: both; font-size: 0; height: 10px; line-height: 10px; overflow:hidden; visibility:hidden;}
+.summaryDetailContainer{ width:360px; background:url(/images/secure/middle_sep.png) repeat-y; float:left; padding:0 0 0 35px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; }
+.lh55{ height:55px; clear:both; visibility:hidden; font-size:0px;}
+.table_top_bar{ height:27px; line-height:27px; background:#989898; font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:bold; color:#ffffff; padding:0 0 0 24px; }
+
+.wid396{ width:396px; float:left;}
+.wid108{ width:108px; float:left;}
+.wid10{ width:10px; float:left;}
+.wid133TAlignR{ width:133px; float:left; text-align:right;}
+.wid90TAlignR{ width:90px; float:left; text-align:right;}
+.content_text13Lh27{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#393939; line-height:27px;}
+.content_text11Lh25{ font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#393939; line-height:25px;}
+.dashedTableBorder{ background:url(/images/secure/dashed_border_img.png) repeat-x; height:1px; clear:both; font-size:0px; }
+.tableSelectedBg{ background:#f7f7f7;}
+.content_text13{ font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#393939;}
+.content_text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939;}
+.blueTotalAmtBox{ border:1px solid #b2d1dc; background:#f0f9fc; line-height:45px; padding:0 18px 0 14px; color:#000000; float:left; font-weight:bold; font-family:Arial, Helvetica, sans-serif; font-size:22px; margin:0 20px 0 0;}
+a.hyperLinkBlue12 {color: #00538A; font-family: Arial,Helvetica,sans-serif; font-size: 12px; font-weight: normal;}
+a:hover.hyperLinkBlue12{ text-decoration:none;}
+.wid78{ width:78px; float:left;}
+.content_text14Lh22{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; line-height:22px;}
+.lh30{ height:30px; clear:both; font-size:0px; visibility:hidden;}
+.lh40{ height:40px; clear:both; font-size:0px; visibility:hidden;}
+.dropDown113{ height:22px; float:left; width:106px; border:1px solid #848484; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:14px; color:#00538a}
+.dropDown139{ height:22px; float:left; width:132px; border:1px solid #848484; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:14px; color:#00538a}
+.dropDown110{ height:22px; float:left; width:103px; border:1px solid #848484; color:#00538a; font-family:Arial, Helvetica, sans-serif; font-weight:normal; font-size:14px; color:#00538a}
+.calenderFieldBorder93{ border:1px #b3b3b3 solid; float:left; width:91px; height:21px;	}
+.calenderInputField93{ border:0px; outline:none; float:left; padding:2px 0 0 5px; width:60px; height:19px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#767676;}
+.calenderIcon{ background:url(/images/secure/calender_icon.png); width:18px; height:17px; float:left; cursor:pointer; margin:2px 0 0 5px;}
+.wid15{ float:left; width:15px;}
+a.hyperLinkBlue12Lh22 {color: #00538A; font-family: Arial,Helvetica,sans-serif; font-size: 12px; font-weight: normal; line-height:22px;}
+a:hover.hyperLinkBlue12Lh20{ text-decoration:none;}
+.wid110{ width:110px; float:left;}
+.wid24{ width:24px; float:left;}
+.wid113TAlignR{ width:113px; float:left; text-align:right;}
+.dashedTableBorder974{ background:url(/images/secure/dashed_border_img.png) repeat-x; height:1px; clear:both; font-size:0px; width:974px; }
+.openContainer{ clear:both; display:none;}
+.minus_icon{ display:none;}
+.plus_icon{ background:url(/images/secure/plus_icon.png); width:9px; height:9px; cursor:pointer; margin:2px 0 0 4px; }
+.minus_icon{ background:url(/images/secure/minus_icon.png); width:9px; height:9px; cursor:pointer; display:none; margin:2px 0 0 4px;}
+#transactionContainer{ clear:both;}
+#transactionContainer:hover{background:#f7f7f7;}
+
+.content_text13Lh23{font-family:Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; color:#393939; line-height:23px;}
+
+
+
+.placeholdertxt { float:right; width:117px; }
+.placeholdertxt a { 
+	color: #00538A;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: underline;
+	float:right;
+	padding-top:4px;
+}
+.placeholdertxt a:hover { 
+	color: #00538A;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+	float:right;
+	padding-top:4px;
+}
+.backarrow { background-image:url(/images/admin/back_button.png); width:12px; height:11px; float:right; margin-top:8px; background-position:left; background-repeat:no-repeat; }
+.arrowgap { float:right; width:30px; }

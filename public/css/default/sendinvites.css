@@ -1,0 +1,79 @@
+/*Manage Invites*/
+.invitationBg{ background-color:#e4e4e4; height:23px; line-height:23px; color:#393939; }
+.invites_txt{ padding-left:10px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; }
+.sortBy{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#393939; font-weight:normal; padding-right:5px; }
+.padRight10{padding-right:10px;}
+.selectWid{width:100px; height:18px; border:1px solid #848484; font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#393939;}
+.selectAll{ background-color:#f1f1f1; height:21px; line-height:21px; }
+a.sendReminder{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#4c74a2; text-decoration:underline; }
+a:hover.sendReminder{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#4c74a2; text-decoration:none; }
+.delSelect{ color:#999999; font-family:Arial, Helvetica, sans-serif; font-size:11px; padding-right:13px; }
+.selectTxt{  color:#393939; font-size:11px; font-family:Arial, Helvetica, sans-serif; }
+.padLeft10{ padding-left:10px; }
+.wid8{ width:8px; float:left; }
+.selectAllWithoutBg{ background-color:#ffffff; height:21px; line-height:21px; }
+.checkbox_textTwo{ color:#393939; }
+.wid289{ width:289px; float:left; }
+.wid216{ width:216px; float:left; }
+.reminder{ color:#999999; }
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px; }
+.padRight27{ padding-right:27px; }
+.wid504{ width:504px; float:left; }
+a.sendInvite{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4c74a2; text-decoration:underline; }
+a:hover.sendInvite{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4c74a2; text-decoration:none; }
+/*Manage Invites*/
+
+/*custome checkbox Css Start From here*/
+.label_check,
+.label_radio    {color:#393939; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal;  }
+.label_check    { background: url(/images/default/check_box.gif) no-repeat; width:13px; height:13px; display:block; margin-top:4px;}
+.label_check.c_on  { background: url(/images/default/check_box_active.gif) no-repeat; width:13px; height:13px; margin-top:4px;}
+.label_check input,
+.label_radio input  { position: absolute; left: -9999px; }
+.wid265{width:250px; float:left;}
+/*custome checkbox Css Ends here*/
+
+/*Send Invite*/
+a.see{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#4c74a2; text-decoration:underline; }
+a:hover.see{ font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#4c74a2; text-decoration:none; }
+.wid217{ width:217px; float:left; }
+/*Send Invite*/
+.lh39{ height:39px; line-height:39px; clear:both; }
+.followPage{ width:1000px; margin:auto; font-family:Arial, Helvetica, sans-serif; font-size:12px; }
+.followPageInner{ width:650px; float:left; }
+.arrowPlace{ width:20px; float:left; text-align:center; color:#999999; }
+a.bredcrumb{ color:#000000; text-decoration:none; }
+a:hover.bredcrumb{ color:#000000; text-decoration:underline; }
+.bredcrumbCurrent{ float:left; color:#999999; }
+a.arrowBack{ background-image:url(/images/default/header_sprite.png); width:5px; height:9px; text-decoration:none; display:block; background-position:0px -33px; margin-top:3px; margin-right:6px; }
+a.back{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4c74a2; text-decoration:none; }
+a:hover.back{ font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#4c74a2; text-decoration:underline; }
+.lh9{ height:9px; line-height:9px; clear:both; }
+.bgLine{height:1px; line-height:1px; background-color:#cdcdcd; font-size:0px; clear:both; }
+.bgimport{ height:52px; background-color:#f9f9f9; }
+.lh24{ height:24px; line-height:24px; clear:both; font-size:0px; }
+.importDecor{ width:104px; float:left; }
+.impOne{ background-image:url(/images/default/header_sprite.png); width:19px; height:19px; float:left; font-weight:bold; color:#9b9b9b; background-position:-10px -32px; text-align:center; line-height:19px; }
+.wid9{ width:9px; float:left; }
+.impTxt{ font-size:14px; font-weight:bold; color:#999999; padding-top:2px; }
+.marLeft10{margin-left:10px;}
+.impSel{background-image:url(/images/default/header_sprite.png); width:19px; height:19px; float:left; font-weight:bold; color:#ffffff; background-position:-33px -32px; text-align:center; line-height:19px;}
+.sendDecor{ width:132px; float:left; }
+.followSel{ font-size:14px; font-weight:bold; color:#393939; padding-top:2px; }
+.lh33{ height:33px; line-height:33px; clear:both; }
+.wid183{ width:183px; float:left; }
+.wid302{ width:302px; float:left; word-wrap:break-word; }
+.wid354{ width:354px; float:left; }
+.wid11{ width:11px; float:left; }
+a.folloerName{ color:#00538a; font-weight:bold; text-decoration:none; }
+a:hover.folloerName{ color:#00538a; font-weight:bold; text-decoration:underline; }
+.followerLocation{ font-size:11px; color:#999999; padding-top:2px; }
+.folloerDetail{ color:#393939; }
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px; }
+a.unfollow{ font-size:11px; color:#00538a; text-decoration:underline; }
+a:hover.unfollow{ font-size:11px; color:#00538a; text-decoration:none; }
+.padTop4{ padding-top:4px; padding-left:10px; }
+.lh10{ height:10px; line-height:10px; clear:both; font-size:0px; }
+.wid18{ width:18px; float:left; }
+.send_invite_enable{ background-image:url(/images/default/send_invite_btn.gif); width:93px; height:24px; border:0px;}
+.send_invite_disable{ background-image:url(/images/default/send_invite.gif); width:93px; height:24px; border:0px;}

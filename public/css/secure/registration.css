@@ -1,0 +1,404 @@
+html{ overflow-y:scroll;}
+body{ margin:0px; padding:0px;}
+a img{ border:0px;}
+.clearBoth{ clear:both;}
+.floatLeft{ float:left;}
+.floatRight{ float:right;}
+.cursor{ cursor:pointer;}
+:focus{ outline:none;}
+/*=============================header starts from here=========================================*/
+#header-wrapper{ height:89px; border-bottom: solid #d8d8d8 1px; clear:both; margin:0 0 30px 0;}
+.header-rightText{ float:right; font-size:22px; font-weight:normal; color:#000000; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; margin:48px 0 0 0;}
+#logo{ float:left; margin:32px 0 0 0;}
+/*=============================header ends from here=========================================*/
+.blueMainHeadingContainer{ clear:both; overflow:auto;}
+
+/*=============================sign in page starts from here==================================*/
+#wid1000Auto{ width:1000px; margin:auto;}
+.blueMainHeading{ font-size:18px; font-weight:normal; color:#00538a; font-family:Arial, Helvetica, sans-serif; float:left;}
+.content-text12Lh20{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939; line-height:20px;}
+.content-text12{ font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.content-text11{ font-family:Arial, Helvetica, sans-serif; font-size:11px; font-weight:normal; color:#393939;}
+.input-textField230{ width:223px; border:#848484 1px solid; padding:0 0 0 5px; height:24px; line-height:24px;}
+.input-textField158{ width:151px; border:#848484 1px solid; padding:0 0 0 5px; height:24px; line-height:24px; }
+.input-textField158-disabled{ width:151px; border:#e8e8e8 1px solid;  height:24px; background-color: #f5f5f5; padding:0 0 0 5px;}
+.suggestive-container{ float:left; margin:0 0px 0 13px;}
+.suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#ff0000; line-height:20px; border-top:#ed9a57 1px solid; border-bottom:#ed9a57 1px solid; float:left; height:22px; background:#fce7d6; padding:0 10px 0 10px;}
+a.hyperLinkBlue11{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue11{ text-decoration:none;}
+.checkBox{ width:13px; height:13px; margin:0 10px 0 0; float:left;}
+.sign_in_errorMsgBox{ border:#ed9a57 1px solid; width:248px; height:55px; float:left; background: url('/images/secure/registration/error_msg_img.gif') no-repeat #fce7d6; padding:15px 0 0 48px; font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#ff0000; line-height:20px;}
+.checkbox_off{ background:url('/images/secure/registration/check_off.png'); width:13px; height:13px; float:left;}
+.input_checkbox{ margin-left:-9999px;}
+.checkbox_on{ background:url('/images/secure/registration/check_on.png'); width:13px; height:13px; float:left;}
+label{ margin:0px; padding:0px;}
+#show_hide{display:none;}
+.available-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#2e8d00; line-height:20px; border-top:#98d073 1px solid; border-bottom:#98d073 1px solid; float:left; height:22px; background:#d1eca6; padding:0 10px 0 10px;}
+.available_tick{ background:url('/images/secure/registration/available_tick.png'); width:10px; height:8px; float:left; background-repeat:no-repeat; margin:7px 5px 0px 0px;}
+/*=============================sign in page ends from here==================================*/
+
+/*==================================================== account deactivated page css starts from here-===========================*/
+a.hyperLinkBlue12{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue12{ text-decoration:none;}
+.content-text14{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; }
+a.hyperLinkBlue14{ font-size:14px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue14{ text-decoration:none;}
+/*==================================================== account deactivated page css ends from here-===========================*/
+
+/*====================account restricted css page starts from here===================================*/
+.dashedBorderText14Lh25{font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; border-bottom:#393939 1px dashed; float:left; line-height:25px;}
+a.dashedBorderLink14Lh25{font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; border-bottom:#393939 1px dashed; float:left; line-height:25px; text-decoration: none;}
+a:hover.dashedBorderLink14Lh25{ text-decoration: underline;}
+
+.content-text14Lh22{ font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; color:#393939; line-height:22px;}
+.grey-text11{font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; width:490px;}
+a.hyperLinkBlue11None{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal; text-decoration:none;}
+a:hover.hyperLinkBlue11None{ text-decoration:underline;}
+/*====================account restricted css page end here===================================*/
+
+/*============================email already in use css page starts from here=============================*/
+.email_error_msgBox{ width:633px; border:#cccccc 1px solid; height:56px; background:#efefef; padding:13px 0 0 17px;}
+/*============================email already in use css page ends here=============================*/
+
+/*===========================forgot your password page css starts from here=======================*/
+.forgot_seperator{ background:url(/images/secure/registration/forgot_password_sep.gif) repeat-y; width:36px; height:279px; float:left;}
+.grey-text12Lh20{ font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+/*===========================forgot your password page css ends from here=======================*/
+.grey-text12{font-size:12px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal;}
+/*===========================forgot your password instruction page css starts from here=======================*/
+/*================no extra css used for this page==============*/
+/*===========================forgot your password instruction page css ends from here=======================*/
+
+/*=================goo2o login page starts from here======================*/
+#wid850Auto{ width:850px; margin:auto;}
+#goo2o-login-header{ height:62px;  clear:both;}
+#goo2o-login-logo{ margin:15px 0 0 0; float:left;}
+a.hyperLinkBlue15{ font-size:15px; font-family:Arial, Helvetica, sans-serif; color:#00538a; font-weight:normal;}
+a:hover.hyperLinkBlue15{ text-decoration:none;}
+.content-text15{ font-family:Arial, Helvetica, sans-serif; font-size:15px; font-weight:normal; color:#393939;}
+.login-bot-btn-bg{ width:100%; background:#ececec; height:45px; border-top:#d6d6d6 1px solid; padding:11px 0 0 0;}
+.borderBottom{border-bottom:solid #d8d8d8 1px; clear:both; font-size:0px; height:1px; width:100%;}
+input.loginupbtn[type="submit"]{
+   background-image:url(/images/secure/registration/sign_in_btn.gif); display: block; background-repeat:no-repeat; height:27px; width:180px; cursor:pointer; background-position:-2px -98px;float:left;}
+
+/*=================goo2o login page ends here======================*/
+
+/*=================not my account page starts from here========================*/
+.wid734Auto{ width:734px; margin:auto;}
+.wid382Auto{ width:382px; margin:auto; }
+.input-textField274{ width:267px; border:#848484 1px solid; padding:0 0 0 5px; height:22px; margin:2px 0 0 0;}
+.not_my_account_msg_box{ width:523px; margin:auto; padding:16px 30px 16px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; background:#eeeeee; border:#d6d6d6 1px solid; line-height:18px; color:#767676;}
+.not_my_account_msg_box a{ font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:12px; font-weight:normal; text-decoration:underline;}
+.not_my_account_msg_box a:hover{ text-decoration:none;}
+input.continueaccount[type="submit"]{
+   background-image:url(/images/secure/registration/continue_btn_not_my_account.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:99px; cursor:pointer; outline:none;}
+/*=================not my account page ends here========================*/
+/*=============================not your account page css starts from here===================================*/
+.content-textGreen18{font-family:Arial, Helvetica, sans-serif; font-size:18px; font-weight:normal; color:#39a100;}
+a.hyperLinkBlack13BLh34{ font-size:13px; font-family:Arial, Helvetica, sans-serif; color:#131313; font-weight:bold; line-height:34px;}
+a.hyperLinkBlack13BLh27{ color: #131313;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 27px;}
+a:hover.hyperLinkBlack13BLh34{ text-decoration:none;}
+input.notmyaccountbutton[type="submit"]{
+   background-image:url(/images/secure/registration/i_didnt_sign_up_btn.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:233px; cursor:pointer; outline:none;}
+input.notmynewaccountbutton[type="submit"]{
+   background-image:url(/images/secure/registration/this_is_nt_my_acc_btn.jpg); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:169px; cursor:pointer; outline:none;}
+/*=============================not your account page css ends here===================================*/
+/*==============================your mail has been removed starts from here========================*/
+
+
+/*==============================your mail has been removed ends from here========================*/
+
+/*===========================reset password page css starts from here=======================*/
+input.passwordbutton[type="submit"]{
+background-image:url(/images/secure/registration/change_btn.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:84px; cursor:pointer; outline:none;}
+input.resetpasswordbutton[type="submit"]{display: block; background-repeat:no-repeat; height:27px; border:0px none; width:182px; cursor:pointer; outline:none;}
+/*===========================reset password page css ends from here=======================*/
+/*============================== check your mail page css starts from here====================*/
+
+/*============================== check your mail page css ends from here====================*/
+
+/*========================= sign up page css starts from here================== */
+.dropDown230{ width:230px; border:#848484 1px solid; padding:0 0 0 5px; height:24px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:normal; color:#393939;}
+.input-textField180{ width:173px; border:#848484 1px solid; padding:0 0 0 5px; height:24px;}
+.sign-up-suggestive-container{ float:left; margin:0 0px 0 13px;}
+.sign-up-suggestive-textContainer{ font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; line-height:22px; border-top:#e5e5e5 1px solid; border-bottom:#e5e5e5 1px solid; float:left; height:22px; background:#f1f1f1; padding:0 10px 0 10px;}
+.adjustmentMar{ float:left; margin:0 0 0 13px; }
+.grey-text11Lh20{font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#767676; font-weight:normal; line-height:20px;}
+#sign_up_show_hide{ display:none;}
+input.signupbtn[type="submit"]{ background-image:url(/images/secure/registration/create_account.gif); background-repeat:no-repeat; height:27px; width:131px; cursor:pointer; border:0px none; font-size:0px; outline:none; padding:0px; margin:0px; }
+.sign-up-alert{color:#FF0000;}
+/* ==================sign up page css starts from here========================== */
+
+/*===========================lineheights starts here========================================*/
+.lh10{ height:10px; clear:both; font-size:0px; line-height:10px;}
+.lh50{ height:50px; clear:both; font-size:0px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+.lh15{ height:15px; line-height:15px; clear:both; font-size:0px;}
+.lh60{ height:60px; clear:both; font-size:0px; }
+.lh160{ height:160px; clear:both; font-size:0px; }
+.lh110{ height:110px; clear:both; font-size:0px; }
+.lh32{ height:32px; clear:both; font-size:0px;}
+.lh35{ height:35px; clear:both; font-size:0px;}
+.lh40{ height:40px; clear:both; font-size:0px;}
+.lh20{ height:20px; line-height:20px; clear:both; font-size:0px;}
+.lh30{ height:30px; clear:both; font-size:0px;}
+.lh25{ height:25px; line-height:25px; clear:both; font-size:0px;}
+.lh210{ height:210px; clear:both; font-size:0px;}
+.lh7{ height:7px; line-height:7px; clear:both; font-size:0px;}
+.lh75{ height:75px; clear:both; font-size:0px;}
+/*===========================lineheights ends here========================================*/
+/*===================widths starts from here==========================*/
+.wid263AlignR{ width:263px; float:left; text-align:right;}
+.wid23AlignC{ width:23px; float:left; text-align:center;}
+.wid255AlignR{ width:255px; float:left; text-align:right;}
+.wid415{ width:415px; float:left;}
+.wid286{ width: 286px; float: left;}
+.wid465{ width:465px; float:left;}
+.wid25{ width:25px; float:left;}
+.wid160{ width:160px; float:left; word-wrap:break-word;}
+.wid142{ width:142px; float:left; word-wrap:break-word;}
+.wid150{ width:150px; float:left; word-wrap:break-word;}
+.wid80{ width:80px; float:left; word-wrap:break-word;}
+.wid375{ width:375px; float:left; word-wrap:break-word;}
+.wid377{ width:377px; float:left; word-wrap:break-word;}
+.wid141AlignR{ width:141px; float:left; word-wrap:break-word; text-align:right;}
+.wid15{ width:15px; float:left;}
+.wid687{ width:687px; float:left; word-wrap:break-word;}
+.wid252{ width:254px; float:left;}
+.wid276{ width:276px; float:left;}
+.wid453Auto{ width:453px; margin:auto;}
+.wid430{ width: 435px; float:left;}
+.wid270{ width: 270px; float:left;}
+/*=======================widths ends from here===============*/
+
+
+/*===================capcha starts from here==========================*/
+.captcha_none{ display:none; }
+.captcha_top_img{float:left; background-image:url(/images/secure/captcha/top_img_new.gif); width:468px; height:6px; line-height: 6px; font-size: 6px; background-repeat:no-repeat; display:block; }
+.captcha_left_img{ float:left; background-image:url(/images/secure/captcha/left_img_new.gif); width:11px; height:82px; background-repeat:no-repeat; }
+.captcha_right_img{ float:left; background-image:url(/images/secure/captcha/right_img_new.gif); width:11px; height:82px; background-repeat:no-repeat; }
+.captcha_bottom_img{ clear:both; background-image:url(/images/secure/captcha/bottom_img_new.gif); width:468px; height:11px; background-repeat:no-repeat; }
+.capcha_refresh_icon{background-image:url(/images/secure/captcha/refresh_img_new.gif); width:10px; height:12px; background-repeat:no-repeat; float:left; display:block; margin-right:5px;}
+.capcha_sound_icon{background-image:url(/images/secure/captcha/sound_img_new.gif); width:12px; height:12px; background-repeat:no-repeat; float:left; display:block; margin-right:5px;}
+.captcha_gap{ float:left; width:300px;}
+.captcha_bg_color{ clear:both; background-color:#707070; width:322px; height:6px; }
+.lh27{ clear:both; height:23px; line-height:23px; }
+.padLeft27{ clear:both; padding-left:27px; }
+.border_height{ height:22px; line-height:22px; width:290px; font-size:13px; margin-left:2px; font-family:"Trebuchet MS", Arial, Verdana; color:#393939; }
+.padLeft12{ clear:both; padding-left:12px; }
+.lh18{ height:18px; line-height:18px; }
+.lh8{height:8px; line-height:8px; clear:both; font-size:0px;}
+a.add_image{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:underline; cursor:pointer;}
+a:hover.add_image{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:pointer;}
+.wid5{width:5px; float:left;}
+.select_an_avtar{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:underline; cursor:pointer;}
+.cursor_pointer{cursor:pointer;}
+.wid290{width:290px; height:20px; line-height:20px; outline:none; border:0px none;}
+a.get_two_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:11px; color:#2A75C1; text-decoration:none; line-height:12px;  cursor:pointer;}
+a:hover.get_two_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:11px; color:#2A75C1; text-decoration:none; line-height:12px; cursor:pointer;}
+
+a.help_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:10px; color:#2A75C1; text-decoration:none; line-height:10px; cursor:pointer;}
+a:hover.help_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:10px; color:#2A75C1; text-decoration:none; line-height:10px; cursor:pointer;}
+
+.can_read_text{font-family:"Trebuchet MS", Arial, Verdana; font-size:12px; color:#000000; font-weight:bold;}
+.powered_text{color:#A7A4A4; font-family:"Trebuchet MS", Arial, Verdana; font-size:11px;}
+.paddleft12{padding-left:12px;}
+
+.wid468{width:468px; float:left;}
+.wid446_capcha{width:446px; float:left; height:82px;}
+.wid300_capcha{width:300px; float:left;}
+.wid145_capcha{width:145px; float:left; height:82px; background-color:#F2F2F2; border-left:1px solid #DDDDDD;}
+.border_bottom_capcha{border-bottom:1px solid #DDDDDD;}
+/*======================= ends from here===============*/
+input[type="submit"].proceedinupbtn{ background-image:url(/images/secure/registration/proceed_to_your_account_btn.gif); background-repeat:no-repeat; height:27px; width:180px; cursor:pointer; border:0px none; font-size:0px; outline:none; padding:0px; margin:0px; }
+
+
+/*=======================login css starts from here==================================*/
+.tar{text-align:right;}
+.right_text{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; font-weight:normal;}
+a.signin_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; text-decoration:underline;}
+a:hover.signin_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#393939; text-decoration:none;}
+.showcase_text{color:#136fb0; font-size:22px; font-family:"Trebuchet MS", Arial, helvetica; }
+.fs0{font-size:0px;}
+.signin_text{font-size:13px; font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFFFFF; font-weight:bold;}
+.header_arrow{position:absolute; padding:6px 0px 0px 30px;}
+.paddtop2{padding-top:4px;}
+/*Header Css Ends here*/
+
+/*Body Block Css Start From here*/
+.email_text{font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; color:#393939; text-align:right; font-weight:bold;}
+a.forgot_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#000000; text-decoration:underline;}
+a:hover.forgot_link{font-family:"Trebuchet MS", Arial, helvetica; font-size:12px; color:#000000; text-decoration:none;}
+.paddtop7{padding-top:7px;}
+/*Body Block Css Ends here*/
+img{border:0px none;}
+
+/*custome checkbox Css Start From here*/
+.has-js { padding-top:2px; }
+.has-js .label_check,
+.has-js .label_radio    { padding-left:15px; color:#010101; font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; font-size:14px; font-weight:normal; }
+.has-js .label_check    { background: url(/images/secure/c_off.gif) no-repeat;}
+.has-js label.c_on      { background: url(/images/secure/c_on.gif) no-repeat; }
+.has-js .label_check input,
+.has-js .label_radio input  { position: absolute; left: -9999px; }
+.wid265{width:250px; float:left;}
+/*custome checkbox Css Ends here*/
+
+
+.input_bg{background-image:url(/images/secure/input_bg.jpg); background-repeat:no-repeat; width:480px; height:31px; float:left; padding-top:5px;}
+.input_bg_success{background-image:url(/images/input_bg_success.gif); background-repeat:no-repeat; width:578px; height:31px; float:left; padding-top:5px; font-size:12px; font-family:"Trebuchet MS", Arial, helvetica; color:#1d880f;}
+.input_bg_active{background-image:url(/images/input_bg_msg.gif); background-repeat:no-repeat; width:578px; height:31px; float:left; padding-top:5px; font-size:12px; font-family:"Trebuchet MS", Arial, helvetica; color:#393939;}
+.input_bg_error{background-image:url(/images/input_bg_error.gif); background-repeat:no-repeat; width:578px; height:31px; float:left; padding-top:5px; font-size:12px; font-family:"Trebuchet MS", Arial, helvetica; color:#ba0f0f;}
+.inputMsg { font-size:12px; clear:both; color:#F00; margin-top:26px;}
+.inputMsg_all { font-size:12px; clear:both; color:#F00; }
+
+.state_bg_signup{background-image:url(/images/state_bg_signup.gif); background-repeat:no-repeat; width:188px; height:31px;}
+.input_wid255{width:240px; height:18px; margin-left:5px; font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; border:0px none; outline:0px none;}
+.input_wid255_success{width:240px; height:18px; margin-left:5px; font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; border:0px none; outline:0px none;}
+.input_wid255_active{width:240px; height:18px; margin-left:5px; font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; border:0px none; outline:0px none;}
+.input_wid255_error{width:240px; height:18px; margin-left:5px; font-family:"Trebuchet MS", Arial, helvetica; font-size:15px; color:#393939; border:0px none; outline:0px none;}
+
+.input_box_main { clear:both; }
+.input_box_main .inputLabel { width:152px; float:left; font-weight:bold; }
+.input_box_main .capchagap { width:109px; float:left; }
+.input_box_main .signup_gap { width:322px; float:left; }
+.input_box_main .inputGap { width:14px; float:left; }
+
+/*input[type="submit"]{
+border:0px none;
+  background-image:url(/images/buttons/buttons.gif); background-repeat:no-repeat; height:31px; width:98px; cursor:pointer;  background-position:-2px -63px; float:left;
+}
+input[type="submit"]:hover{
+  border:0px none;
+    background-image:url(/images/buttons/buttons.gif); background-repeat:no-repeat; height:31px; width:98px; cursor:pointer; background-position:-2px -98px;
+	float:left;
+}*/
+/*input[type="submit"]:focus{
+  outline:none;
+}*/
+input[type="checkbox"]{
+	margin:0px; padding:0px;
+}
+#mainPopDel { display:none; position:absolute; height:140px; background-color:#000000; opacity:.90; top:0px; width:100%;}
+.popcontent { width:760px; margin:auto; }
+.closeButton { clear:both; height:35px; }
+/*.tar { text-align:right; }*/
+.delMsg { clear:both; font-size:20px; font-family:"Trebuchet MS", Arial, helvetica; color:#ffffff; margin:auto; text-align:center; }
+.openPopDiv { cursor:pointer; }
+.closeButt{cursor:pointer; }
+.lh27{ height:27px; line-height:27px; clear:both; font-size:0px; }
+/*Show Information on top Header*/
+.wid500 { width:500px; }
+.fwBold{font-weight:bold;}
+
+
+/*Confirmation Msg Box css*/
+.wid485{width:485px; float:left; height:36px; background-color:#f1f1f1; line-height:36px; vertical-align:middle; }
+.wid438{ width:400px; float:left; font-family:"Trebuchet MS", Arial, helvetica; font-size:16px; color:#000000; font-weight:bold; vertical-align:middle;}
+.paddtop10{padding-top:8px;}
+.loggedout_underline{height:1px; line-height:1px; font-size:0px; background-color:#d1d1d1;}
+.wid453{width:453px; margin:auto;}
+.message_text{color:#393939; font-size:12px; font-family:"Trebuchet MS", Arial, helvetica; height:50px;}
+.lh35{height:35px; line-height:35px; clear:both; font-size:0px;}
+.message_underline{height:2px; line-height:2px; font-size:0px; background-color:#d1d1d1;}
+#cboxClose{ background:url(/images/cross_close.gif); background-repeat:no-repeat; width:13px; height:16px; position:absolute; display:block;}
+#cboxClose:hover{ background:url(/images/cross_close.gif); background-repeat:no-repeat; width:13px; height:16px; position:absolute; display:block;}
+.wid177{width:177px; margin:auto;}
+.wid117{width:117px; margin:auto;}
+.wid70{width:70px; margin:auto;}
+.lh19{height:19px; line-height:19px; clear:both; font-size:0px;}
+.floatLeft{float:left;}
+.floatRight{float:right;}
+.clearBoth{clear:both;}
+.wid17{ width:17px; float:left; }
+.lh8{ height:8px; line-height:8px; clear:both; font-size:0px; }
+/*End Confirmation CSS*/
+
+/*new catcha css starts from here*/
+
+/*.captcha_none{ display:none; }
+.captcha_top_img{float:left; background-image:url(/images/secure/captcha/top_img_new.gif); width:468px; height:6px; line-height: 6px; font-size: 6px; background-repeat:no-repeat; display:block; }
+.captcha_left_img{ float:left; background-image:url(/images/secure/captcha/left_img_new.gif); width:11px; height:82px; background-repeat:no-repeat; }
+.captcha_right_img{ float:left; background-image:url(/images/secure/captcha/right_img_new.gif); width:11px; height:82px; background-repeat:no-repeat; }
+.captcha_bottom_img{ clear:both; background-image:url(/images/secure/captcha/bottom_img_new.gif); width:468px; height:11px; background-repeat:no-repeat; }
+.capcha_refresh_icon{background-image:url(/images/secure/captcha/refresh_img_new.gif); width:10px; height:12px; background-repeat:no-repeat; float:left; display:block; margin-right:5px;}
+.capcha_sound_icon{background-image:url(/images/secure/captcha/sound_img_new.gif); width:12px; height:12px; background-repeat:no-repeat; float:left; display:block; margin-right:5px;}
+.captcha_gap{ float:left; width:300px;}
+.captcha_bg_color{ clear:both; background-color:#707070; width:322px; height:6px; }
+.lh27{ clear:both; height:23px; line-height:23px; }
+.padLeft27{ clear:both; padding-left:27px; }
+.border_height{ height:22px; line-height:22px; width:290px; font-size:13px; margin-left:2px; font-family:"Trebuchet MS", Arial, Verdana; color:#393939; }
+.padLeft12{ clear:both; padding-left:12px; }
+.lh18{ height:18px; line-height:18px; }
+.lh8{height:8px; line-height:8px; clear:both; font-size:0px;}
+a.add_image{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:underline; cursor:pointer;}
+a:hover.add_image{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:none; cursor:pointer;}
+.wid5{width:5px; float:left;}
+.select_an_avtar{color:#000000; font-size:11px; font-family:"Trebuchet MS", Arial, helvetica; text-decoration:underline; cursor:pointer;}
+.cursor_pointer{cursor:pointer;}
+.wid290{width:290px; height:20px; line-height:20px; outline:none; border:0px none;}
+a.get_two_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:11px; color:#2A75C1; text-decoration:none; line-height:12px;  cursor:pointer;}
+a:hover.get_two_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:11px; color:#2A75C1; text-decoration:none; line-height:12px; cursor:pointer;}
+
+a.help_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:10px; color:#2A75C1; text-decoration:none; line-height:10px; cursor:pointer;}
+a:hover.help_link{ font-family:"Trebuchet MS", Arial, Verdana; font-size:10px; color:#2A75C1; text-decoration:none; line-height:10px; cursor:pointer;}
+.can_read_text{font-family:"Trebuchet MS", Arial, Verdana; font-size:12px; color:#000000; font-weight:bold;}
+.powered_text{color:#A7A4A4; font-family:"Trebuchet MS", Arial, Verdana; font-size:11px;}
+.paddleft12{padding-left:12px;}
+
+.wid468{width:468px; float:left;}
+.wid446_capcha{width:446px; float:left; height:82px;}
+.wid300_capcha{width:300px; float:left;}
+.wid145_capcha{width:145px; float:left; height:82px; background-color:#F2F2F2; border-left:1px solid #DDDDDD;}
+.border_bottom_capcha{border-bottom:1px solid #DDDDDD;}
+
+
+
+.wid468{width:468px; float:left;}
+.wid446_capcha{width:446px; float:left; height:82px;}
+.wid300_capcha{width:300px; float:left;}
+.wid145_capcha{width:145px; float:left; height:82px; background-color:#F2F2F2; border-left:1px solid #DDDDDD;}
+.border_bottom_capcha{border-bottom:1px solid #DDDDDD;}*/
+
+.confirm{background-image:url(/images/close_btn.gif); width:53px; height:22px; background-repeat:no-repeat; display:block; cursor:pointer;}
+.alert{ font-family:"Trebuchet MS"; font-size:12px; color:#ff0000; font-weight:normal;}
+.captchText{ font-family:"Trebuchet MS"; font-size:10px; color:#393939; font-weight:normal; width:500px;}
+.lh5{ height:5px; line-height:5px; clear:both; font-size:0px;}
+/*=======================login css ends from here==================================*/
+input.forgetpasswordBtn[type="submit"]{
+   background-image:url(/images/secure/registration/send_instructions_btn.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:131px; cursor:pointer; float:left; font-size:0px; outline:none; padding:0px; margin:0px;}
+input.checkmail_server[type="submit"]{
+   background-image:url(/images/secure/registration/well_done_let_cont_btn.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:200px; cursor:pointer; outline:none;}
+input.resentcheckmail_server[type="submit"]{
+   background-image:url(/images/secure/registration/resend_email.gif); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:121px; cursor:pointer; outline:none;}
+
+input.registerAccountBtn[type="submit"]{
+   background-image:url(/images/secure/registration/create_go2o_btn.png); display: block; background-repeat:no-repeat; height:27px; border:0px none; width:134px; cursor:pointer; float:left; font-size:0px; outline:none; padding:0px; margin:0px;}
+   
+   #footerSecure .lh45{ height:45px; line-height:45px; clear:both; font-size:0px;}
+
+#footerSecure .borderSolid1{ border-bottom:1px solid #a2a2a2; clear:both; font-size:0px;}
+#footerSecure .lh75{ height:75px; line-height:75px; clear:both; font-size:0px;}
+#footerSecure .wid78{ float:left; width:78px;}
+#footerSecure .wid900{ width:900px; margin:auto;}
+#footerSecure .wid1000{ width:1000px; margin:auto;}
+#footerSecure .top-footerHeading{ font-family:Arial, Helvetica, sans-serif; font-size:20px; font-weight:normal; color:#393939; width:805px;}
+#footerSecure .tableGreyText_footer{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#767676; font-weight:normal; width:671px; word-wrap:break-word; margin:12px 0 0 0; line-height:17px;}
+#footerSecure .tableGreyText_footer a{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#498304; font-weight:normal;}
+#footerSecure .tableGreyText_footer a:hover{ text-decoration:none;}
+#footerSecure .borderSolid2{ border-bottom:1px solid #d4d4d4; clear:both; font-size:0px;}
+#footerSecure a.hyperlinkfont11_footer{font-family:Arial, Helvetica, sans-serif; font-size:11px; color:#00538a; font-weight:normal; text-decoration:none;}
+#footerSecure a:hover.hyperlinkfont11_footer{ text-decoration:underline;}
+
+#footerSecure .cursor{ cursor:pointer;}
+#footerSecure .lh37{ height:37px; clear:both; font-size:0px;}
+#footerSecure .lh145{ height:145px; clear:both; font-size:0px;}
+.wid410Auto{ width:410px; margin:auto;}
+input.createAccountBtn[type="submit"]{
+   background-image:url(/images/secure/registration/login_btn_sprite.jpg); background-position: 0 0; width:98px; height:27px; border: 0px none;}
+input.signin_secure_server[type="submit"]{
+   background-image:url(/images/secure/registration/login_btn_sprite.jpg); width:219px; height:27px; background-position: -100px 0;border: 0px none;}
